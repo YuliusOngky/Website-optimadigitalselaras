@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "@/layouts/MainLayout";
+import OptimaHomePage from "@/pages/OptimaHomePage";
 import About1Page from "@/pages/About1Page";
 import About2Page from "@/pages/About2Page";
 import About3Page from "@/pages/About3Page";
@@ -62,8 +63,9 @@ import NotFoundPage from "@/pages/NotFoundPage";
 export default function App() {
   return (
     <Routes>
+      <Route path="/" element={<OptimaHomePage />} />
       <Route element={<MainLayout headerStyle={1} footerStyle={1} />}>
-        <Route path="/" element={<Home1Page />} />
+        <Route path="/template-1" element={<Home1Page />} />
         <Route path="/index-dark" element={<Home1Page />} />
       </Route>
       <Route element={<MainLayout headerStyle={1} footerStyle={1} noFooter />}>
