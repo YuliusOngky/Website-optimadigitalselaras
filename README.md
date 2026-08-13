@@ -2,11 +2,19 @@
 
 Professional web solution for **PT Optima Digital Selaras** - Digital Ecosystem Enabler.
 
-## 🚀 Overview
-
-A comprehensive, modern React + TypeScript website showcasing digital transformation solutions, products, and services. Built with cutting-edge technologies and advanced animation effects.
-
 **Live:** [www.optimadigitalselaras.com](https://www.optimadigitalselaras.com)
+
+## Production vs this repo
+
+The **live homepage** is standalone Optima HTML on GIOS NAS `192.168.1.20`, Docker `optima-web` (nginx **:8088**), behind Cloudflare. It includes the hero video and brand animations.
+
+This GitHub repo still contains the **Vite + React Orisa template** (`src/`). That SPA is **not** what Cloudflare serves. Do not deploy `npm run build` / `dist/` onto `optima-web` or you will replace the live Optima page.
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for the real stack.
+
+## Overview
+
+React + TypeScript template (Orisa) kept in-repo for components and a possible future SPA. Live marketing site is the Optima HTML on GIOS.
 
 ## 📋 Features
 

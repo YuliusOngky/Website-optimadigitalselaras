@@ -1,35 +1,20 @@
 #!/bin/bash
+# Intentionally does NOT upload Vite dist/ to live Optima.
+# Live origin on GIOS 192.168.1.20 is Docker optima-web (nginx :8088),
+# not IIS wwwroot and not /var/www.
 
-# Deployment script untuk GIOS x250 (192.168.1.20)
-# Usage: ./scripts/deploy.sh
+set -euo pipefail
 
-set -e
-
-echo "🚀 Starting deployment to GIOS x250..."
-
-# Configuration
-DEPLOY_HOST="${DEPLOY_HOST:-192.168.1.20}"
-DEPLOY_USER="${DEPLOY_USER:-your-username}"
-DEPLOY_PATH="${DEPLOY_PATH:-/var/www/optimadigitalselaras}"
-SSH_PORT="${SSH_PORT:-22}"
-
-# Colors
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-RED='\033[0;31m'
-NC='\033[0m' # No Color
-
-echo -e "${YELLOW}Building project...${NC}"
-npm run build
-
-if [ ! -d "dist" ]; then
-    echo -e "${RED}Build failed - dist folder not found${NC}"
-    exit 1
-fi
-
-echo -e "${YELLOW}Uploading to server...${NC}"
-scp -P $SSH_PORT -r dist/* $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/
-
-echo -e "${GREEN}✅ Deployment successful!${NC}"
-echo "Application deployed to: http://$DEPLOY_HOST"
-echo "Deployed path: $DEPLOY_PATH"
+echo "This script will not deploy to www.optimadigitalselaras.com."
+echo
+echo "Live stack:"
+echo "  Host:   192.168.1.20 (NAS GIOS, Windows)"
+echo "  Origin: docker optima-web  nginx:1.27-alpine  host :8088"
+echo "  Staging file often used: C:\\deploy\\new_index.html"
+echo "  IIS :80 wwwroot is a leftover Vite SPA and is NOT the Cloudflare origin."
+echo
+echo "Do not scp dist/ (Orisa/Vite) onto optima-web — that overwrites Optima HTML."
+echo "Update live by copying the Optima HTML into the optima-web nginx root, then:"
+echo "  docker restart optima-web"
+echo "Verify: http://192.168.1.20:8088  and  https://www.optimadigitalselaras.com"
+exit 1

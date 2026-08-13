@@ -1,17 +1,35 @@
 # Dependencies
 node_modules/
-package-lock.json
 yarn.lock
 
-# Environment
+# Environment (keep .env.example tracked)
 .env
 .env.local
 .env.*.local
+.env.production
+.env.development
+
+# Agent / local tool state (may contain SSH passwords)
+.claude/
+.cursor/
 
 # Build outputs
 dist/
 build/
 .vite/
+
+# Purchased template + local preview helpers (do not commit)
+orisa-creative-agency-portfolio-react-template-2026-05-17-02-12-21-utc/
+orisa-creative-agency-portfolio-react-template-2026-05-17-02-12-21-utc.zip
+orisa-buka-di-browser/
+orisa-buka-di-browser.zip
+
+# Large local assets / dumps (live site is on GIOS, not in git)
+optima-homepage-preview.html
+*.mp4
+*.zip
+PT OptimaDigital_Company Profile.pdf
+Codex Image*.jpg
 
 # IDE
 .vscode/

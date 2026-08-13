@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Enterprise Software — Optima Digital Selaras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-950:#020b1d;
+  --navy-900:#071633;
+  --navy-800:#0d2347;
+  --navy-700:#15315f;
+  --teal:#8bc53f;
+  --teal-dark:#6ea82f;
+  --cyan-label:#a8d65e;
+  --ink:#0b1220;
+  --muted:#5b6472;
+  --line:rgba(11,18,32,.09);
+  --line-dark:rgba(255,255,255,.14);
+  --off:#f5f7fa;
+  --svc:#3b82f6;
+  --svc-bg:rgba(59,130,246,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.5;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-0.02em;color:var(--ink);}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px;}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-dark);}
+
+/* NAV */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(4,12,28,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand svg{flex-shrink:0;}
+.brand-text{line-height:1.15;}
+.brand-text b{display:block;color:#fff;font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;letter-spacing:.02em;}
+.brand-text span{display:block;color:rgba(255,255,255,.55);font-size:11px;font-weight:500;}
+.nav-links{display:flex;gap:34px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,.85);font-size:14.5px;font-weight:500;transition:color .2s;}
+.nav-links a:hover{color:#fff;}
+.nav-cta{display:flex;align-items:center;gap:18px;}
+
+/* BUTTONS */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:13px 24px;border-radius:8px;font-size:14.5px;font-weight:600;
+  transition:all .2s ease;white-space:nowrap;
+}
+.btn-solid{background:var(--teal);color:var(--navy-950);}
+.btn-solid:hover{background:#a8d65e;transform:translateY(-1px);}
+.btn-outline{border:1.5px solid rgba(255,255,255,.35);color:#fff;}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.06);}
+.btn-outline.on-light{border-color:rgba(11,18,32,.2);color:var(--ink);}
+.btn-outline.on-light:hover{border-color:rgba(11,18,32,.4);background:rgba(11,18,32,.04);}
+.btn-arrow{font-size:16px;transition:transform .2s;}
+.btn:hover .btn-arrow{transform:translateX(3px);}
+.link-more{font-size:14px;font-weight:600;color:var(--teal-dark);display:inline-flex;align-items:center;gap:6px;}
+
+/* SECTION SHARED */
+section{padding:100px 0;}
+.sec-head{margin-bottom:48px;}
+.sec-eyebrow{display:block;margin-bottom:14px;color:var(--svc);}
+.sec-title{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(28px,2.6vw,38px);
+  line-height:1.18;letter-spacing:-0.02em;color:var(--ink);font-weight:800;
+  max-width:640px;
+}
+.sec-desc{max-width:520px;color:var(--muted);font-size:15.5px;line-height:1.7;margin-top:14px;}
+
+/* DETAIL HERO */
+.detail-hero{
+  position:relative;background:var(--navy-950);color:#fff;
+  padding-top:78px;
+}
+.detail-hero .wrap{padding-top:90px;padding-bottom:76px;}
+.breadcrumb{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13.5px;color:rgba(255,255,255,.55);margin-bottom:32px;font-weight:500;
+  transition:color .2s;
+}
+.breadcrumb:hover{color:rgba(255,255,255,.85);}
+.detail-hero .eyebrow{color:var(--cyan-label);display:block;margin-bottom:20px;}
+.detail-hero h1{
+  font-size:clamp(34px,4.4vw,54px);line-height:1.1;letter-spacing:-0.025em;
+  color:#fff;max-width:820px;margin-bottom:22px;
+}
+.detail-hero p{
+  font-size:16.5px;line-height:1.75;color:rgba(255,255,255,.65);
+  max-width:600px;margin-bottom:38px;
+}
+.detail-hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+
+/* COVERS (What It Covers) */
+.cover-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.cover-card{
+  background:#fff;border:1px solid rgba(11,18,32,.08);border-radius:12px;
+  padding:32px 28px;position:relative;
+}
+.cover-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--svc);border-radius:12px 12px 0 0;
+}
+.cover-icon-wrapper{
+  width:52px;height:52px;border-radius:11px;background:var(--svc-bg);
+  display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--svc);
+}
+.cover-card h4{font-size:18px;font-weight:700;margin-bottom:10px;color:var(--ink);}
+.cover-divider{width:20px;height:2px;background:var(--svc);margin:0 0 14px;border-radius:1px;}
+.cover-card p{color:#404b5a;font-size:15px;line-height:1.62;}
+
+/* USE CASES */
+.usecase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 24px;}
+.usecase-card{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:26px 0;border-top:1px solid rgba(11,18,32,.08);
+}
+.usecase-icon{
+  width:40px;height:40px;border-radius:10px;background:var(--off);
+  display:flex;align-items:center;justify-content:center;color:var(--svc);flex-shrink:0;
+}
+.usecase-card h5{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.usecase-card p{font-size:13.5px;color:var(--muted);line-height:1.6;}
+
+/* DELIVERY PROCESS */
+.process-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+.process-step{position:relative;padding:0 24px;}
+.process-step:first-child{padding-left:0;}
+.process-step:last-child{padding-right:0;}
+.process-num{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--navy-950);color:var(--teal);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;
+  margin-bottom:20px;position:relative;z-index:1;
+}
+.process-step::after{
+  content:"";position:absolute;top:22px;left:calc(50% + 22px);right:calc(-50% + 22px);
+  height:1px;background:rgba(11,18,32,.14);
+}
+.process-step:last-child::after{display:none;}
+.process-step h5{font-size:16.5px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+.process-step p{font-size:13.5px;color:var(--muted);line-height:1.6;}
+
+/* FINAL CTA */
+.final-cta{background:var(--navy-950);color:#fff;padding:80px 0;}
+.final-cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
+.final-cta h3{font-size:clamp(24px,3vw,34px);color:#fff;margin-bottom:8px;max-width:560px;}
+.final-cta p{color:rgba(255,255,255,.6);font-size:15px;max-width:480px;}
+
+/* FOOTER */
+footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28px;border-top:1px solid rgba(255,255,255,.08);}
+.foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1.2fr;gap:32px;margin-bottom:52px;}
+.foot-brand p{font-size:13.5px;color:rgba(255,255,255,.5);margin-top:14px;line-height:1.7;max-width:260px;}
+.foot-col h6{font-size:13px;font-weight:700;color:#fff;margin-bottom:16px;text-transform:uppercase;letter-spacing:.03em;}
+.foot-col a, .foot-col p{display:block;font-size:13.5px;color:rgba(255,255,255,.55);margin-bottom:10px;line-height:1.5;}
+.foot-col a:hover{color:#fff;}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:12.5px;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:12px;}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+/* RESPONSIVE */
+@media (max-width:980px){
+  .cover-grid{grid-template-columns:repeat(2,1fr);}
+  .usecase-grid{grid-template-columns:repeat(2,1fr);}
+  .process-row{grid-template-columns:repeat(2,1fr);row-gap:36px;}
+  .process-step::after{display:none;}
+  .foot-top{grid-template-columns:1fr 1fr;}
+  .nav-links{display:none;}
+}
+@media (max-width:640px){
+  .wrap{padding:0 22px;}
+  .detail-hero .wrap{padding-top:120px;padding-bottom:56px;}
+  .detail-hero-actions{flex-direction:column;align-items:flex-start;}
+  .cover-grid{grid-template-columns:1fr;}
+  .usecase-grid{grid-template-columns:1fr;}
+  .process-row{grid-template-columns:1fr;row-gap:28px;}
+  .process-step{padding:0 !important;}
+  section{padding:72px 0;}
+  .final-cta .wrap{flex-direction:column;align-items:flex-start;}
+  .foot-top{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <defs>
+          <linearGradient id="lgNav1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#a8d65e"/>
+            <stop offset="1" stop-color="#6ea82f"/>
+          </linearGradient>
+          <linearGradient id="lgNav2" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#8bc53f"/>
+            <stop offset="1" stop-color="#3f6b1a"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(17,17)">
+          <path d="M0 -13 C7.2 -13 13 -7.2 13 0 C5.8 0 0 -5.8 0 -13 Z" fill="url(#lgNav1)"/>
+          <path d="M13 0 C13 7.2 7.2 13 0 13 C0 5.8 5.8 0 13 0 Z" fill="url(#lgNav2)"/>
+          <path d="M0 13 C-7.2 13 -13 7.2 -13 0 C-5.8 0 0 5.8 0 13 Z" fill="url(#lgNav1)"/>
+          <path d="M-13 0 C-13 -7.2 -7.2 -13 0 -13 C0 -5.8 -5.8 0 -13 0 Z" fill="url(#lgNav2)"/>
+        </g>
+      </svg>
+      <span class="brand-text"><b>OPTIMA DIGITAL</b><span>PT Optima Digital Selaras</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#what-we-do">What We Do</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/#industries">Industries</a></li>
+      <li><a href="/#work">Client Work</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="detail-hero">
+  <div class="wrap">
+    <a href="/#what-we-do" class="breadcrumb">← Back to What We Do</a>
+    <span class="eyebrow">Enterprise Software</span>
+    <h1>Custom systems built around how your business actually operates.</h1>
+    <p>We design and build enterprise-grade software platforms that streamline operations, connect departments, and turn complex workflows into reliable digital systems.</p>
+    <div class="detail-hero-actions">
+      <a href="/#contact" class="btn btn-solid">Discuss Your Platform <span class="btn-arrow">→</span></a>
+      <a href="#process" class="btn btn-outline">View Delivery Process</a>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow sec-eyebrow">What It Covers</span>
+      <h2 class="sec-title">Three pillars of every enterprise platform we build.</h2>
+    </div>
+    <div class="cover-grid">
+      <div class="cover-card">
+        <div class="cover-icon-wrapper">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M3 9h18M9 3v18M15 3v18" stroke="currentColor" stroke-width="1.4"/></svg>
+        </div>
+        <h4>Custom Business Platforms</h4>
+        <div class="cover-divider"></div>
+        <p>Purpose-built systems designed around your exact operational processes, not generic off-the-shelf software forced to fit your business.</p>
+      </div>
+      <div class="cover-card">
+        <div class="cover-icon-wrapper">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="6" cy="6" r="2" stroke="currentColor" stroke-width="1.4"/><circle cx="18" cy="6" r="2" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="18" r="2" stroke="currentColor" stroke-width="1.4"/><path d="M8 6h4M12 8v8M14 6h4M10 15l2-4 2 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>System Integration</h4>
+        <div class="cover-divider"></div>
+        <p>Reliable connections between your internal tools, third-party services, and existing infrastructure so data flows without manual work.</p>
+      </div>
+      <div class="cover-card">
+        <div class="cover-icon-wrapper">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M8 9h8M8 13h5M8 17h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Enterprise Workflow</h4>
+        <div class="cover-divider"></div>
+        <p>Digitized approval chains, role-based access, and process automation that reduce bottlenecks across departments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" style="background:var(--off);">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow sec-eyebrow">Example Use Cases</span>
+      <h2 class="sec-title">Built for the systems that keep operations running.</h2>
+    </div>
+    <div class="usecase-grid">
+      <div class="usecase-card">
+        <div class="usecase-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21h8M12 18v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div><h5>Internal Operations Platform</h5><p>Centralize day-to-day operations, approvals, and reporting into a single internal system.</p></div>
+      </div>
+      <div class="usecase-card">
+        <div class="usecase-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div><h5>Finance or Loan Workflow System</h5><p>Structured, auditable workflows for credit, disbursement, and repayment processes.</p></div>
+      </div>
+      <div class="usecase-card">
+        <div class="usecase-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4-9 4-9-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 7v10l9 4 9-4V7" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <div><h5>Inventory and Transaction System</h5><p>Real-time stock visibility connected directly to sales and procurement.</p></div>
+      </div>
+      <div class="usecase-card">
+        <div class="usecase-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 3v18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7 15l4-5 3 3 5-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><h5>Management Dashboard</h5><p>Consolidated, role-based visibility into KPIs and operational data for leadership.</p></div>
+      </div>
+      <div class="usecase-card">
+        <div class="usecase-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M2 21v-2a5 5 0 015-5h4a5 5 0 015 5v2" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="8" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <div><h5>Customer or Partner Portal</h5><p>Secure, self-service access for external stakeholders to track requests, orders, or accounts.</p></div>
+      </div>
+      <div class="usecase-card">
+        <div class="usecase-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4v6h6M20 20v-6h-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 15a7 7 0 0012.6 2.5M18.5 9A7 7 0 005.9 6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div><h5>Legacy Modernization</h5><p>Migrate aging systems to secure, maintainable platforms without disrupting daily operations.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="reveal">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow sec-eyebrow">Delivery Process</span>
+      <h2 class="sec-title">A structured path from discovery to a scaled platform.</h2>
+    </div>
+    <div class="process-row">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <h5>Discover</h5>
+        <p>We study your current operations, systems, and pain points to define the right scope.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <h5>Design</h5>
+        <p>We map workflows and architecture into a clear technical and functional blueprint.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <h5>Build</h5>
+        <p>We develop, test, and iterate the platform in structured sprints with visibility at every stage.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <h5>Scale</h5>
+        <p>We support deployment, adoption, and future enhancements as your business grows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta reveal">
+  <div class="wrap">
+    <div>
+      <h3>Need a business system that fits your actual workflow?</h3>
+      <p>Optima can help turn operational complexity into a secure, scalable enterprise software platform.</p>
+    </div>
+    <a href="mailto:marketing@optimadigital.co.id" class="btn btn-solid">Discuss Your Platform <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand">
+          <svg width="30" height="30" viewBox="0 0 34 34" fill="none">
+            <defs>
+              <linearGradient id="lgFoot1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#a8d65e"/>
+                <stop offset="1" stop-color="#6ea82f"/>
+              </linearGradient>
+              <linearGradient id="lgFoot2" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#8bc53f"/>
+                <stop offset="1" stop-color="#3f6b1a"/>
+              </linearGradient>
+            </defs>
+            <g transform="translate(17,17)">
+              <path d="M0 -13 C7.2 -13 13 -7.2 13 0 C5.8 0 0 -5.8 0 -13 Z" fill="url(#lgFoot1)"/>
+              <path d="M13 0 C13 7.2 7.2 13 0 13 C0 5.8 5.8 0 13 0 Z" fill="url(#lgFoot2)"/>
+              <path d="M0 13 C-7.2 13 -13 7.2 -13 0 C-5.8 0 0 5.8 0 13 Z" fill="url(#lgFoot1)"/>
+              <path d="M-13 0 C-13 -7.2 -7.2 -13 0 -13 C0 -5.8 -5.8 0 -13 0 Z" fill="url(#lgFoot2)"/>
+            </g>
+          </svg>
+          <span class="brand-text"><b style="color:#fff;">OPTIMA DIGITAL</b><span>PT Optima Digital Selaras</span></span>
+        </a>
+        <p>We enable organizations to build, transform, and scale through technology — creating connected ecosystems that drive sustainable growth.</p>
+      </div>
+      <div class="foot-col">
+        <h6>What We Do</h6>
+        <a href="/#what-we-do">Enterprise Software</a>
+        <a href="/#what-we-do">SaaS Products</a>
+        <a href="/#what-we-do">Web &amp; Digital Experiences</a>
+      </div>
+      <div class="foot-col">
+        <h6>Products</h6>
+        <a href="/products">Government &amp; Community</a>
+        <a href="/products">Finance &amp; Operations</a>
+        <a href="/products">Commerce &amp; Transactions</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href="/#about">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">News &amp; Insights</a>
+      </div>
+      <div class="foot-col">
+        <h6>Get in Touch</h6>
+        <p>marketing@optimadigital.co.id</p>
+        <p>+62 812 988 5679</p>
+        <p>Ruko Golden Madrid Blok D No. 26, Jl. Letnan Sutopo, BSD City, Serpong, Tangerang Selatan, Banten 15310</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 PT Optima Digital Selaras. All rights reserved.</span>
+      <span>www.optimadigital.co.id</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  io.observe(el);
+});
+</script>
+
+</body>
+</html>
