@@ -26,7 +26,8 @@ $Solutions = Join-Path $RepoRoot "public\solutions"
 $Products = Join-Path $RepoRoot "public\products"
 
 if (-not (Test-Path $Index)) { throw "Missing $Index" }
-if (-not (Test-Path (Join-Path $OptimaAssets "hero.mp4"))) { throw "Missing hero.mp4 — run npm run sync:live or git lfs pull" }
+$Hero = Join-Path $OptimaAssets "hero.mp4"
+if (-not (Test-Path $Hero)) { throw "Missing hero.mp4. Run npm run sync:live or git lfs pull." }
 
 $SshTarget = "${UserName}@${HostName}"
 $KeyArgs = @()
@@ -35,23 +36,28 @@ if ($Identity) { $KeyArgs = @("-i", $Identity) }
 Write-Host "Staging Optima homepage -> ${SshTarget}:$RemoteDir (optima-web :8088)"
 
 $RemoteUnix = ($RemoteDir -replace '\\', '/')
-$MkdirCmd = "if not exist `"$RemoteDir\assets\optima`" mkdir `"$RemoteDir\assets\optima`" & if not exist `"$RemoteDir\solutions`" mkdir `"$RemoteDir\solutions`" & if not exist `"$RemoteDir\products`" mkdir `"$RemoteDir\products`""
-& ssh @KeyArgs -o BatchMode=yes -o ConnectTimeout=12 $SshTarget $MkdirCmd
+$RemotePrep = "powershell -NoProfile -Command `"New-Item -ItemType Directory -Force -Path '$RemoteDir\assets\optima','$RemoteDir\solutions','$RemoteDir\products' | Out-Null`""
+& ssh @KeyArgs -o BatchMode=yes -o ConnectTimeout=12 $SshTarget $RemotePrep
+if ($LASTEXITCODE -ne 0) { throw "SSH mkdir failed with exit $LASTEXITCODE" }
 
 & scp @KeyArgs -o BatchMode=yes $Index "${SshTarget}:${RemoteUnix}/index.html"
+if ($LASTEXITCODE -ne 0) { throw "scp index.html failed" }
+
 & scp @KeyArgs -o BatchMode=yes -r "$OptimaAssets\*" "${SshTarget}:${RemoteUnix}/assets/optima/"
+if ($LASTEXITCODE -ne 0) { throw "scp optima assets failed" }
+
 if (Test-Path $Solutions) {
   & scp @KeyArgs -o BatchMode=yes -r "$Solutions\*" "${SshTarget}:${RemoteUnix}/solutions/"
+  if ($LASTEXITCODE -ne 0) { throw "scp solutions failed" }
 }
 if (Test-Path $Products) {
   & scp @KeyArgs -o BatchMode=yes -r "$Products\*" "${SshTarget}:${RemoteUnix}/products/"
+  if ($LASTEXITCODE -ne 0) { throw "scp products failed" }
 }
 
-$RemoteCmd = @"
-docker cp `"$RemoteDir\.`" optima-web:/usr/share/nginx/html/
-docker restart optima-web
-"@
-& ssh @KeyArgs -o BatchMode=yes -o ConnectTimeout=12 $SshTarget $RemoteCmd
+$RemoteDeploy = "powershell -NoProfile -Command `"docker cp '$RemoteDir\.' optima-web:/usr/share/nginx/html/; docker restart optima-web`""
+& ssh @KeyArgs -o BatchMode=yes -o ConnectTimeout=12 $SshTarget $RemoteDeploy
+if ($LASTEXITCODE -ne 0) { throw "docker cp/restart failed with exit $LASTEXITCODE" }
 
 Write-Host "Done. Check http://${HostName}:8088 and https://www.optimadigitalselaras.com"
 Write-Host "IIS :80 was not modified."
