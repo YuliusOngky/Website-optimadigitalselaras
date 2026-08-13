@@ -29,34 +29,37 @@ if (-not (Test-Path $Index)) { throw "Missing $Index" }
 $Hero = Join-Path $OptimaAssets "hero.mp4"
 if (-not (Test-Path $Hero)) { throw "Missing hero.mp4. Run npm run sync:live or git lfs pull." }
 
-$SshTarget = "${UserName}@${HostName}"
-$KeyArgs = @()
-if ($Identity) { $KeyArgs = @("-i", $Identity) }
+$SshArgs = @()
+if ($Identity) { $SshArgs += @("-i", $Identity) }
+$SshArgs += @("-o", "BatchMode=yes", "-o", "ConnectTimeout=12", "-l", $UserName)
+$ScpArgs = @()
+if ($Identity) { $ScpArgs += @("-i", $Identity) }
+$ScpArgs += @("-o", "BatchMode=yes", "-o", "User=$UserName")
 
-Write-Host "Staging Optima homepage -> ${SshTarget}:$RemoteDir (optima-web :8088)"
+Write-Host "Staging Optima homepage -> ${UserName}@${HostName}:$RemoteDir (optima-web :8088)"
 
 $RemoteUnix = ($RemoteDir -replace '\\', '/')
 $RemotePrep = "powershell -NoProfile -Command `"New-Item -ItemType Directory -Force -Path '$RemoteDir\assets\optima','$RemoteDir\solutions','$RemoteDir\products' | Out-Null`""
-& ssh @KeyArgs -o BatchMode=yes -o ConnectTimeout=12 $SshTarget $RemotePrep
+& ssh @SshArgs $HostName $RemotePrep
 if ($LASTEXITCODE -ne 0) { throw "SSH mkdir failed with exit $LASTEXITCODE" }
 
-& scp @KeyArgs -o BatchMode=yes $Index "${SshTarget}:${RemoteUnix}/index.html"
+& scp @ScpArgs $Index "${HostName}:${RemoteUnix}/index.html"
 if ($LASTEXITCODE -ne 0) { throw "scp index.html failed" }
 
-& scp @KeyArgs -o BatchMode=yes -r "$OptimaAssets\*" "${SshTarget}:${RemoteUnix}/assets/optima/"
+& scp @ScpArgs -r "$OptimaAssets\*" "${HostName}:${RemoteUnix}/assets/optima/"
 if ($LASTEXITCODE -ne 0) { throw "scp optima assets failed" }
 
 if (Test-Path $Solutions) {
-  & scp @KeyArgs -o BatchMode=yes -r "$Solutions\*" "${SshTarget}:${RemoteUnix}/solutions/"
+  & scp @ScpArgs -r "$Solutions\*" "${HostName}:${RemoteUnix}/solutions/"
   if ($LASTEXITCODE -ne 0) { throw "scp solutions failed" }
 }
 if (Test-Path $Products) {
-  & scp @KeyArgs -o BatchMode=yes -r "$Products\*" "${SshTarget}:${RemoteUnix}/products/"
+  & scp @ScpArgs -r "$Products\*" "${HostName}:${RemoteUnix}/products/"
   if ($LASTEXITCODE -ne 0) { throw "scp products failed" }
 }
 
 $RemoteDeploy = "powershell -NoProfile -Command `"docker cp '$RemoteDir\.' optima-web:/usr/share/nginx/html/; docker restart optima-web`""
-& ssh @KeyArgs -o BatchMode=yes -o ConnectTimeout=12 $SshTarget $RemoteDeploy
+& ssh @SshArgs $HostName $RemoteDeploy
 if ($LASTEXITCODE -ne 0) { throw "docker cp/restart failed with exit $LASTEXITCODE" }
 
 Write-Host "Done. Check http://${HostName}:8088 and https://www.optimadigitalselaras.com"
