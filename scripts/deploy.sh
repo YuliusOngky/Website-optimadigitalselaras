@@ -13,8 +13,9 @@ echo "  Origin: docker optima-web  nginx:1.27-alpine  host :8088"
 echo "  Staging file often used: C:\\deploy\\new_index.html"
 echo "  IIS :80 wwwroot is a leftover Vite SPA and is NOT the Cloudflare origin."
 echo
-echo "Do not scp dist/ (Orisa/Vite) onto optima-web — that overwrites Optima HTML."
-echo "Update live by copying the Optima HTML into the optima-web nginx root, then:"
+echo "Repo homepage is index.html + public/assets/optima/hero.mp4 (matches live)."
+echo "Do not scp only the Orisa SPA onto optima-web — that drops the video homepage."
+echo "Update live by copying index.html + public/assets/optima/ into the optima-web nginx root, then:"
 echo "  docker restart optima-web"
 echo "Verify: http://192.168.1.20:8088  and  https://www.optimadigitalselaras.com"
 exit 1

@@ -24,9 +24,9 @@ orisa-creative-agency-portfolio-react-template-2026-05-17-02-12-21-utc.zip
 orisa-buka-di-browser/
 orisa-buka-di-browser.zip
 
-# Large local assets / dumps (live site is on GIOS, not in git)
+# Large local dumps (official homepage + hero video live under public/assets/optima/)
 optima-homepage-preview.html
-*.mp4
+/*.mp4
 *.zip
 PT OptimaDigital_Company Profile.pdf
 Codex Image*.jpg

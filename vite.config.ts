@@ -12,6 +12,15 @@ export default defineConfig({
   server: {
     port: 5173,
     strictPort: true,
+    open: "/",
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+        orisa: path.resolve(__dirname, "orisa.html"),
+      },
+    },
   },
 });
 

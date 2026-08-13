@@ -2,9 +2,9 @@
 
 **Live site:** [www.optimadigitalselaras.com](https://www.optimadigitalselaras.com)
 
-The public homepage is **not** the Vite/Orisa SPA in `src/`. Live is a standalone Optima HTML page served from Docker on the GIOS NAS, in front of Cloudflare.
+The public homepage is standalone Optima HTML (hero video + animations). In this repo that is root `index.html` plus `public/assets/optima/` (extracted from live; no 9 MB base64 dump).
 
-Do not SCP `npm run build` / `dist/` onto the live origin. That would replace Optima with the Orisa template.
+Orisa Vite SPA lives at `orisa.html` / `src/`. Do not deploy only that SPA onto `optima-web` or you will drop the video homepage.
 
 ## What is actually running
 
@@ -39,9 +39,10 @@ SSH from this PC uses PuTTY `plink`/`pscp` to `NAS GIOS@192.168.1.20`. Prefer an
 
 | Path | Role |
 |---|---|
-| `src/`, `index.html`, Vite | Orisa React template — library / future SPA, **not** production homepage |
+| `index.html` + `public/assets/optima/` | **Production homepage** (matches live: video + animations) |
+| `orisa.html`, `src/` | Orisa React template — library / future SPA |
 | `solutions/` | Extra HTML pages (e.g. enterprise software). Live `/solutions/enterprise-software/` is still 404 |
-| `.github/workflows/deploy.yml` | Build check only. Does **not** auto-deploy to GIOS (LAN IP is unreachable from GitHub-hosted runners) |
+| `.github/workflows/deploy.yml` | Build check only. Does **not** auto-deploy to GIOS |
 
 ## GitHub Actions
 

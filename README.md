@@ -6,15 +6,17 @@ Professional web solution for **PT Optima Digital Selaras** - Digital Ecosystem 
 
 ## Production vs this repo
 
-The **live homepage** is standalone Optima HTML on GIOS NAS `192.168.1.20`, Docker `optima-web` (nginx **:8088**), behind Cloudflare. It includes the hero video and brand animations.
+**Homepage in this repo = live Optima HTML** (`index.html` + `public/assets/optima/hero.mp4`). Same video background, cursor, and scroll animations as [www.optimadigitalselaras.com](https://www.optimadigitalselaras.com).
 
-This GitHub repo still contains the **Vite + React Orisa template** (`src/`). That SPA is **not** what Cloudflare serves. Do not deploy `npm run build` / `dist/` onto `optima-web` or you will replace the live Optima page.
+```bash
+npm run dev          # Optima homepage at http://localhost:5173 (video + animations)
+npm run dev:orisa    # Orisa React template at /orisa.html
+npm run sync:live    # Re-pull live HTML and explode embedded media
+```
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for the real stack.
+Orisa (`src/`, `orisa.html`) stays as a component library / future SPA. Do not deploy only the Vite SPA `dist/` onto Docker `optima-web` without the Optima `index.html` and hero video.
 
-## Overview
-
-React + TypeScript template (Orisa) kept in-repo for components and a possible future SPA. Live marketing site is the Optima HTML on GIOS.
+See [DEPLOYMENT.md](DEPLOYMENT.md) for GIOS (`optima-web` **:8088**).
 
 ## 📋 Features
 

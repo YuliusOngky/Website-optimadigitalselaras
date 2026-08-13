@@ -8,8 +8,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
+    "dev:orisa": "vite --open /orisa.html",
     "build": "vite build",
     "preview": "vite preview",
+    "sync:live": "python scripts/sync-live-homepage.py",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
