@@ -4,41 +4,440 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Web &amp; Digital Experiences — Optima Digital Selaras</title>
+<meta name="description" content="Corporate websites, UX/UI, and responsive digital interfaces that communicate clearly and support real business conversion goals." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#020b1d;--ink:#0f172a;--muted:#475569;--blue:#2563eb;}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;}
-a{color:inherit;text-decoration:none;}
-.top{background:var(--navy);color:#fff;padding:18px 24px;}
-.top-inner{width:min(1180px,100%);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;}
-.top b{font-family:Manrope,Inter,sans-serif;font-weight:800;letter-spacing:.02em;}
-.top a{color:rgba(255,255,255,.8);font-size:14px;font-weight:600;}
-.top a:hover{color:#fff;}
-.wrap{width:min(800px,100%);margin:0 auto;padding:72px 24px 96px;}
-.crumb{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:16px;}
-h1{font-family:Manrope,Inter,sans-serif;font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-.03em;margin-bottom:20px;}
-p{font-size:17px;color:var(--muted);max-width:640px;}
-.meta{margin-top:28px;font-size:14px;font-weight:600;color:#64748b;}
-.back{display:inline-block;margin-top:40px;font-weight:700;color:var(--blue);}
-.back:hover{color:#1d4ed8;}
+:root{
+  --navy-950:#020b1d;
+  --navy-900:#071633;
+  --teal:#8bc53f;
+  --teal-dark:#6ea82f;
+  --ink:#0f172a;
+  --muted:#475569;
+  --line:rgba(11,18,32,.09);
+  --paper:#f3f6ef;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.5;}
+h1,h2,h3,h4,h5{font-family:'Manrope',Inter,sans-serif;font-weight:800;letter-spacing:-0.02em;}
+a{text-decoration:none;color:inherit;}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px;}
+
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(4,12,28,.96);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-text{line-height:1.15;}
+.brand-text b{display:block;color:#fff;font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;letter-spacing:.02em;}
+.brand-text span{display:block;color:rgba(255,255,255,.55);font-size:11px;font-weight:500;}
+.nav-links{display:flex;gap:34px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,.85);font-size:14.5px;font-weight:500;}
+.nav-links a:hover{color:#fff;}
+
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:13px 24px;border-radius:8px;font-size:14.5px;font-weight:600;
+  transition:all .2s ease;white-space:nowrap;
+}
+.btn-solid{background:var(--teal);color:var(--navy-950);}
+.btn-solid:hover{background:#a8d65e;transform:translateY(-1px);}
+.btn-line{border:1.5px solid rgba(15,23,42,.18);color:var(--ink);background:#fff;}
+.btn-line:hover{border-color:var(--ink);}
+.btn-arrow{transition:transform .2s;}
+.btn:hover .btn-arrow{transform:translateX(3px);}
+
+.web-hero{padding:118px 0 0;background:var(--paper);}
+.web-hero .intro{max-width:720px;padding-bottom:40px;}
+.crumb{font-size:13.5px;font-weight:600;color:var(--teal-dark);display:inline-block;margin-bottom:18px;}
+.crumb:hover{color:var(--ink);}
+.kicker{
+  display:inline-block;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--navy-950);background:var(--teal);border-radius:999px;padding:6px 12px;margin-bottom:16px;
+}
+.web-hero h1{font-size:clamp(34px,4.6vw,56px);line-height:1.06;margin-bottom:16px;}
+.web-hero .lead{font-size:17.5px;line-height:1.7;color:var(--muted);max-width:620px;margin-bottom:14px;}
+.meta{font-size:13.5px;font-weight:700;color:var(--teal-dark);margin-bottom:28px;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px;}
+
+.browser{
+  background:#0b1220;border-radius:16px 16px 0 0;overflow:hidden;
+  box-shadow:0 24px 60px rgba(2,11,29,.18);
+  border:1px solid #1b2740;border-bottom:0;
+}
+.chrome{display:flex;align-items:center;gap:8px;padding:12px 14px;background:#111a2e;}
+.chrome i{width:9px;height:9px;border-radius:50%;display:block;}
+.chrome i:nth-child(1){background:#ff5f57;}
+.chrome i:nth-child(2){background:#febc2e;}
+.chrome i:nth-child(3){background:#28c840;}
+.chrome .url{
+  margin-left:10px;flex:1;height:26px;border-radius:7px;background:#1a243c;
+  color:#93a4c7;font-size:12px;font-weight:600;display:flex;align-items:center;padding:0 12px;
+}
+.site{background:#fff;min-height:280px;}
+.site-nav{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;border-bottom:1px solid #eef2e9;}
+.site-nav b{font-size:13px;letter-spacing:.04em;}
+.site-nav span{font-size:12px;color:#64748b;font-weight:600;}
+.site-hero{padding:42px 28px 48px;background:linear-gradient(135deg,#f7faf3,#e8f0dc);}
+.site-hero em{font-style:normal;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-dark);}
+.site-hero h2{font-size:28px;margin:10px 0 12px;max-width:420px;}
+.site-hero p{font-size:14px;color:var(--muted);max-width:400px;margin-bottom:18px;}
+.site-cta{display:inline-block;background:var(--navy-950);color:#fff;font-size:12.5px;font-weight:700;padding:10px 16px;border-radius:7px;}
+
+.services{padding:88px 0;background:#fff;}
+.services .label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:12px;}
+.services h2{font-size:clamp(26px,3vw,36px);max-width:560px;margin-bottom:40px;}
+.svc-row{display:grid;grid-template-columns:1.2fr .9fr .9fr;gap:16px;}
+.svc{
+  border:1px solid var(--line);border-radius:16px;padding:28px 26px;min-height:240px;
+  display:flex;flex-direction:column;background:#fff;
+}
+.svc.big{background:var(--navy-950);color:#fff;border-color:transparent;}
+.svc.big h3,.svc.big .n{color:#fff;}
+.svc .n{font-family:'Manrope',sans-serif;font-size:13px;font-weight:800;color:var(--teal-dark);margin-bottom:18px;}
+.svc h3{font-size:22px;margin-bottom:12px;}
+.svc p{font-size:14.5px;line-height:1.65;color:var(--muted);}
+.svc.big p{color:rgba(255,255,255,.68);}
+.cover{padding:88px 0;background:var(--paper);}
+.cover .label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:12px;}
+.cover h2{font-size:clamp(26px,3vw,36px);max-width:640px;margin-bottom:14px;}
+.cover .desc{max-width:560px;color:var(--muted);font-size:15.5px;line-height:1.7;margin-bottom:40px;}
+.cover-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.cover-card{
+  background:#fff;border:1px solid #e4eadc;border-radius:14px;padding:26px;
+}
+.cover-icon{
+  width:48px;height:48px;border-radius:10px;background:#eef6e4;color:var(--teal-dark);
+  display:grid;place-items:center;margin-bottom:18px;
+}
+.cover-icon svg{width:24px;height:24px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.cover-card h3{font-size:18px;margin-bottom:10px;}
+.cover-card p{font-size:14.5px;line-height:1.65;color:var(--muted);}
+
+.usecases{padding:88px 0;background:#fff;}
+.usecases .label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:12px;}
+.usecases h2{font-size:clamp(26px,3vw,36px);max-width:640px;margin-bottom:36px;}
+.use-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 28px;}
+.use{display:flex;gap:14px;align-items:flex-start;padding:20px 0;border-top:1px solid var(--line);}
+.use-icon{
+  width:40px;height:40px;border-radius:10px;background:#eef6e4;color:var(--teal-dark);
+  display:grid;place-items:center;flex-shrink:0;
+}
+.use h4{font-size:15.5px;margin-bottom:6px;}
+.use p{font-size:14px;color:var(--muted);line-height:1.6;}
+
+.flow{padding:88px 0;background:var(--paper);}
+.flow .label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:12px;}
+.flow h2{font-size:clamp(26px,3vw,36px);max-width:560px;margin-bottom:36px;}
+.flow-list{display:grid;grid-template-columns:1fr;max-width:720px;gap:0;}
+.flow-item{display:grid;grid-template-columns:88px 1fr;gap:8px;padding:22px 0;border-top:1px solid var(--line);}
+.flow-item strong{font-family:'Manrope',sans-serif;font-size:28px;color:var(--teal-dark);line-height:1;}
+.flow-item h4{font-size:18px;margin-bottom:6px;}
+.flow-item p{font-size:14.5px;color:var(--muted);line-height:1.65;}
+
+.final{padding:0 0 88px;background:#fff;}
+.final .wrap{
+  background:var(--navy-950);color:#fff;border-radius:20px;
+  padding:44px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+}
+.final h3{color:#fff;font-size:clamp(22px,3vw,32px);max-width:520px;margin-bottom:8px;}
+.final p{color:rgba(255,255,255,.65);max-width:460px;}
+
+footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28px;border-top:1px solid rgba(255,255,255,.08);}
+.foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1.2fr;gap:32px;margin-bottom:52px;}
+.foot-brand p{font-size:13.5px;color:rgba(255,255,255,.5);margin-top:14px;line-height:1.7;max-width:260px;}
+.foot-col h6{font-size:13px;font-weight:700;color:#fff;margin-bottom:16px;text-transform:uppercase;letter-spacing:.03em;}
+.foot-col a,.foot-col p{display:block;font-size:13.5px;color:rgba(255,255,255,.55);margin-bottom:10px;line-height:1.5;}
+.foot-col a:hover{color:#fff;}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:12.5px;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:12px;}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media (max-width:980px){
+  .svc-row,.cover-grid,.use-grid,.foot-top{grid-template-columns:1fr 1fr;}
+  .nav-links{display:none;}
+}
+@media (max-width:640px){
+  .wrap{padding:0 22px;}
+  .web-hero{padding-top:110px;}
+  .svc-row,.cover-grid,.use-grid,.foot-top{grid-template-columns:1fr;}
+  .flow-item{grid-template-columns:1fr;}
+  .final .wrap{flex-direction:column;align-items:flex-start;padding:28px;}
+}
 </style>
 </head>
 <body>
-<header class="top">
-  <div class="top-inner">
-    <b>OPTIMA DIGITAL</b>
-    <a href="/#what-we-do">← What We Do</a>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <defs>
+          <linearGradient id="lgNav1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#a8d65e"/>
+            <stop offset="1" stop-color="#6ea82f"/>
+          </linearGradient>
+          <linearGradient id="lgNav2" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#8bc53f"/>
+            <stop offset="1" stop-color="#3f6b1a"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(17,17)">
+          <path d="M0 -13 C7.2 -13 13 -7.2 13 0 C5.8 0 0 -5.8 0 -13 Z" fill="url(#lgNav1)"/>
+          <path d="M13 0 C13 7.2 7.2 13 0 13 C0 5.8 5.8 0 13 0 Z" fill="url(#lgNav2)"/>
+          <path d="M0 13 C-7.2 13 -13 7.2 -13 0 C-5.8 0 0 5.8 0 13 Z" fill="url(#lgNav1)"/>
+          <path d="M-13 0 C-13 -7.2 -7.2 -13 0 -13 C0 -5.8 -5.8 0 -13 0 Z" fill="url(#lgNav2)"/>
+        </g>
+      </svg>
+      <span class="brand-text"><b>OPTIMA DIGITAL</b><span>PT Optima Digital Selaras</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#what-we-do">What We Do</a></li>
+      <li><a href="/#products">Products</a></li>
+      <li><a href="/#industries">Industries</a></li>
+      <li><a href="/#work">Client Work</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="web-hero">
+  <div class="wrap">
+    <div class="intro">
+      <a class="crumb" href="/#what-we-do">← Back to What We Do</a>
+      <div class="kicker">Web studio</div>
+      <h1>High-quality websites and digital interfaces that communicate clearly.</h1>
+      <p class="lead">We design and build sites that perform smoothly and support real conversion goals — from corporate presence to landing pages, business websites, and e-commerce experiences.</p>
+      <p class="meta">Corporate Websites · UX &amp; UI Design · Responsive</p>
+      <div class="hero-actions">
+        <a href="mailto:marketing@optimadigital.co.id" class="btn btn-solid">Start a website project <span class="btn-arrow">→</span></a>
+        <a href="#covers" class="btn btn-line">See what it covers</a>
+      </div>
+    </div>
+    <div class="browser" aria-hidden="true">
+      <div class="chrome"><i></i><i></i><i></i><div class="url">www.your-company.co.id</div></div>
+      <div class="site">
+        <div class="site-nav"><b>ACME CORPORATE</b><span>About · Services · Contact</span></div>
+        <div class="site-hero">
+          <em>Corporate website</em>
+          <h2>A digital presence that matches how you operate.</h2>
+          <p>Clear structure, fast pages, and a path to enquiry — not a brochure that nobody reads.</p>
+          <span class="site-cta">Talk to us</span>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
-<main class="wrap">
-  <p class="crumb">What We Do</p>
-  <h1>Web &amp; Digital Experiences</h1>
-  <p>Corporate websites, landing pages, business websites, e-commerce experiences, UX/UI design, and responsive digital interfaces.</p>
-  <p class="meta">Corporate Websites · UX &amp; UI Design · Responsive</p>
-  <a class="back" href="/#what-we-do">Back to homepage →</a>
-</main>
+
+<section class="services reveal">
+  <div class="wrap">
+    <p class="label">The focus</p>
+    <h2>Clarity, performance, and conversion — not decoration.</h2>
+    <div class="svc-row">
+      <article class="svc big">
+        <div class="n">Communicate clearly</div>
+        <h3>Visitors should understand the offer in seconds.</h3>
+        <p>Structure, copy hierarchy, and visual focus so the business story is obvious — then the next action is obvious too.</p>
+      </article>
+      <article class="svc">
+        <div class="n">Perform smoothly</div>
+        <h3>Fast pages that feel reliable.</h3>
+        <p>Load time, interaction, and accessibility treated as part of the design — not a fix after launch.</p>
+      </article>
+      <article class="svc">
+        <div class="n">Convert</div>
+        <h3>Built around a real business goal.</h3>
+        <p>Enquiry, apply, buy, book, or inform — every screen supports one primary outcome.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="covers" class="cover reveal">
+  <div class="wrap">
+    <p class="label">What it covers</p>
+    <h2>Corporate websites, UX/UI, and responsive digital interfaces.</h2>
+    <p class="desc">The full scope behind the Web &amp; Digital card — from company sites and landing pages to commerce experiences.</p>
+    <div class="cover-grid">
+      <article class="cover-card">
+        <div class="cover-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h8M8 16h5"/></svg></div>
+        <h3>Corporate websites</h3>
+        <p>Company presence with homepage, about, services, proof, and contact — structured for trust and enquiry.</p>
+      </article>
+      <article class="cover-card">
+        <div class="cover-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5h16"/><path d="M8 15h8M8 11h5"/></svg></div>
+        <h3>Landing pages</h3>
+        <p>Single-purpose campaign pages for a product, offer, or event — one message, one CTA.</p>
+      </article>
+      <article class="cover-card">
+        <div class="cover-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a4 4 0 018 0v2"/></svg></div>
+        <h3>Business websites</h3>
+        <p>Service and SME sites that explain what you do, show work, and make it easy to get in touch.</p>
+      </article>
+      <article class="cover-card">
+        <div class="cover-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.6 12.2A2 2 0 009.5 17h7.7a2 2 0 002-1.6L21 7H6"/></svg></div>
+        <h3>E-commerce experiences</h3>
+        <p>Storefronts, catalogs, and checkout paths designed so customers can find and buy without friction.</p>
+      </article>
+      <article class="cover-card">
+        <div class="cover-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17h7M14 14h4"/></svg></div>
+        <h3>UX &amp; UI design</h3>
+        <p>Information architecture, visual system, and interaction states that people can actually use.</p>
+      </article>
+      <article class="cover-card">
+        <div class="cover-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+        <h3>Responsive interfaces</h3>
+        <p>One experience that holds up on phone, tablet, and desktop — including performance on slower networks.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="usecases reveal">
+  <div class="wrap">
+    <p class="label">Example sites we build</p>
+    <h2>Digital interfaces matched to a real conversion goal.</h2>
+    <div class="use-grid">
+      <div class="use">
+        <div class="use-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/></svg></div>
+        <div><h4>Company profile</h4><p>Corporate site that explains the organization, proof, and how to contact the team.</p></div>
+      </div>
+      <div class="use">
+        <div class="use-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <div><h4>Product or offer landing</h4><p>Campaign page for a loan, program, or launch — one CTA, no extra navigation noise.</p></div>
+      </div>
+      <div class="use">
+        <div class="use-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></div>
+        <div><h4>Service business site</h4><p>Packages, work samples, and a booking or WhatsApp path for SMEs.</p></div>
+      </div>
+      <div class="use">
+        <div class="use-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.6 12.2A2 2 0 009.5 17h7.7a2 2 0 002-1.6L21 7H6"/></svg></div>
+        <div><h4>Online shop</h4><p>Catalog, product detail, and checkout designed for conversion, not just display.</p></div>
+      </div>
+      <div class="use">
+        <div class="use-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></div>
+        <div><h4>Campaign microsite</h4><p>Short-lived program or event site with a focused story and a single next step.</p></div>
+      </div>
+      <div class="use">
+        <div class="use-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="7" r="3"/><path d="M2 21v-2a5 5 0 015-5h4a5 5 0 015 5v2"/><circle cx="18" cy="8" r="2.4"/></svg></div>
+        <div><h4>Partner or investor page</h4><p>Clean corporate layout for buyers, partners, or IR — serious, fast, easy to scan.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flow reveal">
+  <div class="wrap">
+    <p class="label">How a site gets made</p>
+    <h2>A short studio path — brief, design, launch.</h2>
+    <div class="flow-list">
+      <div class="flow-item">
+        <strong>01</strong>
+        <div>
+          <h4>Brief</h4>
+          <p>We lock audience, offer, and the one action the site must win — enquiry, apply, buy, or inform.</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <strong>02</strong>
+        <div>
+          <h4>Design</h4>
+          <p>We design IA, UI, and content around the brand — structure first, then visual system and interaction.</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <strong>03</strong>
+        <div>
+          <h4>Launch</h4>
+          <p>Responsive build, performance pass, CMS if needed, and a site your team can actually update.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final reveal">
+  <div class="wrap">
+    <div>
+      <h3>Need a website that communicates clearly and converts?</h3>
+      <p>Optima can design and build the corporate site, landing page, or commerce experience around your real goal.</p>
+    </div>
+    <a href="mailto:marketing@optimadigital.co.id" class="btn btn-solid">Discuss your website <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand">
+          <svg width="30" height="30" viewBox="0 0 34 34" fill="none">
+            <defs>
+              <linearGradient id="lgFoot1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#a8d65e"/>
+                <stop offset="1" stop-color="#6ea82f"/>
+              </linearGradient>
+              <linearGradient id="lgFoot2" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#8bc53f"/>
+                <stop offset="1" stop-color="#3f6b1a"/>
+              </linearGradient>
+            </defs>
+            <g transform="translate(17,17)">
+              <path d="M0 -13 C7.2 -13 13 -7.2 13 0 C5.8 0 0 -5.8 0 -13 Z" fill="url(#lgFoot1)"/>
+              <path d="M13 0 C13 7.2 7.2 13 0 13 C0 5.8 5.8 0 13 0 Z" fill="url(#lgFoot2)"/>
+              <path d="M0 13 C-7.2 13 -13 7.2 -13 0 C-5.8 0 0 5.8 0 13 Z" fill="url(#lgFoot1)"/>
+              <path d="M-13 0 C-13 -7.2 -7.2 -13 0 -13 C0 -5.8 -5.8 0 -13 0 Z" fill="url(#lgFoot2)"/>
+            </g>
+          </svg>
+          <span class="brand-text"><b style="color:#fff;">OPTIMA DIGITAL</b><span>PT Optima Digital Selaras</span></span>
+        </a>
+        <p>We enable organizations to build, transform, and scale through technology — creating connected ecosystems that drive sustainable growth.</p>
+      </div>
+      <div class="foot-col">
+        <h6>What We Do</h6>
+        <a href="/solutions/enterprise-software/">Enterprise Software</a>
+        <a href="/products/">SaaS Products</a>
+        <a href="/solutions/web-digital/">Web &amp; Digital Experiences</a>
+        <a href="/solutions/digital-transformation/">Digital Transformation</a>
+      </div>
+      <div class="foot-col">
+        <h6>Products</h6>
+        <a href="/#products">Bank &amp; Financial</a>
+        <a href="/#products">Government &amp; Community</a>
+        <a href="/#products">Commerce &amp; Transactions</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href="/#about">About Us</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h6>Get in Touch</h6>
+        <p>marketing@optimadigital.co.id</p>
+        <p>+62 812 988 5679</p>
+        <p>Ruko Golden Madrid Blok D No. 26, Jl. Letnan Sutopo, BSD City, Serpong, Tangerang Selatan, Banten 15310</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 PT Optima Digital Selaras. All rights reserved.</span>
+      <span>www.optimadigital.co.id</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  io.observe(el);
+});
+</script>
 </body>
 </html>
