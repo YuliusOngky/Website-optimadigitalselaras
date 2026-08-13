@@ -3,7 +3,7 @@
 #
 # From a laptop on the LAN (SSH key already on the NAS):
 #   $env:DEPLOY_HOST = "192.168.1.20"
-#   $env:DEPLOY_USER = "NAS GIOS"
+#   $env:DEPLOY_USER = "NAS_GIOS"
 #   $env:DEPLOY_KEY  = "$env:USERPROFILE\.ssh\id_ed25519"   # optional
 #   .\scripts\deploy-optima-web.ps1
 #
@@ -16,7 +16,7 @@ $ErrorActionPreference = "Stop"
 
 $RepoRoot = Split-Path -Parent $PSScriptRoot
 $HostName = if ($env:DEPLOY_HOST) { $env:DEPLOY_HOST } else { "192.168.1.20" }
-$UserName = if ($env:DEPLOY_USER) { $env:DEPLOY_USER } else { "NAS GIOS" }
+$UserName = if ($env:DEPLOY_USER) { $env:DEPLOY_USER } else { "NAS_GIOS" }
 $RemoteDir = if ($env:DEPLOY_REMOTE_DIR) { $env:DEPLOY_REMOTE_DIR } else { "C:\deploy\optima-live" }
 $Identity = $env:DEPLOY_KEY
 

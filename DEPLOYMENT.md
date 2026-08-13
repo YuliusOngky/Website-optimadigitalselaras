@@ -12,7 +12,7 @@ Orisa Vite SPA lives at `orisa.html` / `src/`. Do not deploy only that SPA onto 
 
 | Layer | Detail |
 |---|---|
-| Host | Windows NAS `192.168.1.20` (`DESKTOP-5QDC7T3`, user `NAS GIOS`) |
+| Host | Windows NAS `192.168.1.20` (`DESKTOP-5QDC7T3`, user `NAS_GIOS`) |
 | Public DNS / TLS | Cloudflare (`www` + apex) |
 | **Live origin** | Docker container `optima-web` (`nginx:1.27-alpine`) → host port **8088** |
 | Staging on NAS | `C:\deploy\optima-live\` then `docker cp` into `optima-web:/usr/share/nginx/html/` |
@@ -40,7 +40,7 @@ Prefer SSH **key** auth. Do not store NAS passwords in the repo or `.claude/`.
 
 ```powershell
 $env:DEPLOY_HOST = "192.168.1.20"
-$env:DEPLOY_USER = "NAS GIOS"
+$env:DEPLOY_USER = "NAS_GIOS"
 $env:DEPLOY_KEY  = "$env:USERPROFILE\.ssh\id_ed25519"   # if you have a key
 .\scripts\deploy-optima-web.ps1
 ```

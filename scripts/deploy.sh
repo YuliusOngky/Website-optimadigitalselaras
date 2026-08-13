@@ -16,7 +16,7 @@ if command -v powershell >/dev/null 2>&1; then
 else
   echo "Use PowerShell on the LAN laptop:"
   echo "  \$env:DEPLOY_HOST='192.168.1.20'"
-  echo "  \$env:DEPLOY_USER='NAS GIOS'"
+  echo "  \$env:DEPLOY_USER='NAS_GIOS'"
   echo "  powershell -File scripts/deploy-optima-web.ps1"
   exit 1
 fi

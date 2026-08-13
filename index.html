@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Optima Digital Selaras — Digital Ecosystem Enabler</title>
-<link rel="icon" type="image/png" href="/assets/optima/logo.png">
+<link rel="icon" type="image/png" href="/assets/optima/logo.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
@@ -73,7 +73,7 @@ img{max-width:100%;display:block;}
 }
 #nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
 .brand{display:flex;align-items:center;gap:12px;}
-.brand-mark{display:block;width:36px;height:36px;object-fit:contain;flex-shrink:0;}
+.brand-mark{display:block;width:44px;height:44px;object-fit:contain;flex-shrink:0;}
 .brand-text{line-height:1.15;}
 .brand-text b{display:block;color:#fff;font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;letter-spacing:.01em;}
 .brand-text span{display:block;color:rgba(255,255,255,.55);font-size:11px;font-weight:500;}
@@ -259,19 +259,23 @@ section{padding:110px 0;}
 .op-cta .btn-arrow{transition:transform .2s;}
 .op-suite-card:hover .op-cta .btn-arrow,
 .op-card:hover .op-cta .btn-arrow{transform:translateX(3px);}
-.op-suite-head{
-  display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;
-  margin-bottom:12px;
-}
+.op-suite-head{margin-bottom:12px;}
 .op-suite-label{
-  font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--muted);font-family:'Manrope',sans-serif;margin:0;
+  display:flex;align-items:center;justify-content:flex-start;flex-wrap:wrap;gap:10px 14px;
+  margin:0;padding:12px 18px;border-radius:8px;
+  background:var(--teal);color:#0b1220;
+  font-family:'Manrope',sans-serif;
+}
+.op-suite-label b{
+  font-size:14.4px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  line-height:1;white-space:nowrap;
 }
 .op-suite-flow{
-  display:flex;align-items:center;gap:8px;margin:0;
-  font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy-800);
+  display:inline-flex;align-items:center;gap:8px;margin:0;
+  font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  line-height:1;color:#0b1220;
 }
-.op-suite-flow i{color:var(--teal);font-style:normal;font-weight:800;}
+.op-suite-flow i{color:#0b1220;font-style:normal;font-weight:800;}
 .op-suite-grid{
   display:grid;grid-template-columns:1fr 1.28fr 1fr;gap:12px;align-items:stretch;
 }
@@ -381,6 +385,47 @@ section{padding:110px 0;}
 .op-mini b{display:block;font-size:13px;line-height:1.25;}
 .op-mini span{display:block;font-size:11.5px;color:var(--muted);font-weight:500;}
 .op-lps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;}
+.op-preview{margin-top:16px;}
+.op-sites{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+.op-site{display:flex;flex-direction:column;gap:6px;color:inherit;min-width:0;}
+.op-site.is-live{grid-column:1/-1;}
+.op-site-frame{
+  display:block;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.op-site:hover .op-site-frame{
+  transform:translateY(-2px);
+  border-color:rgba(11,18,32,.16);
+  box-shadow:0 10px 18px rgba(11,18,32,.08);
+}
+.op-site-bar{
+  display:flex;align-items:center;gap:4px;background:#eef1f4;padding:5px 7px;
+}
+.op-site-bar i{width:6px;height:6px;border-radius:50%;background:#c5cdd6;flex-shrink:0;}
+.op-site-bar span{
+  margin-left:4px;font-size:10.5px;font-weight:600;color:var(--muted);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.op-site-viewport{
+  display:block;width:100%;height:320px;overflow:hidden;position:relative;background:#128f7a;
+}
+.op-site-iframe{
+  position:absolute;top:0;left:0;width:1280px;height:900px;border:0;
+  pointer-events:none;transform-origin:top left;background:#fff;
+}
+.op-site-screen{
+  display:block;width:100%;height:88px;object-fit:cover;object-position:center top;background:#eef1f4;
+}
+.op-site em{
+  font-style:normal;font-size:12px;font-weight:700;color:var(--teal-dark);
+}
+.op-site.is-soon{cursor:default;opacity:.72;}
+.op-site.is-soon .op-site-frame{background:#f7f8fa;}
+.op-site.is-soon .op-site-screen{
+  height:88px;display:flex;align-items:center;justify-content:center;
+  font-size:11.5px;font-weight:600;color:var(--muted);letter-spacing:.02em;
+}
+.op-site.is-soon em{color:var(--muted);font-weight:600;}
 .op-lp{display:flex;flex-direction:column;gap:7px;color:inherit;min-width:0;}
 .op-lp-frame{
   display:block;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:#fff;
@@ -681,6 +726,8 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
   .op-suite-card{min-height:0;padding:22px 18px;}
   .op-grid{grid-template-columns:1fr;}
   .op-peek,.op-lps{grid-template-columns:1fr 1fr;}
+  .op-sites{grid-template-columns:1fr 1fr;}
+  .op-site-viewport{height:230px;}
 }
 
 .owd-section {
@@ -888,7 +935,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
 <nav id="nav">
   <div class="wrap">
     <a href="#" class="brand">
-      <img class="brand-mark" src="/assets/optima/logo.png" width="36" height="36" alt="Optima Digital Selaras">
+      <img class="brand-mark" src="/assets/optima/logo.png?v=2" width="44" height="44" alt="Optima Digital Selaras">
       <span class="brand-text"><b>PT Optima Digital Selaras</b></span>
     </a>
     <ul class="nav-links">
@@ -1081,8 +1128,10 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
 
     <div class="op-suite">
       <div class="op-suite-head">
-        <p class="op-suite-label">Credit suite</p>
-        <p class="op-suite-flow" aria-hidden="true"><span>Originate</span><i>→</i><span>Assess</span><i>→</i><span>Collect</span></p>
+        <p class="op-suite-label">
+          <b>Credit suite:</b>
+          <span class="op-suite-flow"><span>Originate</span><i>→</i><span>Assess</span><i>→</i><span>Collect</span></span>
+        </p>
       </div>
       <div class="op-suite-grid">
         <a href="/products/los" class="op-suite-card">
@@ -1185,7 +1234,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
         </div>
       </article>
       <article class="op-card op-expand">
-        <a href="/products/web-solutions" class="op-card-main">
+        <a href="/previews/envato-test/" class="op-card-main" target="_blank" rel="noopener noreferrer">
           <div class="op-kicker">07</div>
           <div class="op-icon" aria-hidden="true">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 21h8M12 18v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
@@ -1195,31 +1244,41 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
           <p>High-performance websites and ready industry landings — from financial to retail — built to convert.</p>
           <span class="op-cta">View Solutions <span class="btn-arrow" aria-hidden="true">→</span></span>
         </a>
-        <div class="op-lps" aria-label="Website templates by industry">
-          <a href="/products/web-solutions#financial" class="op-lp">
-            <span class="op-lp-frame" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-lp-screen fin"></span></span>
-            <b>Financial</b><em>Bank &amp; lending</em>
-          </a>
-          <a href="/products/web-solutions#retail" class="op-lp">
-            <span class="op-lp-frame" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-lp-screen retail"></span></span>
-            <b>Retail</b><em>Commerce sites</em>
-          </a>
-          <a href="/products/web-solutions#government" class="op-lp">
-            <span class="op-lp-frame" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-lp-screen gov"></span></span>
-            <b>Government</b><em>Public portals</em>
-          </a>
-          <a href="/products/web-solutions#cooperatives" class="op-lp">
-            <span class="op-lp-frame" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-lp-screen coop"></span></span>
-            <b>Koperasi</b><em>Member sites</em>
-          </a>
-          <a href="/products/web-solutions#sme" class="op-lp">
-            <span class="op-lp-frame" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-lp-screen sme"></span></span>
-            <b>SME</b><em>Company profile</em>
-          </a>
-          <a href="/products/web-solutions#enterprise" class="op-lp">
-            <span class="op-lp-frame" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-lp-screen ent"></span></span>
-            <b>Enterprise</b><em>Corporate web</em>
-          </a>
+        <div class="op-preview">
+          <div class="op-sites">
+            <a class="op-site is-live" href="/previews/envato-test/" target="_blank" rel="noopener noreferrer" data-template-roll data-name="Interno" data-homes="/previews/envato-test/,/previews/envato-test/index-2.html,/previews/envato-test/index-3.html,/previews/envato-test/index-4.html,/previews/envato-test/index-5.html">
+              <span class="op-site-frame">
+                <span class="op-site-bar"><i></i><i></i><i></i><span>Interno · Home 01</span></span>
+                <span class="op-site-viewport">
+                  <iframe class="op-site-iframe" src="/previews/envato-test/" title="Interno Home 01" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin"></iframe>
+                </span>
+              </span>
+              <em>Open Interno →</em>
+            </a>
+            <a class="op-site is-live" href="/previews/yoga-test/" target="_blank" rel="noopener noreferrer" data-template-roll data-name="Optima Yoga" data-homes="/previews/yoga-test/?v=4,/previews/yoga-test/index-3.html?v=4,/previews/yoga-test/index-4.html?v=4,/previews/yoga-test/index-5.html?v=4">
+              <span class="op-site-frame">
+                <span class="op-site-bar"><i></i><i></i><i></i><span>Optima Yoga · Home 01</span></span>
+                <span class="op-site-viewport">
+                  <iframe class="op-site-iframe" src="/previews/yoga-test/?v=4" title="Optima Yoga Home 01" loading="eager" tabindex="-1" sandbox="allow-scripts allow-same-origin"></iframe>
+                </span>
+              </span>
+              <em>Open Optima Yoga →</em>
+            </a>
+            <div class="op-site is-soon">
+              <span class="op-site-frame">
+                <span class="op-site-bar"><i></i><i></i><i></i><span>Template 03</span></span>
+                <span class="op-site-screen">Coming soon</span>
+              </span>
+              <em>Next industry template</em>
+            </div>
+            <div class="op-site is-soon">
+              <span class="op-site-frame">
+                <span class="op-site-bar"><i></i><i></i><i></i><span>Template 04</span></span>
+                <span class="op-site-screen">Coming soon</span>
+              </span>
+              <em>Next industry template</em>
+            </div>
+          </div>
         </div>
       </article>
     </div>
@@ -1432,7 +1491,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
     <div class="foot-brand-row">
       <div class="foot-brand">
         <a href="#nav" class="brand">
-          <img class="brand-mark" src="/assets/optima/logo.png" width="52" height="52" alt="Optima Digital Selaras">
+          <img class="brand-mark" src="/assets/optima/logo.png?v=2" width="52" height="52" alt="Optima Digital Selaras">
           <span class="brand-text">
             <b>PT Optima Digital Selaras</b>
             <i class="foot-mark" aria-hidden="true"></i>
@@ -1529,6 +1588,65 @@ document.querySelectorAll('.reveal').forEach(function(el){
   requestAnimationFrame(tick);
 })();
 
+/* Template preview boxes: zoomed-out live site, roll homes */
+(function(){
+  var PAGE_W = 1280;
+  var boxes = document.querySelectorAll('[data-template-roll]');
+  for (var b = 0; b < boxes.length; b++) initRoll(boxes[b]);
+
+  function initRoll(root){
+    var viewport = root.querySelector('.op-site-viewport');
+    var iframe = root.querySelector('.op-site-iframe');
+    var label = root.querySelector('.op-site-bar span');
+    var name = root.getAttribute('data-name') || 'Template';
+    var hrefs = (root.getAttribute('data-homes') || root.getAttribute('href') || '').split(',').map(function(s){ return s.trim(); }).filter(Boolean);
+    if (!iframe || !hrefs.length) return;
+    var homes = hrefs.map(function(href, n){ return { href: href, name: 'Home 0' + (n + 1) }; });
+    var i = 0, timer = null, hovering = false, loaded = false;
+
+    function fit(){
+      if (!viewport || !iframe) return;
+      iframe.style.transform = 'scale(' + (viewport.clientWidth / PAGE_W) + ')';
+    }
+
+    function show(n){
+      i = (n + homes.length) % homes.length;
+      var home = homes[i];
+      loaded = false;
+      iframe.src = home.href;
+      iframe.title = name + ' ' + home.name;
+      if (label) label.textContent = name + ' · ' + home.name;
+      root.href = home.href;
+    }
+
+    function start(){
+      if (timer || hovering || homes.length < 2) return;
+      timer = setInterval(function(){
+        if (!loaded) return;
+        show(i + 1);
+      }, 8000);
+    }
+
+    function stop(){
+      if (!timer) return;
+      clearInterval(timer);
+      timer = null;
+    }
+
+    iframe.addEventListener('load', function(){
+      fit();
+      setTimeout(function(){ loaded = true; }, 2500);
+    });
+
+    fit();
+    if (window.ResizeObserver) new ResizeObserver(fit).observe(viewport);
+    else window.addEventListener('resize', fit);
+    root.addEventListener('mouseenter', function(){ hovering = true; stop(); });
+    root.addEventListener('mouseleave', function(){ hovering = false; start(); });
+    start();
+  }
+})();
+
 /* Custom trailing cursor */
 (function(){
   if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return;
@@ -1539,6 +1657,15 @@ document.querySelectorAll('.reveal').forEach(function(el){
   document.body.appendChild(dot);
 
   var tx = -100, ty = -100, x = -100, y = -100;
+
+  function pointInRects(x, y, rects, pad){
+    for (var i = 0; i < rects.length; i++){
+      var r = rects[i];
+      if (r.width < 1 || r.height < 1) continue;
+      if (x >= r.left - pad && x <= r.right + pad && y >= r.top - pad && y <= r.bottom + pad) return true;
+    }
+    return false;
+  }
 
   function isOverText(e){
     var el = e.target;
@@ -1568,26 +1695,33 @@ document.querySelectorAll('.reveal').forEach(function(el){
     } catch (err){
       return false;
     }
-
-    var rects = probe.getClientRects();
-    var pad = 2;
-    for (var i = 0; i < rects.length; i++){
-      var r = rects[i];
-      if (r.width < 1 || r.height < 1) continue;
-      if (
-        e.clientX >= r.left - pad && e.clientX <= r.right + pad &&
-        e.clientY >= r.top - pad && e.clientY <= r.bottom + pad
-      ) return true;
-    }
-    return false;
+    return pointInRects(e.clientX, e.clientY, probe.getClientRects(), 2);
   }
+
+  function isOverLearnMoreLabel(e){
+    var link = e.target && e.target.closest && e.target.closest('.owd-link');
+    if (!link) return false;
+    var probe = document.createRange();
+    try { probe.selectNodeContents(link); } catch (err){ return false; }
+    return pointInRects(e.clientX, e.clientY, probe.getClientRects(), 6);
+  }
+
+  var HOVER_SELECTOR = 'a, button, .btn, .op-suite-card, .op-card, .op-mini, .op-lp, .op-demo, .op-site, .work-card, .about-card, input, textarea, select, [role="button"]';
+  var OWD_SKIP = '.owd-section, .owd-card, .owd-link';
 
   window.addEventListener('mousemove', function(e){
     tx = e.clientX; ty = e.clientY;
     dot.classList.add('is-visible');
-    dot.classList.toggle('is-text', isOverText(e));
+
+    var learnMore = isOverLearnMoreLabel(e);
+    var inOwd = !!(e.target.closest && e.target.closest(OWD_SKIP));
+    var hover = learnMore || (!inOwd && !!(e.target.closest && e.target.closest(HOVER_SELECTOR)));
+    dot.classList.toggle('is-hover', hover);
+    dot.classList.toggle('is-text', learnMore || isOverText(e));
   });
-  document.addEventListener('mouseleave', function(){ dot.classList.remove('is-visible'); });
+  document.addEventListener('mouseleave', function(){
+    dot.classList.remove('is-visible', 'is-hover', 'is-text');
+  });
 
   function raf(){
     x += (tx - x) * 0.18;
@@ -1596,14 +1730,6 @@ document.querySelectorAll('.reveal').forEach(function(el){
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
-
-  var HOVER_SELECTOR = 'a, button, .btn, .owd-card, .owd-link, .wwd-card, .op-suite-card, .op-card, .op-mini, .op-lp, .op-demo, .work-card, .about-card, input, textarea, select, [role="button"]';
-  document.addEventListener('mouseover', function(e){
-    if (e.target.closest(HOVER_SELECTOR)) dot.classList.add('is-hover');
-  });
-  document.addEventListener('mouseout', function(e){
-    if (e.target.closest(HOVER_SELECTOR)) dot.classList.remove('is-hover');
-  });
 })();
 </script>
 </body>

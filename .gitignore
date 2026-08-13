@@ -19,6 +19,7 @@ build/
 .vite/
 
 # Purchased template + local preview helpers (do not commit)
+public/previews/
 orisa-creative-agency-portfolio-react-template-2026-05-17-02-12-21-utc/
 orisa-creative-agency-portfolio-react-template-2026-05-17-02-12-21-utc.zip
 orisa-buka-di-browser/
