@@ -1,17 +1,45 @@
-name: Build check (no live deploy)
+name: Optima GIOS artifact (no live SCP)
 
-# Do not auto-deploy on push. GitHub-hosted runners cannot reach 192.168.1.20,
-# and uploading Vite dist/ would overwrite the live Optima HTML on optima-web :8088.
+# GitHub-hosted runners cannot reach 192.168.1.20.
+# Never SCP Vite/Orisa dist/ onto live Optima (Docker optima-web :8088).
+# This workflow only packages the Optima homepage for a later LAN / self-hosted deploy.
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
-  build:
+  package-optima-web:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout (including LFS hero video)
         uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Package files for optima-web :8088
+        run: |
+          mkdir -p artifact/assets/optima artifact/solutions artifact/products
+          cp index.html artifact/
+          cp -a public/assets/optima/. artifact/assets/optima/
+          cp -a public/solutions/. artifact/solutions/
+          cp -a public/products/. artifact/products/
+          ls -la artifact artifact/assets/optima artifact/solutions artifact/products
+
+      - name: Upload optima-web-8088 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: optima-web-8088
+          path: artifact/
+
+  vite-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -22,12 +50,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Vite project
+      - name: Build Vite project (Orisa library only — not live origin)
         run: npm run build
         env:
           VITE_APP_NAME: Website OptimaDigitalSelaras
-
-      - name: Reminder
-        run: |
-          echo "Build only. Live Optima is Docker optima-web on GIOS :8088."
-          echo "Do not SCP dist/ onto the NAS live origin."

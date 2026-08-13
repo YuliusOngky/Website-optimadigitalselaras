@@ -1,21 +1,22 @@
 #!/bin/bash
-# Intentionally does NOT upload Vite dist/ to live Optima.
-# Live origin on GIOS 192.168.1.20 is Docker optima-web (nginx :8088),
-# not IIS wwwroot and not /var/www.
+# Optima live origin is Docker optima-web on GIOS 192.168.1.20:8088.
+# This bash wrapper does not upload Vite/Orisa dist/.
+# On Windows LAN, use: powershell -File scripts/deploy-optima-web.ps1
 
 set -euo pipefail
 
-echo "This script will not deploy to www.optimadigitalselaras.com."
+echo "Live target: Docker optima-web (nginx) at 192.168.1.20:8088"
+echo "Homepage files: index.html + public/assets/optima + public/solutions + public/products"
 echo
-echo "Live stack:"
-echo "  Host:   192.168.1.20 (NAS GIOS, Windows)"
-echo "  Origin: docker optima-web  nginx:1.27-alpine  host :8088"
-echo "  Staging file often used: C:\\deploy\\new_index.html"
-echo "  IIS :80 wwwroot is a leftover Vite SPA and is NOT the Cloudflare origin."
+echo "Do not scp Vite dist/ or IIS wwwroot — that is not the Cloudflare origin."
 echo
-echo "Repo homepage is index.html + public/assets/optima/hero.mp4 (matches live)."
-echo "Do not scp only the Orisa SPA onto optima-web — that drops the video homepage."
-echo "Update live by copying index.html + public/assets/optima/ into the optima-web nginx root, then:"
-echo "  docker restart optima-web"
-echo "Verify: http://192.168.1.20:8088  and  https://www.optimadigitalselaras.com"
-exit 1
+if command -v powershell >/dev/null 2>&1; then
+  echo "Running scripts/deploy-optima-web.ps1 ..."
+  powershell -NoProfile -ExecutionPolicy Bypass -File "$(dirname "$0")/deploy-optima-web.ps1"
+else
+  echo "Use PowerShell on the LAN laptop:"
+  echo "  \$env:DEPLOY_HOST='192.168.1.20'"
+  echo "  \$env:DEPLOY_USER='NAS GIOS'"
+  echo "  powershell -File scripts/deploy-optima-web.ps1"
+  exit 1
+fi

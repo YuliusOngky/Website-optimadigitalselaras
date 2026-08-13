@@ -14,9 +14,11 @@ npm run dev:orisa    # Orisa React template at /orisa.html
 npm run sync:live    # Re-pull live HTML and explode embedded media
 ```
 
-Orisa (`src/`, `orisa.html`) stays as a component library / future SPA. Do not deploy only the Vite SPA `dist/` onto Docker `optima-web` without the Optima `index.html` and hero video.
+Learn more routes: `/solutions/enterprise-software`, `/products`, `/solutions/web-digital`, `/solutions/digital-transformation` (files under `public/`).
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for GIOS (`optima-web` **:8088**).
+Orisa (`src/`, `orisa.html`) stays as a component library / future SPA. Live origin on GIOS is Docker **`optima-web :8088`**, not IIS `:80`.
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for LAN deploy (`scripts/deploy-optima-web.ps1`).
 
 ## 📋 Features
 

@@ -2,7 +2,9 @@
 
 **Live site:** [www.optimadigitalselaras.com](https://www.optimadigitalselaras.com)
 
-The public homepage is standalone Optima HTML (hero video + animations). In this repo that is root `index.html` plus `public/assets/optima/` (extracted from live; no 9 MB base64 dump).
+Scope: this website only. Do not use other LAN clouds for this deploy.
+
+The public homepage is standalone Optima HTML (hero video + animations). In this repo that is root `index.html` plus `public/assets/optima/` (video extracted; no 9 MB base64 dump).
 
 Orisa Vite SPA lives at `orisa.html` / `src/`. Do not deploy only that SPA onto `optima-web` or you will drop the video homepage.
 
@@ -13,45 +15,68 @@ Orisa Vite SPA lives at `orisa.html` / `src/`. Do not deploy only that SPA onto 
 | Host | Windows NAS `192.168.1.20` (`DESKTOP-5QDC7T3`, user `NAS GIOS`) |
 | Public DNS / TLS | Cloudflare (`www` + apex) |
 | **Live origin** | Docker container `optima-web` (`nginx:1.27-alpine`) → host port **8088** |
-| Live staging file | `C:\deploy\new_index.html` (~9.4 MB HTML, same size as live) |
-| IIS `:80` | `C:\inetpub\wwwroot` — leftover Vite SPA (~2 KB `index.html`). **Not** the Cloudflare origin |
-| Vite staging | `C:\deploy\dist` (SPA). `C:\deploy\dist-prod` is empty |
+| Staging on NAS | `C:\deploy\optima-live\` then `docker cp` into `optima-web:/usr/share/nginx/html/` |
+| IIS `:80` | `C:\inetpub\wwwroot` — leftover Vite SPA. **Not** the Cloudflare origin |
+| Node/nginx on host OS | Not installed; nginx runs only inside Docker |
 
 ```
 Browser → Cloudflare → GIOS 192.168.1.20:8088 (optima-web nginx) → Optima HTML
                          192.168.1.20:80  (IIS wwwroot)           → Vite SPA (not live)
 ```
 
-## Update live (manual, from LAN)
-
-1. Edit/export the Optima HTML (match [www.optimadigitalselaras.com](https://www.optimadigitalselaras.com), not Orisa).
-2. Copy it to the NAS, for example:
-   - `C:\deploy\new_index.html`
-   - then into the `optima-web` nginx html mount (inspect with `docker inspect optima-web`).
-3. Restart only if needed: `docker restart optima-web`
-4. Verify:
-   - `http://192.168.1.20:8088` — Optima HTML
-   - `https://www.optimadigitalselaras.com` — same content (Cloudflare)
-
-SSH from this PC uses PuTTY `plink`/`pscp` to `NAS GIOS@192.168.1.20`. Prefer an SSH **key**; do not store passwords in the repo or `.claude/`.
-
 ## This Git repo vs live
 
 | Path | Role |
 |---|---|
-| `index.html` + `public/assets/optima/` | **Production homepage** (matches live: video + animations) |
+| `index.html` + `public/assets/optima/` | **Production homepage** (video + animations) |
+| `public/solutions/` + `public/products/` | Learn more pages (Enterprise, SaaS, Web, Digital Transformation) |
 | `orisa.html`, `src/` | Orisa React template — library / future SPA |
-| `solutions/` | Extra HTML pages (e.g. enterprise software). Live `/solutions/enterprise-software/` is still 404 |
-| `.github/workflows/deploy.yml` | Build check only. Does **not** auto-deploy to GIOS |
+| `.github/workflows/deploy.yml` | Packages `optima-web-8088` artifact + Vite check. **No SCP to GIOS** |
+| `scripts/deploy-optima-web.ps1` | LAN deploy into Docker `optima-web` `:8088` |
+
+## Update live (manual, from LAN)
+
+Prefer SSH **key** auth. Do not store NAS passwords in the repo or `.claude/`.
+
+```powershell
+$env:DEPLOY_HOST = "192.168.1.20"
+$env:DEPLOY_USER = "NAS GIOS"
+$env:DEPLOY_KEY  = "$env:USERPROFILE\.ssh\id_ed25519"   # if you have a key
+.\scripts\deploy-optima-web.ps1
+```
+
+The script copies `index.html`, `public/assets/optima`, `public/solutions`, and `public/products` to `C:\deploy\optima-live\`, then:
+
+```
+docker cp C:\deploy\optima-live\. optima-web:/usr/share/nginx/html/
+docker restart optima-web
+```
+
+Verify:
+
+- `http://192.168.1.20:8088` — Optima HTML (origin)
+- `https://www.optimadigitalselaras.com` — same content via Cloudflare
+
+Do **not** copy into `C:\inetpub\wwwroot` (IIS) unless you intentionally want to change the unused `:80` site.
 
 ## GitHub Actions
 
-`deploy.yml` no longer deploys on push. It only runs `npm ci` + `npm run build` on **workflow_dispatch**, so a failed SCP cannot overwrite live Optima.
+`deploy.yml` runs on `main` / `workflow_dispatch`:
 
-A future automatic deploy needs a **self-hosted runner on the GIOS NAS**, targeting `optima-web` `:8088`, not Linux `/var/www` and not IIS `wwwroot`.
+1. Checkout with Git LFS (hero video)
+2. Upload artifact **`optima-web-8088`** (homepage + solutions + products)
+3. `npm ci && npm run build` as an Orisa library check only
 
-Required later (not set today): self-hosted runner + SSH key on the NAS. Do not put `DEPLOY_HOST=192.168.1.20` on github.com ubuntu runners.
+GitHub-hosted `ubuntu-latest` **cannot** reach `192.168.1.20`. Automatic live deploy needs a **self-hosted runner on the GIOS NAS** later, still targeting `optima-web` `:8088`, not Linux `/var/www` and not IIS `wwwroot`.
+
+Do not add `appleboy/scp-action` against `DEPLOY_HOST=192.168.1.20` on github.com runners.
+
+## Security notes
+
+- `.gitignore` covers `.claude/`, `.env.production`, template zips, and dump media.
+- `.env.example` is tracked; `.env.production` is not.
+- Rotate the NAS SSH password off any old plaintext copies; use a deploy key.
 
 ## Vercel (optional)
 
-`vercel.json` can host the Vite SPA. That is a **separate** preview, not www.optimadigitalselaras.com.
+`vercel.json` can preview this static homepage. That is **not** www.optimadigitalselaras.com (GIOS + Cloudflare).

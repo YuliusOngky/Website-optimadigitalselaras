@@ -4,41 +4,557 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SaaS Products — Optima Digital Selaras</title>
+<meta name="description" content="Optima Digital cloud products: CreditRiskDynamics, loan origination, collection, HRIS, koperasi, POS, and more — multi-tenant software used by many organizations." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#020b1d;--ink:#0f172a;--muted:#475569;--blue:#2563eb;}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;}
-a{color:inherit;text-decoration:none;}
-.top{background:var(--navy);color:#fff;padding:18px 24px;}
-.top-inner{width:min(1180px,100%);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;}
-.top b{font-family:Manrope,Inter,sans-serif;font-weight:800;letter-spacing:.02em;}
-.top a{color:rgba(255,255,255,.8);font-size:14px;font-weight:600;}
-.top a:hover{color:#fff;}
-.wrap{width:min(800px,100%);margin:0 auto;padding:72px 24px 96px;}
-.crumb{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:16px;}
-h1{font-family:Manrope,Inter,sans-serif;font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-.03em;margin-bottom:20px;}
-p{font-size:17px;color:var(--muted);max-width:640px;}
-.meta{margin-top:28px;font-size:14px;font-weight:600;color:#64748b;}
-.back{display:inline-block;margin-top:40px;font-weight:700;color:var(--blue);}
-.back:hover{color:#1d4ed8;}
+:root{
+  --navy-950:#020b1d;
+  --navy-900:#071633;
+  --teal:#8bc53f;
+  --teal-dark:#6ea82f;
+  --ink:#0f172a;
+  --muted:#475569;
+  --line:rgba(11,18,32,.09);
+  --off:#f4f1fb;
+  --saas:#7c3aed;
+  --saas-2:#2f6fed;
+  --saas-3:#22b06f;
+  --saas-4:#1cae86;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.5;}
+h1,h2,h3,h4,h5,h6{font-family:'Manrope',Inter,sans-serif;font-weight:800;letter-spacing:-0.02em;color:var(--ink);}
+a{text-decoration:none;color:inherit;}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px;}
+
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(4,12,28,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-text{line-height:1.15;}
+.brand-text b{display:block;color:#fff;font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;letter-spacing:.02em;}
+.brand-text span{display:block;color:rgba(255,255,255,.55);font-size:11px;font-weight:500;}
+.nav-links{display:flex;gap:34px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,.85);font-size:14.5px;font-weight:500;}
+.nav-links a:hover{color:#fff;}
+
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:13px 24px;border-radius:8px;font-size:14.5px;font-weight:600;
+  transition:all .2s ease;white-space:nowrap;
+}
+.btn-solid{background:var(--saas);color:#fff;}
+.btn-solid:hover{background:#6d28d9;transform:translateY(-1px);}
+.btn-ghost{border:1.5px solid rgba(124,58,237,.35);color:var(--saas);background:#fff;}
+.btn-ghost:hover{border-color:var(--saas);background:#f5f3ff;}
+.btn-light{background:#fff;color:var(--navy-950);}
+.btn-light:hover{background:#ede9fe;}
+.btn-arrow{transition:transform .2s;}
+.btn:hover .btn-arrow{transform:translateX(3px);}
+
+/* HERO — light split, not a full navy banner */
+.saas-hero{
+  padding:120px 0 72px;
+  background:
+    radial-gradient(900px 420px at 90% -10%, rgba(124,58,237,.16), transparent 60%),
+    linear-gradient(180deg, #f7f4ff 0%, #fff 70%);
+  border-bottom:1px solid var(--line);
+}
+.saas-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:56px;
+  align-items:center;
+}
+.crumb{font-size:13.5px;font-weight:600;color:var(--saas);margin-bottom:22px;display:inline-block;}
+.crumb:hover{color:#5b21b6;}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--saas);background:#ede9fe;border-radius:999px;padding:6px 12px;margin-bottom:18px;
+}
+.saas-hero h1{
+  font-size:clamp(32px,4.2vw,52px);line-height:1.08;letter-spacing:-0.035em;
+  max-width:640px;margin-bottom:18px;
+}
+.saas-hero .lead{font-size:17px;line-height:1.7;color:var(--muted);max-width:540px;margin-bottom:28px;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
+.stat-row{display:flex;gap:28px;flex-wrap:wrap;padding-top:8px;border-top:1px solid var(--line);}
+.stat b{display:block;font-family:'Manrope',sans-serif;font-size:28px;color:var(--saas);letter-spacing:-.03em;}
+.stat span{font-size:13px;color:var(--muted);font-weight:600;}
+
+.window{
+  background:#0b1220;border-radius:16px;overflow:hidden;
+  box-shadow:0 30px 70px rgba(76,29,149,.22);
+  border:1px solid #1f2a44;
+}
+.window-bar{display:flex;align-items:center;gap:8px;padding:12px 14px;background:#111a2e;}
+.window-bar i{width:9px;height:9px;border-radius:50%;display:block;}
+.window-bar i:nth-child(1){background:#ff5f57;}
+.window-bar i:nth-child(2){background:#febc2e;}
+.window-bar i:nth-child(3){background:#28c840;}
+.window-bar em{font-style:normal;margin-left:8px;font-size:12px;color:#93a4c7;font-weight:600;}
+.window-body{display:grid;grid-template-columns:120px 1fr;min-height:280px;}
+.side{padding:16px 12px;background:#0e1730;border-right:1px solid #1f2a44;color:#8ea0c5;font-size:12px;}
+.side p{padding:8px 10px;border-radius:8px;margin-bottom:4px;}
+.side p.on{background:rgba(124,58,237,.28);color:#ddd6fe;font-weight:700;}
+.main{padding:18px;}
+.main h3{color:#fff;font-size:15px;margin-bottom:14px;}
+.kpi{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
+.kpi div{background:#151f38;border:1px solid #243154;border-radius:10px;padding:12px;}
+.kpi b{display:block;color:#c4b5fd;font-size:18px;font-family:'Manrope',sans-serif;}
+.kpi span{font-size:11px;color:#8ea0c5;}
+.bars{display:flex;align-items:flex-end;gap:8px;height:78px;padding:8px 4px 0;}
+.bars span{flex:1;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#a78bfa,#7c3aed);}
+.bars span:nth-child(1){height:42%;opacity:.55;}
+.bars span:nth-child(2){height:68%;}
+.bars span:nth-child(3){height:54%;opacity:.75;}
+.bars span:nth-child(4){height:88%;}
+.bars span:nth-child(5){height:62%;opacity:.7;}
+.bars span:nth-child(6){height:74%;}
+.flagship{
+  margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;
+  color:#c4b5fd;font-size:12.5px;font-weight:600;
+}
+.flagship a{color:#fff;text-decoration:underline;text-underline-offset:3px;}
+
+/* COMPARE */
+.compare{padding:88px 0;background:#fff;}
+.compare-head{max-width:680px;margin-bottom:40px;}
+.compare-head .label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--saas);margin-bottom:12px;}
+.compare-head h2{font-size:clamp(26px,3vw,36px);line-height:1.18;}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.compare-card{border-radius:16px;padding:32px;min-height:100%;}
+.compare-card.ent{background:#f8fafc;border:1px solid #e2e8f0;}
+.compare-card.saas{background:#1e0b3d;color:#fff;border:1px solid #3b0764;}
+.compare-card .tag{
+  display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  padding:5px 10px;border-radius:999px;margin-bottom:16px;
+}
+.compare-card.ent .tag{background:#e2e8f0;color:#334155;}
+.compare-card.saas .tag{background:rgba(167,139,250,.22);color:#ddd6fe;}
+.compare-card h3{font-size:22px;margin-bottom:10px;}
+.compare-card.saas h3{color:#fff;}
+.compare-card p{font-size:15px;line-height:1.7;color:var(--muted);margin-bottom:20px;}
+.compare-card.saas p{color:rgba(255,255,255,.7);}
+.compare-card ul{list-style:none;}
+.compare-card li{font-size:14.5px;padding:8px 0;border-top:1px solid rgba(15,23,42,.08);font-weight:600;}
+.compare-card.saas li{border-top-color:rgba(255,255,255,.1);color:#ede9fe;}
+.compare-card a{display:inline-flex;margin-top:22px;font-weight:700;font-size:14px;color:var(--saas);}
+.compare-card.saas a{color:#c4b5fd;}
+
+/* CATALOG */
+.catalog{padding:88px 0;background:var(--off);}
+.catalog-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px;}
+.catalog-head .label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--saas);margin-bottom:12px;}
+.catalog-head h2{font-size:clamp(26px,3vw,36px);max-width:560px;}
+.legend{display:flex;gap:16px;flex-wrap:wrap;}
+.legend span{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--muted);}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block;}
+.cat-block{margin-bottom:28px;}
+.cat-label{
+  display:flex;align-items:center;gap:14px;margin-bottom:14px;
+  font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+}
+.cat-label .line{flex:1;height:1px;background:rgba(15,23,42,.1);}
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.prod{
+  background:#fff;border:1px solid #e8e0f5;border-radius:12px;padding:18px 18px 16px;
+  border-left:4px solid var(--c,#7c3aed);
+  display:flex;flex-direction:column;gap:6px;min-height:118px;
+}
+.prod strong{font-size:15px;}
+.prod em{font-style:normal;font-size:12px;font-weight:700;color:var(--c,#7c3aed);}
+.prod p{font-size:13.5px;color:var(--muted);line-height:1.55;}
+.prod a{margin-top:auto;font-size:13px;font-weight:700;color:var(--c,#7c3aed);}
+
+/* TENANT MODEL */
+.model{padding:88px 0;background:var(--navy-950);color:#fff;}
+.model .label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#c4b5fd;margin-bottom:12px;}
+.model h2{color:#fff;font-size:clamp(26px,3vw,36px);max-width:640px;margin-bottom:40px;}
+.model-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;}
+.model-step{padding:0 28px 0 0;position:relative;}
+.model-step:not(:last-child)::after{
+  content:"";position:absolute;right:18px;top:22px;width:calc(100% - 70px);height:2px;
+  background:linear-gradient(90deg,#7c3aed,rgba(124,58,237,.15));
+}
+.num{
+  width:44px;height:44px;border-radius:12px;background:var(--saas);color:#fff;
+  display:grid;place-items:center;font-family:'Manrope',sans-serif;font-weight:800;margin-bottom:18px;
+}
+.model-step h4{color:#fff;font-size:18px;margin-bottom:10px;}
+.model-step p{color:rgba(255,255,255,.62);font-size:14.5px;line-height:1.65;max-width:280px;}
+
+/* CTA */
+.final{padding:72px 0;background:#fff;border-top:1px solid var(--line);}
+.final .wrap{
+  display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;
+  background:linear-gradient(135deg,#1e0b3d,#4c1d95);
+  border-radius:20px;padding:40px 44px;color:#fff;
+}
+.final h3{color:#fff;font-size:clamp(22px,3vw,32px);max-width:520px;margin-bottom:8px;}
+.final p{color:rgba(255,255,255,.7);max-width:460px;}
+.final-actions{display:flex;gap:12px;flex-wrap:wrap;}
+
+footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28px;border-top:1px solid rgba(255,255,255,.08);}
+.foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1.2fr;gap:32px;margin-bottom:52px;}
+.foot-brand p{font-size:13.5px;color:rgba(255,255,255,.5);margin-top:14px;line-height:1.7;max-width:260px;}
+.foot-col h6{font-size:13px;font-weight:700;color:#fff;margin-bottom:16px;text-transform:uppercase;letter-spacing:.03em;}
+.foot-col a,.foot-col p{display:block;font-size:13.5px;color:rgba(255,255,255,.55);margin-bottom:10px;line-height:1.5;}
+.foot-col a:hover{color:#fff;}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:12.5px;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:12px;}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media (max-width:980px){
+  .saas-hero-grid,.compare-grid,.prod-grid,.model-row,.foot-top{grid-template-columns:1fr 1fr;}
+  .window-body{grid-template-columns:1fr;}
+  .side{display:none;}
+  .model-step:not(:last-child)::after{display:none;}
+  .nav-links{display:none;}
+}
+@media (max-width:640px){
+  .wrap{padding:0 22px;}
+  .saas-hero{padding-top:110px;}
+  .saas-hero-grid,.compare-grid,.prod-grid,.model-row,.foot-top{grid-template-columns:1fr;}
+  .final .wrap{flex-direction:column;align-items:flex-start;padding:28px;}
+}
 </style>
 </head>
 <body>
-<header class="top">
-  <div class="top-inner">
-    <b>OPTIMA DIGITAL</b>
-    <a href="/#what-we-do">← What We Do</a>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <defs>
+          <linearGradient id="lgNav1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#a8d65e"/>
+            <stop offset="1" stop-color="#6ea82f"/>
+          </linearGradient>
+          <linearGradient id="lgNav2" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#8bc53f"/>
+            <stop offset="1" stop-color="#3f6b1a"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(17,17)">
+          <path d="M0 -13 C7.2 -13 13 -7.2 13 0 C5.8 0 0 -5.8 0 -13 Z" fill="url(#lgNav1)"/>
+          <path d="M13 0 C13 7.2 7.2 13 0 13 C0 5.8 5.8 0 13 0 Z" fill="url(#lgNav2)"/>
+          <path d="M0 13 C-7.2 13 -13 7.2 -13 0 C-5.8 0 0 5.8 0 13 Z" fill="url(#lgNav1)"/>
+          <path d="M-13 0 C-13 -7.2 -7.2 -13 0 -13 C0 -5.8 -5.8 0 -13 0 Z" fill="url(#lgNav2)"/>
+        </g>
+      </svg>
+      <span class="brand-text"><b>OPTIMA DIGITAL</b><span>PT Optima Digital Selaras</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#what-we-do">What We Do</a></li>
+      <li><a href="/#products">Products</a></li>
+      <li><a href="/#industries">Industries</a></li>
+      <li><a href="/#work">Client Work</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="saas-hero">
+  <div class="wrap saas-hero-grid">
+    <div>
+      <a class="crumb" href="/#what-we-do">← Back to What We Do</a>
+      <div class="kicker">SaaS catalog</div>
+      <h1>One product. Many organizations. Same cloud.</h1>
+      <p class="lead">Optima builds software you can subscribe to — not a one-off system for a single company. Credit, collection, HR, koperasi, POS, and citizen services run as multi-tenant cloud products.</p>
+      <div class="hero-actions">
+        <a href="mailto:marketing@optimadigital.co.id" class="btn btn-solid">Talk about a product <span class="btn-arrow">→</span></a>
+        <a href="#catalog" class="btn btn-ghost">Browse the catalog</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><b>14+</b><span>ready-to-deploy products</span></div>
+        <div class="stat"><b>4</b><span>sector catalogs</span></div>
+        <div class="stat"><b>1→N</b><span>tenants on one core</span></div>
+      </div>
+    </div>
+    <div class="window" aria-hidden="true">
+      <div class="window-bar"><i></i><i></i><i></i><em>optima.saas / tenant console</em></div>
+      <div class="window-body">
+        <div class="side">
+          <p class="on">Tenants</p>
+          <p>Modules</p>
+          <p>Billing</p>
+          <p>Releases</p>
+        </div>
+        <div class="main">
+          <h3>Active tenants this quarter</h3>
+          <div class="kpi">
+            <div><b>Banking</b><span>Credit · LOS · Collection</span></div>
+            <div><b>Retail</b><span>POS · PPOB · Shop</span></div>
+          </div>
+          <div class="bars"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="flagship">
+            <span>Flagship: CreditRiskDynamics</span>
+            <a href="https://creditriskdynamics.com" target="_blank" rel="noopener noreferrer">Open live →</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
-<main class="wrap">
-  <p class="crumb">What We Do</p>
-  <h1>SaaS Products</h1>
-  <p>Optima Digital SaaS products, including CAP as the flagship Credit Assessment Platform, plus future cloud-based business tools.</p>
-  <p class="meta">Cloud Software · Multi-Tenant · Scalable Architecture</p>
-  <a class="back" href="/#what-we-do">Back to homepage →</a>
-</main>
+
+<section class="compare reveal">
+  <div class="wrap">
+    <div class="compare-head">
+      <p class="label">Not the same as Enterprise Software</p>
+      <h2>Custom platform for one business — or a product many businesses can buy.</h2>
+    </div>
+    <div class="compare-grid">
+      <article class="compare-card ent">
+        <span class="tag">Enterprise Software</span>
+        <h3>Built around one operation</h3>
+        <p>A purpose-built internal platform shaped to a single organization’s workflows, approvals, and data.</p>
+        <ul>
+          <li>One client, one system</li>
+          <li>Deep custom process fit</li>
+          <li>Owned and run internally</li>
+        </ul>
+        <a href="/solutions/enterprise-software/">See Enterprise Software →</a>
+      </article>
+      <article class="compare-card saas">
+        <span class="tag">SaaS Products</span>
+        <h3>Built once, used by many</h3>
+        <p>A shared cloud product with tenant isolation — banks, koperasi, retailers, or agencies subscribe to the same core.</p>
+        <ul>
+          <li>Many tenants, one codebase</li>
+          <li>Configuration, not a rewrite</li>
+          <li>Roadmap shared across customers</li>
+        </ul>
+        <a href="#catalog">See the product catalog ↓</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="catalog" class="catalog reveal">
+  <div class="wrap">
+    <div class="catalog-head">
+      <div>
+        <p class="label">Product catalog</p>
+        <h2>Applications already proven across real sectors in Indonesia.</h2>
+      </div>
+      <div class="legend">
+        <span><i class="dot" style="background:#7c3aed"></i> Bank &amp; Financial</span>
+        <span><i class="dot" style="background:#2f6fed"></i> Government &amp; Community</span>
+        <span><i class="dot" style="background:#22b06f"></i> Finance &amp; Operations</span>
+        <span><i class="dot" style="background:#1cae86"></i> Commerce</span>
+      </div>
+    </div>
+
+    <div class="cat-block">
+      <div class="cat-label" style="color:#7c3aed;"><span>Bank &amp; Financial Sector</span><span class="line"></span></div>
+      <div class="prod-grid">
+        <article class="prod" style="--c:#7c3aed">
+          <em>Flagship</em>
+          <strong>CreditRiskDynamics</strong>
+          <p>Governance-first credit assessment used across financial institutions.</p>
+          <a href="https://creditriskdynamics.com" target="_blank" rel="noopener noreferrer">creditriskdynamics.com →</a>
+        </article>
+        <article class="prod" style="--c:#7c3aed">
+          <em>Lending</em>
+          <strong>Loan Origination System</strong>
+          <p>Repeatable intake, scoring, approval, and disbursement for many lenders.</p>
+        </article>
+        <article class="prod" style="--c:#7c3aed">
+          <em>Collections</em>
+          <strong>Collection Management</strong>
+          <p>Assignment, follow-up, and field collection as a shared cloud module.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="cat-block">
+      <div class="cat-label" style="color:#2f6fed;"><span>Government &amp; Community</span><span class="line"></span></div>
+      <div class="prod-grid">
+        <article class="prod" style="--c:#2f6fed">
+          <em>City</em>
+          <strong>Smart City</strong>
+          <p>Citizen and city operations packaged as a reusable digital service.</p>
+        </article>
+        <article class="prod" style="--c:#2f6fed">
+          <em>People</em>
+          <strong>HRIS</strong>
+          <p>Workforce records and attendance delivered as a multi-org product.</p>
+        </article>
+        <article class="prod" style="--c:#2f6fed">
+          <em>Members</em>
+          <strong>Koperasi Digital</strong>
+          <p>Savings, loans, and member services cooperatives can subscribe to.</p>
+        </article>
+        <article class="prod" style="--c:#2f6fed">
+          <em>Public</em>
+          <strong>Warga Digital</strong>
+          <p>Community and resident services on a shared cloud platform.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="cat-block">
+      <div class="cat-label" style="color:#22b06f;"><span>Finance &amp; Operations</span><span class="line"></span></div>
+      <div class="prod-grid">
+        <article class="prod" style="--c:#22b06f">
+          <em>Trade</em>
+          <strong>Supply Chain Financing</strong>
+          <p>Working-capital flows for suppliers and buyers, productized.</p>
+        </article>
+        <article class="prod" style="--c:#22b06f">
+          <em>Bills</em>
+          <strong>PPOB</strong>
+          <p>Bill payment and digital transactions for many operators.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="cat-block" style="margin-bottom:0;">
+      <div class="cat-label" style="color:#1cae86;"><span>Commerce &amp; Transactions</span><span class="line"></span></div>
+      <div class="prod-grid">
+        <article class="prod" style="--c:#1cae86">
+          <em>Retail</em>
+          <strong>POS</strong>
+          <p>Checkout and inventory for merchants that share one product core.</p>
+        </article>
+        <article class="prod" style="--c:#1cae86">
+          <em>Field</em>
+          <strong>Mobile Collection</strong>
+          <p>On-the-ground collection app connected to the cloud back office.</p>
+        </article>
+        <article class="prod" style="--c:#1cae86">
+          <em>Shop</em>
+          <strong>Online Shop</strong>
+          <p>Storefront and orders as a repeatable commerce product.</p>
+        </article>
+        <article class="prod" style="--c:#1cae86">
+          <em>Lifestyle</em>
+          <strong>Yoga Class App</strong>
+          <p>Class booking and memberships packaged for operators.</p>
+        </article>
+        <article class="prod" style="--c:#1cae86">
+          <em>Mobility</em>
+          <strong>GoRide</strong>
+          <p>Ride and dispatch workflows delivered as a cloud product.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="model reveal">
+  <div class="wrap">
+    <p class="label">How the SaaS model works</p>
+    <h2>Not Discover → Design → Build → Scale. A tenant model.</h2>
+    <div class="model-row">
+      <div class="model-step">
+        <div class="num">01</div>
+        <h4>Shared core</h4>
+        <p>One codebase and release train. Features ship once and become available to every tenant.</p>
+      </div>
+      <div class="model-step">
+        <div class="num">02</div>
+        <h4>Isolated tenants</h4>
+        <p>Each organization gets its own data, users, and configuration — without a separate rebuild.</p>
+      </div>
+      <div class="model-step">
+        <div class="num">03</div>
+        <h4>Grow by onboarding</h4>
+        <p>New customers join the same product. The roadmap serves the catalog, not a single install.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final reveal">
+  <div class="wrap">
+    <div>
+      <h3>Want a product your customers can subscribe to?</h3>
+      <p>Tell us the repeatable workflow. We will tell you whether it should be SaaS — or a custom enterprise platform.</p>
+    </div>
+    <div class="final-actions">
+      <a href="mailto:marketing@optimadigital.co.id" class="btn btn-light">Discuss a SaaS product <span class="btn-arrow">→</span></a>
+      <a href="/solutions/enterprise-software/" class="btn" style="border:1.5px solid rgba(255,255,255,.35);color:#fff;">Or see Enterprise →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand">
+          <svg width="30" height="30" viewBox="0 0 34 34" fill="none">
+            <defs>
+              <linearGradient id="lgFoot1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#a8d65e"/>
+                <stop offset="1" stop-color="#6ea82f"/>
+              </linearGradient>
+              <linearGradient id="lgFoot2" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#8bc53f"/>
+                <stop offset="1" stop-color="#3f6b1a"/>
+              </linearGradient>
+            </defs>
+            <g transform="translate(17,17)">
+              <path d="M0 -13 C7.2 -13 13 -7.2 13 0 C5.8 0 0 -5.8 0 -13 Z" fill="url(#lgFoot1)"/>
+              <path d="M13 0 C13 7.2 7.2 13 0 13 C0 5.8 5.8 0 13 0 Z" fill="url(#lgFoot2)"/>
+              <path d="M0 13 C-7.2 13 -13 7.2 -13 0 C-5.8 0 0 5.8 0 13 Z" fill="url(#lgFoot1)"/>
+              <path d="M-13 0 C-13 -7.2 -7.2 -13 0 -13 C0 -5.8 -5.8 0 -13 0 Z" fill="url(#lgFoot2)"/>
+            </g>
+          </svg>
+          <span class="brand-text"><b style="color:#fff;">OPTIMA DIGITAL</b><span>PT Optima Digital Selaras</span></span>
+        </a>
+        <p>We enable organizations to build, transform, and scale through technology — creating connected ecosystems that drive sustainable growth.</p>
+      </div>
+      <div class="foot-col">
+        <h6>What We Do</h6>
+        <a href="/solutions/enterprise-software/">Enterprise Software</a>
+        <a href="/products/">SaaS Products</a>
+        <a href="/solutions/web-digital/">Web &amp; Digital Experiences</a>
+        <a href="/solutions/digital-transformation/">Digital Transformation</a>
+      </div>
+      <div class="foot-col">
+        <h6>Products</h6>
+        <a href="/#products">Bank &amp; Financial</a>
+        <a href="/#products">Government &amp; Community</a>
+        <a href="/#products">Commerce &amp; Transactions</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href="/#about">About Us</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h6>Get in Touch</h6>
+        <p>marketing@optimadigital.co.id</p>
+        <p>+62 812 988 5679</p>
+        <p>Ruko Golden Madrid Blok D No. 26, Jl. Letnan Sutopo, BSD City, Serpong, Tangerang Selatan, Banten 15310</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 PT Optima Digital Selaras. All rights reserved.</span>
+      <span>www.optimadigital.co.id</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(function(el){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  io.observe(el);
+});
+</script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Optima Digital Selaras — Digital Ecosystem Enabler (Preview)</title>
+<title>Optima Digital Selaras — Digital Ecosystem Enabler</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
@@ -379,6 +379,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
 }
 
 .owd-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 360px;
@@ -443,6 +444,12 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
   font-weight: 700;
   color: #2563eb;
   text-decoration: none;
+}
+
+.owd-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .owd-link:hover {
@@ -624,7 +631,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
         <p class="owd-meta">
           Custom Platforms · Business Systems · Enterprise Workflow
         </p>
-        <a href="/solutions/enterprise-software" class="owd-link">
+        <a href="/solutions/enterprise-software/" class="owd-link">
           Learn more <span aria-hidden="true">→</span>
         </a>
       </article>
@@ -645,7 +652,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
         <p class="owd-meta">
           Cloud Software · Multi-Tenant · Scalable Architecture
         </p>
-        <a href="/products" class="owd-link">
+        <a href="/products/" class="owd-link">
           Learn more <span aria-hidden="true">→</span>
         </a>
       </article>
@@ -667,7 +674,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
         <p class="owd-meta">
           Corporate Websites · UX &amp; UI Design · Responsive
         </p>
-        <a href="/solutions/web-digital" class="owd-link">
+        <a href="/solutions/web-digital/" class="owd-link">
           Learn more <span aria-hidden="true">→</span>
         </a>
       </article>
@@ -688,7 +695,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
         <p class="owd-meta">
           Automation · System Integration · Digital Workflows
         </p>
-        <a href="/solutions/digital-transformation" class="owd-link">
+        <a href="/solutions/digital-transformation/" class="owd-link">
           Learn more <span aria-hidden="true">→</span>
         </a>
       </article>
