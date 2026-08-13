@@ -226,45 +226,218 @@ section{padding:110px 0;}
 }
 .wwd-card:hover .wwd-arrow{opacity:1;transform:translateX(0);}
 
-/* PRODUCT PORTFOLIO */
-.legend{display:flex;gap:22px;flex-wrap:wrap;}
-.legend span{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--muted);}
-.dot{width:8px;height:8px;border-radius:50%;display:inline-block;}
-.cat-block{margin-bottom:34px;}
-.cat-label{
-  display:flex;align-items:center;gap:14px;margin-bottom:16px;
-  font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;
+/* PRODUCTS */
+.op-section .sec-desc{max-width:640px;}
+.op-kicker{
+  display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
+  font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:14px;font-family:'Manrope',sans-serif;
 }
-.cat-label .line{flex:1;height:1px;background:var(--line);}
-.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,300px));gap:16px;}
-.prod-card{
-  border:1px solid var(--line);border-radius:12px;padding:18px 18px 20px;
-  border-top:3px solid var(--cat-color,#2f6fed);
-  transition:transform .2s ease, box-shadow .2s ease;background:#fff;
-  display:flex;flex-direction:column;gap:14px;
+.op-flag{
+  display:inline-flex;align-items:center;
+  background:rgba(139,197,63,.18);color:var(--cyan-label);
+  border:1px solid rgba(139,197,63,.35);
+  border-radius:100px;padding:3px 9px;letter-spacing:.06em;
 }
-.prod-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(11,18,32,.08);}
-.prod-top{display:flex;align-items:center;gap:12px;}
-.prod-icon{
-  width:34px;height:34px;border-radius:9px;background:var(--off);
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--navy-800);
+.op-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14.5px;font-weight:700;color:var(--teal);
 }
-.prod-card h5{font-size:14.5px;font-weight:700;margin-bottom:2px;}
-.prod-card span{font-size:11.5px;color:var(--muted);font-weight:500;}
-.prod-mock{
-  aspect-ratio:16/9;border-radius:8px;background:var(--off);
-  border:1px solid var(--line);padding:10px 12px;
-  display:flex;flex-direction:column;justify-content:center;gap:6px;
+.op-cta .btn-arrow{transition:transform .2s;}
+.op-suite-card:hover .op-cta .btn-arrow,
+.op-card:hover .op-cta .btn-arrow{transform:translateX(3px);}
+.op-suite-head{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;
+  margin-bottom:12px;
 }
-.prod-mock .mock-bar{height:5px;border-radius:3px;background:rgba(11,18,32,.14);}
-.prod-mock .mock-bar.short{width:45%;}
-.prod-mock .mock-bar.accent{background:var(--cat-color,#2f6fed);opacity:.55;width:30%;}
-.prod-mock .mock-dots{display:flex;gap:5px;margin-top:2px;}
-.prod-mock .mock-dots span{width:14px;height:14px;border-radius:50%;background:rgba(11,18,32,.10);}
-.prod-mock.mock-premium{
-  padding:0;overflow:hidden;border-color:#2a3958;
+.op-suite-label{
+  font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);font-family:'Manrope',sans-serif;margin:0;
 }
-.prod-mock.mock-premium img{width:100%;height:100%;object-fit:cover;object-position:top left;display:block;}
+.op-suite-flow{
+  display:flex;align-items:center;gap:8px;margin:0;
+  font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy-800);
+}
+.op-suite-flow i{color:var(--teal);font-style:normal;font-weight:800;}
+.op-suite-grid{
+  display:grid;grid-template-columns:1fr 1.28fr 1fr;gap:12px;align-items:stretch;
+}
+.op-suite-card{
+  display:flex;flex-direction:column;
+  background:#fff;border:1px solid var(--line);border-radius:8px;
+  padding:24px 22px;min-height:300px;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.op-suite-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(11,18,32,.2);
+  box-shadow:0 16px 34px rgba(11,18,32,.08);
+}
+.op-suite-card:focus-visible,.op-card:focus-visible,.op-mini:focus-visible,.op-lp:focus-visible{
+  outline:2px solid var(--teal);outline-offset:3px;
+}
+.op-suite-card.flagship{
+  background:var(--navy-950);color:#fff;
+  border-color:rgba(255,255,255,.1);
+  padding:26px 24px;
+}
+.op-suite-card.flagship:hover{
+  border-color:rgba(139,197,63,.45);
+  box-shadow:0 22px 48px rgba(2,11,29,.22);
+}
+.op-step{
+  font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:16px;font-family:'Manrope',sans-serif;
+}
+.op-suite-card.flagship .op-step{color:rgba(255,255,255,.55);}
+.op-suite-card h3{font-size:22px;margin-bottom:4px;}
+.op-suite-card.flagship h3{color:#fff;font-size:clamp(26px,2.4vw,34px);}
+.op-suite-card .op-sub{font-size:13.5px;font-weight:600;color:var(--muted);margin-bottom:10px;}
+.op-suite-card.flagship .op-sub{color:rgba(255,255,255,.78);}
+.op-suite-card > p{font-size:14px;line-height:1.6;color:var(--muted);margin-bottom:18px;}
+.op-suite-card.flagship > p{color:rgba(255,255,255,.62);}
+.op-suite-card .op-cta{margin-top:auto;}
+.op-suite-card.flagship .op-cta{color:var(--teal);}
+.op-dash{
+  background:#071633;border:1px solid rgba(255,255,255,.1);border-radius:8px;
+  padding:12px;margin:4px 0 18px;
+}
+.op-dash-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.op-dash-top b{font-size:11.5px;font-weight:700;color:rgba(255,255,255,.8);letter-spacing:.04em;}
+.op-dash-top span{font-size:10.5px;color:rgba(255,255,255,.4);font-weight:600;}
+.op-kpis{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}
+.op-kpi{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:8px 10px;}
+.op-kpi strong{display:block;font-family:'Manrope',sans-serif;font-size:16px;color:var(--teal);letter-spacing:-.03em;}
+.op-kpi em{font-style:normal;font-size:10px;color:rgba(255,255,255,.45);font-weight:600;}
+.op-bars{display:flex;align-items:flex-end;gap:5px;height:42px;padding:0 2px;}
+.op-bars i{
+  display:block;flex:1;border-radius:3px 3px 0 0;
+  background:linear-gradient(180deg,var(--teal),rgba(139,197,63,.25));
+  transform-origin:bottom;animation:op-bar 1.8s ease-in-out infinite alternate;
+}
+.op-bars i:nth-child(1){height:42%;animation-delay:0s;}
+.op-bars i:nth-child(2){height:68%;animation-delay:.12s;}
+.op-bars i:nth-child(3){height:54%;animation-delay:.24s;}
+.op-bars i:nth-child(4){height:86%;animation-delay:.08s;}
+.op-bars i:nth-child(5){height:60%;animation-delay:.2s;}
+.op-bars i:nth-child(6){height:74%;animation-delay:.16s;}
+@keyframes op-bar{from{transform:scaleY(.45);}to{transform:scaleY(1);}}
+.op-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;align-items:start;}
+.op-card{
+  display:flex;flex-direction:column;
+  background:#fff;border:1px solid var(--line);border-radius:8px;
+  padding:28px;min-height:220px;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.op-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(11,18,32,.2);
+  box-shadow:0 14px 30px rgba(11,18,32,.08);
+}
+.op-icon{
+  width:36px;height:36px;border-radius:8px;background:var(--off);color:var(--navy-800);
+  display:grid;place-items:center;margin-bottom:16px;
+}
+.op-card h3{font-size:20px;margin-bottom:6px;}
+.op-card .op-sub{font-size:13.5px;color:var(--muted);font-weight:600;margin-bottom:10px;}
+.op-card > p,.op-card-main > p{font-size:14.5px;line-height:1.65;color:var(--muted);margin-bottom:18px;}
+.op-card .op-cta,.op-card-main .op-cta{margin-top:auto;color:var(--teal-dark);}
+.op-expand{display:flex;flex-direction:column;}
+.op-card-main{display:flex;flex-direction:column;flex:1;min-height:0;color:inherit;}
+.op-peek{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px;
+}
+.op-mini{
+  display:flex;align-items:center;gap:10px;
+  background:var(--off);border:1px solid var(--line);border-radius:8px;
+  padding:12px;
+  transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.op-mini:hover{
+  transform:translateY(-2px);
+  border-color:rgba(11,18,32,.2);
+  box-shadow:0 8px 18px rgba(11,18,32,.07);
+}
+.op-mini.hot{border-color:rgba(139,197,63,.45);background:#f7fbf0;}
+.op-thumb{
+  width:40px;height:30px;border-radius:5px;flex-shrink:0;
+  box-shadow:inset 0 0 0 1px rgba(15,23,42,.08);
+}
+.op-thumb.shop{background:linear-gradient(160deg,#d1fae5,#34d399);}
+.op-thumb.pos{background:linear-gradient(160deg,#a7f3d0,#059669);}
+.op-mini b{display:block;font-size:13px;line-height:1.25;}
+.op-mini span{display:block;font-size:11.5px;color:var(--muted);font-weight:500;}
+.op-lps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;}
+.op-lp{display:flex;flex-direction:column;gap:7px;color:inherit;min-width:0;}
+.op-lp-frame{
+  display:block;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:#fff;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.op-lp:hover .op-lp-frame,.op-expand:hover .op-lp-frame{
+  transform:translateY(-2px);
+  border-color:rgba(11,18,32,.16);
+  box-shadow:0 10px 18px rgba(11,18,32,.08);
+}
+.op-lp-bar{display:flex;gap:4px;align-items:center;background:#eef1f4;padding:5px 7px;}
+.op-lp-bar i{width:6px;height:6px;border-radius:50%;background:#c5cdd6;}
+.op-lp-screen{display:block;height:52px;padding:8px 8px 0;position:relative;}
+.op-lp-screen::before{
+  content:"";display:block;width:62%;height:8px;border-radius:2px;background:rgba(255,255,255,.7);margin-bottom:6px;
+}
+.op-lp-screen::after{
+  content:"";display:block;width:84%;height:3px;border-radius:2px;background:rgba(255,255,255,.38);
+  box-shadow:0 7px 0 rgba(255,255,255,.28), 0 14px 0 rgba(255,255,255,.2);
+}
+.op-lp-screen.fin{background:linear-gradient(165deg,#5b21b6,#7c3aed 45%,#c4b5fd);}
+.op-lp-screen.retail{background:linear-gradient(165deg,#047857,#10b981 45%,#a7f3d0);}
+.op-lp-screen.gov{background:linear-gradient(165deg,#1d4ed8,#2563eb 45%,#93c5fd);}
+.op-lp-screen.coop{background:linear-gradient(165deg,#0f766e,#14b8a6 45%,#99f6e4);}
+.op-lp-screen.sme{background:linear-gradient(165deg,#3f6212,#65a30d 45%,#d9f99d);}
+.op-lp-screen.ent{background:linear-gradient(165deg,#0f172a,#334155 45%,#94a3b8);}
+.op-lp b{font-size:11.5px;font-weight:700;line-height:1.2;}
+.op-lp em{font-style:normal;font-size:10.5px;color:var(--muted);font-weight:500;}
+.op-demos{
+  display:grid;grid-template-columns:1.35fr .85fr;gap:10px;margin-top:16px;align-items:end;
+}
+.op-demo{display:flex;flex-direction:column;gap:7px;color:inherit;min-width:0;}
+.op-demo.phone{align-items:center;text-align:center;}
+.op-demo-web{
+  display:block;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:#fff;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.op-demo-phone{
+  display:block;width:46px;height:78px;margin:0 auto;
+  border:1.6px solid #c5cdd6;border-radius:12px;background:#fff;padding:7px 6px 6px;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.op-demo-notch{display:block;width:16px;height:3px;border-radius:100px;background:#c5cdd6;margin:0 auto 5px;}
+.op-demo:hover .op-demo-web,.op-demo:hover .op-demo-phone,.op-expand:hover .op-demo-web,.op-expand:hover .op-demo-phone{
+  transform:translateY(-2px);
+  border-color:rgba(11,18,32,.18);
+  box-shadow:0 10px 18px rgba(11,18,32,.08);
+}
+.op-demo-screen{display:block;height:48px;}
+.op-demo-web .op-demo-screen{height:50px;padding:8px 8px 0;}
+.op-demo-web .op-demo-screen::before{
+  content:"";display:block;width:58%;height:7px;border-radius:2px;background:rgba(255,255,255,.72);margin-bottom:6px;
+}
+.op-demo-web .op-demo-screen::after{
+  content:"";display:block;width:86%;height:3px;border-radius:2px;background:rgba(255,255,255,.36);
+  box-shadow:0 7px 0 rgba(255,255,255,.28), 0 14px 0 rgba(255,255,255,.2);
+}
+.op-demo-phone .op-demo-screen{height:calc(100% - 8px);border-radius:5px;}
+.op-demo-screen.hris-web{background:linear-gradient(165deg,#0f766e,#14b8a6 48%,#99f6e4);}
+.op-demo-screen.hris-app{background:linear-gradient(180deg,#115e59,#2dd4bf);}
+.op-demo-screen.book-web{background:linear-gradient(165deg,#1e3a5f,#2563eb 48%,#93c5fd);}
+.op-demo-screen.book-app{background:linear-gradient(180deg,#1e40af,#60a5fa);}
+.op-demo b{font-size:12px;font-weight:700;line-height:1.2;}
+.op-demo em{font-style:normal;font-size:10.5px;color:var(--muted);font-weight:500;}
+@media (prefers-reduced-motion:reduce){
+  .op-suite-card,.op-card,.op-cta .btn-arrow,.op-mini,.op-lp-frame,.op-demo-web,.op-demo-phone{transition:none;}
+  .op-suite-card:hover,.op-card:hover,.op-mini:hover,.op-lp:hover .op-lp-frame,
+  .op-demo:hover .op-demo-web,.op-demo:hover .op-demo-phone{transform:none;}
+  .op-bars i{animation:none;}
+}
 
 /* INDUSTRIES */
 .ind-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;}
@@ -324,6 +497,10 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
   .work-grid{grid-template-columns:1fr;}
   .foot-top{grid-template-columns:1fr 1fr;}
   .nav-links{display:none;}
+  .op-suite-grid{grid-template-columns:1fr;}
+  .op-suite-card.flagship{order:-1;}
+  .op-grid{grid-template-columns:1fr 1fr;}
+  .op-lps{grid-template-columns:repeat(3,1fr);}
 }
 @media (max-width:640px){
   .wrap{padding:0 22px;}
@@ -334,6 +511,9 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
   .statement .wrap{flex-direction:column;align-items:flex-start;}
   .statement p{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:20px;}
   .foot-top{grid-template-columns:1fr;}
+  .op-suite-card{min-height:0;padding:22px 18px;}
+  .op-grid{grid-template-columns:1fr;}
+  .op-peek,.op-lps{grid-template-columns:1fr 1fr;}
 }
 
 .owd-section {
@@ -737,57 +917,159 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
   </div>
 </section>
 
-<section id="products" class="reveal" style="background:var(--off);">
+<section id="products" class="op-section reveal" style="background:var(--off);" aria-labelledby="products-title">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="sec-title-row"><span class="sec-num">02</span><span class="sec-num-line"></span><h2 class="sec-title">Product Portfolio</h2></div>
-        <p class="sec-desc">Ready-to-deploy applications built and proven across real sectors in Indonesia.</p>
-      </div>
-      <div class="legend">
-        <span><i class="dot" style="background:#7c3aed"></i> Bank & Financial Sector</span>
-        <span><i class="dot" style="background:#2f6fed"></i> Government & Community</span>
-        <span><i class="dot" style="background:#22b06f"></i> Finance & Operations</span>
-        <span><i class="dot" style="background:#1cae86"></i> Commerce & Transactions</span>
+        <div class="sec-title-row"><span class="sec-num">02</span><span class="sec-num-line"></span><span class="eyebrow">Products</span></div>
+        <h2 class="sec-title" id="products-title">Software built for real business operations</h2>
+        <p class="sec-desc">From credit origination to collections, commerce and industry websites — software built for real operations.</p>
       </div>
     </div>
 
-    <div class="cat-block">
-      <div class="cat-label" style="color:#7c3aed;"><span>Bank & Financial Sector</span><span class="line"></span></div>
-      <div class="prod-grid">
-        <a href="https://creditriskdynamics.com" target="_blank" rel="noopener noreferrer" class="prod-card" style="--cat-color:#7c3aed;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 3v18h18M7 15l4-5 3 3 5-7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h5>CreditRiskDynamics</h5><span>Bank & Financial Sector</span></div></div><div class="prod-mock mock-premium"><img src="/assets/optima/creditriskdynamics.jpg" alt="CreditRiskDynamics — governance-first credit platform"></div></a>
-        <a href="https://creditriskdynamics.com" target="_blank" rel="noopener noreferrer" class="prod-card" style="--cat-color:#7c3aed;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4M2 12l4 4L22 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h5>Loan Origination System</h5><span>Bank & Financial Sector</span></div></div><div class="prod-mock"><div class="mock-dots"><span></span><span></span><span></span></div><div class="mock-bar short"></div></div></a>
-        <a href="https://creditriskdynamics.com" target="_blank" rel="noopener noreferrer" class="prod-card" style="--cat-color:#7c3aed;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 9h8M8 13h5M8 17h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div><div><h5>Collection Management System</h5><span>Bank & Financial Sector</span></div></div><div class="prod-mock"><div class="mock-bar"></div><div class="mock-bar short"></div><div class="mock-bar accent"></div></div></a>
+    <div class="op-suite">
+      <div class="op-suite-head">
+        <p class="op-suite-label">Credit suite</p>
+        <p class="op-suite-flow" aria-hidden="true"><span>Originate</span><i>→</i><span>Assess</span><i>→</i><span>Collect</span></p>
+      </div>
+      <div class="op-suite-grid">
+        <a href="/products/los" class="op-suite-card">
+          <div class="op-step">01 · Originate</div>
+          <h3>LOS</h3>
+          <p class="op-sub">Loan Origination System</p>
+          <p>Intake, scoring, approval and disbursement in one auditable lending workflow.</p>
+          <span class="op-cta">Explore LOS <span class="btn-arrow" aria-hidden="true">→</span></span>
+        </a>
+        <a href="/products/cap" class="op-suite-card flagship">
+          <div class="op-step">02 · Assess <span class="op-flag">FLAGSHIP</span></div>
+          <h3>CAP</h3>
+          <p class="op-sub">Credit Assessment Platform</p>
+          <p>AI-assisted risk decisioning for faster, consistent and auditable credit decisions.</p>
+          <div class="op-dash" aria-hidden="true">
+            <div class="op-dash-top"><b>CAP Console</b><span>Risk queue</span></div>
+            <div class="op-kpis">
+              <div class="op-kpi"><strong>94</strong><em>Avg. score</em></div>
+              <div class="op-kpi"><strong>12m</strong><em>Decision time</em></div>
+            </div>
+            <div class="op-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <span class="op-cta">Explore CAP <span class="btn-arrow" aria-hidden="true">→</span></span>
+        </a>
+        <a href="/products/collection" class="op-suite-card">
+          <div class="op-step">03 · Collect</div>
+          <h3>Collection CMS</h3>
+          <p class="op-sub">Collection Management System</p>
+          <p>Assignment, follow-up and field collection with a complete operational history.</p>
+          <span class="op-cta">Explore CMS <span class="btn-arrow" aria-hidden="true">→</span></span>
+        </a>
       </div>
     </div>
 
-    <div class="cat-block">
-      <div class="cat-label" style="color:#2f6fed;"><span>Government & Community</span><span class="line"></span></div>
-      <div class="prod-grid">
-        <div class="prod-card" style="--cat-color:#2f6fed;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" stroke="currentColor" stroke-width="1.7"/></svg></div><div><h5>Smart City</h5><span>Government & Community</span></div></div><div class="prod-mock"><div class="mock-bar"></div><div class="mock-bar short"></div><div class="mock-bar accent"></div></div></div>
-        <div class="prod-card" style="--cat-color:#2f6fed;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M2 21v-2a5 5 0 015-5h4a5 5 0 015 5v2" stroke="currentColor" stroke-width="1.7"/><circle cx="18" cy="8" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg></div><div><h5>HRIS</h5><span>Government & Community</span></div></div><div class="prod-mock"><div class="mock-dots"><span></span><span></span><span></span></div><div class="mock-bar short"></div></div></div>
-        <div class="prod-card" style="--cat-color:#2f6fed;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.7"/><path d="M4 21c0-3.5 3.5-6 8-6s8 2.5 8 6" stroke="currentColor" stroke-width="1.7"/></svg></div><div><h5>Koperasi Digital</h5><span>Government & Community</span></div></div><div class="prod-mock"><div class="mock-bar"></div><div class="mock-bar short"></div><div class="mock-bar accent"></div></div></div>
-        <div class="prod-card" style="--cat-color:#2f6fed;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M2 21v-2a5 5 0 015-5h4a5 5 0 015 5v2" stroke="currentColor" stroke-width="1.7"/></svg></div><div><h5>Warga Digital</h5><span>Government & Community</span></div></div><div class="prod-mock"><div class="mock-dots"><span></span><span></span><span></span></div><div class="mock-bar short"></div></div></div>
-      </div>
-    </div>
-
-    <div class="cat-block">
-      <div class="cat-label" style="color:#22b06f;"><span>Finance & Operations</span><span class="line"></span></div>
-      <div class="prod-grid">
-        <div class="prod-card" style="--cat-color:#22b06f;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div><div><h5>Supply Chain Financing</h5><span>Finance & Operations</span></div></div><div class="prod-mock"><div class="mock-bar"></div><div class="mock-bar short"></div><div class="mock-bar accent"></div></div></div>
-        <div class="prod-card" style="--cat-color:#22b06f;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 9h8M8 13h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div><div><h5>PPOB</h5><span>Finance & Operations</span></div></div><div class="prod-mock"><div class="mock-dots"><span></span><span></span><span></span></div><div class="mock-bar short"></div></div></div>
-      </div>
-    </div>
-
-    <div class="cat-block">
-      <div class="cat-label" style="color:#1cae86;"><span>Commerce & Transactions</span><span class="line"></span></div>
-      <div class="prod-grid">
-        <div class="prod-card" style="--cat-color:#1cae86;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2" stroke="currentColor" stroke-width="1.7"/></svg></div><div><h5>POS</h5><span>Commerce & Transactions</span></div></div><div class="prod-mock"><div class="mock-bar"></div><div class="mock-bar short"></div><div class="mock-bar accent"></div></div></div>
-        <div class="prod-card" style="--cat-color:#1cae86;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="6" y="2" width="12" height="20" rx="2" stroke="currentColor" stroke-width="1.7"/></svg></div><div><h5>Mobile Collection</h5><span>Commerce & Transactions</span></div></div><div class="prod-mock"><div class="mock-bar"></div><div class="mock-bar short"></div><div class="mock-bar accent"></div></div></div>
-        <div class="prod-card" style="--cat-color:#1cae86;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="20" r="1.4" stroke="currentColor" stroke-width="1.7"/><circle cx="18" cy="20" r="1.4" stroke="currentColor" stroke-width="1.7"/><path d="M2 3h3l2.6 12.2A2 2 0 009.5 17h7.7a2 2 0 002-1.6L21 7H6" stroke="currentColor" stroke-width="1.7"/></svg></div><div><h5>Online Shop</h5><span>Commerce & Transactions</span></div></div><div class="prod-mock"><div class="mock-dots"><span></span><span></span><span></span></div><div class="mock-bar short"></div></div></div>
-        <div class="prod-card" style="--cat-color:#1cae86;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.7"/><path d="M12 11.5V17M9 14h6M9.5 21c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div><div><h5>Yoga Class App</h5><span>Commerce & Transactions</span></div></div><div class="prod-mock"><div class="mock-bar"></div><div class="mock-bar short"></div><div class="mock-bar accent"></div></div></div>
-        <div class="prod-card" style="--cat-color:#1cae86;"><div class="prod-top"><div class="prod-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="6" cy="19" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="19" r="2" stroke="currentColor" stroke-width="1.7"/><path d="M4 19h1l2-8h8l3 5v3h-2M8 11L9.5 6h4l1 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h5>GoRide</h5><span>Commerce & Transactions</span></div></div><div class="prod-mock"><div class="mock-dots"><span></span><span></span><span></span></div><div class="mock-bar short"></div></div></div>
-      </div>
+    <div class="op-grid">
+      <article class="op-card op-expand">
+        <a href="/products/hris" class="op-card-main">
+          <div class="op-kicker">04</div>
+          <div class="op-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M2 21v-2a5 5 0 015-5h4a5 5 0 015 5v2" stroke="currentColor" stroke-width="1.7"/><circle cx="18" cy="8" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
+          </div>
+          <h3>HRIS</h3>
+          <p class="op-sub">Workforce Management</p>
+          <p>A modern workforce platform for employee management, attendance, leave, payroll workflows and HR operations.</p>
+          <span class="op-cta">Explore HRIS <span class="btn-arrow" aria-hidden="true">→</span></span>
+        </a>
+        <div class="op-demos" aria-label="HRIS examples">
+          <a href="/products/hris/web" class="op-demo">
+            <span class="op-demo-web" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-demo-screen hris-web"></span></span>
+            <b>Web</b><em>Admin &amp; self-service</em>
+          </a>
+          <a href="/products/hris/app" class="op-demo phone">
+            <span class="op-demo-phone" aria-hidden="true"><span class="op-demo-notch"></span><span class="op-demo-screen hris-app"></span></span>
+            <b>App</b><em>Attendance &amp; leave</em>
+          </a>
+        </div>
+      </article>
+      <article class="op-card op-expand">
+        <a href="/products/booking" class="op-card-main">
+          <div class="op-kicker">05</div>
+          <div class="op-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Class &amp; Booking Platform</h3>
+          <p class="op-sub">Booking &amp; Operations</p>
+          <p>A flexible booking and class management platform for studios, wellness businesses, training centers and service-based businesses.</p>
+          <span class="op-cta">Explore Platform <span class="btn-arrow" aria-hidden="true">→</span></span>
+        </a>
+        <div class="op-demos" aria-label="Booking examples">
+          <a href="/products/booking/web" class="op-demo">
+            <span class="op-demo-web" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-demo-screen book-web"></span></span>
+            <b>Web</b><em>Schedule &amp; studio</em>
+          </a>
+          <a href="/products/booking/app" class="op-demo phone">
+            <span class="op-demo-phone" aria-hidden="true"><span class="op-demo-notch"></span><span class="op-demo-screen book-app"></span></span>
+            <b>App</b><em>Book a class</em>
+          </a>
+        </div>
+      </article>
+      <article class="op-card op-expand">
+        <a href="/products/marketplace" class="op-card-main">
+          <div class="op-kicker">06</div>
+          <div class="op-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 9l1.5-5h15L21 9M3 9h18v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor" stroke-width="1.7"/><path d="M8 13h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Marketplace Platform</h3>
+          <p class="op-sub">Commerce Platform</p>
+          <p>A scalable digital commerce platform for businesses that need to connect products, sellers, customers and transactions.</p>
+          <span class="op-cta">Explore Platform <span class="btn-arrow" aria-hidden="true">→</span></span>
+        </a>
+        <div class="op-peek" aria-label="Marketplace products">
+          <a href="/products/online-shop" class="op-mini">
+            <span class="op-thumb shop" aria-hidden="true"></span>
+            <span><b>Toko Online</b><span>Storefront &amp; checkout</span></span>
+          </a>
+          <a href="/products/pos" class="op-mini hot">
+            <span class="op-thumb pos" aria-hidden="true"></span>
+            <span><b>POS</b><span>In-store transactions</span></span>
+          </a>
+        </div>
+      </article>
+      <article class="op-card op-expand">
+        <a href="/products/web-solutions" class="op-card-main">
+          <div class="op-kicker">07</div>
+          <div class="op-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 21h8M12 18v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Business Website Solutions</h3>
+          <p class="op-sub">Industry landing pages</p>
+          <p>High-performance websites and ready industry landings — from financial to retail — built to convert.</p>
+          <span class="op-cta">View Solutions <span class="btn-arrow" aria-hidden="true">→</span></span>
+        </a>
+        <div class="op-lps" aria-label="Website templates by industry">
+          <a href="/products/web-solutions#financial" class="op-lp">
+            <span class="op-lp-frame" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-lp-screen fin"></span></span>
+            <b>Financial</b><em>Bank &amp; lending</em>
+          </a>
+          <a href="/products/web-solutions#retail" class="op-lp">
+            <span class="op-lp-frame" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-lp-screen retail"></span></span>
+            <b>Retail</b><em>Commerce sites</em>
+          </a>
+          <a href="/products/web-solutions#government" class="op-lp">
+            <span class="op-lp-frame" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-lp-screen gov"></span></span>
+            <b>Government</b><em>Public portals</em>
+          </a>
+          <a href="/products/web-solutions#cooperatives" class="op-lp">
+            <span class="op-lp-frame" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-lp-screen coop"></span></span>
+            <b>Koperasi</b><em>Member sites</em>
+          </a>
+          <a href="/products/web-solutions#sme" class="op-lp">
+            <span class="op-lp-frame" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-lp-screen sme"></span></span>
+            <b>SME</b><em>Company profile</em>
+          </a>
+          <a href="/products/web-solutions#enterprise" class="op-lp">
+            <span class="op-lp-frame" aria-hidden="true"><span class="op-lp-bar"><i></i><i></i><i></i></span><span class="op-lp-screen ent"></span></span>
+            <b>Enterprise</b><em>Corporate web</em>
+          </a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -993,7 +1275,7 @@ document.querySelectorAll('.reveal').forEach(function(el){
   }
   requestAnimationFrame(raf);
 
-  var HOVER_SELECTOR = 'a, button, .btn, .owd-card, .owd-link, .wwd-card, .prod-card, .ind-card, .work-card, input, textarea, select, [role="button"]';
+  var HOVER_SELECTOR = 'a, button, .btn, .owd-card, .owd-link, .wwd-card, .op-suite-card, .op-card, .op-mini, .op-lp, .op-demo, .ind-card, .work-card, input, textarea, select, [role="button"]';
   document.addEventListener('mouseover', function(e){
     if (e.target.closest(HOVER_SELECTOR)) dot.classList.add('is-hover');
   });
