@@ -27,8 +27,8 @@
   ],
   "rewrites": [
     {
-      "source": "/:path*",
-      "destination": "/index.html"
+      "source": "/orisa/:path*",
+      "destination": "/orisa.html"
     }
   ]
 }
