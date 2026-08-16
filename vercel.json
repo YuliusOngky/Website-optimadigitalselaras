@@ -29,6 +29,14 @@
     {
       "source": "/orisa/:path*",
       "destination": "/orisa.html"
+    },
+    {
+      "source": "/products/los",
+      "destination": "/products/los/index.html"
+    },
+    {
+      "source": "/products/los/",
+      "destination": "/products/los/index.html"
     }
   ]
 }

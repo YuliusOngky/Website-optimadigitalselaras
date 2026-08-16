@@ -279,10 +279,16 @@ section{padding:110px 0;}
 .op-suite-grid{
   display:grid;grid-template-columns:1fr 1.28fr 1fr;gap:12px;align-items:stretch;
 }
+.op-suite-cell{
+  display:flex;flex-direction:column;gap:10px;min-width:0;
+}
+.op-suite-cell > .op-suite-card{flex:1;min-height:300px;}
+.op-suite-cell .op-preview{margin-top:0;}
 .op-suite-card{
   display:flex;flex-direction:column;
   background:#fff;border:1px solid var(--line);border-radius:8px;
   padding:24px 22px;min-height:300px;
+  cursor:pointer;
   transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 .op-suite-card:hover{
@@ -290,7 +296,7 @@ section{padding:110px 0;}
   border-color:rgba(11,18,32,.2);
   box-shadow:0 16px 34px rgba(11,18,32,.08);
 }
-.op-suite-card:focus-visible,.op-card:focus-visible,.op-mini:focus-visible,.op-lp:focus-visible{
+.op-suite-card:focus-visible,.op-card:focus-visible,.op-mini:focus-visible,.op-lp:focus-visible,.op-banner:focus-visible{
   outline:2px solid var(--teal);outline-offset:3px;
 }
 .op-suite-card.flagship{
@@ -388,6 +394,7 @@ section{padding:110px 0;}
 .op-preview{margin-top:16px;display:flex;flex-direction:column;gap:12px;}
 .op-banner{
   display:block;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;
+  cursor:pointer;
   transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 .op-banner:hover{
@@ -1153,13 +1160,24 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
         </p>
       </div>
       <div class="op-suite-grid">
-        <a href="/products/los" class="op-suite-card">
-          <div class="op-step">01 · Originate</div>
-          <h3>LOS</h3>
-          <p class="op-sub">Loan Origination System</p>
-          <p>Intake, scoring, approval and disbursement in one auditable lending workflow.</p>
-          <span class="op-cta">Explore LOS <span class="btn-arrow" aria-hidden="true">→</span></span>
-        </a>
+        <article class="op-suite-cell">
+          <a href="/products/los" class="op-suite-card">
+            <div class="op-step">01 · Originate</div>
+            <h3>LOS</h3>
+            <p class="op-sub">Loan Origination System</p>
+            <p>Intake, scoring, approval and disbursement in one auditable lending workflow.</p>
+            <span class="op-cta">Explore LOS <span class="btn-arrow" aria-hidden="true">→</span></span>
+          </a>
+          <div class="op-preview">
+            <a class="op-banner" href="/products/los" aria-label="LOS — Loan Origination System">
+              <img src="/assets/optima/los-banner.png" alt="LOS Loan Origination System — Proses Kredit Lebih Cepat, Akurat &amp; Terintegrasi" width="1024" height="682" loading="lazy" decoding="async">
+              <span class="op-banner-cap">
+                <b>LOS · Loan Origination System</b>
+                <em>Open LOS →</em>
+              </span>
+            </a>
+          </div>
+        </article>
         <a href="/products/cap" class="op-suite-card flagship">
           <div class="op-step">02 · Assess <span class="op-flag">FLAGSHIP</span></div>
           <h3>CAP</h3>
