@@ -385,7 +385,25 @@ section{padding:110px 0;}
 .op-mini b{display:block;font-size:13px;line-height:1.25;}
 .op-mini span{display:block;font-size:11.5px;color:var(--muted);font-weight:500;}
 .op-lps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;}
-.op-preview{margin-top:16px;}
+.op-preview{margin-top:16px;display:flex;flex-direction:column;gap:12px;}
+.op-banner{
+  display:block;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.op-banner:hover{
+  transform:translateY(-2px);
+  border-color:rgba(11,18,32,.16);
+  box-shadow:0 10px 18px rgba(11,18,32,.08);
+}
+.op-banner img{
+  display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:#eef5fb;
+}
+.op-banner-cap{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:10px 12px;background:#f7f8fa;border-top:1px solid var(--line);
+}
+.op-banner-cap b{font-size:12.5px;color:var(--ink);}
+.op-banner-cap em{font-style:normal;font-size:12px;font-weight:700;color:var(--teal-dark);}
 .op-sites{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
 .op-site{display:flex;flex-direction:column;gap:6px;color:inherit;min-width:0;}
 .op-site.is-live{grid-column:1/-1;}
@@ -491,8 +509,9 @@ section{padding:110px 0;}
 .op-demo b{font-size:12px;font-weight:700;line-height:1.2;}
 .op-demo em{font-style:normal;font-size:10.5px;color:var(--muted);font-weight:500;}
 @media (prefers-reduced-motion:reduce){
-  .op-suite-card,.op-card,.op-cta .btn-arrow,.op-mini,.op-lp-frame,.op-demo-web,.op-demo-phone{transition:none;}
+  .op-suite-card,.op-card,.op-cta .btn-arrow,.op-mini,.op-lp-frame,.op-demo-web,.op-demo-phone,.op-banner{transition:none;}
   .op-suite-card:hover,.op-card:hover,.op-mini:hover,.op-lp:hover .op-lp-frame,
+  .op-demo:hover .op-demo-web,.op-demo:hover .op-demo-phone,.op-banner:hover{transform:none;box-shadow:none;}
   .op-demo:hover .op-demo-web,.op-demo:hover .op-demo-phone{transform:none;}
   .op-bars i{animation:none;}
   .work-marquee-track{animation:none;}
@@ -1210,6 +1229,15 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
             <b>App</b><em>Book a class</em>
           </a>
         </div>
+        <div class="op-preview">
+          <a class="op-banner" href="/products/booking" aria-label="Optima Yoga Reservation System">
+            <img src="/assets/optima/optima-yoga-reservation-banner.png" alt="Optima Yoga Reservation System — Kelola Kelas Yoga Jadi Lebih Mudah" width="1024" height="682" loading="lazy" decoding="async">
+            <span class="op-banner-cap">
+              <b>Optima · Yoga Reservation System</b>
+              <em>Open Booking Platform →</em>
+            </span>
+          </a>
+        </div>
       </article>
       <article class="op-card op-expand">
         <a href="/products/marketplace" class="op-card-main">
@@ -1223,13 +1251,22 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
           <span class="op-cta">Explore Platform <span class="btn-arrow" aria-hidden="true">→</span></span>
         </a>
         <div class="op-peek" aria-label="Marketplace products">
-          <a href="/products/online-shop" class="op-mini">
+          <a href="/products/online-shop" class="op-mini hot">
             <span class="op-thumb shop" aria-hidden="true"></span>
             <span><b>Toko Online</b><span>Storefront &amp; checkout</span></span>
           </a>
-          <a href="/products/pos" class="op-mini hot">
+          <a href="/products/pos" class="op-mini">
             <span class="op-thumb pos" aria-hidden="true"></span>
             <span><b>POS</b><span>In-store transactions</span></span>
+          </a>
+        </div>
+        <div class="op-preview">
+          <a class="op-banner" href="/products/online-shop" aria-label="OptimaStore Station — Toko Online">
+            <img src="/assets/optima/optimastore-station-banner.png?v=2" alt="OptimaStore Station — Platform Toko Online Lengkap untuk Bisnis yang Serius" width="1024" height="409" loading="lazy" decoding="async">
+            <span class="op-banner-cap">
+              <b>OptimaStore Station · Toko Online</b>
+              <em>Open Toko Online →</em>
+            </span>
           </a>
         </div>
       </article>
@@ -1706,7 +1743,7 @@ document.querySelectorAll('.reveal').forEach(function(el){
     return pointInRects(e.clientX, e.clientY, probe.getClientRects(), 6);
   }
 
-  var HOVER_SELECTOR = 'a, button, .btn, .op-suite-card, .op-card, .op-mini, .op-lp, .op-demo, .op-site, .work-card, .about-card, input, textarea, select, [role="button"]';
+  var HOVER_SELECTOR = 'a, button, .btn, .op-suite-card, .op-card, .op-mini, .op-lp, .op-demo, .op-site, .op-banner, .work-card, .about-card, input, textarea, select, [role="button"]';
   var OWD_SKIP = '.owd-section, .owd-card, .owd-link';
 
   window.addEventListener('mousemove', function(e){
