@@ -312,7 +312,10 @@ section{padding:110px 0;}
   background:#fff;
 }
 .op-suite-card-fill img{
-  display:block;width:100%;height:auto;aspect-ratio:1024 / 682;object-fit:contain;background:#fff;
+  display:block;width:100%;height:auto;aspect-ratio:1024 / 682;object-fit:cover;object-position:center center;background:#eef5fb;
+}
+.op-suite-card-fill.is-hris img{
+  aspect-ratio:1024 / 512;
 }
 .op-suite-card-fill .op-cta{
   margin:14px 18px 0;
@@ -1189,8 +1192,8 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
     </div>
 
     <div class="op-grid">
-      <a href="/products/hris" class="op-suite-card op-suite-card-fill" aria-label="Explore HRIS">
-        <img src="/assets/optima/hris-banner.png?v=2" alt="HRIS Human Resource Information System — Smarter HR. Happier Employees." width="1024" height="682" loading="lazy" decoding="async">
+      <a href="/products/hris" class="op-suite-card op-suite-card-fill is-hris" aria-label="Explore HRIS">
+        <img src="/assets/optima/hris-banner.png?v=4" alt="HRIS Human Resource Information System — Smarter HR. Happier Employees." width="1024" height="512" loading="lazy" decoding="async">
         <span class="op-cta">Explore HRIS <span class="btn-arrow" aria-hidden="true">→</span></span>
       </a>
       <a href="https://sanctuary-yoga-tan.vercel.app/" target="_blank" rel="noopener noreferrer" class="op-suite-card op-suite-card-fill" aria-label="Explore Yoga Reservation System">
