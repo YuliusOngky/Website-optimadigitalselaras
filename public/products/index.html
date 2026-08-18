@@ -186,6 +186,11 @@ section{padding:100px 0;}
 .bws-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px;}
 .bws-tmpl{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.1);transition:transform .25s,border-color .25s,box-shadow .25s;display:flex;flex-direction:column;}
 a.bws-tmpl:hover{transform:translateY(-4px);border-color:rgba(139,197,63,.45);box-shadow:0 20px 48px rgba(0,0,0,.3);}
+.bws-tmpl-interactive{cursor:pointer;position:relative;}
+.bws-tmpl-interactive:hover{transform:translateY(-4px);border-color:rgba(139,197,63,.45);box-shadow:0 20px 48px rgba(0,0,0,.3);}
+.bws-tmpl-hover-overlay{position:absolute;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:opacity .3s;border-radius:14px;display:flex;align-items:center;justify-content:center;padding:20px;z-index:10;}
+.bws-tmpl-interactive:hover .bws-tmpl-hover-overlay{opacity:1;}
+.bws-tmpl-hover-label{color:#fff;font-size:15px;font-weight:600;text-align:center;letter-spacing:.01em;}
 .bws-tmpl-screen{height:172px;position:relative;overflow:hidden;flex-shrink:0;}
 .bws-tmpl-foot{padding:14px 18px 18px;background:rgba(255,255,255,.05);}
 .bws-live-tag{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--teal);margin-bottom:5px;}
@@ -500,7 +505,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
       </a>
 
       <!-- Restaurant template -->
-      <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20tertarik%20dengan%20template%20Restaurant%20%26%20F%26B." target="_blank" rel="noopener noreferrer" class="bws-tmpl">
+      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="http://192.168.1.20:8088/templates/restaurant/" onclick="window.open(this.getAttribute('data-template-url'), '_blank')" style="cursor:pointer;">
         <div class="bws-tmpl-screen">
           <div class="tmpl-rest" style="height:100%;">
             <div class="tmpl-rest-bg"></div>
@@ -520,13 +525,16 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
               </div>
             </div>
           </div>
+          <div class="bws-tmpl-hover-overlay">
+            <div class="bws-tmpl-hover-label">Click to open full preview</div>
+          </div>
         </div>
         <div class="bws-tmpl-foot">
           <span class="bws-live-tag">Available Now</span>
           <strong>Restaurant &amp; F&amp;B</strong>
           <span class="desc">Menu · Reservation · Digital presence</span>
         </div>
-      </a>
+      </div>
 
       <!-- More industries teaser -->
       <div class="bws-tmpl bws-tmpl-teaser">
