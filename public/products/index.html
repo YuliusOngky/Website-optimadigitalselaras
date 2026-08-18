@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SaaS Products — Optima Digital Selaras</title>
-<meta name="description" content="Optima Digital cloud products: CreditRiskDynamics, loan origination, collection, HRIS, koperasi, POS, and more — multi-tenant software used by many organizations." />
+<title>Products — Optima Digital Selaras</title>
+<meta name="description" content="Professional business websites, commerce applications, enterprise platforms, and financial technology — Optima builds reusable digital products configured around how your organization operates." />
+<link rel="canonical" href="https://optimadigitalselaras.com/products/" />
+<link rel="icon" type="image/png" href="/assets/optima/logo.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
@@ -12,203 +14,284 @@
 :root{
   --navy-950:#020b1d;
   --navy-900:#071633;
+  --navy-800:#0d2347;
+  --navy-700:#15315f;
   --teal:#8bc53f;
   --teal-dark:#6ea82f;
-  --ink:#0f172a;
-  --muted:#475569;
+  --cyan-label:#a8d65e;
+  --ink:#0b1220;
+  --muted:#5b6472;
   --line:rgba(11,18,32,.09);
-  --off:#f4f1fb;
-  --saas:#7c3aed;
-  --saas-2:#2f6fed;
-  --saas-3:#22b06f;
-  --saas-4:#1cae86;
+  --line-dark:rgba(255,255,255,.14);
+  --off:#f5f7fa;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.5;}
-h1,h2,h3,h4,h5,h6{font-family:'Manrope',Inter,sans-serif;font-weight:800;letter-spacing:-0.02em;color:var(--ink);}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:#fff;line-height:1.5;overflow-x:hidden;}
+h1,h2,h3,h4{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-0.02em;color:var(--ink);}
 a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
 .wrap{max-width:1240px;margin:0 auto;padding:0 40px;}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal-dark);}
+section{padding:100px 0;}
 
-#nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(4,12,28,.96);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(255,255,255,.07);
-}
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(4,12,28,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.07);}
 #nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
 .brand{display:flex;align-items:center;gap:12px;}
-.brand-mark{display:block;width:36px;height:36px;object-fit:contain;flex-shrink:0;}
-.foot-brand .brand-mark{width:32px;height:32px;}
-.brand-text{line-height:1.15;}
+.brand-mark{display:block;width:40px;height:40px;object-fit:contain;flex-shrink:0;}
 .brand-text b{display:block;color:#fff;font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;letter-spacing:.01em;}
-.brand-text span{display:block;color:rgba(255,255,255,.55);font-size:11px;font-weight:500;}
-.nav-links{display:flex;gap:34px;list-style:none;}
-.nav-links a{color:rgba(255,255,255,.85);font-size:14.5px;font-weight:500;}
-.nav-links a:hover{color:#fff;}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,.8);font-size:14px;font-weight:500;transition:color .2s;}
+.nav-links a:hover,.nav-links a[aria-current="page"]{color:#fff;}
+.nav-links a[aria-current="page"]{position:relative;}
+.nav-links a[aria-current="page"]::after{content:"";position:absolute;left:0;right:0;bottom:-28px;height:2px;background:var(--teal);}
+.nav-toggle{display:none;width:40px;height:40px;border:1px solid rgba(255,255,255,.2);border-radius:8px;background:transparent;color:#fff;align-items:center;justify-content:center;cursor:pointer;}
+.nav-toggle svg{width:18px;height:18px;}
+.mobile-menu{display:none;}
+.mobile-menu.open{display:block;position:fixed;top:78px;left:0;right:0;bottom:0;background:var(--navy-950);z-index:99;padding:28px 22px;overflow-y:auto;}
+.mobile-menu.open ul{list-style:none;display:flex;flex-direction:column;gap:4px;}
+.mobile-menu.open a{display:block;padding:16px 6px;color:#fff;font-size:17px;font-weight:600;border-bottom:1px solid rgba(255,255,255,.08);}
+.mobile-menu.open .mm-section{padding:10px 6px 4px;color:rgba(255,255,255,.38);font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-bottom:none;}
+.mobile-menu.open .mm-cta{margin-top:20px;}
 
-.btn{
-  display:inline-flex;align-items:center;gap:9px;
-  padding:13px 24px;border-radius:8px;font-size:14.5px;font-weight:600;
-  transition:all .2s ease;white-space:nowrap;
-}
-.btn-solid{background:var(--saas);color:#fff;}
-.btn-solid:hover{background:#6d28d9;transform:translateY(-1px);}
-.btn-ghost{border:1.5px solid rgba(124,58,237,.35);color:var(--saas);background:#fff;}
-.btn-ghost:hover{border-color:var(--saas);background:#f5f3ff;}
-.btn-light{background:#fff;color:var(--navy-950);}
-.btn-light:hover{background:#ede9fe;}
-.btn-arrow{transition:transform .2s;}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:8px;font-size:14.5px;font-weight:600;transition:all .2s ease;white-space:nowrap;}
+.btn-solid{background:var(--teal);color:var(--navy-950);}
+.btn-solid:hover{background:#a8d65e;transform:translateY(-1px);}
+.btn-outline{border:1.5px solid rgba(255,255,255,.35);color:#fff;}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.06);}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink);}
+.btn-ghost:hover{border-color:var(--navy-800);}
+.btn-arrow{font-size:16px;transition:transform .2s;}
 .btn:hover .btn-arrow{transform:translateX(3px);}
 .wa-icon{flex-shrink:0;display:block;}
 
-/* HERO — light split, not a full navy banner */
-.saas-hero{
-  padding:120px 0 72px;
-  background:
-    radial-gradient(900px 420px at 90% -10%, rgba(124,58,237,.16), transparent 60%),
-    linear-gradient(180deg, #f7f4ff 0%, #fff 70%);
-  border-bottom:1px solid var(--line);
-}
-.saas-hero-grid{
-  display:grid;
-  grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
-  gap:56px;
-  align-items:center;
-}
-.crumb{font-size:13.5px;font-weight:600;color:var(--saas);margin-bottom:22px;display:inline-block;}
-.crumb:hover{color:#5b21b6;}
-.kicker{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--saas);background:#ede9fe;border-radius:999px;padding:6px 12px;margin-bottom:18px;
-}
-.saas-hero h1{
-  font-size:clamp(32px,4.2vw,52px);line-height:1.08;letter-spacing:-0.035em;
-  max-width:640px;margin-bottom:18px;
-}
-.saas-hero .lead{font-size:17px;line-height:1.7;color:var(--muted);max-width:540px;margin-bottom:28px;}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
-.stat-row{display:flex;gap:28px;flex-wrap:wrap;padding-top:8px;border-top:1px solid var(--line);}
-.stat b{display:block;font-family:'Manrope',sans-serif;font-size:28px;color:var(--saas);letter-spacing:-.03em;}
-.stat span{font-size:13px;color:var(--muted);font-weight:600;}
+/* HERO */
+.p-hero{background:var(--navy-950);color:#fff;padding:150px 0 84px;position:relative;overflow:hidden;}
+.p-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(760px 420px at 88% -10%, rgba(139,197,63,.13), transparent 60%);pointer-events:none;}
+.p-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(500px 380px at 12% 100%, rgba(21,49,95,.6), transparent 60%);pointer-events:none;}
+.p-hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.9fr);gap:56px;align-items:center;position:relative;}
+.p-hero .eyebrow{color:var(--cyan-label);margin-bottom:18px;display:block;}
+.p-hero h1{font-size:clamp(30px,3.8vw,48px);line-height:1.1;letter-spacing:-.03em;color:#fff;max-width:580px;margin-bottom:20px;}
+.p-hero .lead{font-size:16px;line-height:1.75;color:rgba(255,255,255,.64);max-width:500px;margin-bottom:32px;}
+.p-hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px;}
+.p-stat-row{display:flex;gap:32px;flex-wrap:wrap;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);}
+.p-stat b{display:block;font-family:'Manrope',sans-serif;font-size:26px;color:var(--teal);letter-spacing:-.03em;}
+.p-stat span{font-size:12.5px;color:rgba(255,255,255,.5);font-weight:600;}
 
-.window{
-  background:#0b1220;border-radius:16px;overflow:hidden;
-  box-shadow:0 30px 70px rgba(76,29,149,.22);
-  border:1px solid #1f2a44;
-}
-.window-bar{display:flex;align-items:center;gap:8px;padding:12px 14px;background:#111a2e;}
-.window-bar i{width:9px;height:9px;border-radius:50%;display:block;}
-.window-bar i:nth-child(1){background:#ff5f57;}
-.window-bar i:nth-child(2){background:#febc2e;}
-.window-bar i:nth-child(3){background:#28c840;}
-.window-bar em{font-style:normal;margin-left:8px;font-size:12px;color:#93a4c7;font-weight:600;}
-.window-body{display:grid;grid-template-columns:120px 1fr;min-height:280px;}
-.side{padding:16px 12px;background:#0e1730;border-right:1px solid #1f2a44;color:#8ea0c5;font-size:12px;}
-.side p{padding:8px 10px;border-radius:8px;margin-bottom:4px;}
-.side p.on{background:rgba(124,58,237,.28);color:#ddd6fe;font-weight:700;}
-.main{padding:18px;}
-.main h3{color:#fff;font-size:15px;margin-bottom:14px;}
-.kpi{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
-.kpi div{background:#151f38;border:1px solid #243154;border-radius:10px;padding:12px;}
-.kpi b{display:block;color:#c4b5fd;font-size:18px;font-family:'Manrope',sans-serif;}
-.kpi span{font-size:11px;color:#8ea0c5;}
-.bars{display:flex;align-items:flex-end;gap:8px;height:78px;padding:8px 4px 0;}
-.bars span{flex:1;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#a78bfa,#7c3aed);}
-.bars span:nth-child(1){height:42%;opacity:.55;}
-.bars span:nth-child(2){height:68%;}
-.bars span:nth-child(3){height:54%;opacity:.75;}
-.bars span:nth-child(4){height:88%;}
-.bars span:nth-child(5){height:62%;opacity:.7;}
-.bars span:nth-child(6){height:74%;}
-.flagship{
-  margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;
-  color:#c4b5fd;font-size:12.5px;font-weight:600;
-}
-.flagship a{color:#fff;text-decoration:underline;text-underline-offset:3px;}
+/* HERO PRODUCT COLLAGE */
+.p-collage{position:relative;display:grid;grid-template-rows:auto auto;gap:12px;}
+.p-window{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.1);}
+.p-window-bar{display:flex;align-items:center;gap:8px;padding:11px 14px;background:#0e1730;}
+.p-window-bar i{width:9px;height:9px;border-radius:50%;display:block;}
+.p-window-bar i:nth-child(1){background:#ff5f57;}
+.p-window-bar i:nth-child(2){background:#febc2e;}
+.p-window-bar i:nth-child(3){background:#28c840;}
+.p-window-bar em{font-style:normal;margin-left:6px;font-size:11.5px;color:#93a4c7;font-weight:600;}
+.p-window img{display:block;width:100%;height:auto;}
+.p-window-cap{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;background:#f7f8fa;border-top:1px solid var(--line);}
+.p-window-cap b{font-size:12.5px;color:var(--ink);}
+.p-window-cap a{font-size:12.5px;font-weight:700;color:var(--teal-dark);}
+.p-collage-strip{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.p-mini-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:12px;}
+.p-mini-dot{width:32px;height:32px;border-radius:8px;flex-shrink:0;display:grid;place-items:center;font-size:15px;}
+.p-mini-dot.web{background:rgba(139,197,63,.22);color:var(--teal);}
+.p-mini-dot.fin{background:rgba(99,139,223,.22);color:#7ba8f5;}
+.p-mini-card b{display:block;font-size:12.5px;font-weight:700;color:#fff;line-height:1.2;}
+.p-mini-card span{display:block;font-size:11px;color:rgba(255,255,255,.45);font-weight:500;margin-top:2px;}
 
-/* COMPARE */
-.compare{padding:88px 0;background:#fff;}
-.compare-head{max-width:680px;margin-bottom:40px;}
-.compare-head .label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--saas);margin-bottom:12px;}
-.compare-head h2{font-size:clamp(26px,3vw,36px);line-height:1.18;}
-.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
-.compare-card{border-radius:16px;padding:32px;min-height:100%;}
-.compare-card.ent{background:#f8fafc;border:1px solid #e2e8f0;}
-.compare-card.saas{background:#1e0b3d;color:#fff;border:1px solid #3b0764;}
-.compare-card .tag{
-  display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
-  padding:5px 10px;border-radius:999px;margin-bottom:16px;
-}
-.compare-card.ent .tag{background:#e2e8f0;color:#334155;}
-.compare-card.saas .tag{background:rgba(167,139,250,.22);color:#ddd6fe;}
-.compare-card h3{font-size:22px;margin-bottom:10px;}
-.compare-card.saas h3{color:#fff;}
-.compare-card p{font-size:15px;line-height:1.7;color:var(--muted);margin-bottom:20px;}
-.compare-card.saas p{color:rgba(255,255,255,.7);}
-.compare-card ul{list-style:none;}
-.compare-card li{font-size:14.5px;padding:8px 0;border-top:1px solid rgba(15,23,42,.08);font-weight:600;}
-.compare-card.saas li{border-top-color:rgba(255,255,255,.1);color:#ede9fe;}
-.compare-card a{display:inline-flex;margin-top:22px;font-weight:700;font-size:14px;color:var(--saas);}
-.compare-card.saas a{color:#c4b5fd;}
+/* SECTION HEAD */
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;gap:24px;flex-wrap:wrap;}
+.sec-num{font-size:14px;font-weight:700;color:var(--muted);display:inline-block;margin-right:14px;font-family:'Manrope',sans-serif;}
+.sec-num-line{display:inline-block;width:56px;height:1px;background:var(--line);margin-right:14px;transform:translateY(-4px);}
+.sec-title-row{display:flex;align-items:baseline;margin-bottom:10px;}
+.sec-title{font-size:clamp(24px,2.4vw,34px);}
+.sec-desc{max-width:520px;color:var(--muted);font-size:15.5px;line-height:1.7;}
+.sec-cta-link{font-size:14.5px;font-weight:700;color:var(--teal-dark);display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
+.sec-cta-link:hover{color:var(--navy-800);}
 
-/* CATALOG */
-.catalog{padding:88px 0;background:var(--off);}
-.catalog-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px;}
-.catalog-head .label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--saas);margin-bottom:12px;}
-.catalog-head h2{font-size:clamp(26px,3vw,36px);max-width:560px;}
-.legend{display:flex;gap:16px;flex-wrap:wrap;}
-.legend span{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--muted);}
-.dot{width:8px;height:8px;border-radius:50%;display:inline-block;}
-.cat-block{margin-bottom:28px;}
-.cat-label{
-  display:flex;align-items:center;gap:14px;margin-bottom:14px;
-  font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
-}
-.cat-label .line{flex:1;height:1px;background:rgba(15,23,42,.1);}
-.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.prod{
-  background:#fff;border:1px solid #e8e0f5;border-radius:12px;padding:18px 18px 16px;
-  border-left:4px solid var(--c,#7c3aed);
-  display:flex;flex-direction:column;gap:6px;min-height:118px;
-}
-.prod strong{font-size:15px;}
-.prod em{font-style:normal;font-size:12px;font-weight:700;color:var(--c,#7c3aed);}
-.prod p{font-size:13.5px;color:var(--muted);line-height:1.55;}
-.prod a{margin-top:auto;font-size:13px;font-weight:700;color:var(--c,#7c3aed);}
+/* PRODUCT CARD SYSTEM — Level 1: Featured commerce/business */
+.op-section .sec-desc{max-width:640px;}
+.badge{display:inline-flex;align-items:center;font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:4px 10px;margin-bottom:12px;}
+.badge-core{background:rgba(139,197,63,.18);color:var(--cyan-label);border:1px solid rgba(139,197,63,.35);}
+.badge-core.on-light{color:var(--teal-dark);background:rgba(139,197,63,.14);border-color:rgba(139,197,63,.32);}
+.badge-featured{background:var(--off);color:var(--navy-800);border:1px solid var(--line);}
+.badge-catalog{background:#fff;color:var(--muted);border:1px solid var(--line);}
+.badge-fintech{background:rgba(99,139,223,.14);color:#4a7bd4;border:1px solid rgba(99,139,223,.28);}
+.op-suite-label{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;margin:0 0 18px;padding:12px 18px;border-radius:8px;background:var(--teal);color:var(--navy-950);font-family:'Manrope',sans-serif;}
+.op-suite-label b{font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;}
+.op-suite-flow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy-950);}
+.op-suite-flow i{font-style:normal;font-weight:800;}
+.op-suite-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:stretch;}
+.op-suite-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;}
+.op-suite-card:hover{transform:translateY(-3px);border-color:rgba(11,18,32,.2);box-shadow:0 16px 34px rgba(11,18,32,.08);}
+.op-suite-card img{display:block;width:100%;height:auto;aspect-ratio:1024/682;object-fit:cover;background:var(--off);}
+.op-suite-card-body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1;}
+.op-suite-card h3{font-size:19px;margin-bottom:6px;}
+.op-suite-card p{font-size:13.5px;line-height:1.6;color:var(--muted);margin-bottom:16px;}
+.op-suite-card.flagship{background:var(--navy-950);border-color:var(--navy-800);}
+.op-suite-card.flagship:hover{border-color:rgba(139,197,63,.45);box-shadow:0 22px 48px rgba(2,11,29,.28);}
+.op-suite-card.flagship h3{color:#fff;font-size:clamp(21px,2vw,24px);}
+.op-suite-card.flagship p{color:rgba(255,255,255,.62);}
+.op-cta{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--teal-dark);margin-top:auto;}
+.op-suite-card.flagship .op-cta{color:var(--teal);}
+.op-cta .btn-arrow{transition:transform .2s;}
+.op-suite-card:hover .op-cta .btn-arrow{transform:translateX(3px);}
+.op-note{font-size:12px;color:var(--muted);margin-top:8px;}
+.op-suite-card.flagship .op-note{color:rgba(255,255,255,.42);}
 
-/* TENANT MODEL */
+/* Level 2: Featured cards (op-card) */
+.op-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px;}
+.op-grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.op-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;}
+.op-card:hover{transform:translateY(-3px);border-color:rgba(11,18,32,.2);box-shadow:0 14px 30px rgba(11,18,32,.08);}
+.op-card img{display:block;width:100%;height:auto;aspect-ratio:1024/682;object-fit:cover;background:var(--off);}
+.op-card-body{padding:20px;display:flex;flex-direction:column;flex:1;}
+.op-card h4{font-size:16.5px;margin-bottom:6px;}
+.op-card p{font-size:13.5px;line-height:1.6;color:var(--muted);margin-bottom:16px;}
+
+/* Level 3: Mini commerce highlight cards */
+.op-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;}
+.op-mini-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column;gap:8px;transition:transform .2s,box-shadow .2s,border-color .2s;}
+.op-mini-card:hover{transform:translateY(-2px);border-color:rgba(11,18,32,.18);box-shadow:0 10px 22px rgba(11,18,32,.07);}
+.op-mini-icon{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;margin-bottom:4px;flex-shrink:0;}
+.op-mini-icon.pos{background:linear-gradient(160deg,#d1fae5,#6ee7b7);color:#065f46;}
+.op-mini-icon.ppob{background:linear-gradient(160deg,#dbeafe,#93c5fd);color:#1e40af;}
+.op-mini-icon.goride{background:linear-gradient(160deg,#fde68a,#fbbf24);color:#78350f;}
+.op-mini-icon.hr{background:linear-gradient(160deg,#e0e7ff,#a5b4fc);color:#3730a3;}
+.op-mini-card h4{font-size:15.5px;margin-bottom:0;}
+.op-mini-card p{font-size:13px;line-height:1.6;color:var(--muted);}
+.op-mini-card .op-cta{margin-top:auto;padding-top:10px;}
+
+/* BUSINESS WEBSITE SOLUTIONS section */
+.bws-section{padding:100px 0;background:var(--navy-950);color:#fff;position:relative;overflow:hidden;}
+.bws-section::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 500px at 100% 100%, rgba(139,197,63,.1), transparent 60%);pointer-events:none;}
+.bws-section .eyebrow{color:var(--cyan-label);}
+.bws-section h2{color:#fff;font-size:clamp(24px,2.6vw,36px);max-width:600px;margin:12px 0 14px;}
+.bws-section .sec-desc{color:rgba(255,255,255,.62);max-width:580px;margin-bottom:44px;}
+.bws-tiers{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(255,255,255,.1);border-radius:14px;overflow:hidden;margin-bottom:48px;}
+.bws-tier{background:rgba(255,255,255,.04);padding:32px 28px;position:relative;transition:background .2s;}
+.bws-tier:hover{background:rgba(255,255,255,.07);}
+.bws-tier-num{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:16px;display:block;}
+.bws-tier h3{color:#fff;font-size:19px;margin-bottom:8px;}
+.bws-tier p{font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.55);}
+.bws-tier ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:7px;}
+.bws-tier li{font-size:13px;color:rgba(255,255,255,.6);font-weight:500;display:flex;align-items:center;gap:8px;}
+.bws-tier li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0;}
+
+/* BWS Template Gallery */
+.bws-gallery-label{font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.38);display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+.bws-gallery-label::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.1);}
+.bws-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px;}
+.bws-tmpl{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.1);transition:transform .25s,border-color .25s,box-shadow .25s;display:flex;flex-direction:column;}
+a.bws-tmpl:hover{transform:translateY(-4px);border-color:rgba(139,197,63,.45);box-shadow:0 20px 48px rgba(0,0,0,.3);}
+.bws-tmpl-screen{height:172px;position:relative;overflow:hidden;flex-shrink:0;}
+.bws-tmpl-foot{padding:14px 18px 18px;background:rgba(255,255,255,.05);}
+.bws-live-tag{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--teal);margin-bottom:5px;}
+.bws-live-tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal);display:block;}
+.bws-tmpl-foot strong{display:block;font-size:14.5px;font-weight:800;color:#fff;font-family:'Manrope',sans-serif;margin-bottom:3px;}
+.bws-tmpl-foot span.desc{font-size:12px;color:rgba(255,255,255,.42);}
+
+/* Corporate template mockup */
+.tmpl-corp{background:#f0f2f7;display:flex;flex-direction:column;}
+.tmpl-corp-nav{height:22px;background:#071633;display:flex;align-items:center;padding:0 10px;gap:0;flex-shrink:0;}
+.tmpl-corp-logo{width:44px;height:5px;border-radius:2px;background:rgba(255,255,255,.75);}
+.tmpl-corp-links{margin-left:auto;display:flex;gap:6px;}
+.tmpl-corp-links i{width:18px;height:3px;border-radius:2px;background:rgba(255,255,255,.28);display:block;}
+.tmpl-corp-hero{background:#0d2347;padding:14px 12px 16px;flex-shrink:0;}
+.tmpl-corp-h1{width:72%;height:7px;border-radius:3px;background:rgba(255,255,255,.9);margin-bottom:6px;}
+.tmpl-corp-sub{width:52%;height:4px;border-radius:2px;background:rgba(255,255,255,.32);margin-bottom:10px;}
+.tmpl-corp-cta{width:64px;height:16px;border-radius:4px;background:var(--teal);}
+.tmpl-corp-body{padding:12px 10px;display:grid;grid-template-columns:repeat(3,1fr);gap:7px;flex:1;background:#f0f2f7;}
+.tmpl-corp-card{background:#fff;border:1px solid #dde2ea;border-radius:5px;height:38px;}
+
+/* Restaurant template mockup */
+.tmpl-rest{position:relative;}
+.tmpl-rest-bg{position:absolute;inset:0;background:linear-gradient(160deg,#3d1a0e 0%,#6b3222 40%,#291008 100%);}
+.tmpl-rest-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,.2) 55%,transparent 100%);}
+.tmpl-rest-nav{position:absolute;top:0;left:0;right:0;height:22px;background:rgba(0,0,0,.35);display:flex;align-items:center;padding:0 10px;z-index:1;}
+.tmpl-rest-logo{width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,.8);}
+.tmpl-rest-nav-right{margin-left:auto;display:flex;gap:6px;}
+.tmpl-rest-nav-right i{width:16px;height:3px;border-radius:2px;background:rgba(255,255,255,.35);display:block;}
+.tmpl-rest-content{position:absolute;bottom:0;left:0;right:0;padding:12px 12px 0;}
+.tmpl-rest-h1{width:58%;height:7px;border-radius:3px;background:#fff;margin-bottom:5px;}
+.tmpl-rest-sub{width:40%;height:4px;border-radius:2px;background:rgba(255,255,255,.4);margin-bottom:9px;}
+.tmpl-rest-menu{display:grid;grid-template-columns:1fr 1fr;gap:5px;}
+.tmpl-rest-item{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.1);border-radius:4px;height:28px;}
+
+/* More Templates teaser card */
+.bws-tmpl-teaser{cursor:default;}
+.bws-tmpl-teaser .bws-tmpl-screen{background:var(--navy-900);display:flex;align-items:center;justify-content:center;}
+.bws-teaser-inner{display:flex;flex-direction:column;align-items:center;gap:14px;padding:20px;}
+.bws-teaser-icons{display:flex;gap:10px;}
+.bws-teaser-icon{width:40px;height:40px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);display:grid;place-items:center;}
+.bws-teaser-icon svg{width:18px;height:18px;stroke:rgba(255,255,255,.3);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.bws-teaser-label{font-size:12px;font-weight:600;color:rgba(255,255,255,.28);text-align:center;line-height:1.5;}
+.bws-tmpl-teaser .bws-tmpl-foot{border-top:1px solid rgba(255,255,255,.07);}
+.bws-soon-tag-inline{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.38);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:3px 9px;margin-bottom:5px;}
+
+/* BWS industry grid */
+.bws-industry{margin-bottom:44px;}
+.bws-industry-label{font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:14px;display:flex;align-items:center;gap:14px;}
+.bws-industry-label::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.1);}
+.bws-industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.bws-ind-card{border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:18px 20px;position:relative;transition:border-color .2s,background .2s;}
+.bws-ind-card:not(.is-soon):hover{border-color:rgba(139,197,63,.4);background:rgba(139,197,63,.05);}
+.bws-ind-card.is-soon{opacity:.52;cursor:default;}
+.bws-ind-card h4{font-size:14.5px;color:#fff;margin-bottom:4px;}
+.bws-ind-card p{font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.5;}
+.bws-soon-tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.38);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:3px 8px;margin-top:8px;}
+.bws-cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+
+/* ENTERPRISE TECHNOLOGY section */
+.ent-section{padding:100px 0;background:var(--off);}
+.ent-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:4px;}
+.ent-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px;display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s,border-color .2s;}
+.ent-card:hover{transform:translateY(-3px);border-color:rgba(11,18,32,.18);box-shadow:0 14px 30px rgba(11,18,32,.07);}
+.ent-icon{width:46px;height:46px;border-radius:10px;display:grid;place-items:center;background:var(--off);border:1px solid var(--line);}
+.ent-icon svg{width:22px;height:22px;stroke:var(--navy-800);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.ent-card h3{font-size:17px;margin:0;}
+.ent-card p{font-size:13.5px;line-height:1.65;color:var(--muted);margin:0;}
+.ent-card .op-cta{margin-top:auto;padding-top:6px;}
+
+/* CATALOG — compact discovery grid */
+.catalog{padding:88px 0;background:#fff;}
+.cat-block{margin-bottom:36px;}
+.cat-block:last-child{margin-bottom:0;}
+.cat-label{display:flex;align-items:center;gap:14px;margin-bottom:14px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--navy-800);}
+.cat-label .line{flex:1;height:1px;background:var(--line);}
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.prod{background:#fff;border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:9px;padding:14px 16px 12px;display:flex;flex-direction:column;gap:5px;}
+.prod strong{font-size:14px;font-weight:700;}
+.prod p{font-size:12.5px;color:var(--muted);line-height:1.5;flex:1;}
+.prod a{margin-top:8px;font-size:12px;font-weight:700;color:var(--teal-dark);display:inline-flex;align-items:center;gap:5px;}
+
+/* HOW OPTIMA WORKS */
 .model{padding:88px 0;background:var(--navy-950);color:#fff;}
-.model .label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#c4b5fd;margin-bottom:12px;}
-.model h2{color:#fff;font-size:clamp(26px,3vw,36px);max-width:640px;margin-bottom:40px;}
-.model-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;}
-.model-step{padding:0 28px 0 0;position:relative;}
-.model-step:not(:last-child)::after{
-  content:"";position:absolute;right:18px;top:22px;width:calc(100% - 70px);height:2px;
-  background:linear-gradient(90deg,#7c3aed,rgba(124,58,237,.15));
-}
-.num{
-  width:44px;height:44px;border-radius:12px;background:var(--saas);color:#fff;
-  display:grid;place-items:center;font-family:'Manrope',sans-serif;font-weight:800;margin-bottom:18px;
-}
-.model-step h4{color:#fff;font-size:18px;margin-bottom:10px;}
-.model-step p{color:rgba(255,255,255,.62);font-size:14.5px;line-height:1.65;max-width:280px;}
+.model .eyebrow{color:var(--cyan-label);}
+.model h2{color:#fff;font-size:clamp(24px,2.6vw,34px);max-width:640px;margin:12px 0 44px;}
+.model-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.num{width:40px;height:40px;border-radius:10px;background:var(--teal);color:var(--navy-950);display:grid;place-items:center;font-family:'Manrope',sans-serif;font-weight:800;margin-bottom:16px;}
+.model-step h4{color:#fff;font-size:17px;margin-bottom:8px;}
+.model-step p{color:rgba(255,255,255,.6);font-size:14px;line-height:1.65;}
 
-/* CTA */
-.final{padding:72px 0;background:#fff;border-top:1px solid var(--line);}
-.final .wrap{
-  display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;
-  background:linear-gradient(135deg,#1e0b3d,#4c1d95);
-  border-radius:20px;padding:40px 44px;color:#fff;
-}
-.final h3{color:#fff;font-size:clamp(22px,3vw,32px);max-width:520px;margin-bottom:8px;}
-.final p{color:rgba(255,255,255,.7);max-width:460px;}
+/* FINAL CTA */
+.final-cta{padding:80px 0;background:#fff;}
+.final-cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;background:var(--navy-950);border-radius:18px;padding:44px 48px;color:#fff;}
+.final-cta h3{color:#fff;font-size:clamp(21px,2.6vw,30px);max-width:520px;margin-bottom:8px;}
+.final-cta p{color:rgba(255,255,255,.62);max-width:460px;font-size:14.5px;}
 .final-actions{display:flex;gap:12px;flex-wrap:wrap;}
 
-footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28px;border-top:1px solid rgba(255,255,255,.08);}
-.foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1.2fr;gap:32px;margin-bottom:52px;}
-.foot-brand p{font-size:13.5px;color:rgba(255,255,255,.5);margin-top:14px;line-height:1.7;max-width:260px;}
+/* FOOTER */
+footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28px;border-top:1px solid rgba(255,255,255,.08);}
+.foot-brand-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:40px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08);}
+.foot-brand .brand{align-items:center;gap:16px;}
+.foot-brand .brand-mark{width:48px;height:48px;}
+.foot-brand .brand-text b{display:block;color:#fff;font-size:clamp(17px,2vw,22px);letter-spacing:.03em;line-height:1.15;font-family:'Manrope',sans-serif;font-weight:800;}
+.foot-mark{display:block;width:40px;height:2px;background:var(--teal);margin-top:12px;}
+.foot-brand-meta{font-size:12.5px;color:rgba(255,255,255,.4);letter-spacing:.04em;text-transform:uppercase;font-weight:600;padding-bottom:6px;}
+.foot-top{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:40px;}
 .foot-col h6{font-size:13px;font-weight:700;color:#fff;margin-bottom:16px;text-transform:uppercase;letter-spacing:.03em;}
 .foot-col a,.foot-col p{display:block;font-size:13.5px;color:rgba(255,255,255,.55);margin-bottom:10px;line-height:1.5;}
 .foot-col a:hover{color:#fff;}
@@ -217,295 +300,653 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
 .reveal.in{opacity:1;transform:none;}
 
+/* SECTION DIVIDER accent */
+.section-divider{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
+.section-divider .eyebrow{margin:0;}
+.section-divider::before{content:"";display:block;width:3px;height:18px;background:var(--teal);border-radius:2px;}
+
 @media (max-width:980px){
-  .saas-hero-grid,.compare-grid,.prod-grid,.model-row,.foot-top{grid-template-columns:1fr 1fr;}
-  .window-body{grid-template-columns:1fr;}
-  .side{display:none;}
-  .model-step:not(:last-child)::after{display:none;}
   .nav-links{display:none;}
+  .nav-toggle{display:flex;}
+  .p-hero-grid,.foot-top{grid-template-columns:1fr;}
+  .p-collage-strip{grid-template-columns:1fr 1fr;}
+  .op-suite-grid,.op-grid3,.op-grid2{grid-template-columns:1fr 1fr;}
+  .op-mini-grid{grid-template-columns:1fr 1fr;}
+  .bws-tiers{grid-template-columns:1fr;}
+  .bws-gallery{grid-template-columns:1fr 1fr;}
+  .bws-industry-grid{grid-template-columns:1fr 1fr;}
+  .ent-grid{grid-template-columns:1fr;}
+  .prod-grid{grid-template-columns:repeat(2,1fr);}
+  .model-row{grid-template-columns:1fr 1fr;gap:28px;}
 }
 @media (max-width:640px){
   .wrap{padding:0 22px;}
-  .saas-hero{padding-top:110px;}
-  .saas-hero-grid,.compare-grid,.prod-grid,.model-row,.foot-top{grid-template-columns:1fr;}
-  .final .wrap{flex-direction:column;align-items:flex-start;padding:28px;}
+  .p-hero{padding-top:118px;}
+  .op-suite-grid,.op-grid3,.op-grid2,.op-mini-grid{grid-template-columns:1fr;}
+  .bws-gallery{grid-template-columns:1fr;}
+  .bws-industry-grid{grid-template-columns:1fr;}
+  .ent-grid{grid-template-columns:1fr;}
+  .model-row{grid-template-columns:1fr;}
+  .prod-grid{grid-template-columns:1fr 1fr;}
+  .final-cta .wrap{flex-direction:column;align-items:flex-start;padding:30px;}
+  .foot-top{grid-template-columns:1fr;}
+  .p-collage-strip{grid-template-columns:1fr;}
+}
+@media (max-width:420px){
+  .prod-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
 
+<!-- ===================== NAV ===================== -->
 <nav id="nav">
   <div class="wrap">
     <a href="/" class="brand">
-      <img class="brand-mark" src="/assets/optima/logo.png?v=2" width="36" height="36" alt="Optima Digital Selaras">
+      <img class="brand-mark" src="/assets/optima/logo.png?v=2" width="40" height="40" alt="Optima Digital Selaras">
       <span class="brand-text"><b>PT Optima Digital Selaras</b></span>
     </a>
     <ul class="nav-links">
-      <li><a href="/#what-we-do">What We Do</a></li>
-      <li><a href="/#products">Products</a></li>
-      <li><a href="/#industries">Industries</a></li>
+      <li><a href="/products/" aria-current="page">Products</a></li>
+      <li><a href="#website-solutions">Business Website Solutions</a></li>
+      <li><a href="/#what-we-do">Services</a></li>
       <li><a href="/#work">Client Work</a></li>
-      <li><a href="https://wa.me/628129885679" target="_blank" rel="noopener noreferrer">Contact</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="https://wa.me/6285770566781" target="_blank" rel="noopener noreferrer">Contact</a></li>
     </ul>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
   </div>
 </nav>
 
-<header class="saas-hero">
-  <div class="wrap saas-hero-grid">
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li class="mm-section">Products</li>
+    <li><a href="/products/" aria-current="page">All Products</a></li>
+    <li><a href="#website-solutions">Business Website Solutions</a></li>
+    <li><a href="#business-commerce">Business &amp; Commerce</a></li>
+    <li><a href="#enterprise">Enterprise Technology</a></li>
+    <li><a href="#financial-technology">Financial Technology</a></li>
+    <li class="mm-section">Company</li>
+    <li><a href="/#work">Client Work</a></li>
+    <li><a href="/#about">About</a></li>
+  </ul>
+  <a href="https://wa.me/6285770566781" class="btn btn-solid mm-cta" target="_blank" rel="noopener noreferrer">Talk to Our Team <span class="btn-arrow">→</span></a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<header class="p-hero">
+  <div class="wrap p-hero-grid">
     <div>
-      <a class="crumb" href="/#what-we-do">← Back to What We Do</a>
-      <div class="kicker">SaaS catalog</div>
-      <h1>One product. Many organizations. Same cloud.</h1>
-      <p class="lead">Optima builds software you can subscribe to — not a one-off system for a single company. Credit, collection, HR, koperasi, POS, and citizen services run as multi-tenant cloud products.</p>
-      <div class="hero-actions">
-        <a href="https://wa.me/628129885679" class="btn btn-solid" target="_blank" rel="noopener noreferrer"><svg class="wa-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Talk about a product</a>
-        <a href="#catalog" class="btn btn-ghost">Browse the catalog</a>
+      <span class="eyebrow">Optima Digital Products</span>
+      <h1>Digital products built for real business operations.</h1>
+      <p class="lead">From professional business websites and commerce applications to enterprise platforms and financial technology — Optima builds reusable digital products that configure around how organizations operate.</p>
+      <div class="p-hero-actions">
+        <a href="#website-solutions" class="btn btn-solid">Explore Products <span class="btn-arrow">→</span></a>
+        <a href="https://wa.me/6285770566781" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Talk to Our Team</a>
       </div>
-      <div class="stat-row">
-        <div class="stat"><b>14+</b><span>ready-to-deploy products</span></div>
-        <div class="stat"><b>4</b><span>sector catalogs</span></div>
-        <div class="stat"><b>1→N</b><span>tenants on one core</span></div>
+      <div class="p-stat-row">
+        <div class="p-stat"><b>4</b><span>product categories</span></div>
+        <div class="p-stat"><b>14+</b><span>products in portfolio</span></div>
+        <div class="p-stat"><b>Live</b><span>deployments running today</span></div>
       </div>
     </div>
-    <div class="window" aria-hidden="true">
-      <div class="window-bar"><i></i><i></i><i></i><em>optima.saas / tenant console</em></div>
-      <div class="window-body">
-        <div class="side">
-          <p class="on">Tenants</p>
-          <p>Modules</p>
-          <p>Billing</p>
-          <p>Releases</p>
+    <div class="p-collage" aria-hidden="true">
+      <div class="p-window">
+        <div class="p-window-bar"><i></i><i></i><i></i><em>OptimaStore — Commerce Platform</em></div>
+        <img src="/assets/optima/optimastore-station-banner.png?v=3" alt="" width="1024" height="682">
+        <div class="p-window-cap">
+          <b>OptimaStore — Commerce &amp; Business Applications</b>
+          <a href="#business-commerce">Explore →</a>
         </div>
-        <div class="main">
-          <h3>Active tenants this quarter</h3>
-          <div class="kpi">
-            <div><b>Banking</b><span>Credit · LOS · Collection</span></div>
-            <div><b>Retail</b><span>POS · PPOB · Shop</span></div>
+      </div>
+      <div class="p-collage-strip">
+        <a href="#website-solutions" class="p-mini-card" style="cursor:pointer;">
+          <div class="p-mini-dot web">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
           </div>
-          <div class="bars"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="flagship">
-            <span>Flagship: CreditRiskDynamics</span>
-            <a href="https://creditriskdynamics.com" target="_blank" rel="noopener noreferrer">Open live →</a>
+          <div>
+            <b>Business Website Solutions</b>
+            <span>Professional websites, fast</span>
           </div>
-        </div>
+        </a>
+        <a href="#financial-technology" class="p-mini-card" style="cursor:pointer;">
+          <div class="p-mini-dot fin">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <div>
+            <b>Financial Technology</b>
+            <span>Credit Suite &amp; FinTech</span>
+          </div>
+        </a>
       </div>
     </div>
   </div>
 </header>
 
-<section class="compare reveal">
+<!-- ===================== 01 BUSINESS WEBSITE SOLUTIONS ===================== -->
+<section id="website-solutions" class="bws-section reveal">
   <div class="wrap">
-    <div class="compare-head">
-      <p class="label">Not the same as Enterprise Software</p>
-      <h2>Custom platform for one business — or a product many businesses can buy.</h2>
+    <div class="sec-head" style="margin-bottom:12px;">
+      <div>
+        <div class="sec-title-row"><span class="sec-num" style="color:rgba(255,255,255,.38);">01</span><span class="sec-num-line" style="background:rgba(255,255,255,.12)"></span><span class="eyebrow">Business Website Solutions</span></div>
+        <h2>Professional websites without starting from zero.</h2>
+        <p class="sec-desc">Choose a proven website foundation, customize it around your brand, or build something completely tailored to your business — across three tiers for every budget and timeline.</p>
+      </div>
     </div>
-    <div class="compare-grid">
-      <article class="compare-card ent">
-        <span class="tag">Enterprise Software</span>
-        <h3>Built around one operation</h3>
-        <p>A purpose-built internal platform shaped to a single organization’s workflows, approvals, and data.</p>
+
+    <!-- 3-tier model -->
+    <div class="bws-tiers">
+      <div class="bws-tier">
+        <span class="bws-tier-num">Tier 01</span>
+        <h3>Ready Template</h3>
+        <p>A fully designed, industry-specific website foundation — go live fast with your content dropped in.</p>
         <ul>
-          <li>One client, one system</li>
-          <li>Deep custom process fit</li>
-          <li>Owned and run internally</li>
+          <li>Industry-matched design</li>
+          <li>Your branding, our foundation</li>
+          <li>Fastest path to live</li>
         </ul>
-        <a href="/solutions/enterprise-software/">See Enterprise Software →</a>
+      </div>
+      <div class="bws-tier">
+        <span class="bws-tier-num">Tier 02</span>
+        <h3>Customized Template</h3>
+        <p>Start with a proven foundation and extend it — custom pages, features, and brand adjustments built on top.</p>
+        <ul>
+          <li>Custom sections &amp; pages</li>
+          <li>Deeper brand integration</li>
+          <li>Balanced cost and flexibility</li>
+        </ul>
+      </div>
+      <div class="bws-tier">
+        <span class="bws-tier-num">Tier 03</span>
+        <h3>Custom Website</h3>
+        <p>Fully designed and built around your specific business requirements, brand system, and user journey.</p>
+        <ul>
+          <li>Purpose-built from brief</li>
+          <li>Full design system ownership</li>
+          <li>Maximum differentiation</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Website Collection -->
+    <span class="bws-gallery-label">Website Collection</span>
+    <div class="bws-gallery">
+
+      <!-- Corporate template -->
+      <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20tertarik%20dengan%20template%20Corporate%20%26%20Professional." target="_blank" rel="noopener noreferrer" class="bws-tmpl">
+        <div class="bws-tmpl-screen">
+          <div class="tmpl-corp" style="height:100%;display:flex;flex-direction:column;">
+            <div class="tmpl-corp-nav">
+              <span class="tmpl-corp-logo"></span>
+              <span class="tmpl-corp-links"><i></i><i></i><i></i><i></i></span>
+            </div>
+            <div class="tmpl-corp-hero">
+              <div class="tmpl-corp-h1"></div>
+              <div class="tmpl-corp-sub"></div>
+              <div class="tmpl-corp-cta"></div>
+            </div>
+            <div class="tmpl-corp-body">
+              <div class="tmpl-corp-card"></div>
+              <div class="tmpl-corp-card"></div>
+              <div class="tmpl-corp-card"></div>
+            </div>
+          </div>
+        </div>
+        <div class="bws-tmpl-foot">
+          <span class="bws-live-tag">Available Now</span>
+          <strong>Corporate &amp; Professional</strong>
+          <span class="desc">Company profile · Service firm · Agency</span>
+        </div>
+      </a>
+
+      <!-- Restaurant template -->
+      <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20tertarik%20dengan%20template%20Restaurant%20%26%20F%26B." target="_blank" rel="noopener noreferrer" class="bws-tmpl">
+        <div class="bws-tmpl-screen">
+          <div class="tmpl-rest" style="height:100%;">
+            <div class="tmpl-rest-bg"></div>
+            <div class="tmpl-rest-overlay"></div>
+            <div class="tmpl-rest-nav">
+              <span class="tmpl-rest-logo"></span>
+              <span class="tmpl-rest-nav-right"><i></i><i></i><i></i></span>
+            </div>
+            <div class="tmpl-rest-content">
+              <div class="tmpl-rest-h1"></div>
+              <div class="tmpl-rest-sub"></div>
+              <div class="tmpl-rest-menu">
+                <div class="tmpl-rest-item"></div>
+                <div class="tmpl-rest-item"></div>
+                <div class="tmpl-rest-item"></div>
+                <div class="tmpl-rest-item"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bws-tmpl-foot">
+          <span class="bws-live-tag">Available Now</span>
+          <strong>Restaurant &amp; F&amp;B</strong>
+          <span class="desc">Menu · Reservation · Digital presence</span>
+        </div>
+      </a>
+
+      <!-- More industries teaser -->
+      <div class="bws-tmpl bws-tmpl-teaser">
+        <div class="bws-tmpl-screen">
+          <div class="bws-teaser-inner">
+            <div class="bws-teaser-icons">
+              <div class="bws-teaser-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="bws-teaser-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="2"/></svg>
+              </div>
+              <div class="bws-teaser-icon">
+                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+            </div>
+            <span class="bws-teaser-label">Hotel · Clinic · Property · Education<br>templates in development</span>
+          </div>
+        </div>
+        <div class="bws-tmpl-foot">
+          <span class="bws-soon-tag-inline">Coming Soon</span>
+          <strong>More Industries</strong>
+          <span class="desc">4 additional templates in development</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Industries -->
+    <div class="bws-industry">
+      <span class="bws-industry-label">Industries We Build For</span>
+      <div class="bws-industry-grid">
+        <div class="bws-ind-card">
+          <h4>Corporate &amp; Professional Services</h4>
+          <p>Company profiles, service firms, consulting agencies</p>
+        </div>
+        <div class="bws-ind-card">
+          <h4>Restaurant &amp; F&amp;B</h4>
+          <p>Menus, reservations, digital presence for food businesses</p>
+        </div>
+        <div class="bws-ind-card is-soon">
+          <h4>Hotel &amp; Hospitality</h4>
+          <p>Property showcase and booking-ready pages</p>
+          <span class="bws-soon-tag">Coming Soon</span>
+        </div>
+        <div class="bws-ind-card is-soon">
+          <h4>Clinic &amp; Health Services</h4>
+          <p>Medical practice profiles and appointment pages</p>
+          <span class="bws-soon-tag">Coming Soon</span>
+        </div>
+        <div class="bws-ind-card is-soon">
+          <h4>Property &amp; Real Estate</h4>
+          <p>Project marketing, listing, and developer sites</p>
+          <span class="bws-soon-tag">Coming Soon</span>
+        </div>
+        <div class="bws-ind-card is-soon">
+          <h4>Education &amp; Training</h4>
+          <p>Schools, courses, and learning institution websites</p>
+          <span class="bws-soon-tag">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bws-cta-row">
+      <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Business%20Website%20Solutions." target="_blank" rel="noopener noreferrer" class="btn btn-solid">Get Website Pricing <span class="btn-arrow">→</span></a>
+      <a href="https://wa.me/6285770566781" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Talk to Our Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 02 BUSINESS & COMMERCE ===================== -->
+<section id="business-commerce" class="op-section reveal" style="background:#fff;">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-title-row"><span class="sec-num">02</span><span class="sec-num-line"></span><span class="eyebrow">Business &amp; Commerce</span></div>
+        <h2 class="sec-title">Applications designed for how businesses sell, operate, and serve customers.</h2>
+        <p class="sec-desc">Ready-to-deploy commerce and business applications — built for real operators, not rebuilt from scratch for each client.</p>
+      </div>
+      <a href="https://wa.me/6285770566781" class="sec-cta-link" target="_blank" rel="noopener noreferrer">Request a Demo <span class="btn-arrow">→</span></a>
+    </div>
+
+    <!-- Featured: OptimaStore + Yoga (real screenshots) -->
+    <div class="op-grid2" style="margin-bottom:14px;">
+      <article class="op-card">
+        <img src="/assets/optima/optimastore-station-banner.png?v=3" alt="OptimaStore commerce platform screenshot" width="1024" height="682" loading="lazy" decoding="async">
+        <div class="op-card-body">
+          <span class="badge badge-featured">Featured · Commerce</span>
+          <h4>OptimaStore</h4>
+          <p>Online commerce platform with product catalog, orders, and storefront — configured for modern businesses.</p>
+          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20request%20demo%20OptimaStore." target="_blank" rel="noopener noreferrer" class="op-cta">Request Demo <span class="btn-arrow">→</span></a>
+        </div>
       </article>
-      <article class="compare-card saas">
-        <span class="tag">SaaS Products</span>
-        <h3>Built once, used by many</h3>
-        <p>A shared cloud product with tenant isolation — banks, koperasi, retailers, or agencies subscribe to the same core.</p>
-        <ul>
-          <li>Many tenants, one codebase</li>
-          <li>Configuration, not a rewrite</li>
-          <li>Roadmap shared across customers</li>
-        </ul>
-        <a href="#catalog">See the product catalog ↓</a>
+      <article class="op-card" id="yoga">
+        <img src="/assets/optima/optima-yoga-reservation-banner.png" alt="Yoga Class App booking and membership screenshot" width="1024" height="682" loading="lazy" decoding="async">
+        <div class="op-card-body">
+          <span class="badge badge-featured">Featured · Service Business</span>
+          <h4>Yoga Class App</h4>
+          <p>Class booking, scheduling, and membership management — packaged for fitness and service-based operators.</p>
+          <a href="https://sanctuary-yoga-tan.vercel.app/" target="_blank" rel="noopener noreferrer" class="op-cta">Lihat Demo <span class="btn-arrow">→</span></a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Supporting: POS, PPOB, HRIS, GoRide -->
+    <div class="op-mini-grid">
+      <article class="op-mini-card">
+        <div class="op-mini-icon pos">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h4>Point of Sale (POS)</h4>
+        <p>Checkout, inventory, and transaction management for merchants and retail operators on a shared product platform.</p>
+        <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20POS." target="_blank" rel="noopener noreferrer" class="op-cta">Ask about this <span class="btn-arrow">→</span></a>
+      </article>
+      <article class="op-mini-card">
+        <div class="op-mini-icon ppob">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg>
+        </div>
+        <h4>PPOB</h4>
+        <p>Digital transaction and bill payment solution for operators handling electricity, water, telco, and other services.</p>
+        <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20PPOB." target="_blank" rel="noopener noreferrer" class="op-cta">Ask about this <span class="btn-arrow">→</span></a>
+      </article>
+      <article class="op-mini-card" id="hris">
+        <div class="op-mini-icon hr">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h4>HRIS</h4>
+        <p>Workforce records and attendance delivered as a multi-organization HR product — ready to deploy for any business.</p>
+        <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20request%20demo%20HRIS." target="_blank" rel="noopener noreferrer" class="op-cta">Request Demo <span class="btn-arrow">→</span></a>
+      </article>
+      <article class="op-mini-card">
+        <div class="op-mini-icon goride">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>GoRide</h4>
+        <p>Ride dispatch and operations workflow delivered as a configurable cloud product for mobility operators.</p>
+        <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20GoRide." target="_blank" rel="noopener noreferrer" class="op-cta">Ask about this <span class="btn-arrow">→</span></a>
       </article>
     </div>
   </div>
 </section>
 
+<!-- ===================== 03 ENTERPRISE TECHNOLOGY ===================== -->
+<section id="enterprise" class="ent-section reveal">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-title-row"><span class="sec-num">03</span><span class="sec-num-line"></span><span class="eyebrow">Enterprise Technology</span></div>
+        <h2 class="sec-title">When your requirement doesn't fit a standard product.</h2>
+        <p class="sec-desc">If your business has processes, integrations, or scale that standard products can't cover, Optima builds and integrates a solution around your operation.</p>
+      </div>
+      <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20konsultasi%20tentang%20Enterprise%20Technology%20solutions." target="_blank" rel="noopener noreferrer" class="sec-cta-link">Explore Enterprise Solutions <span class="btn-arrow">→</span></a>
+    </div>
+    <div class="ent-grid">
+      <article class="ent-card">
+        <div class="ent-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><path d="M17 13v2m0 0v2m0-2h2m-2 0h-2"/></svg>
+        </div>
+        <h3>Custom Software &amp; Enterprise Platforms</h3>
+        <p>Purpose-built internal platforms shaped around a single organization's workflows, approvals, data, and integrations — one client, one system, run internally.</p>
+        <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Custom%20Software." target="_blank" rel="noopener noreferrer" class="op-cta">Talk to Our Team <span class="btn-arrow">→</span></a>
+      </article>
+      <article class="ent-card">
+        <div class="ent-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Website &amp; Digital Experiences</h3>
+        <p>High-fidelity digital platforms, interactive experiences, and complex web applications that go beyond template or product solutions.</p>
+        <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Website%20dan%20Digital%20Experiences." target="_blank" rel="noopener noreferrer" class="op-cta">Talk to Our Team <span class="btn-arrow">→</span></a>
+      </article>
+      <article class="ent-card">
+        <div class="ent-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Digital Transformation &amp; Integration</h3>
+        <p>Connecting legacy systems, migrating operations to modern platforms, and integrating third-party data sources into a unified technology layer.</p>
+        <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Digital%20Transformation." target="_blank" rel="noopener noreferrer" class="op-cta">Talk to Our Team <span class="btn-arrow">→</span></a>
+      </article>
+      <article class="ent-card">
+        <div class="ent-icon">
+          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        </div>
+        <h3>Mobile App Development</h3>
+        <p>Cross-platform and native mobile applications — from consumer-facing apps to field operations tools running on iOS and Android.</p>
+        <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Mobile%20App%20Development." target="_blank" rel="noopener noreferrer" class="op-cta">Talk to Our Team <span class="btn-arrow">→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 04 FINANCIAL TECHNOLOGY ===================== -->
+<section class="op-section reveal" id="financial-technology" style="background:#fff;">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-title-row"><span class="sec-num">04</span><span class="sec-num-line"></span><span class="eyebrow">Financial Technology</span></div>
+        <h2 class="sec-title">Technology platforms for credit and financial operations.</h2>
+        <p class="sec-desc">Three integrated products covering the full credit lifecycle — live and running for financial institutions today.</p>
+      </div>
+    </div>
+    <div class="op-suite-label">
+      <b>Credit Suite:</b>
+      <span class="op-suite-flow"><span>Originate</span><i>→</i><span>Assess</span><i>→</i><span>Collect</span></span>
+    </div>
+    <div class="op-suite-grid">
+      <article class="op-suite-card">
+        <img src="/assets/optima/los-banner.png" alt="LOS — Loan Origination System product screenshot" width="1024" height="682" loading="lazy" decoding="async">
+        <div class="op-suite-card-body">
+          <span class="badge badge-fintech on-light">FinTech · Origination</span>
+          <h3>Loan Origination System</h3>
+          <p>Repeatable intake, scoring, approval, and disbursement workflow — deployed across lenders on a shared product core.</p>
+          <a href="https://los.optimadigitalselaras.com" target="_blank" rel="noopener noreferrer" class="op-cta">Lihat Detail <span class="btn-arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="op-suite-card flagship">
+        <img src="/assets/optima/cap-banner.png" alt="Credit Assessment Platform product screenshot" width="1024" height="682" loading="lazy" decoding="async">
+        <div class="op-suite-card-body">
+          <span class="badge badge-core">FinTech · Assessment</span>
+          <h3>Credit Assessment Platform</h3>
+          <p>Governance-first credit assessment used across financial institutions — delivered through CreditRiskDynamics, Optima's dedicated product brand.</p>
+          <a href="https://www.creditriskdynamics.com" target="_blank" rel="noopener noreferrer" class="op-cta">Visit CreditRiskDynamics <span class="btn-arrow">→</span></a>
+          <span class="op-note">creditriskdynamics.com — Optima's dedicated CAP product site.</span>
+        </div>
+      </article>
+
+      <article class="op-suite-card">
+        <img src="/assets/optima/cms-banner.png" alt="Collection Management System product screenshot" width="1024" height="682" loading="lazy" decoding="async">
+        <div class="op-suite-card-body">
+          <span class="badge badge-fintech on-light">FinTech · Collection</span>
+          <h3>Collection Management System</h3>
+          <p>Assignment, follow-up, and field collection managed as a shared cloud module — with mobile collection app included.</p>
+          <a href="https://cms.optimadigitalselaras.com" target="_blank" rel="noopener noreferrer" class="op-cta">Request Demo <span class="btn-arrow">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 05 FULL CATALOG ===================== -->
 <section id="catalog" class="catalog reveal">
   <div class="wrap">
-    <div class="catalog-head">
+    <div class="sec-head">
       <div>
-        <p class="label">Product catalog</p>
-        <h2>Applications already proven across real sectors in Indonesia.</h2>
-      </div>
-      <div class="legend">
-        <span><i class="dot" style="background:#7c3aed"></i> Bank &amp; Financial</span>
-        <span><i class="dot" style="background:#2f6fed"></i> Government &amp; Community</span>
-        <span><i class="dot" style="background:#22b06f"></i> Finance &amp; Operations</span>
-        <span><i class="dot" style="background:#1cae86"></i> Commerce</span>
+        <div class="sec-title-row"><span class="sec-num">05</span><span class="sec-num-line"></span><span class="eyebrow">Full Product Catalog</span></div>
+        <h2 class="sec-title">The complete Optima product portfolio.</h2>
+        <p class="sec-desc">Every product Optima has built — grouped by domain. Each configures per organization without a full rebuild.</p>
       </div>
     </div>
 
-    <div class="cat-block">
-      <div class="cat-label" style="color:#7c3aed;"><span>Bank &amp; Financial Sector</span><span class="line"></span></div>
+    <div class="cat-block" id="catalog-commerce">
+      <div class="cat-label"><span>Business &amp; Commerce Applications</span><span class="line"></span></div>
       <div class="prod-grid">
-        <article class="prod" style="--c:#7c3aed">
-          <em>Flagship</em>
-          <strong>CreditRiskDynamics</strong>
-          <p>Governance-first credit assessment used across financial institutions.</p>
-          <a href="https://creditriskdynamics.com" target="_blank" rel="noopener noreferrer">creditriskdynamics.com →</a>
+        <article class="prod">
+          <strong>OptimaStore</strong>
+          <p>Online commerce with product catalog, orders, and storefront management.</p>
+          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20request%20demo%20OptimaStore." target="_blank" rel="noopener noreferrer">Request Demo →</a>
         </article>
-        <article class="prod" style="--c:#7c3aed">
-          <em>Lending</em>
-          <strong>Loan Origination System</strong>
-          <p>Repeatable intake, scoring, approval, and disbursement for many lenders.</p>
+        <article class="prod">
+          <strong>Point of Sale (POS)</strong>
+          <p>Checkout and inventory for merchants and retailers on a shared product core.</p>
+          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20POS." target="_blank" rel="noopener noreferrer">Ask about this →</a>
         </article>
-        <article class="prod" style="--c:#7c3aed">
-          <em>Collections</em>
-          <strong>Collection Management</strong>
-          <p>Assignment, follow-up, and field collection as a shared cloud module.</p>
-        </article>
-      </div>
-    </div>
-
-    <div class="cat-block">
-      <div class="cat-label" style="color:#2f6fed;"><span>Government &amp; Community</span><span class="line"></span></div>
-      <div class="prod-grid">
-        <article class="prod" style="--c:#2f6fed">
-          <em>City</em>
-          <strong>Smart City</strong>
-          <p>Citizen and city operations packaged as a reusable digital service.</p>
-        </article>
-        <article class="prod" style="--c:#2f6fed">
-          <em>People</em>
-          <strong>HRIS</strong>
-          <p>Workforce records and attendance delivered as a multi-org product.</p>
-        </article>
-        <article class="prod" style="--c:#2f6fed">
-          <em>Members</em>
-          <strong>Koperasi Digital</strong>
-          <p>Savings, loans, and member services cooperatives can subscribe to.</p>
-        </article>
-        <article class="prod" style="--c:#2f6fed">
-          <em>Public</em>
-          <strong>Warga Digital</strong>
-          <p>Community and resident services on a shared cloud platform.</p>
-        </article>
-      </div>
-    </div>
-
-    <div class="cat-block">
-      <div class="cat-label" style="color:#22b06f;"><span>Finance &amp; Operations</span><span class="line"></span></div>
-      <div class="prod-grid">
-        <article class="prod" style="--c:#22b06f">
-          <em>Trade</em>
-          <strong>Supply Chain Financing</strong>
-          <p>Working-capital flows for suppliers and buyers, productized.</p>
-        </article>
-        <article class="prod" style="--c:#22b06f">
-          <em>Bills</em>
+        <article class="prod">
           <strong>PPOB</strong>
-          <p>Bill payment and digital transactions for many operators.</p>
+          <p>Bill payment and digital transactions for operators handling multi-category services.</p>
+          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20PPOB." target="_blank" rel="noopener noreferrer">Ask about this →</a>
+        </article>
+        <article class="prod">
+          <strong>Yoga Class App</strong>
+          <p>Class booking, scheduling, and membership for fitness and service businesses.</p>
+          <a href="https://sanctuary-yoga-tan.vercel.app/" target="_blank" rel="noopener noreferrer">View Demo →</a>
+        </article>
+        <article class="prod">
+          <strong>HRIS</strong>
+          <p>Workforce records and attendance for multi-organization deployments.</p>
+          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20request%20demo%20HRIS." target="_blank" rel="noopener noreferrer">Request Demo →</a>
+        </article>
+        <article class="prod">
+          <strong>GoRide</strong>
+          <p>Ride dispatch and operations as a configurable cloud product for mobility operators.</p>
+          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20GoRide." target="_blank" rel="noopener noreferrer">Ask about this →</a>
         </article>
       </div>
     </div>
 
-    <div class="cat-block" style="margin-bottom:0;">
-      <div class="cat-label" style="color:#1cae86;"><span>Commerce &amp; Transactions</span><span class="line"></span></div>
+    <div class="cat-block" id="catalog-financial">
+      <div class="cat-label"><span>Financial &amp; Business Technology</span><span class="line"></span></div>
       <div class="prod-grid">
-        <article class="prod" style="--c:#1cae86">
-          <em>Retail</em>
-          <strong>POS</strong>
-          <p>Checkout and inventory for merchants that share one product core.</p>
+        <article class="prod">
+          <strong>Loan Origination System</strong>
+          <p>Intake, scoring, approval, and disbursement for lenders — live deployments running today.</p>
+          <a href="https://los.optimadigitalselaras.com" target="_blank" rel="noopener noreferrer">Lihat Detail →</a>
         </article>
-        <article class="prod" style="--c:#1cae86">
-          <em>Field</em>
+        <article class="prod">
+          <strong>Credit Assessment Platform</strong>
+          <p>Governance-first credit assessment via CreditRiskDynamics.</p>
+          <a href="https://www.creditriskdynamics.com" target="_blank" rel="noopener noreferrer">Visit Product Site →</a>
+        </article>
+        <article class="prod">
+          <strong>Collection Management System</strong>
+          <p>Assignment, follow-up, and field collection as a shared cloud module.</p>
+          <a href="https://cms.optimadigitalselaras.com" target="_blank" rel="noopener noreferrer">Request Demo →</a>
+        </article>
+        <article class="prod">
           <strong>Mobile Collection</strong>
-          <p>On-the-ground collection app connected to the cloud back office.</p>
+          <p>On-the-ground field collection app connected to CMS cloud back office.</p>
+          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Mobile%20Collection." target="_blank" rel="noopener noreferrer">Ask about this →</a>
         </article>
-        <article class="prod" style="--c:#1cae86">
-          <em>Shop</em>
-          <strong>Online Shop</strong>
-          <p>Storefront and orders as a repeatable commerce product.</p>
+        <article class="prod">
+          <strong>Koperasi Digital</strong>
+          <p>Savings, loans, and member services — cooperative operations as a subscribed product.</p>
+          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Koperasi%20Digital." target="_blank" rel="noopener noreferrer">Ask about this →</a>
         </article>
-        <article class="prod" style="--c:#1cae86">
-          <em>Lifestyle</em>
-          <strong>Yoga Class App</strong>
-          <p>Class booking and memberships packaged for operators.</p>
+        <article class="prod">
+          <strong>Supply Chain Financing</strong>
+          <p>Working-capital flows for suppliers and buyers, productized for multi-business deployment.</p>
+          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Supply%20Chain%20Financing." target="_blank" rel="noopener noreferrer">Ask about this →</a>
         </article>
-        <article class="prod" style="--c:#1cae86">
-          <em>Mobility</em>
-          <strong>GoRide</strong>
-          <p>Ride and dispatch workflows delivered as a cloud product.</p>
+        <article class="prod">
+          <strong>Smart City</strong>
+          <p>Citizen services and city operations packaged as a reusable digital service platform.</p>
+          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Smart%20City." target="_blank" rel="noopener noreferrer">Ask about this →</a>
+        </article>
+        <article class="prod">
+          <strong>Warga Digital</strong>
+          <p>Community and resident services on a shared cloud platform for local governments and RTs.</p>
+          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Warga%20Digital." target="_blank" rel="noopener noreferrer">Ask about this →</a>
         </article>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ===================== HOW OPTIMA BUILDS ===================== -->
 <section class="model reveal">
   <div class="wrap">
-    <p class="label">How the SaaS model works</p>
-    <h2>Not Discover → Design → Build → Scale. A tenant model.</h2>
+    <span class="eyebrow">How the Optima Product Model Works</span>
+    <h2>One technology organization. Multiple product lines. Configured per business.</h2>
     <div class="model-row">
       <div class="model-step">
         <div class="num">01</div>
-        <h4>Shared core</h4>
-        <p>One codebase and release train. Features ship once and become available to every tenant.</p>
+        <h4>Products, not rebuilds</h4>
+        <p>Optima builds reusable digital products — each deployed to many clients with configuration, not a custom rebuild each time.</p>
       </div>
       <div class="model-step">
         <div class="num">02</div>
         <h4>Isolated tenants</h4>
-        <p>Each organization gets its own data, users, and configuration — without a separate rebuild.</p>
+        <p>Each organization gets its own data, users, and configuration — without a separate codebase or infrastructure.</p>
       </div>
       <div class="model-step">
         <div class="num">03</div>
-        <h4>Grow by onboarding</h4>
-        <p>New customers join the same product. The roadmap serves the catalog, not a single install.</p>
+        <h4>Dedicated product brands</h4>
+        <p>When a product reaches sufficient scale, it gets its own dedicated brand — like CreditRiskDynamics for CAP.</p>
+      </div>
+      <div class="model-step">
+        <div class="num">04</div>
+        <h4>Enterprise when needed</h4>
+        <p>If a product doesn't fit, Optima builds a purpose-built enterprise platform shaped around your specific operation.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="final reveal">
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final-cta reveal">
   <div class="wrap">
     <div>
-      <h3>Want a product your customers can subscribe to?</h3>
-      <p>Tell us the repeatable workflow. We will tell you whether it should be SaaS — or a custom enterprise platform.</p>
+      <h3>Ready to see Optima's products in action?</h3>
+      <p>Tell us your business context — we'll show you the right product, configuration, or solution.</p>
     </div>
     <div class="final-actions">
-      <a href="https://wa.me/628129885679" class="btn btn-light" target="_blank" rel="noopener noreferrer"><svg class="wa-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Discuss a SaaS product</a>
-      <a href="/solutions/enterprise-software/" class="btn" style="border:1.5px solid rgba(255,255,255,.35);color:#fff;">Or see Enterprise →</a>
+      <a href="https://wa.me/6285770566781" class="btn btn-solid" target="_blank" rel="noopener noreferrer">
+        <svg class="wa-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Talk to Our Team
+      </a>
+      <a href="#catalog" class="btn btn-outline">Browse Full Catalog →</a>
     </div>
   </div>
 </section>
 
+<!-- ===================== FOOTER ===================== -->
 <footer>
   <div class="wrap">
-    <div class="foot-top">
+    <div class="foot-brand-row">
       <div class="foot-brand">
         <a href="/" class="brand">
-          <img class="brand-mark" src="/assets/optima/logo.png?v=2" width="32" height="32" alt="Optima Digital Selaras">
-          <span class="brand-text"><b style="color:#fff;">OPTIMA DIGITAL</b><span>PT Optima Digital Selaras</span></span>
+          <img class="brand-mark" src="/assets/optima/logo.png?v=2" width="48" height="48" alt="Optima Digital Selaras">
+          <span class="brand-text"><b>PT Optima Digital Selaras</b><i class="foot-mark" aria-hidden="true"></i></span>
         </a>
       </div>
-      <div class="foot-col">
-        <h6>What We Do</h6>
-        <a href="/solutions/enterprise-software/">Enterprise Software</a>
-        <a href="/products/">SaaS Products</a>
-        <a href="/solutions/web-digital/">Web &amp; Digital Experiences</a>
-        <a href="/solutions/digital-transformation/">Digital Transformation</a>
-      </div>
+      <span class="foot-brand-meta">Digital ecosystem enabler</span>
+    </div>
+    <div class="foot-top">
       <div class="foot-col">
         <h6>Products</h6>
-        <a href="/#products">Bank &amp; Financial</a>
-        <a href="/#products">Government &amp; Community</a>
-        <a href="/#products">Commerce &amp; Transactions</a>
+        <a href="#website-solutions">Business Website Solutions</a>
+        <a href="#business-commerce">Business &amp; Commerce</a>
+        <a href="#enterprise">Enterprise Technology</a>
+        <a href="#financial-technology">Financial Technology</a>
+        <a href="#catalog">Full Catalog</a>
+      </div>
+      <div class="foot-col">
+        <h6>Financial Technology</h6>
+        <a href="https://los.optimadigitalselaras.com" target="_blank" rel="noopener noreferrer">Loan Origination System</a>
+        <a href="https://www.creditriskdynamics.com" target="_blank" rel="noopener noreferrer">Credit Assessment Platform</a>
+        <a href="https://cms.optimadigitalselaras.com" target="_blank" rel="noopener noreferrer">Collection Management System</a>
       </div>
       <div class="foot-col">
         <h6>Company</h6>
         <a href="/#about">About Us</a>
-        <a href="https://wa.me/628129885679" target="_blank" rel="noopener noreferrer">Contact</a>
+        <a href="/#work">Client Work</a>
+        <a href="https://wa.me/6285770566781" target="_blank" rel="noopener noreferrer">Contact</a>
       </div>
       <div class="foot-col">
         <h6>Get in Touch</h6>
-        <a href="https://wa.me/628129885679" target="_blank" rel="noopener noreferrer">marketing@optimadigital.co.id</a>
-        <a href="https://wa.me/628129885679" target="_blank" rel="noopener noreferrer">+62 812 988 5679</a>
+        <a href="mailto:marketing@optimadigital.co.id">marketing@optimadigital.co.id</a>
+        <a href="tel:+6285770566781">0857 7056 6781</a>
         <p>Ruko Golden Madrid Blok D No. 26, Jl. Letnan Sutopo, BSD City, Serpong, Tangerang Selatan, Banten 15310</p>
       </div>
     </div>
@@ -517,12 +958,30 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
 </footer>
 
 <script>
+// Scroll reveal
 document.querySelectorAll('.reveal').forEach(function(el){
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:.12});
+  }, {threshold:.1});
   io.observe(el);
 });
+
+// Mobile menu toggle
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('mobileMenu');
+  if(!toggle || !menu) return;
+  toggle.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
 </script>
 </body>
 </html>
