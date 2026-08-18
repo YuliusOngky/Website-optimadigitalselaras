@@ -1,0 +1,35 @@
+.cta-wrap {
+    margin: 0 auto;
+    max-width: 1420px;
+    padding-bottom: 260px;
+    .btn-group {
+        .as-btn {
+            min-width: 180px;
+        }
+    }
+}
+
+@include xxl {
+    .cta-wrap {
+        margin: 0 50px;
+    }
+}
+@media (max-width: 1200px) {
+    .cta-wrap {
+        margin: 0;
+        overflow: hidden;
+    }
+}
+@include lg {
+    .cta-wrap {
+        margin: 0;
+        overflow: hidden;
+    }
+}
+@include md {
+    .cta-wrap {
+        padding-left: 30px;
+        padding-bottom: 280px;
+        padding-right: 30px;
+    }
+}

@@ -191,7 +191,10 @@ a.bws-tmpl:hover{transform:translateY(-4px);border-color:rgba(139,197,63,.45);bo
 .bws-tmpl-hover-overlay{position:absolute;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:opacity .3s;border-radius:14px;display:flex;align-items:center;justify-content:center;padding:20px;z-index:10;}
 .bws-tmpl-interactive:hover .bws-tmpl-hover-overlay{opacity:1;}
 .bws-tmpl-hover-label{color:#fff;font-size:15px;font-weight:600;text-align:center;letter-spacing:.01em;}
-.bws-tmpl-screen{height:172px;position:relative;overflow:hidden;flex-shrink:0;}
+.bws-tmpl-screen{height:200px;position:relative;overflow:hidden;flex-shrink:0;}
+/* Actual screenshot preview */
+.bws-tmpl-screen.has-preview{background-size:cover;background-position:top center;background-repeat:no-repeat;transition:background-position 4s ease;}
+.bws-tmpl-interactive:hover .bws-tmpl-screen.has-preview{background-position:bottom center;}
 .bws-tmpl-foot{padding:14px 18px 18px;background:rgba(255,255,255,.05);}
 .bws-live-tag{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--teal);margin-bottom:5px;}
 .bws-live-tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal);display:block;}
@@ -212,18 +215,21 @@ a.bws-tmpl:hover{transform:translateY(-4px);border-color:rgba(139,197,63,.45);bo
 .tmpl-corp-card{background:#fff;border:1px solid #dde2ea;border-radius:5px;height:38px;}
 
 /* Restaurant template mockup */
-.tmpl-rest{position:relative;}
-.tmpl-rest-bg{position:absolute;inset:0;background:linear-gradient(160deg,#3d1a0e 0%,#6b3222 40%,#291008 100%);}
-.tmpl-rest-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,.2) 55%,transparent 100%);}
-.tmpl-rest-nav{position:absolute;top:0;left:0;right:0;height:22px;background:rgba(0,0,0,.35);display:flex;align-items:center;padding:0 10px;z-index:1;}
-.tmpl-rest-logo{width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,.8);}
-.tmpl-rest-nav-right{margin-left:auto;display:flex;gap:6px;}
-.tmpl-rest-nav-right i{width:16px;height:3px;border-radius:2px;background:rgba(255,255,255,.35);display:block;}
-.tmpl-rest-content{position:absolute;bottom:0;left:0;right:0;padding:12px 12px 0;}
-.tmpl-rest-h1{width:58%;height:7px;border-radius:3px;background:#fff;margin-bottom:5px;}
-.tmpl-rest-sub{width:40%;height:4px;border-radius:2px;background:rgba(255,255,255,.4);margin-bottom:9px;}
-.tmpl-rest-menu{display:grid;grid-template-columns:1fr 1fr;gap:5px;}
-.tmpl-rest-item{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.1);border-radius:4px;height:28px;}
+.tmpl-rest{position:relative;background:linear-gradient(135deg,#f5e6d3 0%,#e8d4c0 100%);}
+.tmpl-rest-bg{position:absolute;inset:0;background:linear-gradient(135deg, rgba(255,255,255,.95) 0%, rgba(245,230,211,.9) 50%, rgba(232,212,192,.85) 100%);background-image:
+  radial-gradient(circle at 15% 20%, rgba(139,110,73,.08) 0%, transparent 50%),
+  linear-gradient(135deg, rgba(255,255,255,.95) 0%, rgba(245,230,211,.9) 50%, rgba(232,212,192,.85) 100%);
+  opacity:1;z-index:0;}
+.tmpl-rest-overlay{position:absolute;inset:0;background:none;}
+.tmpl-rest-nav{position:absolute;top:0;left:0;right:0;height:24px;background:#f9f6f1;display:flex;align-items:center;padding:0 12px;z-index:2;border-bottom:1px solid rgba(0,0,0,.06);}
+.tmpl-rest-logo{width:48px;height:6px;border-radius:2px;background:#8b6e49;opacity:.7;}
+.tmpl-rest-nav-right{margin-left:auto;display:flex;gap:8px;}
+.tmpl-rest-nav-right i{width:20px;height:3px;border-radius:2px;background:#a0826d;opacity:.6;display:block;}
+.tmpl-rest-content{position:absolute;top:50%;left:0;right:0;transform:translateY(-50%);padding:16px 14px;z-index:1;text-align:center;}
+.tmpl-rest-h1{width:100%;height:8px;border-radius:3px;background:#8b6e49;margin-bottom:8px;opacity:.8;}
+.tmpl-rest-sub{width:90%;height:4px;border-radius:2px;background:#a68f7c;margin:0 auto 12px;opacity:.6;}
+.tmpl-rest-menu{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0 2px;}
+.tmpl-rest-item{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:5px;height:24px;box-shadow:0 1px 3px rgba(0,0,0,.06);}
 
 /* More Templates teaser card */
 .bws-tmpl-teaser{cursor:default;}
@@ -521,21 +527,30 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
     <div class="carousel-section">
       <div class="carousel-container">
         <div class="carousel-slides" id="carouselSlides">
-          <!-- Restaurant Template -->
+          <!-- Restaurant Template — actual screenshot -->
           <div class="carousel-slide active" data-index="0" data-url="http://192.168.1.20:8088/templates/restaurant/">
-            <div style="width:100%;height:100%;background:linear-gradient(135deg, #8B4513 0%, #654321 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:48px;">🍽️</div>
+            <img src="/assets/optima/templates/restaurant-preview.png" alt="Restaurant & F&B Template" style="width:100%;height:100%;object-fit:cover;object-position:top;">
             <div class="carousel-overlay">
-              <h3>Restaurant & F&B Template</h3>
-              <p>Menu, reservations, and stunning digital presence for food & beverage businesses</p>
+              <h3>Restaurant &amp; F&amp;B Template</h3>
+              <p>Menu, reservations, and stunning digital presence for food &amp; beverage businesses</p>
               <div class="carousel-cta" onclick="window.open(this.parentElement.parentElement.getAttribute('data-url'), '_blank')">View Live Preview →</div>
             </div>
           </div>
-          <!-- AutoDetail Template -->
-          <div class="carousel-slide" data-index="1" data-url="http://192.168.1.20:8088/templates/autodetail/">
-            <div style="width:100%;height:100%;background:linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:48px;">🚗</div>
+          <!-- Dealaro — Car Dealer HTML Template -->
+          <div class="carousel-slide" data-index="1" data-url="http://192.168.1.20:8088/templates/dealaro-web/">
+            <img src="/assets/optima/templates/dealaro-preview.png" alt="Dealaro Car Dealer Template" style="width:100%;height:100%;object-fit:cover;object-position:top;">
             <div class="carousel-overlay">
-              <h3>AutoDetail & Car Shop Template</h3>
-              <p>Services, pricing, gallery, and appointment booking for automotive businesses</p>
+              <h3>Dealaro — Automotive Car Dealer</h3>
+              <p>Showroom, services, and appointment booking for car dealers &amp; suppliers</p>
+              <div class="carousel-cta" onclick="window.open(this.parentElement.parentElement.getAttribute('data-url'), '_blank')">View Live Preview →</div>
+            </div>
+          </div>
+          <!-- Champz — Sneakers & Sports Apparel Store -->
+          <div class="carousel-slide" data-index="2" data-url="http://192.168.1.20:8088/templates/stephub-web/">
+            <img src="/assets/optima/templates/champz-preview.jpg" alt="Champz Sneakers Store Template" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+            <div class="carousel-overlay">
+              <h3>Champz — Sneakers &amp; Sports Apparel</h3>
+              <p>Full-featured online store with collections, cart, checkout &amp; promotions</p>
               <div class="carousel-cta" onclick="window.open(this.parentElement.parentElement.getAttribute('data-url'), '_blank')">View Live Preview →</div>
             </div>
           </div>
@@ -550,7 +565,63 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
     <span class="bws-gallery-label">Website Collection</span>
     <div class="bws-gallery">
 
-      <!-- Corporate template -->
+      <!-- Restaurant & F&B template — actual screenshot -->
+      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="http://192.168.1.20:8088/templates/restaurant/" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
+        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/restaurant-preview.png');">
+          <div class="bws-tmpl-hover-overlay">
+            <div class="bws-tmpl-hover-label">Click to open full preview</div>
+          </div>
+        </div>
+        <div class="bws-tmpl-foot">
+          <span class="bws-live-tag">Available Now</span>
+          <strong>Restaurant &amp; F&amp;B</strong>
+          <span class="desc">Menu · Reservation · Digital presence</span>
+        </div>
+      </div>
+
+      <!-- Dealaro — Automotive Car Dealer HTML template -->
+      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="http://192.168.1.20:8088/templates/dealaro-web/" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
+        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/dealaro-preview.png');">
+          <div class="bws-tmpl-hover-overlay">
+            <div class="bws-tmpl-hover-label">Click to open full preview</div>
+          </div>
+        </div>
+        <div class="bws-tmpl-foot">
+          <span class="bws-live-tag">Available Now</span>
+          <strong>Dealaro — Car Dealer</strong>
+          <span class="desc">Showroom · Services · Appointment booking</span>
+        </div>
+      </div>
+
+      <!-- Champz — Sneakers & Apparel Online Store -->
+      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="http://192.168.1.20:8088/templates/stephub-web/" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
+        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/champz-preview.jpg');background-position:top center;">
+          <div class="bws-tmpl-hover-overlay">
+            <div class="bws-tmpl-hover-label">Click to open full preview</div>
+          </div>
+        </div>
+        <div class="bws-tmpl-foot">
+          <span class="bws-live-tag">Available Now</span>
+          <strong>Champz — Sneakers &amp; Apparel</strong>
+          <span class="desc">Shop · Collections · Cart · Checkout</span>
+        </div>
+      </div>
+
+      <!-- Stephub — Shoes eCommerce Mobile App -->
+      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="http://192.168.1.20:8088/templates/stephub-web/" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
+        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/stephub-preview.png');background-color:#f5f5f5;">
+          <div class="bws-tmpl-hover-overlay">
+            <div class="bws-tmpl-hover-label">Click to open full preview</div>
+          </div>
+        </div>
+        <div class="bws-tmpl-foot">
+          <span class="bws-live-tag">Available Now</span>
+          <strong>Stephub — Shoes Store App</strong>
+          <span class="desc">Mobile app · eCommerce · React</span>
+        </div>
+      </div>
+
+      <!-- Corporate template — placeholder (no web file) -->
       <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20tertarik%20dengan%20template%20Corporate%20%26%20Professional." target="_blank" rel="noopener noreferrer" class="bws-tmpl">
         <div class="bws-tmpl-screen">
           <div class="tmpl-corp" style="height:100%;display:flex;flex-direction:column;">
@@ -577,59 +648,6 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
         </div>
       </a>
 
-      <!-- Restaurant template -->
-      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="http://192.168.1.20:8088/templates/restaurant/" onclick="window.open(this.getAttribute('data-template-url'), '_blank')" style="cursor:pointer;">
-        <div class="bws-tmpl-screen">
-          <div class="tmpl-rest" style="height:100%;">
-            <div class="tmpl-rest-bg"></div>
-            <div class="tmpl-rest-overlay"></div>
-            <div class="tmpl-rest-nav">
-              <span class="tmpl-rest-logo"></span>
-              <span class="tmpl-rest-nav-right"><i></i><i></i><i></i></span>
-            </div>
-            <div class="tmpl-rest-content">
-              <div class="tmpl-rest-h1"></div>
-              <div class="tmpl-rest-sub"></div>
-              <div class="tmpl-rest-menu">
-                <div class="tmpl-rest-item"></div>
-                <div class="tmpl-rest-item"></div>
-                <div class="tmpl-rest-item"></div>
-                <div class="tmpl-rest-item"></div>
-              </div>
-            </div>
-          </div>
-          <div class="bws-tmpl-hover-overlay">
-            <div class="bws-tmpl-hover-label">Click to open full preview</div>
-          </div>
-        </div>
-        <div class="bws-tmpl-foot">
-          <span class="bws-live-tag">Available Now</span>
-          <strong>Restaurant &amp; F&amp;B</strong>
-          <span class="desc">Menu · Reservation · Digital presence</span>
-        </div>
-      </div>
-
-      <!-- AutoDetail Car Detailing template -->
-      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="http://192.168.1.20:8088/templates/autodetail/" onclick="window.open(this.getAttribute('data-template-url'), '_blank')" style="cursor:pointer;">
-        <div class="bws-tmpl-screen">
-          <div style="height:100%; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); display:flex; align-items:center; justify-content:center;">
-            <div style="text-align:center; color:#fff;">
-              <div style="font-size:48px; margin-bottom:20px;">🚗</div>
-              <div style="font-size:20px; font-weight:bold;">AutoDetail</div>
-              <div style="font-size:14px; margin-top:10px; opacity:0.8;">Car Detailing & Auto Shop</div>
-            </div>
-          </div>
-          <div class="bws-tmpl-hover-overlay">
-            <div class="bws-tmpl-hover-label">Click to open full preview</div>
-          </div>
-        </div>
-        <div class="bws-tmpl-foot">
-          <span class="bws-live-tag">Available Now</span>
-          <strong>AutoDetail &amp; Car Shop</strong>
-          <span class="desc">Services · Pricing · Gallery · Appointments</span>
-        </div>
-      </div>
-
       <!-- More industries teaser -->
       <div class="bws-tmpl bws-tmpl-teaser">
         <div class="bws-tmpl-screen">
@@ -651,7 +669,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
         <div class="bws-tmpl-foot">
           <span class="bws-soon-tag-inline">Coming Soon</span>
           <strong>More Industries</strong>
-          <span class="desc">4 additional templates in development</span>
+          <span class="desc">Additional templates in development</span>
         </div>
       </div>
 

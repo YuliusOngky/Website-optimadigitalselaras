@@ -1,0 +1,39 @@
+.course-card .details {
+    .price {
+        left: 40px;
+        right: auto;
+    }
+    ul li {
+        + li {
+            margin-right: 25px;
+            padding-right: 33px;
+            margin-left: 0;
+            padding-left: 0;
+            &:after {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+}
+
+@include ml {
+    .course-card .details ul li + li {
+        margin-right: 19px;
+        padding-right: 22px;
+    }
+}
+@include lg {
+    .course-card .details ul li + li {
+        margin-right: 24px;
+        padding-right: 0;
+    }
+    .course-card .details .price {
+        left: 30px;
+    }
+}
+@include md {
+    .course-card .details ul li + li {
+        margin-right: auto;
+    }
+}

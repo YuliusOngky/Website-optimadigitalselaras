@@ -1,0 +1,65 @@
+.process-box {
+    text-align: center;
+    &_icon {
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        position: relative;
+        margin: 0 auto 26px auto;
+        .process-icon {
+            transition: 0.4s all;
+        }
+    } 
+    &_number {
+        width: 56px;
+        height: 56px;
+        line-height: 55px;
+        border-radius: 50%;
+        background: $theme-color;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+        font-family: $title-font;
+        color: $white-color;
+        position: absolute;
+        top: 0;
+        left: 25px;
+    }
+    .arrow {
+        position: absolute;
+        top: 38%;
+        right: -5px;
+        transform: translate(100%, -50%);
+    }
+    &_title {
+        font-weight: 700;
+        margin-bottom: 17px;
+    } 
+    &_text {
+        margin-bottom: -0.5em;
+    }
+    &:hover {
+        .process-icon {
+            transform: rotateY(180deg);
+        }
+    }
+}
+@include ml {
+    .process-box .arrow {
+        width: 84%;
+    }
+}
+@include lg {
+    .process-box .arrow {
+        display: none;
+    }
+    .process-box_number {
+        width: 46px;
+        height: 46px;
+        line-height: 45px;
+        font-size: 24px;
+        top: 2px;
+        left: 25px;
+    }
+}

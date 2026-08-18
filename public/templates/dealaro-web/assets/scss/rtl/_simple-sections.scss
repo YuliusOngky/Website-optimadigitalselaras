@@ -1,0 +1,64 @@
+.title-area .sub-title {
+    padding: 0 32px 0 15px;
+    &:after {
+        left: auto;
+        right: 13px;
+    }
+}
+
+.read-more-btn {
+    display: inline-block;
+    i,svg {
+        margin-right: 4px;
+    }
+    &:after {
+        left: auto;
+        right: 0;
+    }
+}
+
+.about-card-box img {
+    margin-right: 0;
+    margin-left: 35px;
+}
+.about-founder {
+    .thumb {
+        margin-left: 21px;
+        margin-right: 0;
+    }
+    .sign {
+        margin-right: 40px;
+        margin-left: 0;
+    }
+} 
+.about-list-info {
+    left: 0;
+    right: auto;
+    border-radius: 0px 10px 10px 10px;
+    padding: 35px 40px 29px 80px;
+    ul li i, 
+    ul li svg {
+        margin-left: 5px;
+        margin-right: 0;
+    }
+}
+.white-title:after {
+    left: auto;
+    right: 0;
+}
+.team-slider-2 .slick-arrow.slick-prev {
+    left: var(--pos-x, -130px);
+    right: auto;
+}
+
+@include md {
+    .about-list-info {
+        left: -40%;
+        border-radius: 10px;
+    }
+}
+@include sm {
+    .about-list-info {
+        left: 0;
+    }
+}

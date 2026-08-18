@@ -1,0 +1,72 @@
+.subscribe-area {
+    padding: 60px 0;
+    background-size: 100% 100%;
+}
+.subscribe-form {
+    display: flex;
+    position: relative;
+    .form-group {
+        width: 100%;
+        .form-control {
+            height: 70px;
+            padding: 0 180px 0 30px;
+        }
+    }
+    .as-btn {
+        flex: none;
+        padding: 21px 38px;
+        position: absolute;
+        right: 7px;
+        top: 7px;
+    }
+    &.style2 {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 465px;
+        gap: 0px;
+        .form-group {
+            margin-bottom: 0;
+            input {
+                background-color: #252934;
+                border: 0;
+                height: 56px;
+                color: $white-color;
+                padding: 0 30px;
+            }
+        }
+        .as-btn {
+            padding: 21px 38px;
+            min-width: 150px;
+            position: relative;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+@include xxl {
+    .subscribe-area {
+        background-size: cover;
+    }
+}
+@include md {
+    .subscribe-area {
+        padding: 80px 0;
+    }
+}
+@include xs {
+    .subscribe-form {
+        display: block;
+        text-align: center;
+        background: $white-color;
+        .as-btn {
+            margin: 10px 0;
+            padding: 19px 40px;
+            position: initial;
+        }
+        .form-group .form-control {
+            height: 60px;
+            padding: 0 30px;
+        }
+    }
+}

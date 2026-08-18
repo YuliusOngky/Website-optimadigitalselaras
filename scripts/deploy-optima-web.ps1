@@ -27,6 +27,7 @@ $Index = Join-Path $RepoRoot "index.html"
 $OptimaAssets = Join-Path $RepoRoot "public\assets\optima"
 $Solutions = Join-Path $RepoRoot "public\solutions"
 $Products = Join-Path $RepoRoot "public\products"
+$Templates = Join-Path $RepoRoot "public\templates"
 
 if (-not (Test-Path $Index)) { throw "Missing $Index" }
 $Hero = Join-Path $OptimaAssets "hero.mp4"
@@ -42,7 +43,7 @@ if (-not $UseAlias) { $ScpArgs += @("-o", "User=$UserName") }
 Write-Host "Staging Optima homepage -> ${SshTarget}:$RemoteDir (optima-web :8088)"
 
 $RemoteUnix = ($RemoteDir -replace '\\', '/')
-$RemotePrep = "cmd /c `"if not exist `"$RemoteDir\products\los\assets`" mkdir `"$RemoteDir\products\los\assets`" & if not exist `"$RemoteDir\assets\optima`" mkdir `"$RemoteDir\assets\optima`" & if not exist `"$RemoteDir\solutions`" mkdir `"$RemoteDir\solutions`""
+$RemotePrep = "cmd /c `"if not exist `"$RemoteDir\products\los\assets`" mkdir `"$RemoteDir\products\los\assets`" & if not exist `"$RemoteDir\assets\optima`" mkdir `"$RemoteDir\assets\optima`" & if not exist `"$RemoteDir\solutions`" mkdir `"$RemoteDir\solutions`" & if not exist `"$RemoteDir\templates`" mkdir `"$RemoteDir\templates`""
 & ssh @SshArgs $SshTarget $RemotePrep
 if ($LASTEXITCODE -ne 0) { throw "SSH mkdir failed with exit $LASTEXITCODE" }
 
@@ -62,6 +63,14 @@ if (Test-Path $Products) {
   $ProductsItems = Get-ChildItem -Path $Products -Force | ForEach-Object { $_.FullName }
   & scp @ScpArgs -r @ProductsItems "${SshTarget}:${RemoteUnix}/products/"
   if ($LASTEXITCODE -ne 0) { throw "scp products failed" }
+}
+
+if (Test-Path $Templates) {
+  $TemplateItems = Get-ChildItem -Path $Templates -Force | Where-Object { $_.Name -match '-web$|restaurant|autodetail' } | ForEach-Object { $_.FullName }
+  if ($TemplateItems) {
+    & scp @ScpArgs -r @TemplateItems "${SshTarget}:${RemoteUnix}/templates/"
+    if ($LASTEXITCODE -ne 0) { throw "scp templates failed" }
+  }
 }
 
 Write-Host "Done. Check http://${HostName}:8088/products/los and https://optimadigitalselaras.com/products/los"

@@ -1,0 +1,420 @@
+/*----------------------------------------------
+    # why choose us area style here
+----------------------------------------------*/
+.wcu-thumb {
+    height: 100%;
+    img {
+        height: 100%;
+    }
+    &.video-box1 {
+        .play-btn {
+            left: 0;
+            >i {
+                width: var(--icon-size, 80px);
+                height: var(--icon-size, 80px);
+                line-height: var(--icon-size, 78px);
+                border: 2px solid $white-color;
+            }
+            &::before {
+                height: 210px;
+                width: 210px;
+                background: $title-color;
+                animation: none;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &:after {
+                background: $theme-color;
+                opacity: 0.3;
+                animation: pulse 1s infinite ease-in-out alternate;
+                height: 140px;
+                width: 140px;
+                left: -30px;
+                top: -30px;
+            }
+        }
+    }
+    &.style-2 {
+        &.video-box1 {
+            background-position: right;
+            .play-btn {
+                left: 50%;
+                &::after,
+                &::before {
+                    content: "";
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: auto;
+                    width: auto;
+                    background-color: rgba(255, 192, 0, 0.3);
+                    z-index: -1;
+                    border-radius: 50%;
+                    transition: all ease 0.4s;
+                    animation: ripple 4s infinite ease-in-out;
+                }
+                &::after {
+                    animation-delay: 1s;
+                }
+                &:hover {
+                    &:after, &:before {
+                        background-color: rgba(255, 255, 255, 0.3);
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes pulse {
+    from { transform: scale(0.9); }
+    to { transform: scale(1.05); }
+}
+.wcu-box {
+    padding: 220px 350px 217px 100px;
+}
+.info-media {
+    display: flex;
+    ~ .info-media {
+        margin-top: 30px;
+    }
+    &_icon {
+        height: 50px;
+        width: 50px;
+        position: relative;
+        text-align: center;
+        line-height: 50px;
+        color: $white-color;
+        font-size: 18px;
+        font-weight: 700;
+        margin-right: 20px;
+        .icon-hover {
+            opacity: 0;
+        }
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            transition: 0.4s;
+        }
+
+    }
+    &_title {
+        color: $white-color;
+        margin-top: -0.3em;
+    }
+    &_text {
+        color: $smoke-color;
+        margin-bottom: 0;
+    }
+    &:hover {
+        .info-media_icon {
+            .icon-hover {
+                opacity: 1;
+            }
+            .icon-bg {
+                opacity: 0;
+            }
+        }
+    }
+}
+.booking-form {
+    padding: 59px 60px;
+    transform: translate(0, -50%);
+    position: relative;
+    background-color: $white-color;
+    z-index: 3;
+    box-shadow: 0px 10px 30px rgba(1, 19, 60, 0.07);
+    background-size: 100% 100%;
+    margin-bottom: -125px;
+    .title-area {
+        .content {
+            font-weight: 500;
+            font-family: $body-font;
+            color: $body-color;
+            margin-top: 15px;
+        }
+    }
+    .form-group {
+        margin-bottom: 0;
+    }
+    .form-btn {
+        .as-btn {
+            width: 100%;
+        }
+    }
+}
+/***Why Choose Us Area 2***/
+.wcu-area-2 {
+    margin-right: 160px;
+}
+.wcu-wrap {
+    padding-left: 90px;
+    padding-right: 190px;
+    padding-bottom: 183px; 
+} 
+.wcu-card {
+    text-align: center;
+    background: $white-color;
+    border: 1px solid $smoke-color4;
+    padding: 30px 30px 25px;
+    .icon {
+        background: rgba(255, 192, 0, 0.2);
+        border: 1px solid $theme-color;
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        line-height: 58px;
+        border-radius: 50%;
+        margin-bottom: 18px;
+    }
+    .card-title {
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+    .content {
+        font-size: 14px;
+        margin-bottom: 0;
+        max-width: 227px;
+        margin: 0 auto;
+    }
+}
+/*******wcu-wrap3********/
+.wcu-wrap3 {
+    margin-left: 350px;
+    padding-bottom: 183px;
+    padding-right: 106px;
+    .title-area {
+        .content {
+            max-width: 596px;
+            color: $smoke-color4;
+        }
+    }
+}
+.wcu-card2 {
+    background: $white-color;
+    border-radius: 5px;
+    padding: 20px 20px 18px;
+    display: flex;
+    position: relative;
+    z-index: 0;
+    &:after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 10px;
+        top: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        z-index: -1;
+    }
+    .icon {
+        flex: none;
+        margin-right: 15px;
+        margin-top: 4px;
+    }
+    .card-title {
+        margin-bottom: 0;
+    }
+    .content {
+        margin-top: 8px;
+        font-size: 14px;
+        margin-bottom: 0;
+        line-height: 24px;
+    }
+}
+.wcu-wrap4 {
+    padding-right: 350px;
+    padding-bottom: 183px;
+    padding-left: 10px;
+}
+@include hd {
+    .wcu-wrap3 {
+        max-width: 807px;
+        margin-left: auto;
+    }
+}
+@media (max-width: 1600px) {
+    .wcu-wrap {
+        padding-right: 0;
+        padding-left: 0;
+        max-width: 600px;
+        margin-left: 100px;
+    }
+    .wcu-area-2 {
+        margin-right: 60px;
+    }
+    .wcu-wrap3 {
+        margin-left: 188px;
+    }
+    .wcu-box {
+        padding: 220px 180px 217px 100px;
+    }
+}
+@include xxl {
+    .wcu-box {
+        padding: 220px 110px 217px 100px;
+    }
+    .wcu-area {
+        .anime-img-1 {
+            width: 300px;
+        }
+    }
+    .wcu-area-2 {
+        margin-right: 50px;
+    }
+    .wcu-wrap {
+        margin-left: 35px;
+
+    }
+    .wcu-wrap3 {
+        margin-left: 110px;
+        padding-right: 120px;
+    }
+    .wcu-thumb.video-box1 {
+        background-position: left;
+    }
+    .wcu-wrap4 {
+        padding-right: 110px;
+    }
+}
+@include ml {
+    .wcu-box {
+        padding: 194px 70px 196px 70px;
+    }
+    .wcu-wrap {
+        padding-right: 55px;
+    }
+    .wcu-card {
+        padding: 30px 25px 25px;
+    }
+    .wcu-card .card-title {
+        font-size: 21px;
+    }
+    .wcu-wrap3 {
+        padding-right: 82px;
+    }
+    .wcu-thumb.video-box1 .play-btn::before {
+        height: 200px;
+        width: 200px;
+    }
+    .wcu-wrap4 {
+        padding-right: 120px;
+    }
+}
+@media (max-width: 1200px) {
+    .wcu-wrap {
+        max-width: initial;
+        margin-left: 50px;
+    }
+    .wcu-area-2 {
+        margin-right: 0px;
+    }
+    .wcu-wrap3 {
+        margin-left: 42px;
+    }
+}
+@include lg {
+    .booking-form {
+        transform: none;
+        margin-bottom: 0;
+        .anime-img-3 {
+            top: 56.5% !important;
+        }
+        .form-btn {
+            .as-btn:hover:before, .as-btn:hover:after, .as-btn.active:before, .as-btn.active:after {
+                border-width: 60px 280px;
+            }
+        }
+    }
+    .wcu-box {
+        padding: 194px 60px 70px 60px;
+    }
+    .wcu-area-2 {
+        margin-right: 0;
+    }
+    .wcu-wrap4,
+    .wcu-wrap {
+        padding-left: 43px;
+        padding-right: 43px;
+        padding-bottom: 120px;
+        margin-left: 0;
+    }
+    .wcu-wrap {
+        padding-top: 60px !important;
+    }
+    .wcu-thumb.video-box1 {
+        min-height: 500px;
+        .play-btn {
+            left: 50%;
+        }
+    }
+    .wcu-wrap3 {
+        padding-bottom: 120px;
+        padding-right: 50px;
+        margin-left: 50px;
+    }
+    .wcu-thumb.style-2.video-box1 {
+        background-position: left;
+    }
+}
+@include md {
+    .wcu-thumb {
+        min-height: 500px;
+    }
+    .wcu-box {
+        padding: 80px 80px 70px;
+    }
+    .booking-form .form-btn {
+        text-align: center;
+        .as-btn {
+            width: auto;
+        }
+    }
+    .wcu-wrap4,
+    .wcu-wrap {
+        padding-bottom: 80px;
+    }
+    .wcu-wrap3 {
+        padding-bottom: 80px;
+    }
+}
+@include sm {
+    .wcu-box {
+        padding: 80px 40px 70px;
+    }
+    .booking-form {
+        padding: 39px 40px;
+    }
+    .wcu-thumb.video-box1 .play-btn:after {
+        left: -40px;
+        top: -40px;
+    }
+}
+@include xs {
+    .wcu-box {
+        padding: 80px 30px 70px;
+    }
+    .info-media {
+        display: block;
+        .info-media_icon {
+            margin-bottom: 20px;
+        }
+    }
+    .booking-form {
+        padding: 29px 30px 40px;
+    }
+    .wcu-wrap4,
+    .wcu-wrap {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .wcu-wrap3 {
+        padding-right: 15px;
+        margin-left: 15px;
+    }
+}

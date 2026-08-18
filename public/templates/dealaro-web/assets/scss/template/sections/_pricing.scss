@@ -1,0 +1,104 @@
+/* Pricing 1 ---------------------------------- */ 
+.price-card {
+    position: relative;
+    overflow: hidden;
+    &_header {
+        background-color: $smoke-color3;
+        background-position: right;
+        padding: 40px 40px 85px;
+        position: relative;
+        transition: 0.4s;
+        overflow: hidden;
+        z-index: 0;
+        .bg-shape {
+            position: absolute;
+            right: 0;
+            top: 0;
+            opacity: 0.1;
+            transition: 0.4s;
+            z-index: -1;
+            path {
+                transition: 0.4s;
+                fill: $title-color !important;
+            }
+        }
+    }
+    &_title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 5px;
+        transition: .4s;
+    }
+    &_price {
+        color: $theme-color;
+        position: relative;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 0;
+        transition: 0.4s;
+        .price {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 48px;
+            margin-bottom: 17px;
+            color: $theme-color;
+            transition: 0.4s;
+        }
+        .currency {
+            font-size: 30px;
+            font-weight: 700;
+            color: $theme-color;
+            position: absolute;
+            top: 8px;
+        }
+    }
+    &_content {
+        border: 1px solid rgba(22, 25, 33, 0.1);
+        margin: 0 15px;
+        margin-bottom: -55px;
+        padding: 30px;
+        transform: translate(0px, -55px);
+        background: $white-color;
+        .available-list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            margin-bottom: 30px;
+            li {
+                line-height: 16px;
+                &:not(:last-child) {
+                    margin-bottom: 18px;
+                }
+                i {
+                    color: $theme-color;
+                    margin-right: 10px;
+                }
+                &.unavailable {
+                    color: $light-color;
+                    i {
+                        color: $light-color;
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        .price-card_header {
+            background: $theme-color;
+            .svg-img {
+                opacity: 0.5;
+                path {
+                    fill: $smoke-color3 !important;
+                }
+            }
+            .price-card_price,
+            .price-card_price .price,
+            .price-card_title {
+                color: $white-color;
+            }
+        }
+    }
+}
+  

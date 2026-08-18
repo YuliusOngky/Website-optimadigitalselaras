@@ -1,0 +1,46 @@
+.download-app-area {
+    overflow: hidden;
+    max-width: 1520px;
+    margin: auto;
+}
+.download-app-wrap {
+    padding-left: 150px;
+    .content {
+        color: #BDBDBD;
+        margin-bottom: 40px;
+    }
+}
+@include xxl {
+    .download-app-area {
+        margin: 0px;
+    }
+    .download-app-wrap {
+        padding-left: 100px;
+    }
+}
+@media (max-width: 1200px) {
+    .download-app-wrap {
+        padding-left: 45px;
+    }
+}
+@include md {
+    .download-app-area {
+        background: $title-color;
+    }
+    .download-app-wrap {
+        padding: 0 100px;
+        .btn-group {
+            justify-content: center;
+        }
+    }
+}
+@include sm {
+    .download-app-wrap {
+        padding: 0 50px;
+    }
+}
+@include xs {
+    .download-app-wrap {
+        padding: 0 15px;
+    }
+}

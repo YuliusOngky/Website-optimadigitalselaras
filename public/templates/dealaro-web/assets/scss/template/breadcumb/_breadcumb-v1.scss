@@ -1,0 +1,110 @@
+.breadcumb-menu {
+    max-width: 100%;
+    padding: 0;
+    margin: 0px 0 -0.5em 0;
+    list-style-type: none;
+    position: relative;
+    li {
+        display: inline-block;
+        padding-right: 3px;
+        list-style: none;
+        position: relative;
+        &:after {
+            content: "\f105";
+            position: relative;
+            margin-left: 7px;
+            font-weight: 400;
+            font-size: 16px;
+            font-family: $icon-font;
+            color: $theme-color;
+        }
+
+        &:last-child {
+            padding-right: 0;
+            margin-right: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+        &.active {
+            a {
+                color: $theme-color;
+            }
+        }
+    }
+    li,
+    span {
+        white-space: normal;
+        color: inherit;
+        word-break: break-word;
+        font-weight: 500;
+        font-family: $title-font;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: $white-color;
+    }
+    a {
+        color: $theme-color;
+    }
+}
+.breadcumb-thumb {
+    margin: -130px -90px -170px -65px;
+    animation: zoom 2s ease-in-out;
+}
+@keyframes zoom {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.breadcumb-title {
+    color: $white-color;
+    margin: -0.25em 0 14px 0;
+	line-height: 1.1;
+    font-size: 52px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.breadcumb-wrapper {
+    background-size: cover;
+    padding: 120px 0;
+    overflow: hidden;
+    position: relative;
+    background-color: $title-color;
+}
+@media (max-width:1200px) {
+    .breadcumb-thumb {
+        margin: -100px -62px -170px -65px;
+    }    
+}
+@include md {
+    .breadcumb-wrapper {
+        padding: 140px 0 150px;
+    }
+    .breadcumb-thumb {
+        display: none;
+    }
+}
+@include sm {
+    .breadcumb-wrapper {
+        padding: 120px 0;
+    }
+    .breadcumb-title {
+        font-size: 46px;
+    }
+    .breadcumb-menu {
+        padding-left: 55px;
+        &:after {
+            width: 40px;
+        } 
+    }
+}
+@include xs {
+	.breadcumb-title {
+		font-size: 34px;
+	}
+}

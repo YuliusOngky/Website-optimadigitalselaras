@@ -1,0 +1,21 @@
+.blog-card .date {
+    right: auto;
+    left: 40px;
+}
+.blog-meta span, .blog-meta a {
+    margin-left: 31px;
+    margin-right: 0;
+}
+.blog-meta span:last-child, .blog-meta a:last-child {
+    margin-left: 0;
+}
+.blog-meta span i, .blog-meta a i {
+    margin-left: 6px;
+    margin-right: 0;
+}
+
+@include sm {
+    .blog-card .date {
+        left: 20px;
+    }
+}

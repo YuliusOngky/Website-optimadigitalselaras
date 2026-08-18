@@ -1,0 +1,155 @@
+.header-links {
+    li {
+        &:not(:last-child) {
+            margin: 0;
+            padding: 0;
+        }
+        &:not(:first-child) {
+            padding: 0 21px 0 0;
+            margin: 0 17px 0 0;
+            &:after {
+                right: 0;
+                left: auto;
+            }
+        }
+        > i {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+    }
+}
+
+.header-social a {
+    margin: 0 0 0 15px;
+    @include vxs {
+        margin: 0 0 0 10px;
+    }
+    &:not(:last-child) {
+        margin: 0;
+        padding: 0;
+        &:after {
+            display: none;
+        }
+    }
+    &:not(:first-child) {
+        padding: 0 16px 0 0;
+        margin: 0 12px 0 0;
+        &:after {
+            right: 0;
+            left: auto;
+            display: block;
+        }
+    }
+}
+
+.menu-expand i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.main-menu {
+    > ul > li {
+        &:first-child {
+            margin-left: 15px !important;
+            margin-right: 0 !important;
+        }
+        &:last-child {
+            margin-left: 0 !important;
+            margin-right: 15px !important;
+        }
+    }
+    .mega-menu,
+    .sub-menu {
+        text-align: right;
+        li {
+            a {
+                padding-left: 0;
+                padding-right: 23px;
+                &:before {
+                    left: unset;
+                    right: 0;
+                }
+            }
+            &.menu-item-has-children > a:after {
+                float: left;
+                content: "\f104";
+                margin-left: 0;
+            }
+        }
+    }
+    .sub-menu {
+        left: unset;
+        right: -23px;
+    }
+}
+.main-menu ul.sub-menu li ul.sub-menu {
+    left: auto;
+    right: 100%;
+    margin-right: 18px;
+    margin-left: 0;
+}
+.category-menu {
+    text-align: right;
+    left: unset;
+    right: -23px;
+    a {
+        padding-left: 0;
+        padding-right: 23px;
+        &:before {
+            left: unset;
+            right: 0;
+        }
+    }
+}
+
+
+.popup-search-box form input {
+    padding: 0 30px 0 85px;
+}
+.popup-search-box form button {
+    left: 12px;
+    right: auto;
+}
+.as-menu-wrapper {
+    .as-menu-toggle {
+        left: -16.5px;
+        right: unset;
+        top: 25px;
+    }
+    .as-menu-area {
+        right: -110%;
+        border-left: 3px solid $theme-color;
+        border-right: none;
+    }
+    &.as-body-visible {
+        .as-menu-area {
+            right: 0%;
+        }
+    }
+}
+
+.as-mobile-menu {
+    text-align: right;
+    ul {
+        li {
+            a {
+                padding-left: 0;
+                padding-right: 18px;
+                &:before {
+                    left: unset;
+                    right: 0;
+                    margin-right: 0;
+                    margin-left: 10px;
+                    transform: rotate(180deg);
+                }
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        .as-item-has-children > a .as-mean-expand {
+            right: unset;
+            left: 0;
+        }
+    }
+}

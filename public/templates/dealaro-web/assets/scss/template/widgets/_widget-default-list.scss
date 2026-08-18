@@ -1,0 +1,120 @@
+.widget_nav_menu,
+.widget_meta,
+.widget_pages,
+.widget_archive,
+.widget_categories {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 0 0;
+    }
+    
+    .menu,
+    > ul {
+        margin: -4px 0 0px 0;
+    }
+
+    a {
+        display: block;
+        border: none;
+        margin: 0;
+        padding: 17.5px 25px;
+        font-size: 16px;
+        line-height: 1.313;
+        color: $body-color;
+        background: $white-color;
+        position: relative;
+        border-radius: 0px;
+        margin-bottom: 15px;
+        font-weight: 500;
+        &:before {
+            content: '\f061';
+            position: absolute;
+            right: 25px;
+            font-family: $icon-font;
+            font-weight: 400;
+            transition: all ease 0.4s;
+        }
+        &:hover {
+            color: $title-color;
+            background: $theme-color2;
+            &:before {
+                color: $title-color;
+            }
+            i {
+                color: $white-color;
+            }
+        }
+        i {
+            margin-right: 10px;
+            color: $theme-color;
+            transition: 0.4s all;
+        }
+    }
+
+    li {
+        display: block;
+        position: relative;
+
+        > span {
+            font-size: 16px;
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            background: $theme-color;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            line-height: 31px;
+            text-align: center;
+            color: $white-color;
+            transform: translateY(-50%);
+            transition: all ease 0.4s;
+        }
+        &:last-child {
+            a {
+                margin-bottom: 0;
+            }
+        }
+        &:hover {
+            > span {
+                background: $white-color;
+                color: $theme-color;
+            }
+        }
+        
+    }
+
+    .children {
+        margin-left: 10px;
+    }
+}
+
+.widget_nav_menu,
+.widget_meta,
+.widget_pages {
+    a {
+        padding-right: 20px;
+    }
+}
+
+.widget_nav_menu {
+    .sub-menu {
+        margin-left: 10px;
+    }
+}
+
+.wp-block-archives {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+
+    a:not(:hover) {
+        color: inherit;
+    }
+}
+
+.as-blog ul.wp-block-archives li {
+    margin: 5px 0;
+}

@@ -1,0 +1,114 @@
+.hero-1 .banner-anime-img {
+    margin: 80px 30px 0 0px;
+    text-align: left;
+}
+.hero-thumbnail {
+    margin: -27px -55px -186px -115px;
+}
+.wcu-thumb {
+    text-align: left;
+    .shape-mockup {
+        left: 0;
+    }
+}
+.count-down-wrap {
+    .cta-countdown {
+        justify-content: right;
+        li + li {
+            padding-left: 15px;
+            margin-left: 0;
+            margin-right: 22px;
+            padding-right: 51px;
+        }
+        li + li:after {
+            right: 0;
+            left: auto;
+        }
+    }
+    .title {
+        margin-left: 30px;
+        padding-left: 60px;
+        padding-right: 0;
+        margin-right: 0;
+        &:after {
+            left: 0;
+            right: auto;
+        }
+    }
+    .as-btn {
+        left: -69px;
+        right: auto;
+        border-radius: 10px 10px 0 0px;
+    }
+    &:after {
+        left: auto;
+        right: 0;
+        border-radius: 10px 0px 0 10px;
+    }
+}
+
+.skills-area .single-skill ~ .single-skill {
+    margin-right: 23px;
+    margin-left: 0;
+}
+
+
+
+@include lg {
+    .hero-thumbnail {
+        margin: -27px -55px -100px -115px;
+    }
+    .count-down-wrap .cta-countdown li {
+        + li {
+            margin-right: 2px;
+            padding-right: 31px;
+            padding-left: 15px;
+        }
+        &:first-child {
+            padding-left: 15px;
+            padding-right: 0;
+        }
+        :last-child {
+            padding-left: 0;
+        }
+    }
+}
+@include md {
+    .hero-thumbnail {
+        margin: 0;
+    }
+    .count-down-wrap .title {
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .count-down-wrap .cta-countdown {
+        justify-content: center;
+        li:last-child {
+            padding-left: 0;
+        }
+    }
+}
+@include sm {
+    .count-down-wrap:after {
+        right: 50%;
+        border-radius: 0 0px 10px 10px;
+        transform: translate(50%, 0%);
+    }
+    .count-down-wrap .as-btn {
+        border-radius: 10px;
+    }
+    .count-down-wrap .cta-countdown li + li {
+        padding-right: 0;
+    }
+    .count-down-wrap .cta-countdown li:first-child {
+        padding-left: 15px;
+    }
+    .about-list-info {
+        padding: 25px 30px 19px 30px;
+    }
+}
+@include xs {
+    .skills-area .single-skill ~ .single-skill {
+        margin-right: auto;
+    }
+}

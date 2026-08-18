@@ -1,0 +1,191 @@
+
+
+.copyright-wrap {
+    padding: 20.5px 0;
+    border-top: 1px solid #444A56;
+    background-color: #252934;
+}
+.copyright-text {
+    margin: 0;
+    color: $white-color;
+    a {
+        color: $theme-color;
+        &:hover {
+            color: $white-color;
+        }
+    }
+}
+.footer-links {
+    ul {
+        padding: 0;
+        margin: 0;
+    }  
+    li {
+        display: inline-block;
+        position: relative;
+        line-height: normal;
+        font-size: 16px;
+        font-weight: 400;
+        &:not(:last-child) {
+            padding-right: 15px;
+            margin-right: 10px;
+            border-right: 1px solid $white-color;
+        }
+        a {
+            color: $white-color;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+} 
+.footer-top {
+    padding: 82px 0;
+    border-bottom: 1px solid #262A35;
+    .newsletter-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 100%;
+        gap: 65px;
+        padding-left: 70px;
+        .newsletter-title {
+            margin-top: -0.1em;
+            margin-bottom: 4px;
+            max-width: 420px;
+            font-size: 36px;
+            font-weight: 700;
+            color: $white-color;
+        }
+    }
+}
+.footer-layout1 {
+    background-color: #1B2024;
+}
+/*****footer-area 2*****/
+.footer-layout2 {
+    background-color: #1B2024;
+    .footer-info-list li a,
+    .as-widget-about .about-text {
+        color: $smoke-color4;
+    }
+    .footer-info-list li a:hover {
+        color: $theme-color;
+    }
+    .footer-widget .widget_title {
+        margin-top: 0;
+    }
+    .footer-widget.widget_meta a:before, .footer-widget.widget_pages a:before, .footer-widget.widget_archive a:before, .footer-widget.widget_categories a:before, .footer-widget.widget_nav_menu a:before {
+        content: "\f061";
+    }
+}
+.as-widget-contact {
+    max-width: 265px;
+}
+/*****footer-area 3******/
+.footer-layout3 {
+    background-color: #1B2024;
+    .widget-area {
+        padding-bottom: 120px;
+    }
+    .footer-widget.widget_meta a:before, .footer-widget.widget_pages a:before, .footer-widget.widget_archive a:before, .footer-widget.widget_categories a:before, .footer-widget.widget_nav_menu a:before {
+        content: "\f061";
+    }
+}
+@include ml {
+    .footer-top .newsletter-wrap {
+        gap: 10px;
+        padding-left: 20px;
+    }
+}
+@include lg {
+    .footer-top .newsletter-wrap {
+        padding-left: 0;
+        padding-top: 40px;
+    }
+}
+@include md {
+    .copyright-text {
+        text-align: center;
+    }
+    .footer-top ul {
+        border-bottom: 5px solid rgb(52, 60, 79);
+        padding: 135px 0 35px 0;
+    }
+    .footer-top ul li {
+        padding: 0;
+        padding-bottom: 28px;
+    }
+    .footer-top ul li + li +li {
+        margin-left: 0;
+        padding-left: 0;
+        padding-top: 16px;
+    }
+    .footer-newsletter {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        .newsletter-title {
+            max-width: 100%;
+        }
+    }
+    .footer-widget.widget {
+        padding-top: $space-mobile;
+    } 
+    .footer-layout1 .widget-area {
+        padding-bottom: $space-mobile;
+    }
+    .footer-top {
+        text-align: center;
+        .newsletter-wrap {
+            display: block;
+            .newsletter-title {
+                max-width: fit-content;
+                margin: auto;
+                font-size: 30px;
+            }
+        }
+        .subscribe-form.style2 {
+            max-width: fit-content;
+            margin: 30px auto 0;
+        }
+    }
+    .footer-layout3 .widget-area {
+        padding-bottom: 80px;
+    }
+}
+@include sm {
+    .footer-top ul li + li {
+        margin-left: 0;
+    }
+    .footer-top ul li + li +li {
+        padding-top: 0;
+    }
+    .footer-top ul {
+        padding: 100px 0 35px 0;
+    }
+}
+@include xs {
+    .footer-newsletter {
+        padding: 35px 20px 40px 20px;
+    }
+    .copyright-wrap {
+        background-size: cover;
+    }
+    .footer-contact-wrap .details .info {
+        font-size: 20px;
+    }
+    .footer-top .subscribe-form.style2 {
+        display: block;
+    }
+    .footer-widget.widget {
+        padding-top: 50px;
+    }
+}
+
+@include vxs {
+    .newsletter-form {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

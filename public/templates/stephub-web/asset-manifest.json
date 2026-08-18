@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4bda2c3c.css",
+    "main.js": "/static/js/main.beac508f.js",
+    "static/media/14.png": "/static/media/14.de617f945397d761aec8.png",
+    "static/media/13.png": "/static/media/13.d13ce6c2f08ec5d6239a.png",
+    "static/media/16.png": "/static/media/16.9efc8cb758bd7d2a6650.png",
+    "static/media/09.png": "/static/media/09.7d7a8086b48d124d9c52.png",
+    "static/media/17.png": "/static/media/17.c65df28de06fc77612ed.png",
+    "static/media/03.png": "/static/media/03.ada1e2929324d7f9a6ea.png",
+    "static/media/06.png": "/static/media/06.51622bbcf1acbff60385.png",
+    "static/media/07.png": "/static/media/07.e598f82e6b1046665757.png",
+    "static/media/08.png": "/static/media/08.e53818b1dcb43d2f3d82.png",
+    "static/media/05.png": "/static/media/05.541c517a36e9450c5246.png",
+    "static/media/11.png": "/static/media/11.2b96db58ff9bb7791a52.png",
+    "static/media/15.png": "/static/media/15.ff9fd09d7ae76e07f3ef.png",
+    "static/media/10.png": "/static/media/10.d243d3bae9373c4c3319.png",
+    "static/media/12.png": "/static/media/12.1f06dfd360d149e6d8e8.png",
+    "static/media/Mulish-Black.ttf": "/static/media/Mulish-Black.1c7e28eec1581d8fbe41.ttf",
+    "static/media/Mulish-Bold.ttf": "/static/media/Mulish-Bold.6cb68186a91bb3fcb0b7.ttf",
+    "static/media/Mulish-Light.ttf": "/static/media/Mulish-Light.2b8fbb0e33f960080fd2.ttf",
+    "static/media/Mulish-ExtraBold.ttf": "/static/media/Mulish-ExtraBold.06b5157c67b69344b4be.ttf",
+    "static/media/Mulish-Regular.ttf": "/static/media/Mulish-Regular.d3d302e1573fb1c8db5b.ttf",
+    "static/media/Mulish-SemiBold.ttf": "/static/media/Mulish-SemiBold.6bf3074a2efb3178fd2b.ttf",
+    "static/media/Mulish-ExtraLight.ttf": "/static/media/Mulish-ExtraLight.588a2961a8a2682d569b.ttf",
+    "index.html": "/index.html",
+    "main.4bda2c3c.css.map": "/static/css/main.4bda2c3c.css.map",
+    "main.beac508f.js.map": "/static/js/main.beac508f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4bda2c3c.css",
+    "static/js/main.beac508f.js"
+  ]
+}
