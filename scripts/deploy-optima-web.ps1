@@ -49,15 +49,18 @@ if ($LASTEXITCODE -ne 0) { throw "SSH mkdir failed with exit $LASTEXITCODE" }
 & scp @ScpArgs $Index "${SshTarget}:${RemoteUnix}/index.html"
 if ($LASTEXITCODE -ne 0) { throw "scp index.html failed" }
 
-& scp @ScpArgs -r "$OptimaAssets\*" "${SshTarget}:${RemoteUnix}/assets/optima/"
+$OptimaItems = Get-ChildItem -Path $OptimaAssets -Force | ForEach-Object { $_.FullName }
+& scp @ScpArgs -r @OptimaItems "${SshTarget}:${RemoteUnix}/assets/optima/"
 if ($LASTEXITCODE -ne 0) { throw "scp optima assets failed" }
 
 if (Test-Path $Solutions) {
-  & scp @ScpArgs -r "$Solutions\*" "${SshTarget}:${RemoteUnix}/solutions/"
+  $SolutionsItems = Get-ChildItem -Path $Solutions -Force | ForEach-Object { $_.FullName }
+  & scp @ScpArgs -r @SolutionsItems "${SshTarget}:${RemoteUnix}/solutions/"
   if ($LASTEXITCODE -ne 0) { throw "scp solutions failed" }
 }
 if (Test-Path $Products) {
-  & scp @ScpArgs -r "$Products\*" "${SshTarget}:${RemoteUnix}/products/"
+  $ProductsItems = Get-ChildItem -Path $Products -Force | ForEach-Object { $_.FullName }
+  & scp @ScpArgs -r @ProductsItems "${SshTarget}:${RemoteUnix}/products/"
   if ($LASTEXITCODE -ne 0) { throw "scp products failed" }
 }
 
