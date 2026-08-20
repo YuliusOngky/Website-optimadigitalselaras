@@ -170,16 +170,6 @@ section{padding:100px 0;}
 .bws-section .eyebrow{color:var(--cyan-label);}
 .bws-section h2{color:#fff;font-size:clamp(24px,2.6vw,36px);max-width:600px;margin:12px 0 14px;}
 .bws-section .sec-desc{color:rgba(255,255,255,.62);max-width:580px;margin-bottom:44px;}
-.bws-tiers{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(255,255,255,.1);border-radius:14px;overflow:hidden;margin-bottom:48px;}
-.bws-tier{background:rgba(255,255,255,.04);padding:32px 28px;position:relative;transition:background .2s;}
-.bws-tier:hover{background:rgba(255,255,255,.07);}
-.bws-tier-num{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:16px;display:block;}
-.bws-tier h3{color:#fff;font-size:19px;margin-bottom:8px;}
-.bws-tier p{font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.55);}
-.bws-tier ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:7px;}
-.bws-tier li{font-size:13px;color:rgba(255,255,255,.6);font-weight:500;display:flex;align-items:center;gap:8px;}
-.bws-tier li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0;}
-
 /* BWS Template Gallery */
 .bws-gallery-label{font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.38);display:flex;align-items:center;gap:14px;margin-bottom:16px;}
 .bws-gallery-label::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.1);}
@@ -325,7 +315,6 @@ body.view-apps .nav-website{display:none;}
   .p-collage-strip{grid-template-columns:1fr 1fr;}
   .op-suite-grid,.op-grid3,.op-grid2{grid-template-columns:1fr 1fr;}
   .op-mini-grid{grid-template-columns:1fr 1fr;}
-  .bws-tiers{grid-template-columns:1fr;}
   .bws-gallery{grid-template-columns:1fr 1fr;}
   .bws-industry-grid{grid-template-columns:1fr 1fr;}
   .ent-grid{grid-template-columns:1fr;}
@@ -487,41 +476,7 @@ body.view-apps .nav-website{display:none;}
       <div>
         <div class="sec-title-row"><span class="sec-num" style="color:rgba(255,255,255,.38);">01</span><span class="sec-num-line" style="background:rgba(255,255,255,.12)"></span><span class="eyebrow">Business Website Solutions</span></div>
         <h2>Professional websites without starting from zero.</h2>
-        <p class="sec-desc">Choose a proven website foundation, customize it around your brand, or build something completely tailored to your business — across three tiers for every budget and timeline.</p>
-      </div>
-    </div>
-
-    <!-- 3-tier model -->
-    <div class="bws-tiers">
-      <div class="bws-tier">
-        <span class="bws-tier-num">Tier 01</span>
-        <h3>Ready Template</h3>
-        <p>A fully designed, industry-specific website foundation — go live fast with your content dropped in.</p>
-        <ul>
-          <li>Industry-matched design</li>
-          <li>Your branding, our foundation</li>
-          <li>Fastest path to live</li>
-        </ul>
-      </div>
-      <div class="bws-tier">
-        <span class="bws-tier-num">Tier 02</span>
-        <h3>Customized Template</h3>
-        <p>Start with a proven foundation and extend it — custom pages, features, and brand adjustments built on top.</p>
-        <ul>
-          <li>Custom sections &amp; pages</li>
-          <li>Deeper brand integration</li>
-          <li>Balanced cost and flexibility</li>
-        </ul>
-      </div>
-      <div class="bws-tier">
-        <span class="bws-tier-num">Tier 03</span>
-        <h3>Custom Website</h3>
-        <p>Fully designed and built around your specific business requirements, brand system, and user journey.</p>
-        <ul>
-          <li>Purpose-built from brief</li>
-          <li>Full design system ownership</li>
-          <li>Maximum differentiation</li>
-        </ul>
+        <p class="sec-desc">Choose a proven website foundation, customize it around your brand, or build something completely tailored to your business.</p>
       </div>
     </div>
 
@@ -574,17 +529,8 @@ body.view-apps .nav-website{display:none;}
               <div class="carousel-cta" onclick="window.open(this.parentElement.parentElement.getAttribute('data-url'), '_blank')">View Live Preview →</div>
             </div>
           </div>
-          <!-- Construction brochure — print pack website preview -->
-          <div class="carousel-slide" data-index="5" data-url="/templates/construction-brochure/">
-            <img src="/assets/optima/templates/construction-brochure-preview.jpg?v=20260819" alt="Construction Company Brochure Preview" style="width:100%;height:100%;object-fit:cover;object-position:top;">
-            <div class="carousel-overlay">
-              <h3>Construction — Company Brochure</h3>
-              <p>Trifold company profile preview for contractors and construction brands</p>
-              <div class="carousel-cta" onclick="window.open(this.parentElement.parentElement.getAttribute('data-url'), '_blank')">View Live Preview →</div>
-            </div>
-          </div>
           <!-- Jarsy — Juice & Beverage HTML demo -->
-          <div class="carousel-slide" data-index="6" data-url="/templates/jarsy-web/">
+          <div class="carousel-slide" data-index="5" data-url="/templates/jarsy-web/">
             <img src="/assets/optima/templates/jarsy-preview.jpg?v=20260819" alt="Jarsy Juice Template" style="width:100%;height:100%;object-fit:cover;object-position:top;">
             <div class="carousel-overlay">
               <h3>Jarsy — Juice &amp; Beverage</h3>
@@ -593,7 +539,7 @@ body.view-apps .nav-website{display:none;}
             </div>
           </div>
           <!-- Auction — Car Dealer & Mechanic HTML template -->
-          <div class="carousel-slide" data-index="7" data-url="/templates/auction-web/">
+          <div class="carousel-slide" data-index="6" data-url="/templates/auction-web/">
             <img src="/assets/optima/templates/auction-preview.jpg?v=20260819" alt="Auction Car Dealer Template" style="width:100%;height:100%;object-fit:cover;object-position:top;">
             <div class="carousel-overlay">
               <h3>Auction — Car Dealer &amp; Mechanic</h3>
@@ -602,7 +548,7 @@ body.view-apps .nav-website{display:none;}
             </div>
           </div>
           <!-- Zevana — Company Profile Elementor kit demo -->
-          <div class="carousel-slide" data-index="8" data-url="/templates/zevana-web/">
+          <div class="carousel-slide" data-index="7" data-url="/templates/zevana-web/">
             <img src="/assets/optima/templates/zevana-preview.jpg?v=20260819" alt="Zevana Company Profile Template" style="width:100%;height:100%;object-fit:cover;object-position:top;">
             <div class="carousel-overlay">
               <h3>Zevana — Company Profile</h3>
@@ -611,8 +557,8 @@ body.view-apps .nav-website{display:none;}
             </div>
           </div>
           <!-- Gorent — Car Rental HTML5 template -->
-          <div class="carousel-slide" data-index="9" data-url="/templates/gorent-web/">
-            <img src="/assets/optima/templates/gorent-preview.jpg?v=20260819" alt="Gorent Car Rental Template" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+          <div class="carousel-slide" data-index="8" data-url="/templates/gorent-web/">
+            <img src="/assets/optima/templates/gorent-preview.jpg?v=20260821" alt="Gorent Car Rental Template" style="width:100%;height:100%;object-fit:cover;object-position:top;">
             <div class="carousel-overlay">
               <h3>Gorent — Car Rental</h3>
               <p>Fleet listings, booking, drivers, and shop pages for car rental operators</p>
@@ -715,8 +661,8 @@ body.view-apps .nav-website{display:none;}
       </div>
 
       <!-- Yoga & Fitness template -->
-      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/yoga-web/" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
-        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/yoga-preview.jpg?v=20260819');background-position:top center;">
+      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/yoga-web/index-5.html" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
+        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/yoga-preview.jpg?v=20260821');background-position:top center;">
           <div class="bws-tmpl-hover-overlay">
             <div class="bws-tmpl-hover-label">Click to open full preview</div>
           </div>
@@ -725,20 +671,6 @@ body.view-apps .nav-website{display:none;}
           <span class="bws-live-tag">Available Now</span>
           <strong>Yoga &amp; Fitness Studio</strong>
           <span class="desc">Classes · Schedule · Membership · Booking</span>
-        </div>
-      </div>
-
-      <!-- Yoga classes / schedule — additional collection slot -->
-      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/yoga-web/classes.html" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
-        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/yoga-classes-preview.jpg?v=20260819');background-position:top center;">
-          <div class="bws-tmpl-hover-overlay">
-            <div class="bws-tmpl-hover-label">Click to open full preview</div>
-          </div>
-        </div>
-        <div class="bws-tmpl-foot">
-          <span class="bws-live-tag">Available Now</span>
-          <strong>YogaZone — Classes &amp; Schedule</strong>
-          <span class="desc">Class calendar · Booking · Studio pages</span>
         </div>
       </div>
 
@@ -826,20 +758,6 @@ body.view-apps .nav-website{display:none;}
         </div>
       </div>
 
-      <!-- Homelist property listings — previously empty collection slot -->
-      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/realestate-web/properties.html" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
-        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/realestate-listings-preview.jpg?v=20260819');background-position:top center;">
-          <div class="bws-tmpl-hover-overlay">
-            <div class="bws-tmpl-hover-label">Click to open full preview</div>
-          </div>
-        </div>
-        <div class="bws-tmpl-foot">
-          <span class="bws-live-tag">Available Now</span>
-          <strong>Homelist — Property Listings</strong>
-          <span class="desc">Search · Map · Agent · Project pages</span>
-        </div>
-      </div>
-
       <!-- Sizzle menu — previously empty collection slot -->
       <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/sizzle-web/#menu" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
         <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/sizzle-menu-preview.jpg?v=20260819');background-position:center top;">
@@ -854,34 +772,6 @@ body.view-apps .nav-website{display:none;}
         </div>
       </div>
 
-      <!-- Construction brochure cover — empty collection slot -->
-      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/construction-brochure/" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
-        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/construction-brochure-preview.jpg?v=20260819');background-position:top center;">
-          <div class="bws-tmpl-hover-overlay">
-            <div class="bws-tmpl-hover-label">Click to open full preview</div>
-          </div>
-        </div>
-        <div class="bws-tmpl-foot">
-          <span class="bws-live-tag">Available Now</span>
-          <strong>Construction — Company Brochure</strong>
-          <span class="desc">Cover · Profile · Branches · Team</span>
-        </div>
-      </div>
-
-      <!-- Construction brochure inside spread — empty collection slot -->
-      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/construction-brochure/inside.html" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
-        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/construction-brochure-inside-preview.jpg?v=20260819');background-position:top center;">
-          <div class="bws-tmpl-hover-overlay">
-            <div class="bws-tmpl-hover-label">Click to open full preview</div>
-          </div>
-        </div>
-        <div class="bws-tmpl-foot">
-          <span class="bws-live-tag">Available Now</span>
-          <strong>Construction — Inside Spread</strong>
-          <span class="desc">History · Services · Achievements</span>
-        </div>
-      </div>
-
       <!-- Dealaro inventory — previously empty collection slot -->
       <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/dealaro-web/home-car-dealer.html" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
         <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/dealaro-inventory-preview.png?v=20260819b');background-position:top center;">
@@ -893,20 +783,6 @@ body.view-apps .nav-website{display:none;}
           <span class="bws-live-tag">Available Now</span>
           <strong>Dealaro — Inventory &amp; Search</strong>
           <span class="desc">New &amp; used cars · Make · Model · Price</span>
-        </div>
-      </div>
-
-      <!-- Fresheat menu page — additional collection slot -->
-      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/fresheat-web/menu/" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
-        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/fresheat-menu-preview.jpg?v=20260819');background-position:top center;">
-          <div class="bws-tmpl-hover-overlay">
-            <div class="bws-tmpl-hover-label">Click to open full preview</div>
-          </div>
-        </div>
-        <div class="bws-tmpl-foot">
-          <span class="bws-live-tag">Available Now</span>
-          <strong>Fresheat — Food Menu</strong>
-          <span class="desc">Dishes · Categories · Reservation</span>
         </div>
       </div>
 
@@ -949,20 +825,6 @@ body.view-apps .nav-website{display:none;}
           <span class="bws-live-tag">Available Now</span>
           <strong>Zevana — Company Profile</strong>
           <span class="desc">Corporate · Services · Team · Contact</span>
-        </div>
-      </div>
-
-      <!-- Zevana about / services — additional collection slot -->
-      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/zevana-web/about.html" onclick="window.open(this.getAttribute('data-template-url'),'_blank')">
-        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/zevana-about-preview.jpg?v=20260819');background-position:top center;">
-          <div class="bws-tmpl-hover-overlay">
-            <div class="bws-tmpl-hover-label">Click to open full preview</div>
-          </div>
-        </div>
-        <div class="bws-tmpl-foot">
-          <span class="bws-live-tag">Available Now</span>
-          <strong>Zevana — About &amp; Services</strong>
-          <span class="desc">About · Team · Services · Quotes</span>
         </div>
       </div>
 
@@ -1010,7 +872,7 @@ body.view-apps .nav-website{display:none;}
 
       <!-- Gorent car rental — new collection slot (gallery was full) -->
       <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/gorent-web/" onclick="window.open(this.getAttribute('data-template-url'),'_blank')">
-        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/gorent-preview.jpg?v=20260819');background-position:top center;">
+        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/gorent-preview.jpg?v=20260821');background-position:top center;">
           <div class="bws-tmpl-hover-overlay">
             <div class="bws-tmpl-hover-label">Click to open full preview</div>
           </div>
