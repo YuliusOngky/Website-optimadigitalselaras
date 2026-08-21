@@ -1,0 +1,132 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,600);
+/* Colors Variables */
+/* line 1, ../sass/partials/_base.scss */
+body {
+  font-size: 14px;
+  line-height: 24px;
+  color: #666666;
+  font-family: 'Raleway', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 9, ../sass/partials/_base.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 15, ../sass/partials/_base.scss */
+hr {
+  border-color: #d4d4d4;
+  margin: 8% 0;
+}
+
+/* line 1, ../sass/partials/_header.scss */
+#main-header {
+  position: fixed;
+  background: #222222;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 60px;
+  text-align: right;
+}
+/* line 9, ../sass/partials/_header.scss */
+#main-header .logo {
+  float: right;
+  display: inline-block;
+  margin: 0 35px 0 35px;
+  vertical-align: middle;
+}
+/* line 15, ../sass/partials/_header.scss */
+#main-header h2 {
+  text-align: right;
+  color: white;
+  font-size: 1.2em;
+  font-family: 'Raleway', sans-serif;
+  line-height: 60px;
+  margin: 0 40px 0 0;
+}
+
+/* line 1, ../sass/partials/_content.scss */
+#content {
+  width: 60%;
+  margin-left: 23%;
+  padding: 3%;
+  padding-top: 9%;
+}
+/* line 6, ../sass/partials/_content.scss */
+#content h3 {
+  font-size: 2em;
+  font-family: 'Raleway', sans-serif;
+  color: #222222;
+  margin-bottom: 4%;
+}
+/* line 12, ../sass/partials/_content.scss */
+#content h4 {
+  font-size: 1.2em;
+  color: #222222;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  margin-bottom: 4%;
+}
+/* line 19, ../sass/partials/_content.scss */
+#content strong {
+  color: #222222;
+}
+/* line 22, ../sass/partials/_content.scss */
+#content p {
+  margin-bottom: 4%;
+}
+/* line 25, ../sass/partials/_content.scss */
+#content pre {
+  border-radius: 0;
+  border: 0;
+  padding: 20px 0 0 0;
+}
+/* line 30, ../sass/partials/_content.scss */
+#content ul li {
+  line-height: 32px;
+}
+
+/* line 1, ../sass/partials/_sidebar.scss */
+#aside-panel {
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  top: 60px;
+  left: 0;
+  background: #2f2f2f;
+}
+/* line 8, ../sass/partials/_sidebar.scss */
+#aside-panel h3 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  color: gray;
+  display: block;
+  text-align: center;
+}
+/* line 15, ../sass/partials/_sidebar.scss */
+#aside-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 19, ../sass/partials/_sidebar.scss */
+#aside-panel ul li {
+  border-bottom: 1px solid #414141;
+}
+/* line 21, ../sass/partials/_sidebar.scss */
+#aside-panel ul li a {
+  padding: 20px;
+  display: block;
+  font-size: 14px;
+  color: #d9d9d9;
+}
+/* line 26, ../sass/partials/_sidebar.scss */
+#aside-panel ul li a:hover {
+  background: #2c2c2c;
+  color: white;
+  text-decoration: none;
+}

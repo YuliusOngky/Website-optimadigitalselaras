@@ -1,0 +1,128 @@
+{%  unless section.settings.hide_flash_banner %}
+<link rel="stylesheet" href="{{ 'dt-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'flash-sale-banner.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'dt-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'flash-sale-banner.css' | asset_url | stylesheet_tag }}</noscript>
+  <div class="flash-sale-banner content-container color-{{ section.settings.color_scheme }} gradient {% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %}" >
+   <div class="row">
+    <div class="flash-sale-banner__blocks">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'heading' -%}
+            <h4 class="sale-header{{ block.shopify_attributes }}" >{{ block.settings.heading | escape }}</h4>
+          {%- when 'text' -%}
+            <div class="flash-sale-banner__text rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+          {%- when 'button' -%}
+           	<div class="copy-text" id="copy__text">
+      		<input type="text" class="text" value="{{ block.settings.button_label | escape }}" />
+      		<button><i class="fa fa-clone"></i>{{ block.settings.button_link | escape }}</button>
+        	</div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+{% endunless %}
+{% schema %}
+{
+  "name": "t:sections.flash-sale-banner.name",
+  "tag": "section",
+  "class": "section section-flash-sale-banner",
+  "settings": [
+    {
+      "type":"checkbox",
+      "id":"hide_flash_banner",
+       "default": true,
+       "label": "t:sections.flash-sale-banner.settings.hide_flash_banner.label"
+    },
+    {
+      "type":"checkbox",
+      "id":"page_full_width",
+       "default": false,
+      "label": "t:sections.all.page_full_width.label"
+    },
+    {
+      "type":"checkbox",
+      "id":"page_full_width_spacing",
+       "default": false,
+      "label": "t:sections.all.page_full_width_spacing.label"
+    },
+    {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.flash-sale-banner.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Talk about your brand",
+          "label": "t:sections.flash-sale-banner.blocks.heading.settings.heading.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.flash-sale-banner.blocks.text.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "t:sections.flash-sale-banner.blocks.text.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.flash-sale-banner.blocks.button.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:sections.flash-sale-banner.blocks.button.settings.button_label.label"
+        },
+        {
+          "type": "text",
+          "id": "button_link",
+          "label": "t:sections.flash-sale-banner.blocks.button.settings.button_link.label"
+        }        
+      ]
+    }
+  ]
+}
+{% endschema %}

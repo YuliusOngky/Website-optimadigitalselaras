@@ -1,0 +1,288 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+ @media screen and (max-width: 576px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+    }
+  } 
+  @media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  } 
+  
+ {%  unless section.settings.breadcrumb_image == blank  %}
+ .breadcrumb {background:url({{ section.settings.breadcrumb_image | image_url: width: 1920 }});background-repeat:no-repeat;background-size:cover;padding-left:20px;padding-right:20px; background-position:center;}  
+     {% endunless %}
+ .breadcrumb a{color: rgba(var(--color-foreground),1);}  
+ .breadcrumb a:hover{ color: rgb(var(--color-link-hover));}
+ .breadcrumb{position: relative;z-index: 1;}  
+ .breadcrumb .breadcrumb_title{margin:0; font-weight: var(--font-heading-weight);text-transform:capitalize;}
+ .breadcrumb a, .breadcrumb span{display: inline-block;margin-top:1rem;font-size:var(--font-h6-size);font-weight:400; padding: 0;} 
+ .breadcrumb.text-center{text-align:center;}  
+ .breadcrumb.text-start{text-align:left;}  
+ .breadcrumb.text-end{text-align:right;}
+ .breadcrumb:before { position: absolute; content: "";  display: block;  width: 100%;  height: 100%;  left: 0;  top: 0;  z-index: -1;background:rgba(var(--color-background));opacity:.{{section.settings.image_overlay_opacity}};}  
+  .breadcrumb .breadcrumb__sep{padding:0 10px;}
+   span.breadcrumb__sep svg {
+    width: 10px;
+    height: 10px;
+    fill: currentcolor;
+}
+
+  @media screen and (max-width: 576px) { 
+    .breadcrumb .breadcrumb_title{ margin-bottom:1rem;}
+    .breadcrumb a, .breadcrumb span{font-size:calc(var(--font-h6-size) - 2px); margin:0;}
+  }
+
+.breadcrumb .breadcrumb__sep:after {
+    content: "\f054";
+    font-family: FontAwesome;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all .4s ease-in-out 0s;
+    position: relative;
+    width: auto;
+    height: auto;
+    background: transparent;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 1rem;
+    margin: auto;
+}
+
+
+
+  
+{% endstyle %}
+<div class="breadcrumb-section color-{{ section.settings.color_scheme }} gradient {{ section.settings.custom_class_name }} ">
+ <div class="{% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %}">
+ <div class="row"> 
+   <nav class="breadcrumb text-{{ section.settings.breadcrumb_style }} section-{{ section.id }}-padding isolate"  aria-label="breadcrumbs {{ request.page_type }}">
+ {% if template contains 'product' %}  
+      {% if section.settings.use_breadcrumb_title %}
+    <h2 class="breadcrumb_title ">{{ product.title }}</h2>
+        {% endif %}
+    {% if collection %}
+    <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a> 
+    <span aria-hidden="true" class="breadcrumb__sep"> 
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg> -->
+    </span>
+    {% if collection.handle %}
+    {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+    {{ collection.title | link_to: url }}  
+    {% endif %}
+    {% else %}
+    {% capture url %}/collections/all{% endcapture %}
+    <a href="{{ url }}">{{ 'general.breadcrumbs.all' | t }}</a>
+    {% endif %}
+
+    <span aria-hidden="true" class="breadcrumb__sep">
+   <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg> -->
+    </span>
+    <span>{{ product.title }}</span>
+
+
+    {% elsif template contains 'collection' and collection.handle %}
+    {% if template == 'list-collections' %}
+     {% if section.settings.use_breadcrumb_title %}  
+    <h2 class="breadcrumb_title">{{ 'general.breadcrumbs.all_collections' | t }}</h2>
+      {% endif %}  
+    {% else %}
+    {% if section.settings.use_breadcrumb_title %}     
+    <h2 class="breadcrumb_title">{{ collection.title }}</h2>
+    {% endif %}     
+    <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+  <span aria-hidden="true" class="breadcrumb__sep">
+   <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg> -->
+    </span>
+       <a href="/collections" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.all_collections' | t }}</a>
+    <span aria-hidden="true" class="breadcrumb__sep">
+   <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg> -->
+    </span>
+    {% if current_tags %}
+    {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+    {{ collection.title | link_to: url }}
+    <span aria-hidden="true" class="breadcrumb__sep">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg> -->
+    </span>
+    <span>{{ current_tags | join: " + " }}</span>
+    {% else %}
+    <span>{{ collection.title }}</span>
+
+    {% endif %}  
+    {% endif %}
+    {% elsif template == 'blog' %}
+    {% if section.settings.use_breadcrumb_title %}  
+    <h2 class="breadcrumb_title">{{ blog.title }}</h2>
+    {% endif %}
+    <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+
+    <span aria-hidden="true" class="breadcrumb__sep">
+   <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg> -->
+    </span>
+    {% if current_tags %}
+    {{ blog.title | link_to: blog.url }}
+    <span aria-hidden="true" class="breadcrumb__sep">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg> -->
+    </span>
+    <span>{{ current_tags | join: " + " }}</span>
+    {% else %}
+
+    <span>{{ blog.title }}</span>
+
+    {% endif %}
+
+    {% elsif template == 'article' %}
+     {% if section.settings.use_breadcrumb_title %}   
+    <h2 class="breadcrumb_title">{{ article.title }}</h2>
+     {% endif %} 
+    <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+
+    <span aria-hidden="true" class="breadcrumb__sep">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg> -->
+    </span>
+    {{ blog.title | link_to: blog.url }}
+    <span aria-hidden="true" class="breadcrumb__sep">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg> -->
+    </span>
+    <span>{{ article.title }}</span>
+
+    {% elsif template contains 'page' %}
+    {% if section.settings.use_breadcrumb_title %}  
+    <h2 class="breadcrumb_title">{{ page.title }}</h2>
+     {% endif %}   
+    <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+
+    <span aria-hidden="true" class="breadcrumb__sep">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg> -->
+    </span>
+    <span>{{ page.title }}</span>
+
+    {% else %}
+    {% if template == 'list-collections' %}
+    {% if section.settings.use_breadcrumb_title %}    
+    <h1 class="breadcrumb_title">{{ 'general.breadcrumbs.all_collections' | t }}</h1>
+    {% endif %}  
+    {% else %}
+      
+    {% if section.settings.use_breadcrumb_title %}      
+    <h2 class="breadcrumb_title">{{ page_title }}</h2>
+    {% endif %}    
+    <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+
+    <span aria-hidden="true" class="breadcrumb__sep">
+   <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg> -->
+    </span>
+    <span>{{ page_title }}</span>
+    {% endif %}
+
+    {% endif %}
+ </nav>
+</div>   
+</div>
+ </div>
+
+{% schema %}
+  {
+      "name": "t:sections.breadcrumb.name",
+    "settings": [
+      {
+      "type":"checkbox",
+      "id":"page_full_width",
+       "default": false,
+      "label": "t:sections.all.page_full_width.label"
+    },
+    {
+      "type":"checkbox",
+      "id":"page_full_width_spacing",
+       "default": false,
+      "label": "t:sections.all.page_full_width_spacing.label"
+    },
+      {
+        "type": "checkbox",
+        "id": "use_breadcrumb_title",
+        "label": "Enable breadcrumb title",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "breadcrumb_image",
+        "label": "Image"
+      },
+      {
+        "type": "select",
+        "id": "breadcrumb_style",
+        "label": "Style",
+        "default": "center",
+        "options": [
+          {
+            "value": "start",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "end",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "image_overlay_opacity",
+        "label": "Opacity",
+        "min": 0,
+        "max": 99,
+        "step": 1,
+        "unit": "%",
+        "default": 40
+      },
+      {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+    ],
+    
+   "presets": [
+    {
+      "name": "t:sections.breadcrumb.presets.name"
+    }
+  ]
+}
+
+{% endschema %}        

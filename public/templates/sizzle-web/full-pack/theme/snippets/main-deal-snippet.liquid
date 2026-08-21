@@ -1,0 +1,13 @@
+{% if product.metafields.dtx.deal-time.value != blank %}
+{% assign endTime = product.metafields.dtx.deal-time.value | date: "%d %b %Y" %}s
+<div class="product-deal-count" data-end-time="{{endTime}}">
+  <div class="deal-clock">
+    <ul>
+      <li class="days"></li>
+      <li class="hours"></li>
+      <li class="minutes"></li>
+      <li class="seconds"></li>
+    </ul>
+  </div>
+</div>
+{% endif %}

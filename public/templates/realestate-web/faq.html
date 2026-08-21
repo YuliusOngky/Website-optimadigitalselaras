@@ -1,0 +1,1680 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="styles/styles.css" />
+      <title>FAQs - Homelist</title>
+   </head>
+   <body>
+      <!-- Navbar started -->
+      <header
+         class="sticky left-0 top-0 z-50 flex h-nav-2 items-center bg-white shadow-sm"
+      >
+         <nav class="container flex items-center justify-between px-3 2xl:px-0">
+            <div>
+               <a href="index.html">
+                  <img
+                     src="assets/images/logo.png"
+                     alt="Homelist"
+                     class="shrink-0"
+                  />
+               </a>
+            </div>
+
+            <div class="flex items-center gap-x-6 text-nature-500">
+               <menu
+                  class="mr-2.5 hidden items-center gap-x-3 text-sm font-semibold hover:*:text-primary hover:*:duration-300 md:flex lg:gap-x-5 lg:text-[17px] xl:space-x-6"
+               >
+                  <li
+                     role="button"
+                     id="homesDropdownButton"
+                     data-dropdown-toggle="homes-dropdown-hover"
+                     data-dropdown-trigger="hover"
+                  >
+                     <a class="group relative" role="button" href="index.html"
+                        >Home
+                        <i
+                           class="fa-solid fa-chevron-down text-sm font-normal"
+                        ></i>
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div>
+                     </a>
+                  </li>
+
+                  <div
+                     id="homes-dropdown-hover"
+                     class="z-10 hidden w-60 rounded-xl bg-white shadow"
+                  >
+                     <menu
+                        aria-labelledby="homesDropdownButton"
+                        class="w-full p-2.5 font-semibold text-gray-700 *:px-5 *:py-2.5"
+                     >
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index.html"
+                              >Homepage 1</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index2.html"
+                              >Homepage 2</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index3.html"
+                              >Homepage 3</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index4.html"
+                              >Homepage 4</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index5.html"
+                              >Homepage 5</a
+                           >
+                        </li>
+                     </menu>
+                  </div>
+                  <li
+                     role="button"
+                     id="propertiesDropdownButton"
+                     data-dropdown-toggle="properties-dropdown-hover"
+                     data-dropdown-trigger="hover"
+                  >
+                     <a class="group relative" href="index.html"
+                        >Properties
+                        <i
+                           class="fa-solid fa-chevron-down text-sm font-normal"
+                        ></i>
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div>
+                     </a>
+                  </li>
+
+                  <div
+                     id="properties-dropdown-hover"
+                     class="z-10 hidden w-60 rounded-xl bg-white shadow"
+                  >
+                     <menu
+                        aria-labelledby="propertiesDropdownButton"
+                        class="w-full p-2.5 font-semibold text-gray-700 *:px-5 *:py-2.5"
+                     >
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="properties.html"
+                              >Property List</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="property.html"
+                              >Property Details</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="property2.html"
+                              >Property Details V2</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-1.html"
+                              >Map View 1</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-2.html"
+                              >Map View 2</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-3.html"
+                              >Map View 3</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-4.html"
+                              >Map View 4</a
+                           >
+                        </li>
+                     </menu>
+                  </div>
+                  <li>
+                     <a class="group relative" href="blogs.html"
+                        >Blogs
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div
+                     ></a>
+                  </li>
+                  <li
+                     role="button"
+                     id="pagesDropdownButton"
+                     data-dropdown-toggle="pages-dropdown-hover"
+                     data-dropdown-trigger="hover"
+                  >
+                     <a class="group relative" href="index.html"
+                        >Pages
+                        <i
+                           class="fa-solid fa-chevron-down text-sm font-normal"
+                        ></i>
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div>
+                     </a>
+                  </li>
+
+                  <div
+                     id="pages-dropdown-hover"
+                     class="z-10 hidden w-60 rounded-xl bg-white shadow"
+                  >
+                     <menu
+                        aria-labelledby="pagesDropdownButton"
+                        class="w-full p-2.5 font-semibold text-gray-700 *:px-5 *:py-2.5"
+                     >
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="blogs.html"
+                              >Blog List</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="blog.html"
+                              >Blog Details</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="property2.html"
+                              >FAQs</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-1.html"
+                              >Project List</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-2.html"
+                              >Project Details</a
+                           >
+                        </li>
+                     </menu>
+                  </div>
+                  <li>
+                     <a class="group relative" href="contact.html"
+                        >Contacts
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div
+                     ></a>
+                  </li>
+               </menu>
+               <button
+                  data-modal-target="search-modal"
+                  data-modal-toggle="search-modal"
+                  type="button"
+                  class="transition duration-300 hover:text-primary"
+               >
+                  <i
+                     class="fa-solid fa-magnifying-glass text-xl text-nature-600 duration-300 hover:text-primary"
+                  ></i>
+               </button>
+               <button
+                  class="hidden size-[60px] bg-primary text-white md:block"
+                  type="button"
+                  data-drawer-target="drawer-right-example"
+                  data-drawer-show="drawer-right-example"
+                  data-drawer-placement="right"
+                  aria-controls="drawer-right-example"
+               >
+                  <i class="fa-solid fa-lines-leaning text-2xl"></i>
+               </button>
+               <button
+                  class="md:hidden"
+                  type="button"
+                  data-drawer-target="responsive-menu"
+                  data-drawer-show="responsive-menu"
+                  aria-controls="responsive-menu"
+               >
+                  <svg
+                     class="size-6"
+                     stroke="currentColor"
+                     fill="currentColor"
+                     stroke-width="0"
+                     viewBox="0 0 24 24"
+                     height="200px"
+                     width="200px"
+                     xmlns="http://www.w3.org/2000/svg"
+                  >
+                     <path fill="none" d="M0 0h24v24H0V0z"></path>
+                     <path
+                        d="M3 18h13v-2H3v2zm0-5h10v-2H3v2zm0-7v2h13V6H3zm18 9.59L17.42 12 21 8.41 19.59 7l-5 5 5 5L21 15.59z"
+                     ></path>
+                  </svg>
+               </button>
+            </div>
+         </nav>
+      </header>
+      <!-- Navbar ended -->
+
+      <!-- Details Started -->
+      <section class="bg-primary-10">
+         <div
+            class="h-auto w-full bg-cover bg-center bg-no-repeat"
+            style="background-image: url(&quot;assets/images/layer.svg&quot;)"
+         >
+            <div
+               class="container flex h-[225px] flex-col items-center justify-center sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] 2xl:h-[450px]"
+            >
+               <h1 class="common-hero-heading">FAQs</h1>
+
+               <div class="flex" aria-label="Breadcrumb">
+                  <ol class="inline-flex items-center space-x-1 md:space-x-2">
+                     <li class="inline-flex items-center">
+                        <a
+                           href="#"
+                           class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white"
+                        >
+                           <i class="fa-solid fa-house me-2.5 h-3 w-3"></i>
+                           Home
+                        </a>
+                     </li>
+
+                     <li aria-current="page">
+                        <div class="flex items-center">
+                           <i
+                              class="fa-solid fa-chevron-right mx-1 h-3 w-3 text-gray-400"
+                           ></i>
+                           <span
+                              class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400 md:ms-2"
+                              >FAQs</span
+                           >
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Details Ended -->
+
+      <!-- Accordion Started -->
+      <section
+         class="section-padding-120 gap-30 container grid px-4 md:grid-cols-2 xl:px-0"
+      >
+         <div>
+            <div
+               id="accordion-flush"
+               data-accordion="collapse"
+               data-active-classes="bg-white shadow-shadow10 dark:bg-gray-900 text-gray-900 dark:text-white mb-4"
+               data-inactive-classes="text-gray-500 dark:text-gray-400 mb-4"
+            >
+               <!-- Num 1 -->
+               <h2
+                  id="accordion-flush-heading-1"
+                  class="rounded-[20px] bg-white shadow-shadow10"
+               >
+                  <button
+                     type="button"
+                     class="px-30 flex w-full items-center gap-3 rounded-t-[20px] bg-white py-5 font-medium"
+                     data-accordion-target="#accordion-flush-body-1"
+                     aria-expanded="true"
+                     aria-controls="accordion-flush-body-1"
+                  >
+                     <i
+                        class="fa-solid fa-circle-plus shrink-0 rotate-180 text-xl text-secondary"
+                        data-accordion-icon
+                        aria-hidden="true"
+                     ></i>
+                     <span class="text-xl text-new-900"
+                        >What is the average properties?</span
+                     >
+                  </button>
+               </h2>
+               <div
+                  id="accordion-flush-body-1"
+                  class="p-30 mb-4 hidden rounded-b-[20px] bg-white !pt-0 shadow-shadow10"
+                  aria-labelledby="accordion-flush-heading-1"
+               >
+                  <div class="pt-5 dark:border-gray-700">
+                     <p class="text-gray-500 dark:text-gray-400">
+                        It is a long established fact that a reader will be
+                        distr acted bioiiy the rea dablea content of a page when
+                        looking at its layout Thoiie point of using.It is a long
+                        this established
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Num 2 -->
+               <h2
+                  id="accordion-flush-heading-2"
+                  class="rounded-[20px] bg-white shadow-shadow10"
+               >
+                  <button
+                     type="button"
+                     class="px-30 flex w-full items-center gap-3 rounded-t-[20px] bg-white py-5 font-medium"
+                     data-accordion-target="#accordion-flush-body-2"
+                     aria-expanded="true"
+                     aria-controls="accordion-flush-body-2"
+                  >
+                     <i
+                        class="fa-solid fa-circle-plus shrink-0 rotate-180 text-xl text-secondary"
+                        data-accordion-icon
+                        aria-hidden="true"
+                     ></i>
+                     <span class="text-xl text-new-900"
+                        >How do I find properties for sale in this
+                        category?</span
+                     >
+                  </button>
+               </h2>
+               <div
+                  id="accordion-flush-body-2"
+                  class="p-30 mb-4 hidden rounded-b-[20px] bg-white !pt-0 shadow-shadow10"
+                  aria-labelledby="accordion-flush-heading-2"
+               >
+                  <div class="pt-5 dark:border-gray-700">
+                     <p class="text-gray-500 dark:text-gray-400">
+                        It is a long established fact that a reader will be
+                        distr acted bioiiy the rea dablea content of a page when
+                        looking at its layout Thoiie point of using.It is a long
+                        this established
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Num 3 -->
+               <h2
+                  id="accordion-flush-heading-3"
+                  class="rounded-[20px] bg-white shadow-shadow10"
+               >
+                  <button
+                     type="button"
+                     class="px-30 flex w-full items-center gap-3 rounded-t-[20px] bg-white py-5 font-medium"
+                     data-accordion-target="#accordion-flush-body-3"
+                     aria-expanded="true"
+                     aria-controls="accordion-flush-body-3"
+                  >
+                     <i
+                        class="fa-solid fa-circle-plus shrink-0 rotate-180 text-xl text-secondary"
+                        data-accordion-icon
+                        aria-hidden="true"
+                     ></i>
+                     <span class="text-xl text-new-900"
+                        >What a home in this category?</span
+                     >
+                  </button>
+               </h2>
+               <div
+                  id="accordion-flush-body-3"
+                  class="p-30 mb-4 hidden rounded-b-[20px] bg-white !pt-0 shadow-shadow10"
+                  aria-labelledby="accordion-flush-heading-3"
+               >
+                  <div class="pt-5 dark:border-gray-700">
+                     <p class="text-gray-500 dark:text-gray-400">
+                        It is a long established fact that a reader will be
+                        distr acted bioiiy the rea dablea content of a page when
+                        looking at its layout Thoiie point of using.It is a long
+                        this established
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Num 4 -->
+               <h2
+                  id="accordion-flush-heading-4"
+                  class="rounded-[20px] bg-white shadow-shadow10"
+               >
+                  <button
+                     type="button"
+                     class="px-30 flex w-full items-center gap-3 rounded-t-[20px] bg-white py-5 font-medium"
+                     data-accordion-target="#accordion-flush-body-4"
+                     aria-expanded="true"
+                     aria-controls="accordion-flush-body-4"
+                  >
+                     <i
+                        class="fa-solid fa-circle-plus shrink-0 rotate-180 text-xl text-secondary"
+                        data-accordion-icon
+                        aria-hidden="true"
+                     ></i>
+                     <span class="text-xl text-new-900"
+                        >How do I know if a property location?</span
+                     >
+                  </button>
+               </h2>
+               <div
+                  id="accordion-flush-body-4"
+                  class="p-30 mb-4 hidden rounded-b-[20px] bg-white !pt-0 shadow-shadow10"
+                  aria-labelledby="accordion-flush-heading-4"
+               >
+                  <div class="pt-5 dark:border-gray-700">
+                     <p class="text-gray-500 dark:text-gray-400">
+                        It is a long established fact that a reader will be
+                        distr acted bioiiy the rea dablea content of a page when
+                        looking at its layout Thoiie point of using.It is a long
+                        this established
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Num 8 -->
+               <h2
+                  id="accordion-flush-heading-9"
+                  class="rounded-[20px] bg-white shadow-shadow10"
+               >
+                  <button
+                     type="button"
+                     class="px-30 flex w-full items-center gap-3 rounded-t-[20px] bg-white py-5 font-medium"
+                     data-accordion-target="#accordion-flush-body-9"
+                     aria-expanded="true"
+                     aria-controls="accordion-flush-body-9"
+                  >
+                     <i
+                        class="fa-solid fa-circle-plus shrink-0 rotate-180 text-xl text-secondary"
+                        data-accordion-icon
+                        aria-hidden="true"
+                     ></i>
+                     <span class="text-xl text-new-900"
+                        >Are there any property in this category?</span
+                     >
+                  </button>
+               </h2>
+               <div
+                  id="accordion-flush-body-9"
+                  class="p-30 mb-4 hidden rounded-b-[20px] bg-white !pt-0 shadow-shadow10"
+                  aria-labelledby="accordion-flush-heading-9"
+               >
+                  <div class="pt-5 dark:border-gray-700">
+                     <p class="text-gray-500 dark:text-gray-400">
+                        It is a long established fact that a reader will be
+                        distr acted bioiiy the rea dablea content of a page when
+                        looking at its layout Thoiie point of using.It is a long
+                        this established
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div>
+            <div
+               id="accordion-flush2"
+               data-accordion="collapse"
+               data-active-classes="bg-white shadow-shadow10 dark:bg-gray-900 text-gray-900 dark:text-white mb-4"
+               data-inactive-classes="text-gray-500 dark:text-gray-400 mb-4"
+            >
+               <!-- Num 5 -->
+               <h2
+                  id="accordion-flush-heading-5"
+                  class="rounded-[20px] bg-white shadow-shadow10"
+               >
+                  <button
+                     type="button"
+                     class="px-30 flex w-full items-center gap-3 rounded-t-[20px] bg-white py-5 font-medium"
+                     data-accordion-target="#accordion-flush-body-5"
+                     aria-expanded="true"
+                     aria-controls="accordion-flush-body-5"
+                  >
+                     <i
+                        class="fa-solid fa-circle-plus shrink-0 rotate-180 text-xl text-secondary"
+                        data-accordion-icon
+                        aria-hidden="true"
+                     ></i>
+                     <span class="text-xl text-new-900"
+                        >Are properties in this category?</span
+                     >
+                  </button>
+               </h2>
+               <div
+                  id="accordion-flush-body-5"
+                  class="p-30 mb-4 hidden rounded-b-[20px] bg-white !pt-0 shadow-shadow10"
+                  aria-labelledby="accordion-flush-heading-5"
+               >
+                  <div class="pt-5 dark:border-gray-700">
+                     <p class="text-gray-500 dark:text-gray-400">
+                        It is a long established fact that a reader will be
+                        distr acted bioiiy the rea dablea content of a page when
+                        looking at its layout Thoiie point of using.It is a long
+                        this established
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Num 6 -->
+               <h2
+                  id="accordion-flush-heading-6"
+                  class="rounded-[20px] bg-white shadow-shadow10"
+               >
+                  <button
+                     type="button"
+                     class="px-30 flex w-full items-center gap-3 rounded-t-[20px] bg-white py-5 font-medium"
+                     data-accordion-target="#accordion-flush-body-6"
+                     aria-expanded="true"
+                     aria-controls="accordion-flush-body-6"
+                  >
+                     <i
+                        class="fa-solid fa-circle-plus shrink-0 rotate-180 text-xl text-secondary"
+                        data-accordion-icon
+                        aria-hidden="true"
+                     ></i>
+                     <span class="text-xl text-new-900"
+                        >How property in this category?</span
+                     >
+                  </button>
+               </h2>
+               <div
+                  id="accordion-flush-body-6"
+                  class="p-30 mb-4 hidden rounded-b-[20px] bg-white !pt-0 shadow-shadow10"
+                  aria-labelledby="accordion-flush-heading-6"
+               >
+                  <div class="pt-5 dark:border-gray-700">
+                     <p class="text-gray-500 dark:text-gray-400">
+                        It is a long established fact that a reader will be
+                        distr acted bioiiy the rea dablea content of a page when
+                        looking at its layout Thoiie point of using.It is a long
+                        this established
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Num 7 -->
+               <h2
+                  id="accordion-flush-heading-7"
+                  class="rounded-[20px] bg-white shadow-shadow10"
+               >
+                  <button
+                     type="button"
+                     class="px-30 flex w-full items-center gap-3 rounded-t-[20px] bg-white py-5 font-medium"
+                     data-accordion-target="#accordion-flush-body-7"
+                     aria-expanded="true"
+                     aria-controls="accordion-flush-body-7"
+                  >
+                     <i
+                        class="fa-solid fa-circle-plus shrink-0 rotate-180 text-xl text-secondary"
+                        data-accordion-icon
+                        aria-hidden="true"
+                     ></i>
+                     <span class="text-xl text-new-900"
+                        >What property designs within this category?</span
+                     >
+                  </button>
+               </h2>
+               <div
+                  id="accordion-flush-body-7"
+                  class="p-30 mb-4 hidden rounded-b-[20px] bg-white !pt-0 shadow-shadow10"
+                  aria-labelledby="accordion-flush-heading-7"
+               >
+                  <div class="pt-5 dark:border-gray-700">
+                     <p class="text-gray-500 dark:text-gray-400">
+                        It is a long established fact that a reader will be
+                        distr acted bioiiy the rea dablea content of a page when
+                        looking at its layout Thoiie point of using.It is a long
+                        this established
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Num 8 -->
+               <h2
+                  id="accordion-flush-heading-8"
+                  class="rounded-[20px] bg-white shadow-shadow10"
+               >
+                  <button
+                     type="button"
+                     class="px-30 flex w-full items-center gap-3 rounded-t-[20px] bg-white py-5 font-medium"
+                     data-accordion-target="#accordion-flush-body-8"
+                     aria-expanded="true"
+                     aria-controls="accordion-flush-body-8"
+                  >
+                     <i
+                        class="fa-solid fa-circle-plus shrink-0 rotate-180 text-xl text-secondary"
+                        data-accordion-icon
+                        aria-hidden="true"
+                     ></i>
+                     <span class="text-xl text-new-900"
+                        >How a property in this category?</span
+                     >
+                  </button>
+               </h2>
+               <div
+                  id="accordion-flush-body-8"
+                  class="p-30 mb-4 hidden rounded-b-[20px] bg-white !pt-0 shadow-shadow10"
+                  aria-labelledby="accordion-flush-heading-8"
+               >
+                  <div class="pt-5 dark:border-gray-700">
+                     <p class="text-gray-500 dark:text-gray-400">
+                        It is a long established fact that a reader will be
+                        distr acted bioiiy the rea dablea content of a page when
+                        looking at its layout Thoiie point of using.It is a long
+                        this established
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Accordion Ended -->
+
+      <!-- Contact Us Section Start  -->
+      <section class="section-padding bg-primary-10">
+         <div
+            class="container grid gap-10 px-2 md:grid-cols-10 md:gap-12 lg:gap-16 xl:gap-20 xl:px-2"
+         >
+            <div class="flex size-fit flex-col px-5 md:col-span-4 xl:px-0">
+               <h2 class="heading-2 !mb-0 !text-start xl:!leading-[64px]">
+                  We Provide The most Suitable and quality real estate
+               </h2>
+
+               <div class="mt-4 md:mt-8 lg:mt-14 xl:mt-20">
+                  <h4
+                     class="text-xl font-medium text-nature-500 md:text-2xl lg:text-3xl xl:text-[34px]"
+                  >
+                     Get in touch
+                  </h4>
+                  <p
+                     class="mt-1.5 font-poppins text-nature-300 md:mt-2.5 lg:mt-3 lg:text-lg"
+                  >
+                     Fill up the form our Team will get back to you within 24
+                     hours.
+                  </p>
+                  <div
+                     class="mt-3.5 flex items-center gap-x-3 md:mt-5 md:gap-x-4 lg:mt-6 lg:gap-x-5 xl:mt-[30px] xl:gap-x-6"
+                  >
+                     <a
+                        href="#"
+                        class="text-nature-400 transition-all hover:text-[#1877f2]"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fa-brands fa-square-facebook text-2xl"></i
+                     ></a>
+                     <a
+                        href="#"
+                        class="text-nature-400 transition-all hover:text-[#c32aa3]"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fa-brands fa-square-instagram text-2xl"></i
+                     ></a>
+                     <a
+                        href="#"
+                        class="text-nature-400 transition-all hover:text-[#0a66c2]"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fa-brands fa-linkedin text-2xl"></i
+                     ></a>
+                     <a
+                        href="#"
+                        class="text-nature-400 transition-all hover:text-black"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fa-brands fa-square-x-twitter text-2xl"></i
+                     ></a>
+                  </div>
+                  <div
+                     class="mt-5 flex flex-col gap-y-4 md:mt-10 md:gap-y-5 lg:mt-14 lg:gap-y-6 xl:mt-[70px] xl:gap-y-7"
+                  >
+                     <div class="flex gap-x-2 lg:gap-x-3">
+                        <div
+                           class="flex size-10 items-center justify-center rounded-md bg-primary xl:size-12"
+                        >
+                           <i
+                              class="fa-solid fa-phone-volume text-lg text-white xl:text-xl"
+                           ></i>
+                        </div>
+                        <div class="size-fit">
+                           <p
+                              class="font-poppins font-medium text-nature-400 lg:text-lg"
+                           >
+                              +1800 123 456 789
+                           </p>
+                           <span
+                              class="font-poppins text-sm font-normal text-nature-200"
+                              >Help phone support</span
+                           >
+                        </div>
+                     </div>
+                     <div class="flex gap-x-2 lg:gap-x-3">
+                        <div
+                           class="flex size-10 items-center justify-center rounded-md bg-primary xl:size-12"
+                        >
+                           <i
+                              class="fa-solid fa-envelope text-lg text-white xl:text-xl"
+                           ></i>
+                        </div>
+                        <div class="size-fit">
+                           <p
+                              class="font-poppins font-medium text-nature-400 lg:text-lg"
+                           >
+                              support@homelist.com
+                           </p>
+                           <span
+                              class="font-poppins text-sm font-normal text-nature-200"
+                              >Help email support</span
+                           >
+                        </div>
+                     </div>
+                     <div class="flex gap-x-2 lg:gap-x-3">
+                        <div
+                           class="flex size-10 items-center justify-center rounded-md bg-primary xl:size-12"
+                        >
+                           <i
+                              class="fa-solid fa-map-pin text-lg text-white xl:text-xl"
+                           ></i>
+                        </div>
+                        <div class="size-fit">
+                           <p
+                              class="font-poppins font-medium text-nature-400 lg:text-lg"
+                           >
+                              5th Avenue, New York, NY.
+                           </p>
+                           <span
+                              class="font-poppins text-sm font-normal text-nature-200"
+                              >Our office address</span
+                           >
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="rounded-2xl bg-white p-7 pt-12 md:col-span-6">
+               <form class="grid w-full gap-2.5 md:gap-4 lg:gap-5 xl:gap-6">
+                  <div class="w-full">
+                     <label
+                        for="name"
+                        class="mb-1.5 block font-poppins text-base font-medium text-nature-600 md:mb-2.5 lg:mb-3"
+                        >Your Name</label
+                     >
+                     <input
+                        type="text"
+                        placeholder="Enter your name"
+                        id="name"
+                        class="placeholder:font-poppins placeholder:text-sm placeholder:text-nature-50"
+                     />
+                  </div>
+
+                  <div
+                     class="grid grid-cols-2 gap-2.5 md:gap-4 lg:gap-5 xl:gap-6"
+                  >
+                     <div class="w-full">
+                        <label
+                           for="email"
+                           class="mb-1.5 block font-poppins text-base font-medium text-nature-600 md:mb-2.5 lg:mb-3"
+                           >Email</label
+                        >
+                        <input
+                           type="text"
+                           placeholder="Enter your email"
+                           id="email"
+                           class="placeholder:font-poppins placeholder:text-sm placeholder:text-nature-50"
+                        />
+                     </div>
+                     <div class="w-full">
+                        <label
+                           class="mb-1.5 block font-poppins text-base font-medium text-nature-600 md:mb-2.5 lg:mb-3"
+                           for="phone"
+                           >Phone</label
+                        >
+                        <input
+                           id="phone"
+                           type="text"
+                           placeholder="Enter your phone"
+                           class="placeholder:font-poppins placeholder:text-sm placeholder:text-nature-50"
+                        />
+                     </div>
+                  </div>
+
+                  <div class="w-full">
+                     <label
+                        class="mb-1.5 block font-poppins text-base font-medium text-nature-600 md:mb-2.5 lg:mb-3"
+                        for="property"
+                        >Property Type</label
+                     >
+                     <select name="property" id="property">
+                        <option
+                           value=""
+                           class="font-poppins text-sm text-nature-50"
+                        >
+                           Choose type
+                        </option>
+                        <option value="property-1">Property 1</option>
+                        <option value="property-2">Property 2</option>
+                        <option value="property-3">Property 3</option>
+                        <option value="property-4">Property 4</option>
+                     </select>
+                  </div>
+
+                  <div class="w-full">
+                     <label
+                        class="mb-1.5 block font-poppins text-base font-medium text-nature-600 md:mb-2.5 lg:mb-3"
+                        for="message"
+                        >Message</label
+                     >
+                     <textarea
+                        name="message"
+                        id="message"
+                        placeholder="Your message"
+                        rows="8"
+                        class="max-h-36 placeholder:font-poppins placeholder:text-sm placeholder:text-nature-50 md:max-h-40 lg:max-h-48 xl:max-h-56"
+                     ></textarea>
+                  </div>
+
+                  <div>
+                     <button
+                        type="submit"
+                        class="rounded-xl bg-primary px-8 py-3.5 font-poppins font-medium text-white transition-all hover:bg-primary-400 md:px-9 md:py-4 lg:px-10 lg:py-5 lg:text-lg xl:px-11 xl:py-[22px]"
+                     >
+                        Send Message
+                     </button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </section>
+      <!-- Contact Us Section End  -->
+
+      <!-- Footer Start -->
+      <footer class="w-full bg-new-100">
+         <div
+            class="w-full rounded-t-3xl bg-nature-600 text-white md:rounded-t-[40px] lg:rounded-t-[60px] xl:rounded-t-[80px] 2xl:rounded-t-[110px]"
+         >
+            <div
+               class="container px-5 py-6 md:py-10 lg:py-14 xl:px-0 xl:py-20 2xl:py-[100px]"
+            >
+               <div
+                  class="flex flex-col gap-y-5 md:flex-row md:items-center md:justify-between"
+               >
+                  <h2
+                     class="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl xl:leading-[64px]"
+                  >
+                     Your home is as important to us <br />
+                     as our own
+                  </h2>
+                  <form class="max-w-[366px]">
+                     <div class="flex items-center gap-0">
+                        <input
+                           type="email"
+                           placeholder="Your email address"
+                           class="rounded-l-md rounded-r-none px-[20px] py-[17px] text-nature-600 placeholder:font-poppins placeholder:text-sm placeholder:text-nature-200"
+                        />
+                        <button
+                           type="submit"
+                           class="rounded-l-none rounded-r-md bg-primary px-[23px] py-[17px]"
+                        >
+                           <i
+                              class="fa-solid fa-magnifying-glass text-[22px]"
+                           ></i>
+                        </button>
+                     </div>
+                  </form>
+               </div>
+
+               <hr
+                  class="my-6 h-px !bg-nature-500 md:my-8 lg:my-12 xl:my-[60px]"
+               />
+
+               <div class="grid w-full grid-cols-2 gap-y-5 md:grid-cols-4">
+                  <div>
+                     <h5
+                        class="mb-2.5 text-lg font-bold md:mb-3.5 md:text-xl lg:mb-5 lg:text-2xl xl:mb-7 xl:text-3xl"
+                     >
+                        About Us
+                     </h5>
+                     <ul
+                        class="grid gap-2 font-poppins text-sm text-new-200 md:gap-3 md:text-base lg:gap-4"
+                     >
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Press</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Resources and Policies</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Careers</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Content Integrity</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Investor Relations</a>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div>
+                     <h5
+                        class="mb-2.5 text-lg font-bold md:mb-3.5 md:text-xl lg:mb-5 lg:text-2xl xl:mb-7 xl:text-3xl"
+                     >
+                        Tour by Categories
+                     </h5>
+                     <ul
+                        class="grid gap-2 font-poppins text-sm text-new-200 md:gap-3 md:text-base lg:gap-4"
+                     >
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Outdoor Activities</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">City Tours </a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Cultural & Thematic Tours</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Indulgence & Luxury Tours</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Family Friendly Tours</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Relaxation Tours</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h5
+                        class="mb-2.5 text-lg font-bold md:mb-3.5 md:text-xl lg:mb-5 lg:text-2xl xl:mb-7 xl:text-3xl"
+                     >
+                        Tripadvisor Sites
+                     </h5>
+                     <ul
+                        class="grid gap-2 font-poppins text-sm text-new-200 md:gap-3 md:text-base lg:gap-4"
+                     >
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Jetsetter</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Cruise Critic</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Seat Guru</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Holiday Lettings</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Vacation Home</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Rentals</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Reco Trip Designers</a>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div>
+                     <h5
+                        class="mb-2.5 text-lg font-bold md:mb-3.5 md:text-xl lg:mb-5 lg:text-2xl xl:mb-7 xl:text-3xl"
+                     >
+                        Get in touch
+                     </h5>
+
+                     <p class="font-poppins text-lg text-new-200 md:text-base">
+                        Intrigued such's narrow cloud <br />
+                        set upon can my sleeping <br />
+                        could't alarm.
+                     </p>
+
+                     <div
+                        class="mt-[30px] flex gap-x-3 *:flex *:size-10 *:items-center *:justify-center *:rounded-full *:border *:border-nature-400 *:text-xl *:text-white"
+                     >
+                        <a
+                           href="#"
+                           class="transition-all hover:bg-white hover:text-[#1877F2]"
+                        >
+                           <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a
+                           href="#"
+                           class="transition-all hover:bg-white hover:text-[#131418]"
+                        >
+                           <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a
+                           href="#"
+                           class="transition-all hover:bg-white hover:text-[#0A66C2]"
+                        >
+                           <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a
+                           href="#"
+                           class="transition-all hover:bg-white hover:text-[#E4405F]"
+                        >
+                           <i class="fa-brands fa-instagram"></i>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+
+               <hr
+                  class="my-6 h-px !bg-nature-500 md:my-8 lg:my-12 xl:my-[60px]"
+               />
+
+               <p
+                  class="text-center font-poppins text-sm tracking-tight text-primary-10 md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"
+               >
+                  Copyright &copy;2024 Homelist, All right reserved.
+               </p>
+            </div>
+         </div>
+      </footer>
+      <!-- Footer End -->
+
+      <!-- NOTE: splitted content -->
+      <!-- drawer component -->
+      <div
+         id="drawer-right-example"
+         class="fixed right-0 top-0 z-[60] h-screen w-96 translate-x-full overflow-y-auto border-l bg-white p-10 transition-transform"
+         tabindex="-1"
+         aria-labelledby="drawer-right-label"
+      >
+         <a href="index.html">
+            <img src="assets/images/logo.png" alt="Homelist" />
+         </a>
+         <button
+            type="button"
+            data-drawer-hide="drawer-right-example"
+            aria-controls="drawer-right-example"
+            class="group absolute right-10 top-10 inline-flex size-[38px] items-center justify-center rounded-full bg-rose-100 text-sm text-rose-600"
+         >
+            <svg
+               class="size-3.5 transition-transform duration-500 ease-in-out group-hover:rotate-180"
+               aria-hidden="true"
+               xmlns="http://www.w3.org/2000/svg"
+               fill="none"
+               viewBox="0 0 14 14"
+            >
+               <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+               />
+            </svg>
+            <span class="sr-only">Close menu</span>
+         </button>
+
+         <div class="mt-8">
+            <article
+               class="prose prose-ul:m-0 prose-ul:list-none prose-ul:space-y-2.5 prose-ul:pl-0 prose-li:pl-0"
+            >
+               <h3>About Us</h3>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corporis quos illo odio incidunt optio sunt impedit! Quis
+                  nesciunt, expedita doloribus temporibus eos, eum corporis amet
+                  voluptatem sapiente consectetur exercitationem doloremque?
+               </p>
+               <h3>Contact Info</h3>
+               <div>
+                  <ul>
+                     <li>
+                        <h4 class="m-0 font-semibold">Email</h4>
+                        <div class="flex items-center gap-x-1.5">
+                           <span
+                              class="inline-flex size-8 items-center justify-center rounded-md bg-primary-50 text-primary"
+                           >
+                              <i class="fa-solid fa-envelope text-primary"></i>
+                           </span>
+                           <span class="text-base leading-none text-slate-500"
+                              >support@homelist.com</span
+                           >
+                        </div>
+                     </li>
+                     <li>
+                        <h4 class="m-0 font-semibold">Phone</h4>
+                        <div class="flex items-center gap-x-1.5">
+                           <span
+                              class="inline-flex size-8 items-center justify-center rounded-md bg-primary-50 text-primary"
+                           >
+                              <i class="fa-solid fa-phone text-primary"></i>
+                           </span>
+                           <span class="text-base text-slate-500"
+                              >+880 131 245 6340</span
+                           >
+                        </div>
+                     </li>
+                     <li>
+                        <h4 class="m-0 font-semibold">Address</h4>
+                        <div class="flex items-center gap-x-1.5">
+                           <span
+                              class="inline-flex size-8 items-center justify-center rounded-md bg-primary-50 text-primary"
+                           >
+                              <i
+                                 class="fa-solid fa-map-marker-alt text-primary"
+                              ></i>
+                           </span>
+                           <span class="text-base text-slate-500"
+                              >1234, Street, City, USA.</span
+                           >
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+
+               <div class="mt-8">
+                  <h3>Follow Us</h3>
+                  <menu class="flex items-center gap-x-2.5">
+                     <li>
+                        <a
+                           href="#"
+                           class="group flex size-10 items-center justify-center rounded-full bg-primary-50"
+                        >
+                           <i
+                              class="fa-brands fa-facebook text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"
+                           ></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a
+                           href="#"
+                           class="group flex size-10 items-center justify-center rounded-full bg-primary-50"
+                        >
+                           <i
+                              class="fa-brands fa-twitter text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"
+                           ></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a
+                           href="#"
+                           class="group flex size-10 items-center justify-center rounded-full bg-primary-50"
+                        >
+                           <i
+                              class="fa-brands fa-instagram text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"
+                           ></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a
+                           href="#"
+                           class="group flex size-10 items-center justify-center rounded-full bg-primary-50"
+                        >
+                           <i
+                              class="fa-brands fa-linkedin text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"
+                           ></i>
+                        </a>
+                     </li>
+                  </menu>
+               </div>
+            </article>
+         </div>
+      </div>
+
+      <!-- search modal -->
+      <div
+         id="search-modal"
+         data-modal-backdrop="static"
+         tabindex="-1"
+         aria-hidden="true"
+         class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0"
+      >
+         <div
+            class="flex max-h-full w-full max-w-screen-md flex-col items-center justify-center p-4"
+         >
+            <button
+               data-modal-hide="search-modal"
+               class="group flex size-8 items-center justify-center rounded-full bg-rose-100 text-xl text-rose-600"
+            >
+               <i
+                  class="fa-solid fa-times transition-transform duration-500 group-hover:rotate-180"
+               ></i>
+            </button>
+
+            <form class="mx-auto mt-16 w-full">
+               <label
+                  for="default-search"
+                  class="sr-only mb-2 text-sm font-medium text-gray-900"
+                  >Search</label
+               >
+               <div class="relative">
+                  <div
+                     class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3"
+                  >
+                     <svg
+                        class="h-4 w-4 text-gray-500"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                        />
+                     </svg>
+                  </div>
+                  <input
+                     type="search"
+                     id="default-search"
+                     class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 ps-10 text-sm text-gray-900 focus:border-primary focus:ring-primary"
+                     placeholder="Search for Properties..."
+                     required
+                  />
+                  <button
+                     type="submit"
+                     class="absolute bottom-2.5 end-2.5 rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary focus:outline-none focus:ring-4 focus:ring-blue-300"
+                  >
+                     Search
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+      <!-- splitd content end -->
+
+      <!-- responsive menu content started -->
+      <div
+         id="responsive-menu"
+         tabindex="-1"
+         aria-labelledby="responsive-menu-label"
+         class="fixed left-0 top-0 z-[60] h-screen w-64 -translate-x-full overflow-y-auto border-r bg-white p-4 transition-transform"
+      >
+         <a href="#">
+            <img src="assets/images/logo.png" />
+         </a>
+         <button
+            type="button"
+            data-drawer-hide="responsive-menu"
+            aria-controls="responsive-menu"
+            class="absolute end-2.5 top-2.5 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+         >
+            <svg
+               class="h-3 w-3"
+               aria-hidden="true"
+               xmlns="http://www.w3.org/2000/svg"
+               fill="none"
+               viewBox="0 0 14 14"
+            >
+               <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+               />
+            </svg>
+            <span class="sr-only">Close menu</span>
+         </button>
+         <div class="overflow-y-auto py-4">
+            <ul class="space-y-2 font-medium">
+               <!-- homes -->
+               <li>
+                  <button
+                     type="button"
+                     class="group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                     aria-controls="dropdown-homes"
+                     data-collapse-toggle="dropdown-homes"
+                  >
+                     <i
+                        class="fa-solid fa-house h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap text-left"
+                        >Homes</span
+                     >
+                     <svg
+                        class="h-3 w-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 4 4 4-4"
+                        />
+                     </svg>
+                  </button>
+                  <ul id="dropdown-homes" class="hidden space-y-2 py-2">
+                     <li>
+                        <a
+                           href="index.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 1</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="index2.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 2</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="index3.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 3</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="index4.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 4</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="index5.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 5</a
+                        >
+                     </li>
+                  </ul>
+               </li>
+
+               <!-- property -->
+               <li>
+                  <button
+                     type="button"
+                     class="group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                     aria-controls="dropdown-property"
+                     data-collapse-toggle="dropdown-property"
+                  >
+                     <i
+                        class="fa-solid fa-umbrella-beach h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap text-left"
+                        >Property</span
+                     >
+                     <svg
+                        class="h-3 w-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 4 4 4-4"
+                        />
+                     </svg>
+                  </button>
+                  <ul id="dropdown-property" class="hidden space-y-2 py-2">
+                     <li>
+                        <a
+                           href="properties.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Properties</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="property.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Property Details</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="property2.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Property Details V2</a
+                        >
+                     </li>
+                  </ul>
+               </li>
+
+               <!-- project -->
+               <li>
+                  <button
+                     type="button"
+                     class="group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                     aria-controls="dropdown-project"
+                     data-collapse-toggle="dropdown-project"
+                  >
+                     <i
+                        class="fa-solid fa-diagram-project h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap text-left"
+                        >Project</span
+                     >
+                     <svg
+                        class="h-3 w-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 4 4 4-4"
+                        />
+                     </svg>
+                  </button>
+                  <ul id="dropdown-project" class="hidden space-y-2 py-2">
+                     <li>
+                        <a
+                           href="projects.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Projects</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="project.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Project Details</a
+                        >
+                     </li>
+                  </ul>
+               </li>
+
+               <!-- blog -->
+               <li>
+                  <button
+                     type="button"
+                     class="group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                     aria-controls="dropdown-blog"
+                     data-collapse-toggle="dropdown-blog"
+                  >
+                     <i
+                        class="fa-brands fa-microblog h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap text-left"
+                        >Blogs</span
+                     >
+                     <svg
+                        class="h-3 w-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 4 4 4-4"
+                        />
+                     </svg>
+                  </button>
+                  <ul id="dropdown-blog" class="hidden space-y-2 py-2">
+                     <li>
+                        <a
+                           href="blogs.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Blogs</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="blog.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Blog Details</a
+                        >
+                     </li>
+                  </ul>
+               </li>
+
+               <li>
+                  <a
+                     href="map-view-1.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-location-crosshairs h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap"
+                        >Map View 1</span
+                     >
+                  </a>
+               </li>
+
+               <li>
+                  <a
+                     href="map-view-2.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-location-crosshairs h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap"
+                        >Map View 2</span
+                     >
+                  </a>
+               </li>
+
+               <li>
+                  <a
+                     href="map-view-3.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-location-crosshairs h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap"
+                        >Map View 3</span
+                     >
+                  </a>
+               </li>
+
+               <li>
+                  <a
+                     href="faq.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-circle-question h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap">FAQs</span>
+                  </a>
+               </li>
+
+               <li>
+                  <a
+                     href="contact.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-paper-plane h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap">Contact</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- Splitted code ended -->
+
+      <!-- Scripts -->
+      <script src="js/fontawesome.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+      <script src="js/index.js"></script>
+   </body>
+</html>

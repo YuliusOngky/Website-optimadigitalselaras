@@ -1,0 +1,137 @@
+.grid-banner-wrapper.main{width:100%; max-width:100%;display: grid; grid-template-columns: repeat(2, 1fr);gap:40px;}
+.grid-banner-wrapper.main .title-wrapper-with-link { width: 100%; max-width: 100%; display: flex;justify-content: center;height: 100%;gap:30px;}
+.grid-banner-wrapper.main grid-swipe-slider{ width: 100%; max-width: 100%;}
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link{width:100%;max-width:70%; margin: 0 auto;}
+.grid-banner-wrapper.main .grid-banner-content{display: flex; justify-content: center;align-items: center;height: 100%;}
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .block_grid{display: flex;gap: 10px;}
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .block_grid .block_grid_image{
+    width: 56px;
+    height: 56px;
+    background: rgba(var(--color-button));
+    border-radius: var(--buttons-radius-outset);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-banner-wrapper.main .grid-banner-content_left{border-radius: 0 30px 30px 0;}
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .block_grid .block_grid_image img{ width:30px; }
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .block_grid .image-with-text .grid-block-heading{width:230px;margin: 0;line-height: 30px;}
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .grid-banner_block{display:flex; gap:40px;flex-wrap: wrap;}
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .title, 
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .description{margin:0; width:100%;max-width: 600px;}
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .title:before{display:none;}
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .title:after{
+    top: 64px;
+    margin: auto;
+    background-repeat: no-repeat;
+    margin-left: 2rem;
+    right: 42%;
+}
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .button{margin-top:4rem;}
+.grid-banner-block-image{position:relative;}
+.grid-banner-block-image:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to top, black, transparent);
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+  border-radius: 30px;
+}
+.grid-swip-banner .grid-banner-wrapper .team-section-slider data-slider-options,
+.swiper, 
+.grid-banner-block-image{height:100%;}
+.grid-swip-banner .grid-banner-wrapper.main .team-section-slider .team-slider{position:relative;height:100%;}
+.grid-swip-banner .grid-banner-wrapper.main .team-section-slider .team-slider .swiper{ border-radius: 30px; }
+.grid-swip-banner .grid-banner-wrapper.main .team-section-slider .team-slider .swiper .swiper-wrapper .swiper-slide .grid-block-image{ height:100%; }
+.grid-swip-banner .grid-banner-wrapper.main .team-section-slider .team-slider .swiper .swiper-wrapper .swiper-slide .grid-block-image .grid-banner-image{ width:100%;height:100%; }
+.grid-swip-banner .grid-banner-wrapper.main .team-section-slider .team-slider .swiper-pagination{
+    position:absolute;
+    width: 40%;
+    bottom: 40px;
+    height: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: unset;
+}
+.grid-swip-banner .grid-banner-wrapper.main .team-section-slider .team-slider .swiper-pagination .swiper-pagination-bullet:before{background: rgba(var(--color-button-text));}
+
+
+@media screen and (max-width:1440px){
+  .grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .title:after{ right: 16%; }
+  .grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .button{ margin:0; }
+  .grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link{ min-height: 65rem; }.
+  .grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .grid-banner_block { gap:20px; }
+}
+
+@media screen and (max-width:1200px){
+  .grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .title:after {
+    right: 66%;
+    top: 13rem;
+}
+}
+
+@media screen and (max-width:1024px){
+  .grid-banner-wrapper.main{display:flex;flex-direction: column;}
+  .grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link {  min-height: 45rem; }
+  .grid-banner-wrapper.main .title-wrapper-with-link{ align-items:center; }
+  .grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .title {
+    max-width: 657px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .title:after { right: 33%; top: 7rem;}
+.grid-banner-wrapper.main:after{ display:none; }
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link {width: 100%; max-width: 100%; margin: 0 auto;}  
+}
+
+@media screen and (max-width:768px){
+  .grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .grid-banner_block {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  .grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .description{text-align:center;}
+      .grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .title {
+        max-width: 500px;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+      .grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .title:after {
+        right: 19%;
+        top: 5rem;
+    }
+  .grid-banner-wrapper.main .grid-banner-content{min-height:50rem;}
+}
+
+@media screen and (max-width:575px){
+      .grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .title:after {
+        right: 36%;
+        top: 4rem;
+    }
+}
+
+@media screen and (max-width:425px){
+.grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .title {
+    max-width: 400px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+ .grid-swip-banner .grid-banner-wrapper .grid-banner-content .title-wrapper-with-link .title:after {
+        right: 19%;
+        top: 4rem;
+    }
+}
+
+
+
+
+
+
+

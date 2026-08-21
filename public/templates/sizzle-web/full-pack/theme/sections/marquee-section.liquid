@@ -1,0 +1,293 @@
+{{ 'section-marquee.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign margin = section.settings.margin | split: ','
+  assign margin_top = margin[0]
+  assign margin_bottom = margin[1]
+  assign padding = section.settings.padding | split: ','
+  assign padding_top = padding[0]
+  assign padding_bottom = padding[1]
+-%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  .marquee-section .section-{{ section.id }}-padding .marquee-list .marquee-block{
+    padding: 5px {{ section.settings.marquee_padding }}px;
+  }
+  {% if section.settings.marquee_image %}
+    .section-{{ section.id }} .marquee-block:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -30px;
+      top: 0;
+      bottom:0;
+      margin: auto;
+      color: inherit;
+      background:url({{ section.settings.marquee_image | image_url: width:1920  }});
+      no-repeat center;
+      background-size: contain;background-repeat:no-repeat;
+      }
+    {% endif %}  
+     {% if section.settings.marquee_image and section.settings.heading_size == 'h3' %}
+       .section-{{ section.id }} .marquee-block:after {width: var(--font-h3-size);height: var(--font-h3-size);}
+     {% endif %}
+     {% if section.settings.marquee_image and section.settings.heading_size == 'h2' %}
+       .section-{{ section.id }} .marquee-block:after {width: var(--font-h2-size);height: var(--font-h2-size);}
+     {% endif %}
+     {% if section.settings.marquee_image and section.settings.heading_size == 'h1' %}
+       .section-{{ section.id }} .marquee-block:after {width: var(--font-h1-size);height: var(--font-h1-size);}
+     {% endif %}
+  .marquee-section.section-{{ section.id }} .section-{{ section.id }}-padding .row{position: relative;z-index: 1;}
+{%- endstyle -%}
+
+<div class="marquee-section color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}">
+  <div class="{% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %}section-{{ section.id }}-padding isolate">
+    <div class="row">     
+      <div class="marquee-swiper" id="dt-marquee-section-{{ section.id }}" data-speed="{{ section.settings.speed | times: 1000 }}">
+        <div class="dt-animate-call start-animation">
+          <div class="marquee-list {% if section.settings.content_reverse %}reverse{% endif %}">
+          {% for block in section.blocks %}
+            {% if section.blocks.size == 1 %}
+              {% if forloop.index == 1 %}
+                {% for i in (1..4) %}
+                   {% if block.settings.block_heading != blank %}
+                  <li class="marquee-block">
+                      <h2 class="marquee-title {{ section.settings.heading_size }}">{{ block.settings.block_heading }}</h2>
+                  </li>
+                  {% endif %}  
+                  {% if block.settings.block_image != blank %}
+                    <li class="marquee-block marquee-block-image">
+                      <div class="marquee-image">
+                        {{
+                        block.settings.block_image
+                        | image_url: width: 3840
+                        | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                        }}
+                      </div>
+                  </li>
+                   {% endif %} 
+                {% endfor %}
+              {% endif %}
+            {% else %}
+              {% if block.settings.block_heading != blank %}
+              <li class="marquee-block">
+                  <h2 class="marquee-title {{ section.settings.heading_size }}">{{ block.settings.block_heading }}</h2>
+              </li>
+             {% endif %}  
+             {% if block.settings.block_image != blank %}
+                    <li class="marquee-block marquee-block-image">
+                      <div class="marquee-image">
+                        {{
+                        block.settings.block_image
+                        | image_url: width: 3840
+                        | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                        }}
+                      </div>
+                  </li>
+                   {% endif %}  
+            {% endif %}
+          {% endfor %}
+          </div>
+          <div class="marquee-list {% if section.settings.content_reverse %}reverse{% endif %}">
+          {% for block in section.blocks %}
+            {% if section.blocks.size == 1 %}
+              {% if forloop.index == 1 %}
+                {% for i in (1..4) %}
+                   {% if block.settings.block_heading != blank %}
+                  <li class="marquee-block">
+                      <h2 class="marquee-title {{ section.settings.heading_size }}">{{ block.settings.block_heading }}</h2>
+                  </li>
+                  {% endif %} 
+                  {% if block.settings.block_image != blank %}
+                    <li class="marquee-block marquee-block-image">
+                      <div class="marquee-image">
+                        {{
+                        block.settings.block_image
+                        | image_url: width: 3840
+                        | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                        }}
+                      </div>
+                  </li>
+                   {% endif %} 
+                {% endfor %}
+              {% endif %}
+            {% else %}
+              {% if block.settings.block_heading != blank %}
+              <li class="marquee-block">
+                  <h2 class="marquee-title {{ section.settings.heading_size }}">{{ block.settings.block_heading }}</h2>
+              </li>
+             {% endif %}  
+              {% if block.settings.block_image != blank %}
+                    <li class="marquee-block marquee-block-image">
+                      <div class="marquee-image">
+                        {{
+                        block.settings.block_image
+                        | image_url: width: 3840
+                        | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                        }}
+                      </div>
+                  </li>
+                   {% endif %} 
+            {% endif %}
+          {% endfor %}
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.marquee.name",
+  "class": "section section-marquee",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "page_full_width",
+      "default": false,
+      "label": "t:sections.all.page_full_width.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "page_full_width_spacing",
+      "default": false,
+      "label": "t:sections.all.page_full_width_spacing.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "marquee_image",
+      "label": "t:sections.marquee.settings.marquee_image.label"
+    },
+      {
+      "type": "checkbox",
+      "id": "content_reverse",
+      "default": false,
+      "label": "t:sections.marquee.settings.content_reverse.label"
+    },
+     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h3",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+    "type": "range",
+    "id": "marquee_padding",
+    "min": 0,
+    "max": 100,
+    "step": 4,
+    "unit": "px",
+    "label": "t:sections.marquee.settings.marquee_padding.label",
+    "default": 36
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "t:sections.marquee.blocks.text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_heading",
+          "label": "t:sections.marquee.blocks.text.settings.block_heading.label",
+          "default": "Main Heading"
+        }
+      ]
+    },
+    {
+    "type": "image",
+    "name": "t:sections.marquee.blocks.image.name",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "block_image",
+    "label":"t:sections.marquee.blocks.image.settings.block_image.label"
+    }
+    ]
+    } 
+  ],
+
+  "presets": [
+    {
+      "name": "Marquee",
+      "category": "Marquee",
+      "blocks": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

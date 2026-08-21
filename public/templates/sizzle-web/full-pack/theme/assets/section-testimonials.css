@@ -1,0 +1,85 @@
+.testimonial__heading { margin: 2rem 0 6rem; padding: 0; }
+.testimonial-container .testimonial-author { margin: 0;font-family: var(--font-heading-family); letter-spacing: 0.2px;}
+.testimonial-container .testimonial-author a{ padding-right:30px; }
+
+.testimonials .testimonial-content blockquote{ transition:all 0.3s linear; border: none; background:none; margin-top: 0;padding:0; }
+.testimonial-content blockquote cite { margin-top:0rem;display: flex;flex-direction: row;font-style:normal; gap:5px; align-items:center; }
+.testimonial-content blockquote cite span{ padding: 0; margin: 0; }
+.testimonial-content blockquote cite span:before { display:none; }
+.testimonial-content blockquote >:is(h1,h2,h3,h4,h5,p){ margin:20px 0;max-width:1000px;  }
+.slider-button--prev .icon { transform: rotate(90deg);}
+.testimonials .swiper-button-next svg, .testimonials .swiper-button-prev svg {  display: none;}
+blockquote {   margin: 0;  padding: 30px 0 30px 55px; position: relative;}
+.testimonials .swiper-controls { position: relative; width: 115px; bottom: 0; right: auto; left: auto; margin: auto;}
+.testimonials .swiper-container.testimonialsSwiper{margin-bottom:50px;}
+.testimonial-content blockquote.content-center{align-items: center;}
+.testimonial-content blockquote{display: flex;flex-direction: column;}
+.testimonial-content blockquote.content-center >:is(h1,h2,h3,h4,h5,p),
+.testimonial-content blockquote.content-center span{text-align:center;font-weight: var(--medium-font-weight);}
+.testimonial-container .testimonial-image.content-center{display: flex;justify-content: center;margin:auto}
+.testimonial-container .content-center .dt-sc-rating div[class*=star-rating]:after{text-align:center}
+.testimonial-container  .dt-sc-rating{margin-top:30px;}
+.testimonial-container .testimonial-image .image{width:70px;height:70px;border-radius:50%;}
+.testimonial-container .testimonial-image .image svg{border-radius: 50%;}
+.testimonial-container .testimonial-image .image_info .dt-sc-rating{margin-top:1rem;}
+.testimonial-container .testimonial-image .image_info cite{font-style:normal;font-weight: var(--medium-font-weight);}
+.testimonials .testimonial-container .testimonial-wrapper{padding:30px;}
+.testimonial-container .testimonial-image{display:flex;align-items:center;gap:15px;}
+.testimonial-container .testimonial-image > *{border-radius:50%;}
+.testimonial-content blockquote>p{font-weight: var(--medium-font-weight);line-height: 28px;}
+.testimonials quote-slider .swiper .swiper-wrapper .testimonial-container{border-radius:30px;border: 1px solid rgb(var(--color-foreground));} 
+.testimonials quote-slider .swiper .swiper-pagination .swiper-pagination-bullet:before{background:rgb(var(--color-foreground));}
+/* .testimonials quote-slider .swiper .swiper-pagination{padding: 6rem 0px;} */
+.testimonials .title-wrapper-with-link .description{width:100%;max-width:610px;font-weight: var(--medium-font-weight);line-height: 30px;margin:0;}
+.testimonials .title-wrapper-with-link{margin-bottom:6rem;}
+
+
+
+
+@media screen and  (min-width:768px) (max-width: 990px) {
+.testimonials .testimonial-container .testimonial-content blockquote:before {
+   
+      content:'';
+      position:relative;
+      width:100px;
+      height:100px;
+      background-color:currentcolor;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+}
+
+
+@media screen and (max-width: 990px) {
+  .testimonial-container { grid-template-columns: 1fr 1fr; padding:  0; }  
+ .testimonials.testimonial-home-2 .testimonial-container blockquote:before { left: 0; }
+  /* .testimonial-container blockquote cite { margin-top: 3rem; } */
+}
+
+@media screen and (max-width: 750px) {
+  .testimonial-container { grid-template-columns: 1fr; }
+  .testimonial-container blockquote { margin-top: 0rem; padding: 20px; }
+  .testimonial-image { justify-content: center; }
+  .testimonials .title-wrapper-with-link{padding:0 1.5rem;}
+}
+
+
+.testimonials  quote-slider {
+    cursor: grab;
+}
+.testimonials .page-full-width .testimonial-content{padding-left:0px; padding-right:0px;}  
+.testimonials .swiper-pagination{ position:absolute;;width: 40% !important; right:0; bottom:80px; top:unset !important; margin: auto; }
+
+@media screen and (max-width:575px){
+  .testimonials .swiper-pagination{ bottom:40px; }
+}
+
+@media screen and (max-width: 480px) { 
+.testimonials .testimonial-container .testimonial-wrapper {
+    padding: 20px;
+}
+}
+
+
+

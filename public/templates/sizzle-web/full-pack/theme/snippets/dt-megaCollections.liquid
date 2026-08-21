@@ -1,0 +1,284 @@
+{%- assign TabMenu1 = block.settings.tab1 -%}
+{%- assign TabMenu2 = block.settings.tab2 -%}
+{%- assign TabMenu3 = block.settings.tab3 -%}
+{%- assign TabMenu4 = block.settings.tab4 -%}
+{%- assign TabMenu5 = block.settings.tab5 -%}
+
+{% capture MegaTab1 %}
+{% if TabMenu1 != blank %}
+<li class="dt-sc-menu-tabs"  id="tab1">
+  <ul class="dt-sc-column {{block.settings.tab1_columns}} {%if block.settings.row_reverse_tab1 %}row-reverse {% endif %}">
+    {%- for link in linklists[TabMenu1].links -%}
+    <li>     
+      {%- if link.links != blank and link.type == 'collection_link' -%}
+          {% assign card_collection = link.object %}      
+          {%- if card_collection.featured_image -%}
+                <a href="{{ card_collection.url }}">
+            <img
+              srcset="{%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 330 -%}{{ card_collection.featured_image | image_url: width: 330 }} 330w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 535 -%}{{ card_collection.featured_image | image_url: width: 535 }} 535w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 750 -%}{{ card_collection.featured_image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 1000 -%}{{ card_collection.featured_image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 1500 -%}{{ card_collection.featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 3000 -%}{{ card_collection.featured_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {{ card_collection.featured_image | image_url }} {{ card_collection.featured_image.width }}w"
+              src="{{ card_collection.featured_image | image_url: width: 1500 }}"
+              sizes="
+              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+              (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+              calc(100vw - 3rem)"
+              alt="{{ card_collection.title | escape }}"
+              height="{{ card_collection.featured_image.height }}"
+              width="{{ card_collection.featured_image.width }}"
+              loading="lazy"
+              class="motion-reduce loaded-image"
+            >
+                </a>
+           {%- else -%}
+         {{ 'collection-1' | placeholder_svg_tag }} 
+    {%- endif -%}      
+       <a class="headding" href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}> {{ link.title }} </a>
+      {%- endif -%}
+    </li>
+    {%- endfor -%} 
+  </ul>
+</li>
+{% endif %}
+{% endcapture %}
+
+{% capture MegaTab2 %}
+{% if TabMenu2 != blank %}
+<li class="dt-sc-menu-tabs"  id="tab2">
+  <ul class="dt-sc-column {{block.settings.tab2_columns}} {%if block.settings.row_reverse_tab2 %}row-reverse {% endif %}">
+    {%- for link in linklists[TabMenu2].links -%}
+    <li>     
+      {%- if link.links != blank and link.type == 'collection_link' -%}
+          {% assign card_collection = link.object %}      
+          {%- if card_collection.featured_image -%}
+                <a href="{{ card_collection.url }}">
+            <img
+              srcset="{%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 330 -%}{{ card_collection.featured_image | image_url: width: 330 }} 330w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 535 -%}{{ card_collection.featured_image | image_url: width: 535 }} 535w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 750 -%}{{ card_collection.featured_image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 1000 -%}{{ card_collection.featured_image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 1500 -%}{{ card_collection.featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 3000 -%}{{ card_collection.featured_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {{ card_collection.featured_image | image_url }} {{ card_collection.featured_image.width }}w"
+              src="{{ card_collection.featured_image | image_url: width: 1500 }}"
+              sizes="
+              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+              (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+              calc(100vw - 3rem)"
+              alt="{{ card_collection.title | escape }}"
+              height="{{ card_collection.featured_image.height }}"
+              width="{{ card_collection.featured_image.width }}"
+              loading="lazy"
+              class="motion-reduce loaded-image"
+            >
+                </a>
+           {%- else -%}
+         {{ 'collection-1' | placeholder_svg_tag }} 
+    {%- endif -%}      
+       <a class="headding" href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}> {{ link.title }} </a>
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+   
+  </ul>
+</li>
+{% endif %}
+{% endcapture %}
+
+{% capture MegaTab3 %}
+{% if TabMenu3 != blank %}
+<li class="dt-sc-menu-tabs"  id="tab3">
+  <ul class="dt-sc-column {{block.settings.tab3_columns}} {%if block.settings.row_reverse_tab3 %}row-reverse {% endif %}">
+    {%- for link in linklists[TabMenu3].links -%}
+    <li>     
+      {%- if link.links != blank and link.type == 'collection_link' -%}
+          {% assign card_collection = link.object %}      
+          {%- if card_collection.featured_image -%}
+                <a href="{{ card_collection.url }}">
+            <img
+              srcset="{%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 330 -%}{{ card_collection.featured_image | image_url: width: 330 }} 330w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 535 -%}{{ card_collection.featured_image | image_url: width: 535 }} 535w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 750 -%}{{ card_collection.featured_image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 1000 -%}{{ card_collection.featured_image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 1500 -%}{{ card_collection.featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 3000 -%}{{ card_collection.featured_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {{ card_collection.featured_image | image_url }} {{ card_collection.featured_image.width }}w"
+              src="{{ card_collection.featured_image | image_url: width: 1500 }}"
+              sizes="
+              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+              (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+              calc(100vw - 3rem)"
+              alt="{{ card_collection.title | escape }}"
+              height="{{ card_collection.featured_image.height }}"
+              width="{{ card_collection.featured_image.width }}"
+              loading="lazy"
+              class="motion-reduce loaded-image"
+            >
+                </a>
+           {%- else -%}
+         {{ 'collection-1' | placeholder_svg_tag }} 
+    {%- endif -%}      
+       <a class="headding" href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}> {{ link.title }} </a>
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  
+  </ul>
+</li>
+{% endif %}
+{% endcapture %}
+
+{% capture MegaTab4 %}
+{% if TabMenu4 != blank %}
+<li class="dt-sc-menu-tabs"  id="tab4">
+  <ul class="dt-sc-column {{block.settings.tab4_columns}}  {%if block.settings.row_reverse_tab4 %}row-reverse {% endif %}">
+    {%- for link in linklists[TabMenu4].links -%}
+    <li>     
+      {%- if link.links != blank and link.type == 'collection_link' -%}
+          {% assign card_collection = link.object %}      
+          {%- if card_collection.featured_image -%}
+                <a href="{{ card_collection.url }}">
+            <img
+              srcset="{%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 330 -%}{{ card_collection.featured_image | image_url: width: 330 }} 330w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 535 -%}{{ card_collection.featured_image | image_url: width: 535 }} 535w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 750 -%}{{ card_collection.featured_image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 1000 -%}{{ card_collection.featured_image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 1500 -%}{{ card_collection.featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 3000 -%}{{ card_collection.featured_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {{ card_collection.featured_image | image_url }} {{ card_collection.featured_image.width }}w"
+              src="{{ card_collection.featured_image | image_url: width: 1500 }}"
+              sizes="
+              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+              (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+              calc(100vw - 3rem)"
+              alt="{{ card_collection.title | escape }}"
+              height="{{ card_collection.featured_image.height }}"
+              width="{{ card_collection.featured_image.width }}"
+              loading="lazy"
+              class="motion-reduce loaded-image"
+            >
+                </a>
+           {%- else -%}
+         {{ 'collection-1' | placeholder_svg_tag }} 
+    {%- endif -%}      
+       <a class="headding" href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}> {{ link.title }} </a>
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  
+  </ul>
+</li>
+{% endif %}
+{% endcapture %}
+
+{% capture MegaTab5 %}
+{% if TabMenu5 != blank %}
+<li class="dt-sc-menu-tabs"  id="tab5">
+  <ul class="dt-sc-column {{block.settings.tab5_columns}} {%if block.settings.row_reverse_tab5 %}row-reverse {% endif %}">
+    {%- for link in linklists[TabMenu5].links -%}
+    <li>     
+      {%- if link.links != blank and link.type == 'collection_link' -%}
+          {% assign card_collection = link.object %}      
+          {%- if card_collection.featured_image -%}
+                <a href="{{ card_collection.url }}">
+            <img
+              srcset="{%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 330 -%}{{ card_collection.featured_image | image_url: width: 330 }} 330w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 535 -%}{{ card_collection.featured_image | image_url: width: 535 }} 535w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 750 -%}{{ card_collection.featured_image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 1000 -%}{{ card_collection.featured_image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 1500 -%}{{ card_collection.featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if card_collection.featured_image.width >= 3000 -%}{{ card_collection.featured_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {{ card_collection.featured_image | image_url }} {{ card_collection.featured_image.width }}w"
+              src="{{ card_collection.featured_image | image_url: width: 1500 }}"
+              sizes="
+              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+              (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+              calc(100vw - 3rem)"
+              alt="{{ card_collection.title | escape }}"
+              height="{{ card_collection.featured_image.height }}"
+              width="{{ card_collection.featured_image.width }}"
+              loading="lazy"
+              class="motion-reduce loaded-image"
+            >
+                </a>
+           {%- else -%}
+         {{ 'collection-1' | placeholder_svg_tag }} 
+    {%- endif -%}      
+       <a class="headding" href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}> {{ link.title }} </a>
+      {%- endif -%}
+    </li>
+    {%- endfor -%}   
+  </ul>
+</li>
+{% endif %}
+{% endcapture %}
+<div class="tabs-nav deskTabs hide-mobile">
+  <ul class="tabs">
+    {% if block.settings.tab1_heading != blank %}
+    <li class="active"><a href="#tab1">{% if block.settings.tab1_image != blank %}
+    {{ block.settings.tab1_image | image_url: width: 50 | image_tag: srcset: nil, loading: 'lazy'  }}
+    {% endif %}{{ block.settings.tab1_heading }}</a></li>
+    {% endif %}
+    {% if block.settings.tab2_heading != blank %}
+    <li><a href="#tab2">{% if block.settings.tab2_image != blank %}
+    {{ block.settings.tab2_image | image_url: width: 50 | image_tag: srcset: nil, loading: 'lazy'  }}
+    {% endif %}{{ block.settings.tab2_heading }}</a></li>
+    {% endif %}
+    {% if block.settings.tab3_heading != blank %}
+    <li><a href="#tab3">{% if block.settings.tab3_image != blank %}
+    {{ block.settings.tab3_image | image_url: width: 50 | image_tag: srcset: nil, loading: 'lazy'  }}
+    {% endif %}{{ block.settings.tab3_heading }}</a></li>
+    {% endif %}
+    {% if block.settings.tab4_heading != blank %}
+    <li><a href="#tab4">{% if block.settings.tab4_image != blank %}
+    {{ block.settings.tab4_image | image_url: width: 50 | image_tag: srcset: nil, loading: 'lazy'  }}
+    {% endif %}{{ block.settings.tab4_heading }}</a></li>
+    {% endif %}
+    {% if block.settings.tab5_heading != blank %}
+    <li><a href="#tab5">{% if block.settings.tab5_image != blank %}
+    {{ block.settings.tab5_image | image_url: width: 50 | image_tag: srcset: nil, loading: 'lazy'  }}
+    {% endif %}{{ block.settings.tab5_heading }}</a></li>
+    {% endif %}
+  </ul>
+</div>
+<ul class="tabs-content hide-mobile">
+  {{ MegaTab1 }}
+  {{ MegaTab2 }}
+  {{ MegaTab3 }}
+  {{ MegaTab4 }}
+  {{ MegaTab5 }}
+</ul>
+
+<div class="tabs-nav mobileTabs">
+  <ul class="tabs">
+    {% if block.settings.tab1_heading != blank %}
+    <li><a>{{ block.settings.tab1_heading }}</a></li>
+    <div class="tab-wrapper" style="display: none;">{{ MegaTab1 }}</div>
+    {% endif %}
+    {% if block.settings.tab2_heading != blank %}
+    <li><a>{{ block.settings.tab2_heading }}</a></li>
+    <div class="tab-wrapper" style="display: none;">{{ MegaTab2 }}</div>
+    {% endif %}
+    {% if block.settings.tab3_heading != blank %}
+    <li><a>{{ block.settings.tab3_heading }}</a></li>
+    <div class="tab-wrapper" style="display: none;">{{ MegaTab3 }}</div>
+    {% endif %}
+    {% if block.settings.tab4_heading != blank %}
+    <li><a>{{ block.settings.tab4_heading }}</a></li>
+    <div class="tab-wrapper" style="display: none;">{{ MegaTab4 }}</div>
+    {% endif %}
+    {% if block.settings.tab5_heading != blank %}
+    <li><a>{{ block.settings.tab5_heading }}</a></li>
+    <div class="tab-wrapper" style="display: none;"> {{ MegaTab5 }}</div>
+    {% endif %}
+  </ul>
+</div>

@@ -1,0 +1,126 @@
+/* swiper */
+
+.swiper-button-next, .swiper-button-prev{
+color: rgba(var(--color-button-text));
+background: rgba(var(--color-button));
+width: 50px;
+height: 50px;
+border-radius: 50%; 
+transition: all 0.3s linear;  
+}
+/* .swiper-pagination-bullet-active{ background: rgba(var(--color-button));} */
+.swiper-button-next:after, .swiper-button-prev:after{font-size:20px ;}
+.swiper-button-prev:hover, .swiper-button-next:hover{color:rgba(var(--color-secondary-button-text));background:rgba(var(--color-secondary-button));}
+.swiper-button-next{right:40px;opacity:0;left: auto;}
+.swiper-button-prev{left:40px;opacity:0;right: auto;}
+.swiper:hover .swiper-button-next,
+.swiper-container:hover .swiper-button-next{right:50px;opacity:1;}
+.swiper:hover .swiper-button-prev,
+.swiper-container:hover .swiper-button-prev{left:50px;opacity:1;}
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+  cursor: not-allowed;pointer-events: auto;
+}
+.swiper-button-next.swiper-button-hidden,
+.swiper-button-prev.swiper-button-hidden {
+  opacity: 0;
+  cursor: not-allowed;pointer-events: auto;
+}
+.swiper:hover .swiper-button-next.swiper-button-disabled,
+.swiper:hover .swiper-button-prev.swiper-button-disabled {opacity:0.35;}
+.swiper-button-lock {
+  display: none;
+}
+.swiper-pagination {
+  position: relative;
+  text-align: center;
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+.swiper-pagination.swiper-pagination-hidden {
+  opacity: 0;
+}
+.swiper-pagination-disabled > .swiper-pagination,
+.swiper-pagination.swiper-pagination-disabled {
+  display: none !important;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  padding:1rem;
+}
+  .swiper-pagination-bullet {
+  background: transparent;
+  opacity: 1;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  transition: all var(--duration-default) linear;
+}
+
+.swiper-pagination-bullet:before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+  background: rgba(var(--color-button-text));
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  transition: all var(--duration-default) linear;
+}
+.swiper-pagination-bullet-active,
+.swiper-pagination-bullet-active:before {
+  transition: all var(--duration-default) linear;
+  width:25px;
+}
+
+/*swiper- product tab*/
+.tabs_container .swiper-button-next span:after,
+.tabs_container .swiper-button-prev span:after {
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+    background: rgb(var(--color-foreground)) !important;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px){
+  .swiper-button-next{right:20px;}
+  .swiper-button-prev{left:20px;}
+  .swiper:hover .swiper-button-next,
+  .swiper-container:hover .swiper-button-next{right:30px;}
+  .swiper:hover .swiper-button-prev,
+  .swiper-container:hover .swiper-button-prev{left:30px;}
+  .swiper-button-next, .swiper-button-prev {width: calc(var(--swiper-navigation-size) - 5px); height: calc(var(--swiper-navigation-size) - 5px);}
+}
+
+@media screen and (max-width: 480px){
+.swiper-navigation {position: relative;display: flex;justify-content: center;margin-top: 20px;}
+.swiper-button-next, .swiper-button-prev {position: relative;right: 0;left: 0;top: auto;opacity: 1;transform: none;margin: 0 12px;width: calc(var(--swiper-navigation-size) - 15px); height: calc(var(--swiper-navigation-size) - 15px);  }  
+.swiper-button-next:after, .swiper-button-prev:after{font-size:14px;}
+ .swiper-button-prev {order: -1;}  
+.swiper:hover .swiper-button-next, .swiper-container:hover .swiper-button-next {right: 0!important;}  
+.swiper:hover .swiper-button-prev, .swiper-container:hover .swiper-button-prev{left:0!important;}  
+.swiper .swiper-button-prev, .swiper-container .swiper-button-prev{opacity:1;}  
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{opacity:0.5;}  
+}

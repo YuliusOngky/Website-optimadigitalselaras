@@ -1,0 +1,120 @@
+#cta-1 {
+	background-color: @bg-light;
+	width: 100%;
+	padding: 30px 0px;
+	p {
+		float: left;
+		font-size: 18px;
+		margin-top: 10px;
+		@media (max-width: @screen-sm-max) {
+			float: none;
+			text-align: center;
+		}
+	}
+	em {
+		font-style: normal;
+		font-weight: 700;
+	}
+	.advanced-button {
+		@media (max-width: @screen-sm-max) {
+			float: 	none;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+		}
+		float: right;
+	}
+}
+
+#cta-2 {
+	padding: 30px 0px;
+	.background-image(linear-gradient(-90deg, darken(@second-color, 3%) 40%, @second-color 40%));
+	@media (max-width: @screen-sm-max) {
+		background-image: none;
+		background-color: @second-color;
+	}
+	.left-content {
+		h2 {
+			@media (max-width: @screen-sm-max) {
+				margin-bottom: 20px;	
+				float: none;	
+				text-align: center;
+				margin-right: 0px;
+			}
+			font-family: @primary-font;
+			font-size: 18px;
+			text-transform: uppercase;
+			font-weight: 700;
+			color: @white;
+			float: left;
+			margin-right: 60px;
+			margin-top: 27px;
+		}
+		form {
+			padding-top: 15px;
+			input {
+				@media (max-width: @screen-sm-max) {
+					margin-bottom: 15px;	
+					float: none;	
+					width: 100%;
+				}
+				background-color: @white;
+				border: none;
+				height: 40px;
+				width: 200px;
+				display: inline-block;
+				margin-right: -5px;
+				outline: none;
+				font-family: @secondary-font;
+				font-size: 13px;
+				color: @text-color;
+				padding-left: 15px;
+				float: left;
+			}
+			.simple-button {
+				display: inline-block;
+				@media (max-width: @screen-sm-max) {
+					float: none;
+					text-align: center;
+					display: block;
+					margin-bottom: 50px;
+				}
+			}
+		}
+	}
+	.right-content {
+		@media (max-width: @screen-sm-max) {
+			margin-top: 30px;	
+			float: none;
+			text-align: center;		
+		}
+		float: right;
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			li {
+				display: inline-block;
+				margin: 0px -1px;
+				a {
+					@media (max-width: @screen-sm-max) {
+						width: 54px;
+						height: 54px;
+						line-height: 54px;		
+					}
+					background-color: darken(@second-color, 10%);
+					width: 64px;
+					height: 64px;
+					display: inline-block;
+					text-align: center;
+					line-height: 64px;
+					color: @white;
+					font-size: 15px;
+				}
+				a:hover {
+					color: @accent-color;
+				}
+			}
+		}
+	}
+}

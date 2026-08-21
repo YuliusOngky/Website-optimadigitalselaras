@@ -1,0 +1,1543 @@
+{
+    "manifest_version": "1.0.23",
+    "title": "Zevana - Company Profile & Business Elementor Template Kit",
+    "page_builder": "elementor",
+    "kit_version": "1.0.3",
+    "templates": [
+        {
+            "name": "Global Kit Styles",
+            "screenshot": "screenshots\/global-kit-styles.jpg",
+            "source": "templates\/global.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "global-styles",
+                "include_in_zip": "1",
+                "elementor_pro_required": null,
+                "additional_template_information": [
+                    "These are the global theme styles configured through the Elementor Theme Styles area."
+                ]
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Pricing",
+            "screenshot": "screenshots\/pricing.jpg",
+            "source": "templates\/pricing.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/pricing\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Homepage",
+            "screenshot": "screenshots\/homepage.jpg",
+            "source": "templates\/homepage.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/homepage\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Testimonial",
+            "screenshot": "screenshots\/testimonial.jpg",
+            "source": "templates\/testimonial.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/testimonial\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Single Blog",
+            "screenshot": "screenshots\/single-blog.jpg",
+            "source": "templates\/single-blog.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/single-blog\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Our Blog",
+            "screenshot": "screenshots\/our-blog.jpg",
+            "source": "templates\/our-blog.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/our-blog\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Contact Us",
+            "screenshot": "screenshots\/contact-us.jpg",
+            "source": "templates\/contact-us.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/contact-us\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Our Project",
+            "screenshot": "screenshots\/our-project.jpg",
+            "source": "templates\/our-project.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/our-project\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Our Team",
+            "screenshot": "screenshots\/our-team.jpg",
+            "source": "templates\/our-team.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/our-team\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Web Development",
+            "screenshot": "screenshots\/web-development.jpg",
+            "source": "templates\/web-development.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/web-development\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Plan Implementation",
+            "screenshot": "screenshots\/plan-implementation.jpg",
+            "source": "templates\/plan-implementation.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/plan-implementation\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Business Management",
+            "screenshot": "screenshots\/business-management.jpg",
+            "source": "templates\/business-management.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/business-management\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Digital Marketing",
+            "screenshot": "screenshots\/digital-marketing.jpg",
+            "source": "templates\/digital-marketing.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/digital-marketing\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Our Services",
+            "screenshot": "screenshots\/our-services.jpg",
+            "source": "templates\/our-services.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/our-services\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "About Us",
+            "screenshot": "screenshots\/about-us.jpg",
+            "source": "templates\/about-us.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/about-us\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Zevana - Header",
+            "screenshot": "screenshots\/zevana-header.jpg",
+            "source": "templates\/zevana-header.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/zevana-header\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-header",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Zevana - Footer",
+            "screenshot": "screenshots\/zevana-footer.jpg",
+            "source": "templates\/zevana-footer.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/zevana-footer\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-footer",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Zevana - Contact Form",
+            "screenshot": "screenshots\/zevana-contact-form.jpg",
+            "source": "templates\/zevana-contact-form.json",
+            "preview_url": "https:\/\/hrkit.rometheme.pro\/zevana\/template-kit\/zevana-contact-form\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-contact",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        }
+    ],
+    "required_plugins": [
+        {
+            "name": "RTMKit",
+            "version": "1.6.7",
+            "file": "rometheme-for-elementor\/RomeTheme.php",
+            "author": "Rometheme"
+        },
+        {
+            "name": "RTMForm Builder",
+            "version": "1.2.4",
+            "file": "romethemeform\/rometheme-form.php",
+            "author": "Rometheme"
+        },
+        {
+            "name": "Elementor",
+            "version": "3.33.0",
+            "file": "elementor\/elementor.php",
+            "author": "Elementor.com"
+        }
+    ],
+    "images": [
+        {
+            "filename": "logo-8.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/logo-8.png",
+            "templates": [
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/testimonial.json",
+                    "name": "Testimonial"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                },
+                {
+                    "source": "templates\/digital-marketing.json",
+                    "name": "Digital Marketing"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 7202,
+            "dimensions": [
+                300,
+                115
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "logo-7.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/logo-7.png",
+            "templates": [
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/testimonial.json",
+                    "name": "Testimonial"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                },
+                {
+                    "source": "templates\/digital-marketing.json",
+                    "name": "Digital Marketing"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 23276,
+            "dimensions": [
+                300,
+                115
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "logo-5.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/logo-5.png",
+            "templates": [
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/testimonial.json",
+                    "name": "Testimonial"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                },
+                {
+                    "source": "templates\/digital-marketing.json",
+                    "name": "Digital Marketing"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 13019,
+            "dimensions": [
+                300,
+                115
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "logo-6.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/logo-6.png",
+            "templates": [
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/testimonial.json",
+                    "name": "Testimonial"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                },
+                {
+                    "source": "templates\/digital-marketing.json",
+                    "name": "Digital Marketing"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 9885,
+            "dimensions": [
+                300,
+                115
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "logo-3.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/logo-3.png",
+            "templates": [
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/testimonial.json",
+                    "name": "Testimonial"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                },
+                {
+                    "source": "templates\/digital-marketing.json",
+                    "name": "Digital Marketing"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 13668,
+            "dimensions": [
+                300,
+                115
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "logo-4.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/logo-4.png",
+            "templates": [
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/testimonial.json",
+                    "name": "Testimonial"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                },
+                {
+                    "source": "templates\/digital-marketing.json",
+                    "name": "Digital Marketing"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 14406,
+            "dimensions": [
+                300,
+                115
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "logo-2.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/logo-2.png",
+            "templates": [
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/testimonial.json",
+                    "name": "Testimonial"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                },
+                {
+                    "source": "templates\/digital-marketing.json",
+                    "name": "Digital Marketing"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 12649,
+            "dimensions": [
+                300,
+                115
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "logo-1.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/logo-1.png",
+            "templates": [
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/testimonial.json",
+                    "name": "Testimonial"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                },
+                {
+                    "source": "templates\/digital-marketing.json",
+                    "name": "Digital Marketing"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 16039,
+            "dimensions": [
+                300,
+                115
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "photo-1.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/photo-1-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 246442,
+            "dimensions": [
+                1498,
+                999
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "photo-9-1.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/photo-9-1-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 213322,
+            "dimensions": [
+                1536,
+                1024
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "background-2.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/background-2.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/web-development.json",
+                    "name": "Web Development"
+                },
+                {
+                    "source": "templates\/plan-implementation.json",
+                    "name": "Plan Implementation"
+                },
+                {
+                    "source": "templates\/digital-marketing.json",
+                    "name": "Digital Marketing"
+                },
+                {
+                    "source": "templates\/our-services.json",
+                    "name": "Our Services"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 78624,
+            "dimensions": [
+                564,
+                565
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "photo-8-2.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/photo-8-2-800x951.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/plan-implementation.json",
+                    "name": "Plan Implementation"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 96456,
+            "dimensions": [
+                1077,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "photo-2-1.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/photo-2-1-800x951.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 120302,
+            "dimensions": [
+                1077,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "graphic-1-1.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/graphic-1-1-800x799.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/web-development.json",
+                    "name": "Web Development"
+                },
+                {
+                    "source": "templates\/plan-implementation.json",
+                    "name": "Plan Implementation"
+                },
+                {
+                    "source": "templates\/digital-marketing.json",
+                    "name": "Digital Marketing"
+                },
+                {
+                    "source": "templates\/our-services.json",
+                    "name": "Our Services"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 192183,
+            "dimensions": [
+                1284,
+                1283
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "icon-1.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/icon-1.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 20019,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "icon-2-3.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/icon-2-3.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 10418,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "photo-3.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/photo-3-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/digital-marketing.json",
+                    "name": "Digital Marketing"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 203832,
+            "dimensions": [
+                1920,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "icon-3-1.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/icon-3-1.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/our-services.json",
+                    "name": "Our Services"
+                }
+            ],
+            "filesize": 14982,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "icon-5-1.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/icon-5-1.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/our-services.json",
+                    "name": "Our Services"
+                }
+            ],
+            "filesize": 22971,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "icon-6.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/icon-6.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/our-services.json",
+                    "name": "Our Services"
+                }
+            ],
+            "filesize": 21047,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "icon-4-4.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/icon-4-4.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/our-services.json",
+                    "name": "Our Services"
+                }
+            ],
+            "filesize": 21315,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "icon-8.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/icon-8.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 2966,
+            "dimensions": [
+                95,
+                1196
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "icon-11.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/icon-11.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 10813,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "icon-10.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/icon-10.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 2998,
+            "dimensions": [
+                95,
+                1196
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "icon-12-1.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/icon-12-1.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 9865,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "icon-13.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/icon-13.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 7919,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "icon-7-1.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/icon-7-1.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 3014,
+            "dimensions": [
+                95,
+                1196
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "icon-14.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/icon-14.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 10337,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "photo-6-1.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/photo-6-1-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/single-blog.json",
+                    "name": "Single Blog"
+                },
+                {
+                    "source": "templates\/contact-us.json",
+                    "name": "Contact Us"
+                },
+                {
+                    "source": "templates\/our-services.json",
+                    "name": "Our Services"
+                }
+            ],
+            "filesize": 228573,
+            "dimensions": [
+                1728,
+                1152
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "photo-7.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/photo-7-800x951.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 91359,
+            "dimensions": [
+                1077,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "photo-5.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/photo-5-800x951.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 86416,
+            "dimensions": [
+                1077,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "project-1.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/project-1-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                }
+            ],
+            "filesize": 173104,
+            "dimensions": [
+                1920,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "project-2.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/project-2-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                }
+            ],
+            "filesize": 143556,
+            "dimensions": [
+                1920,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "project-4.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/project-4-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                }
+            ],
+            "filesize": 132082,
+            "dimensions": [
+                1920,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "project-3.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/project-3-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                }
+            ],
+            "filesize": 153903,
+            "dimensions": [
+                1920,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "testimonial.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/testimonial.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/testimonial.json",
+                    "name": "Testimonial"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                }
+            ],
+            "filesize": 63496,
+            "dimensions": [
+                300,
+                120
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "testimonial-1.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/testimonial-1.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/testimonial.json",
+                    "name": "Testimonial"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                }
+            ],
+            "filesize": 117938,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "testimonial-2.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/testimonial-2.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/testimonial.json",
+                    "name": "Testimonial"
+                },
+                {
+                    "source": "templates\/our-project.json",
+                    "name": "Our Project"
+                }
+            ],
+            "filesize": 108909,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "background-1-1.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/background-1-1-800x235.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 228442,
+            "dimensions": [
+                1920,
+                565
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "testimonial-4.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/testimonial-4.png",
+            "templates": [
+                {
+                    "source": "templates\/testimonial.json",
+                    "name": "Testimonial"
+                }
+            ],
+            "filesize": 145309,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "testimonial-3.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/testimonial-3.png",
+            "templates": [
+                {
+                    "source": "templates\/testimonial.json",
+                    "name": "Testimonial"
+                }
+            ],
+            "filesize": 100598,
+            "dimensions": [
+                300,
+                300
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "blog-3.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/blog-3-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/single-blog.json",
+                    "name": "Single Blog"
+                }
+            ],
+            "filesize": 182455,
+            "dimensions": [
+                1920,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "team-1.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/team-1-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 46486,
+            "dimensions": [
+                906,
+                906
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "team-2.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/team-2-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 59190,
+            "dimensions": [
+                906,
+                906
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "team-3.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/team-3-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 79796,
+            "dimensions": [
+                906,
+                906
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "team-5.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/team-5-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 30107,
+            "dimensions": [
+                906,
+                906
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "team-4.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/team-4-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 26839,
+            "dimensions": [
+                906,
+                906
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "team-6.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/team-6-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 29835,
+            "dimensions": [
+                906,
+                906
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "photo-11.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/photo-11-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/web-development.json",
+                    "name": "Web Development"
+                }
+            ],
+            "filesize": 88037,
+            "dimensions": [
+                1920,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "photo-10.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/photo-10-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/business-management.json",
+                    "name": "Business Management"
+                }
+            ],
+            "filesize": 112043,
+            "dimensions": [
+                1920,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "photo-4.jpg",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/photo-4-800x951.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-services.json",
+                    "name": "Our Services"
+                }
+            ],
+            "filesize": 99603,
+            "dimensions": [
+                1077,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/collections\/WV27BLNQR9?utm_source=my_collection&utm_medium=link&utm_campaign=share_collection"
+        },
+        {
+            "filename": "ttd1.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/ttd1.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 22223,
+            "dimensions": [
+                225,
+                99
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "logo-zenava.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/logo-zenava.png",
+            "templates": [
+                {
+                    "source": "templates\/zevana-header.json",
+                    "name": "Zevana - Header"
+                }
+            ],
+            "filesize": 5139,
+            "dimensions": [
+                300,
+                115
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "logo-zenava-1.png",
+            "thumbnail_url": "http:\/\/hrkit.rometheme.pro\/zevana\/wp-content\/uploads\/sites\/75\/2023\/05\/logo-zenava-1.png",
+            "templates": [
+                {
+                    "source": "templates\/zevana-footer.json",
+                    "name": "Zevana - Footer"
+                }
+            ],
+            "filesize": 5133,
+            "dimensions": [
+                300,
+                115
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        }
+    ]
+}

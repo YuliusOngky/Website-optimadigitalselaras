@@ -1,0 +1,147 @@
+
+{% unless settings.goal == blank %}
+<div class="cart-progress">
+<p style="text-align:center" id="main-cart-progress" data-id="{{ section.id }}" class="free-shipping {% if cart.total_price >= goal %}success{% endif %}">  
+  {% assign goal = settings.goal | times:100 %}
+  {% if cart.items.size == 0 %}
+            {{ 'templates.cart.free_shipping_spend' | t }} {{ goal | money }}
+  {% endif %}
+  {% if cart.items.size != 0 %}
+      {% if cart.total_price >= goal %} <span>{{ 'templates.cart.free_shipping_success' | t }} <strong>{{ 'templates.cart.free_shipping_success_text' | t  }}</strong></span>
+      {% elsif cart.total_price < goal %} {{ 'templates.cart.free_shipping_text_1' | t }}<span>{{ goal | minus: cart.total_price | money }}</span> {{ 'templates.cart.free_shipping_text_2' | t }}
+      {% endif %}
+  {% endif %}
+</p>
+
+{% assign percentage = cart.total_price |  divided_by:100 %}
+<div class="cart-progress-bar">
+<progress max="{{ goal }}" value="{{ cart.total_price }}" class="{% if cart.total_price >= goal %}free-shipp-ready{% endif %}">{{ percentage }}
+</progress>   
+<div class="progress-icon">
+</div>
+</div>
+</div>
+<style>
+
+progress[value] {
+	-webkit-appearance:none;
+    -moz-appearance:none;        
+    appearance: none;
+	border: none;
+	position: relative;
+	margin: 0 0 ; 
+    height: 7px;
+    transition: all 0.3s linear;
+  width:100%;
+}
+ .cart-progress-bar{
+   position: relative;
+    background: rgba(117, 82, 164, 0.2);
+    height: 7px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;width:100%;
+}
+  .progress-icon{position:relative;}
+ .cart__contents{
+       margin-top: 5rem;
+ }
+
+  .progress-icon {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    color: rgba(var(--color-button));
+    border-radius: 50%;
+    border: 1px solid;
+    top: 0;
+    right: -4px;
+    animation: blinkers 1.5s  infinite;
+}
+  
+ .progress-icon:before {
+   content: "";
+    width: 26px;
+    height: 26px;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    color: currentcolor;
+    -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="38.197" height="21.5" viewbox="0 0 38.197 21.5" class="icon icon-free-shipping"><g id="Group_25127" data-name="Group 25127" transform="translate(-1083.836 -1161.835)"><path id="Path_54444" data-name="Path 54444" d="M76.155,6.988H95.1a.132.132,0,0,1,.132.132V23.868" transform="translate(1014.583 1155.597)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><line id="Line_317" data-name="Line 317" x1="4.357" transform="translate(1090.739 1179.465)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><line id="Line_318" data-name="Line 318" x1="11.098" transform="translate(1101.294 1179.465)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><path id="Path_54445" data-name="Path 54445" d="M291.733,32.235h6.362a.4.4,0,0,1,.338.188l4.479,7.216a1.261,1.261,0,0,1,.19.665v5.1a1.46,1.46,0,0,1-1.46,1.46h-1.3" transform="translate(818.182 1132.596)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><circle id="Ellipse_200" data-name="Ellipse 200" cx="3.068" cy="3.068" r="3.068" transform="translate(1112.393 1176.449)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><path id="Path_54446" data-name="Path 54446" d="M131.987,165.909a3.068,3.068,0,1,1-3.068-3.068A3.068,3.068,0,0,1,131.987,165.909Z" transform="translate(969.308 1013.608)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><path id="Path_54447" data-name="Path 54447" d="M340,62.32h-3.635a.293.293,0,0,0-.289.346l.765,4.31a.415.415,0,0,0,.408.341h6.064" transform="translate(777.784 1105.187)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><line id="Line_319" data-name="Line 319" x2="4.116" transform="translate(1086.602 1165.636)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><line id="Line_320" data-name="Line 320" x2="4.389" transform="translate(1088.04 1169.229)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><line id="Line_321" data-name="Line 321" x2="5.754" transform="translate(1086.714 1176.415)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><line id="Line_322" data-name="Line 322" x2="5.88" transform="translate(1084.586 1172.822)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/></g></svg>');
+    mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="38.197" height="21.5" viewbox="0 0 38.197 21.5" class="icon icon-free-shipping"><g id="Group_25127" data-name="Group 25127" transform="translate(-1083.836 -1161.835)"><path id="Path_54444" data-name="Path 54444" d="M76.155,6.988H95.1a.132.132,0,0,1,.132.132V23.868" transform="translate(1014.583 1155.597)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><line id="Line_317" data-name="Line 317" x1="4.357" transform="translate(1090.739 1179.465)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><line id="Line_318" data-name="Line 318" x1="11.098" transform="translate(1101.294 1179.465)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><path id="Path_54445" data-name="Path 54445" d="M291.733,32.235h6.362a.4.4,0,0,1,.338.188l4.479,7.216a1.261,1.261,0,0,1,.19.665v5.1a1.46,1.46,0,0,1-1.46,1.46h-1.3" transform="translate(818.182 1132.596)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><circle id="Ellipse_200" data-name="Ellipse 200" cx="3.068" cy="3.068" r="3.068" transform="translate(1112.393 1176.449)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><path id="Path_54446" data-name="Path 54446" d="M131.987,165.909a3.068,3.068,0,1,1-3.068-3.068A3.068,3.068,0,0,1,131.987,165.909Z" transform="translate(969.308 1013.608)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><path id="Path_54447" data-name="Path 54447" d="M340,62.32h-3.635a.293.293,0,0,0-.289.346l.765,4.31a.415.415,0,0,0,.408.341h6.064" transform="translate(777.784 1105.187)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><line id="Line_319" data-name="Line 319" x2="4.116" transform="translate(1086.602 1165.636)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><line id="Line_320" data-name="Line 320" x2="4.389" transform="translate(1088.04 1169.229)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><line id="Line_321" data-name="Line 321" x2="5.754" transform="translate(1086.714 1176.415)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/><line id="Line_322" data-name="Line 322" x2="5.88" transform="translate(1084.586 1172.822)" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5"/></g></svg>');
+    background: currentColor;
+    display: block;
+} 
+
+progress[value]::-webkit-progress-bar {
+	background-color: whiteSmoke;
+}
+ 
+progress[value]::-webkit-progress-value {
+	position: relative;
+	border-radius:5px;
+  background-color:  rgb(var(--color-link-hover));
+}
+
+progress[value]::-moz-progress-bar {
+
+	border-radius:5px;
+  	background-color: rgb(var(--color-link-hover));
+}
+@-webkit-keyframes blinkers {
+  0% {
+    transform: translateY(-50%) scale(0.9);
+  }
+  50% {
+    transform : translateY(-50%) scale(0.95);
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+@keyframes blinkers {
+  0% {
+    transform: translateY(-50%) scale(0.9);
+  }
+  50% {
+     transform : translateY(-50%) scale(1);
+  }
+  100% {
+    transform: translateY(-50%) scale(0.9);
+  }
+}
+progress:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(135deg,rgba(255,255,255,.2) 0,rgba(255,255,255,.2) 25%,rgba(255,255,255,0) 25%,rgba(255,255,255,0) 50%,rgba(255,255,255,.2) 50%,rgba(255,255,255,.2) 75%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%);
+    z-index: 1;
+    -webkit-animation: move 5s linear infinite;
+    border-radius: 5px;
+    overflow: hidden;
+    background-size: 3rem 3rem;
+}
+@keyframes move{
+0% {
+    background-position: 0 0;
+}
+100% {
+    background-position: -60px -60px;
+}
+  }
+
+.cart-template cart-items .cart-progress .free-shipping  .cart-progress-bar{display:none;}
+.cart-progress .free-shipping  strong{    font-weight: 400;color: rgba(var(--color-base-outline-button-labels));}
+.cart-progress .free-shipping{margin:0 0 36px;}  
+</style>
+{% endunless %}

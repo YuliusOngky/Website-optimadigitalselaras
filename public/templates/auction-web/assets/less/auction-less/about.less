@@ -1,0 +1,159 @@
+.who-is {
+	.left-content {
+		h2 {
+			font-family: @primary-font;
+			margin-top: 0px;
+			font-size: 20px;
+			text-transform: uppercase;
+			color: @heading;
+			font-weight: 700;
+		}
+		span {
+			font-family: @primary-font;
+			font-size: 11px;
+			color: @text-color;
+			text-transform: uppercase;
+		}
+		p {
+			margin-top: 30px;
+		}
+		a {
+			font-size: 11px;
+		    font-family: @primary-font;
+		    color: @second-color;
+		    text-transform: uppercase;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+	.right-content {
+		margin-top: 30px;
+		.skillbar {
+			@media (max-width: @screen-sm-max) {
+				margin-top: 60px;
+			}
+			position:relative;
+			display:block;
+			margin-bottom:50px;
+			width:100%;
+			background:@bg-light;
+			height:10px;
+			border-radius:3px;
+			-moz-border-radius:3px;
+			-webkit-border-radius:3px;
+			-webkit-transition:0.4s linear;
+			-moz-transition:0.4s linear;
+			-ms-transition:0.4s linear;
+			-o-transition:0.4s linear;
+			transition:0.4s linear;
+			-webkit-transition-property:width, background-color;
+			-moz-transition-property:width, background-color;
+			-ms-transition-property:width, background-color;
+			-o-transition-property:width, background-color;
+			transition-property:width, background-color;
+		}
+		.skillbar-title {
+			position:absolute;
+			top:-30px;
+			left:0;
+		}
+		.skillbar-title {
+			h6 {
+				font-family: @primary-font;
+				font-size: 11px;
+				font-weight: 700;
+				text-transform: uppercase;
+				display: inline-block;
+				margin-right: 15px;
+			}
+			span {
+				font-family: @primary-font;
+				font-size: 11px;
+				font-weight: 400;
+			}
+		}
+		.skillbar-bar {
+			height:10px;
+			width:0px;
+			background:@bg-light;
+			border-radius:10px;
+			-moz-border-radius:10px;
+			-webkit-border-radius:10px;
+		}
+	}
+}
+
+.meet-team {
+	background-color: @bg-light;
+	.team-member {
+		@media (max-width: @screen-sm-max) {
+			margin-bottom: 45px;
+		}
+		.thumb-holder {
+			img {
+				max-width: 100%;
+				overflow: hidden;
+				position: relative;
+				border-radius: 50%;
+			}
+			.down-content {
+				h2 {
+					font-family: @primary-font;
+					font-size: 14px;
+					text-transform: uppercase;
+					font-weight: 700;
+					margin-top: 25px;
+					margin-bottom: 0px;
+				}
+				span {
+					font-family: @secondary-font;
+					font-size: 11px;
+					color: @text-color;
+					text-transform: uppercase;
+				}
+			}
+			.hover-content {
+				background-color: rgba(250, 250, 250, 0.95);
+				position: absolute;
+				left: 50%;
+				margin-left: -97px;
+				width: 194px;
+				height: 192px;
+				border-radius: 50%;
+				top: 14px;
+				opacity: 0;
+				visibility: hidden;
+				.line {
+					margin-top: 30%;
+					margin-bottom: 5%;
+					width: 60px;
+					height: 2px;
+					background-color: @accent-color;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				ul {
+					padding: 0;
+					margin: 0;
+					list-style: none;
+					li {
+						display: inline-block;
+						a {
+							margin: 0 8px;
+							color: @heading;
+						}
+						a:hover {
+							color: @accent-color;
+						}
+					}
+				}
+			}
+		}
+		.thumb-holder:hover .hover-content {
+			opacity: 1;
+			visibility: visible;
+			cursor: pointer;
+		}
+	}
+}

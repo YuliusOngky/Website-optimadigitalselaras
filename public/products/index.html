@@ -300,8 +300,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
 
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
 .reveal.in{opacity:1;transform:none;}
-#website-solutions,#business-commerce,#financial-technology,#enterprise{scroll-margin-top:90px;}
-body.view-apps .nav-website{display:none;}
+#website-solutions,#business-commerce,#financial-technology,#enterprise,#hris{scroll-margin-top:90px;}
 
 /* SECTION DIVIDER accent */
 .section-divider{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
@@ -758,20 +757,6 @@ body.view-apps .nav-website{display:none;}
         </div>
       </div>
 
-      <!-- Sizzle menu — previously empty collection slot -->
-      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/sizzle-web/#menu" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
-        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/sizzle-menu-preview.jpg?v=20260819');background-position:center top;">
-          <div class="bws-tmpl-hover-overlay">
-            <div class="bws-tmpl-hover-label">Click to open full preview</div>
-          </div>
-        </div>
-        <div class="bws-tmpl-foot">
-          <span class="bws-live-tag">Available Now</span>
-          <strong>Sizzle — Menu &amp; Ordering</strong>
-          <span class="desc">Chef picks · Categories · Flash deal</span>
-        </div>
-      </div>
-
       <!-- Dealaro inventory — previously empty collection slot -->
       <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/dealaro-web/home-car-dealer.html" onclick="window.open(this.getAttribute('data-template-url'), '_blank')">
         <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/dealaro-inventory-preview.png?v=20260819b');background-position:top center;">
@@ -844,7 +829,7 @@ body.view-apps .nav-website{display:none;}
 
       <!-- Brancy cosmetic / beauty salon — empty collection slot -->
       <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/brancy-web/" onclick="window.open(this.getAttribute('data-template-url'),'_blank')">
-        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/brancy-preview.jpg?v=20260821');background-position:top center;">
+        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/brancy-preview.jpg?v=20260821c');background-position:top center;">
           <div class="bws-tmpl-hover-overlay">
             <div class="bws-tmpl-hover-label">Click to open full preview</div>
           </div>
@@ -853,20 +838,6 @@ body.view-apps .nav-website{display:none;}
           <span class="bws-live-tag">Available Now</span>
           <strong>Brancy — Cosmetic &amp; Beauty Salon</strong>
           <span class="desc">Shop · Skincare · Salon · Blog</span>
-        </div>
-      </div>
-
-      <!-- Brancy shop — second empty collection slot -->
-      <div class="bws-tmpl bws-tmpl-interactive" data-template-url="/templates/brancy-web/product.html" onclick="window.open(this.getAttribute('data-template-url'),'_blank')">
-        <div class="bws-tmpl-screen has-preview" style="background-image:url('/assets/optima/templates/brancy-shop-preview.jpg?v=20260819');background-position:top center;">
-          <div class="bws-tmpl-hover-overlay">
-            <div class="bws-tmpl-hover-label">Click to open full preview</div>
-          </div>
-        </div>
-        <div class="bws-tmpl-foot">
-          <span class="bws-live-tag">Available Now</span>
-          <strong>Brancy — Shop &amp; Products</strong>
-          <span class="desc">Catalog · Categories · Product pages</span>
         </div>
       </div>
 
@@ -939,8 +910,8 @@ body.view-apps .nav-website{display:none;}
       <a href="https://wa.me/6285770566781" class="sec-cta-link" target="_blank" rel="noopener noreferrer">Request a Demo <span class="btn-arrow">→</span></a>
     </div>
 
-    <!-- Featured: OptimaStore + Yoga (real screenshots) -->
-    <div class="op-grid2" style="margin-bottom:14px;">
+    <!-- Featured: OptimaStore, Yoga, HRIS (real screenshots) -->
+    <div class="op-grid3" style="margin-bottom:14px;">
       <article class="op-card">
         <a href="https://optimadigitalselaras.com/optima-store" target="_blank" rel="noopener noreferrer">
           <img src="/assets/optima/optimastore-station-banner.png?v=3" alt="OptimaStore commerce platform screenshot" width="1024" height="682" loading="lazy" decoding="async">
@@ -963,9 +934,20 @@ body.view-apps .nav-website{display:none;}
           <a href="https://sanctuary-yoga-tan.vercel.app/" target="_blank" rel="noopener noreferrer" class="op-cta">Lihat Demo <span class="btn-arrow">→</span></a>
         </div>
       </article>
+      <article class="op-card" id="hris">
+        <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20request%20demo%20HRIS." target="_blank" rel="noopener noreferrer">
+          <img src="/assets/optima/hris-banner.png?v=5" alt="Optima HRIS — Kelola SDM Lebih Mudah Jadi Lebih Produktif" width="1024" height="682" loading="lazy" decoding="async">
+        </a>
+        <div class="op-card-body">
+          <span class="badge badge-featured">Featured · People Ops</span>
+          <h4>HRIS</h4>
+          <p>Workforce records and attendance delivered as a multi-organization HR product — ready to deploy for any business.</p>
+          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20request%20demo%20HRIS." target="_blank" rel="noopener noreferrer" class="op-cta">Request Demo <span class="btn-arrow">→</span></a>
+        </div>
+      </article>
     </div>
 
-    <!-- Supporting: POS, PPOB, HRIS, GoRide -->
+    <!-- Supporting: POS, PPOB, GoRide -->
     <div class="op-mini-grid">
       <article class="op-mini-card">
         <div class="op-mini-icon pos">
@@ -982,14 +964,6 @@ body.view-apps .nav-website{display:none;}
         <h4>PPOB</h4>
         <p>Digital transaction and bill payment solution for operators handling electricity, water, telco, and other services.</p>
         <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20PPOB." target="_blank" rel="noopener noreferrer" class="op-cta">Ask about this <span class="btn-arrow">→</span></a>
-      </article>
-      <article class="op-mini-card" id="hris">
-        <div class="op-mini-icon hr">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h4>HRIS</h4>
-        <p>Workforce records and attendance delivered as a multi-organization HR product — ready to deploy for any business.</p>
-        <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20request%20demo%20HRIS." target="_blank" rel="noopener noreferrer" class="op-cta">Request Demo <span class="btn-arrow">→</span></a>
       </article>
       <article class="op-mini-card">
         <div class="op-mini-icon goride">
@@ -1019,13 +993,15 @@ body.view-apps .nav-website{display:none;}
     </div>
     <div class="op-suite-grid">
       <article class="op-suite-card flagship">
-        <img src="/assets/optima/los-banner.png" alt="LOS — Loan Origination System product screenshot" width="1024" height="682" loading="lazy" decoding="async">
+        <a href="/products/los/">
+          <img src="/assets/optima/los-banner.png" alt="LOS — Loan Origination System product screenshot" width="1024" height="682" loading="lazy" decoding="async">
+        </a>
         <div class="op-suite-card-body">
           <span class="badge badge-fintech">FinTech · Origination</span>
           <h3>Loan Origination System</h3>
           <p>Repeatable intake, scoring, approval, and disbursement workflow — deployed across lenders on a shared product core.</p>
-          <a href="https://los.optimadigitalselaras.com" target="_blank" rel="noopener noreferrer" class="op-cta">Lihat Detail <span class="btn-arrow">→</span></a>
-          <span class="op-note">los.optimadigitalselaras.com — Optima's Loan Origination System.</span>
+          <a href="/products/los/" class="op-cta">Lihat Detail <span class="btn-arrow">→</span></a>
+          <span class="op-note">/products/los — LOS product landing page. Live demo is linked from there.</span>
         </div>
       </article>
 
@@ -1155,7 +1131,7 @@ body.view-apps .nav-website{display:none;}
         <article class="prod">
           <strong>Loan Origination System</strong>
           <p>Intake, scoring, approval, and disbursement for lenders — live deployments running today.</p>
-          <a href="https://los.optimadigitalselaras.com" target="_blank" rel="noopener noreferrer">Lihat Detail →</a>
+          <a href="/products/los/">Lihat Detail →</a>
         </article>
         <article class="prod">
           <strong>Credit Assessment Platform</strong>
@@ -1267,7 +1243,7 @@ body.view-apps .nav-website{display:none;}
       </div>
       <div class="foot-col">
         <h6>Financial Technology</h6>
-        <a href="https://los.optimadigitalselaras.com" target="_blank" rel="noopener noreferrer">Loan Origination System</a>
+        <a href="/products/los/">Loan Origination System</a>
         <a href="https://www.creditriskdynamics.com" target="_blank" rel="noopener noreferrer">Credit Assessment Platform</a>
         <a href="https://cms.optimadigitalselaras.com" target="_blank" rel="noopener noreferrer">Collection Management System</a>
       </div>
@@ -1317,7 +1293,7 @@ document.querySelectorAll('.reveal').forEach(function(el){
   });
 })();
 
-// Active nav indicator follows the clicked section; hide Website nav in apps view
+// Active nav indicator follows the clicked section
 (function(){
   var navLinks = document.querySelectorAll('.nav-links a, #mobileMenu a');
   function setActive(link){
@@ -1326,7 +1302,6 @@ document.querySelectorAll('.reveal').forEach(function(el){
   }
   function applyHashView(){
     var hash = location.hash || '';
-    document.body.classList.toggle('view-apps', hash === '#business-commerce');
     var match = null;
     navLinks.forEach(function(a){ if(a.getAttribute('href') === hash) match = a; });
     if(match) setActive(match);
@@ -1334,7 +1309,7 @@ document.querySelectorAll('.reveal').forEach(function(el){
   navLinks.forEach(function(a){
     var href = a.getAttribute('href') || '';
     if(href.charAt(0) === '#'){
-      a.addEventListener('click', function(){ setActive(a); document.body.classList.toggle('view-apps', href === '#business-commerce'); });
+      a.addEventListener('click', function(){ setActive(a); });
     }
   });
   applyHashView();

@@ -1,0 +1,299 @@
+{%- liquid
+  assign variants_available_arr = product.variants | map: 'available'
+  assign variants_option1_arr = product.variants | map: 'option1'
+  assign variants_option2_arr = product.variants | map: 'option2'
+  assign variants_option3_arr = product.variants | map: 'option3'
+  assign product_form_id = 'product-form-' | append: section.id
+-%}
+
+{%- unless product.has_only_default_variant -%}
+  {%- if block.settings.picker_type == 'button' -%}
+    <variant-radios
+      id="variant-radios-{{ section.id }}"
+      class="no-js-hidden"
+      data-section="{{ section.id }}"
+      data-url="{{ product.url }}"
+      {% if update_url == false %}
+        data-update-url="false"
+      {% endif %}
+      {{ block.shopify_attributes }}
+    >
+      {%- for option in product.options_with_values -%}
+        {%- liquid
+          assign option_disabled = true
+
+          for option1_name in variants_option1_arr
+            case option.position
+              when 1
+                if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                  assign option_disabled = false
+                endif
+              when 2
+                if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                  assign option_disabled = false
+                endif
+              when 3
+                if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                  assign option_disabled = false
+                endif
+            endcase
+          endfor
+        -%}
+        {% assign option_index = forloop.index0 %}
+        <fieldset class="js product-form__input option-name-{{ option.name | downcase }}">
+          <div class="swatch-label-text">
+            <legend class="form__label">
+              {{ option.name }}:
+              <span class="append-options-values {% if section.settings.meta_style == "one-half" %}hidden{% endif %}">
+                {{- option.selected_value -}}
+              </span>
+            </legend>
+          </div>
+          {% if block.settings.picker_method == 'variant_image' or block.settings.picker_method == 'custom_color' %}
+            <div
+              class="swatch-group {% if block.settings.color_variant_style == 'circle' %} color_varient_circle {% else %} color_varient_square {% endif %} "
+            >
+          {% endif %}
+          {% if option.name == 'Size' %}
+            <div class="varient-model-wrapper">
+              <div class="varient-class">
+                {%- for value in option.values -%}
+                  <input
+                    type="radio"
+                    id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    name="{{ option.name }}"
+                    value="{{ value | escape }}"
+                    form="{{ product_form_id }}"
+                    class="{% if variant.available %} available {% else %} unavailable {% endif %}"
+                    {% if option.selected_value == value %}
+                      checked
+                    {% endif %}
+                    {% if option_disabled %}
+                      class="disabled"
+                    {% endif %}
+                  >
+                  {% if option.name == 'Color' %}       
+                     {%- assign currentcolor = value | remove: ' ' | escape | downcase -%}
+              {%- assign swatch_image = '' -%}          
+                    {%- if block.settings.picker_method == 'custom_color' -%}
+                      {%- liquid
+                         for variant in product.variants
+                      if swatch_image != ''
+                        break
+                      endif
+                      for variant_option in variant['options']
+                        if swatch_image != ''
+                          break
+                        endif
+                        assign option_title = variant_option | escape | downcase
+                        if currentcolor == option_title
+                          assign swatch_image = variant.featured_media.preview_image
+                        endif
+                      endfor
+                    endfor
+                         
+                        assign colorName = value | handle
+                        assign colorFile = value | handle | append: '.' | append: file_extension
+                        assign colorFileURL = colorFile | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+                      -%}
+                      <div data-value="{{ value | escape }}" class="swatch-element">
+                        <div class="tooltip x">
+                          <label
+                            for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                            class="swatch-variant-text"
+                          >
+                            {{- value | handle -}}
+                          </label>
+                        </div>
+                        <label
+                          for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                          class="swatch-variant-color bg-color-{{ value | handle }}"
+                          style="background-size: cover;background-color: {{- colorName -}}; background-image: url({{ colorFileURL }}); background-repeat: no-repeat;"
+                        >
+                        </label>
+                      </div>
+                    {%- else -%}
+                      <div data-value="{{ value | escape }}" class="swatch-element">
+                        <div class="tooltip">
+                          <label
+                            for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                            class="swatch-variant-text"
+                          >
+                            {{- value | escape -}}
+                          </label>
+                        </div>
+                        <label
+                          for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                          class="swatch-variant-image "
+                          style="background-image: url('{{ swatch_image | image_url: width: 100, height: 100 }}');"
+                        ></label>
+                      </div>
+                    {%- endif -%}
+                  {% else %}
+                    <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                      {{ value }}
+                    </label>
+                  {% endif %}
+                {%- endfor -%}
+              </div>
+            </div>
+          {% else %}
+            {%- for value in option.values -%}
+              <input
+                type="radio"
+                id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                name="{{ option.name }}"
+                value="{{ value | escape }}"
+                form="{{ product_form_id }}"
+                class="{% if variant.available %} available {% else %} unavailable {% endif %}"
+                {% if option.selected_value == value %}
+                  checked
+                {% endif %}
+              >
+              {%- assign currentcolor = value | remove: ' ' | escape | downcase -%}
+              {%- assign swatch_image = '' -%}               
+              {% if option.name == 'Color' %}
+                {%- liquid
+                    for variant in product.variants
+                      if swatch_image != ''
+                        break
+                      endif
+                      for variant_option in variant['options']
+                        if swatch_image != ''
+                          break
+                        endif
+                        assign option_title = variant_option | escape | downcase
+                        if currentcolor == option_title
+                          assign swatch_image = variant.featured_media.preview_image
+                        endif
+                      endfor
+                    endfor
+                  assign colorName = value | handle
+                  assign colorFile = value | handle | append: '.' | append: file_extension
+                  assign colorFileURL = colorFile | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+                -%}
+                {%- if block.settings.picker_method == 'custom_color' -%}
+                  <div data-value="{{ value | escape }}" class="swatch-element">
+                    <div class="tooltip">
+                      <label
+                        for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                        class="swatch-variant-text"
+                      >
+                        {{- value | escape -}}
+                      </label>
+                    </div>
+
+                    <label
+                      for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                      class="swatch-variant-color bg-color-{{ value | handle }}"
+                      style="background-size: cover;background-color: {{- colorName -}};{% if value.swatch.color %} background-color: {{ value.swatch.color }} {% endif %}; background-image: url({{ colorFileURL }}); background-repeat: no-repeat;"
+                    >
+                    </label>
+                  </div>
+                {%- else -%}
+                  <div data-value="{{ value | escape }}" class="swatch-element">
+                    <div class="tooltip">
+                      <label
+                        for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                        class="swatch-variant-text"
+                      >
+                        {{- value | escape -}}
+                      </label>
+                    </div>
+                    <label
+                      for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                      class="swatch-variant-image "
+                      style="background-image: url('{{ swatch_image | image_url: width: 100, height: 100 }}');"
+                    ></label>
+                  </div>
+                {%- endif -%}
+              {% else %}
+                <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                  {{ value }}
+                </label>
+              {% endif %}
+            {%- endfor -%}
+          {% endif %}
+          {%- if block.settings.picker_method == 'variant_image' or block.settings.picker_method == 'custom_color' -%}
+            </div>
+          {% endif %}
+        </fieldset>
+      {%- endfor -%}
+      <script type="application/json">
+        {{ product.variants | json }}
+      </script>
+    </variant-radios>
+  {%- else -%}
+    <variant-selects
+      class="no-js-hidden"
+      data-section="{{ section.id }}"
+      data-url="{{ product.url }}"
+      {{ block.shopify_attributes }}
+    >
+      {%- for option in product.options_with_values -%}
+        <div class="product-form__input product-form__input--dropdown">
+          <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+            {{ option.name }}
+          </label>
+          <div class="select">
+            <select
+              id="Option-{{ section.id }}-{{ forloop.index0 }}"
+              class="select__select"
+              name="options[{{ option.name | escape }}]"
+              form="{{ product_form_id }}"
+            >
+              {%- for value in option.values -%}
+                <option
+                  value="{{ value | escape }}"
+                  {% if option.selected_value == value %}
+                    selected="selected"
+                  {% endif %}
+                >
+                  {{ value }}
+                </option>
+              {%- endfor -%}
+            </select>
+            {% render 'icon-caret' %}
+          </div>
+        </div>
+      {%- endfor -%}
+
+      <script type="application/json">
+        {{ product.variants | json }}
+      </script>
+    </variant-selects>
+  {%- endif -%}
+{%- endunless -%}
+
+<noscript class="product-form__noscript-wrapper-{{ section.id }}">
+  <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+    <label class="form__label" for="Variants-{{ section.id }}">
+      {{- 'products.product.product_variants' | t -}}
+    </label>
+    <div class="select">
+      <select
+        name="id"
+        id="Variants-{{ section.id }}"
+        class="select__select"
+        form="{{ product_form_id }}"
+      >
+        {%- for variant in product.variants -%}
+          <option
+            {% if variant == product.selected_or_first_available_variant %}
+              selected="selected"
+            {% endif %}
+            {% if variant.available == false %}
+              disabled
+            {% endif %}
+            value="{{ variant.id }}"
+          >
+            {{ variant.title }}
+            {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+            - {{ variant.price | money | strip_html }}
+          </option>
+        {%- endfor -%}
+      </select>
+      {% render 'icon-caret' %}
+    </div>
+  </div>
+</noscript>

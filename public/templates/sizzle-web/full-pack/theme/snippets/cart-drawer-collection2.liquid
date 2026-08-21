@@ -1,0 +1,31 @@
+{%- if settings.cart_drawer_collection != blank -%}
+  <div class="cart-drawer__collection2 {% if cart == empty %}is-empty{% endif %}">
+    <h4>{{ 'sections.cart.suggested_products' | t }}</h4>
+    
+          <div
+            id="Slider-{{ section.id }}"
+            class="product-grid contains-card{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} swiper-wrapper1"
+            role="list"
+            aria-label="{{ 'sections.featured_collection.slider' | t }}"
+          >
+            {%- for product in settings.cart_drawer_collection.products limit: 5 -%}
+              <div id="Slide-{{ section.id }}-{{ forloop.index }}" >
+                {% render 'card-product-for-drawer',
+                  card_product: product,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_rating: section.settings.show_rating,
+                  show_quick_add: settings.enable_quickadd,
+                  section_id: section.id
+                %}
+              </div>
+            {%- else -%}
+              {%- for i in (1..4) -%}
+                <div class="grid__item">
+                  {% render 'card-product', show_vendor: section.settings.show_vendor %}
+                </div>
+              {%- endfor -%}
+            {%- endfor -%}
+          </div>
+  </div>
+{%- endif -%}

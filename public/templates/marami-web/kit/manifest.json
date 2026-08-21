@@ -1,0 +1,1075 @@
+{
+    "manifest_version": "1.0.23",
+    "title": "Marami - Snack Brand & Bakery Template Kit",
+    "page_builder": "elementor",
+    "kit_version": "1.0.0",
+    "templates": [
+        {
+            "name": "Global Kit Styles",
+            "screenshot": "screenshots\/global-kit-styles.jpg",
+            "source": "templates\/global.json",
+            "preview_url": "https:\/\/elementor.imoodev.com",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "global-styles",
+                "include_in_zip": "1",
+                "elementor_pro_required": null,
+                "additional_template_information": [
+                    "These are the global theme styles configured through the Elementor Theme Styles area."
+                ]
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Home",
+            "screenshot": "screenshots\/home.jpg",
+            "source": "templates\/home.json",
+            "preview_url": "https:\/\/marami.elementor.imoodev.com\/template-kit\/home\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Home 2",
+            "screenshot": "screenshots\/home-2.jpg",
+            "source": "templates\/home-2.json",
+            "preview_url": "https:\/\/marami.elementor.imoodev.com\/template-kit\/home-2\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "About",
+            "screenshot": "screenshots\/about.jpg",
+            "source": "templates\/about.json",
+            "preview_url": "https:\/\/marami.elementor.imoodev.com\/template-kit\/about\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Partner",
+            "screenshot": "screenshots\/partner.jpg",
+            "source": "templates\/partner.json",
+            "preview_url": "https:\/\/marami.elementor.imoodev.com\/template-kit\/partner\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Product",
+            "screenshot": "screenshots\/product.jpg",
+            "source": "templates\/product.json",
+            "preview_url": "https:\/\/marami.elementor.imoodev.com\/template-kit\/product\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Gallery",
+            "screenshot": "screenshots\/gallery.jpg",
+            "source": "templates\/gallery.json",
+            "preview_url": "https:\/\/marami.elementor.imoodev.com\/template-kit\/gallery\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Contact",
+            "screenshot": "screenshots\/contact.jpg",
+            "source": "templates\/contact.json",
+            "preview_url": "https:\/\/marami.elementor.imoodev.com\/template-kit\/contact\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Faq",
+            "screenshot": "screenshots\/faq.jpg",
+            "source": "templates\/faq.json",
+            "preview_url": "https:\/\/marami.elementor.imoodev.com\/template-kit\/faq\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Coming Soon",
+            "screenshot": "screenshots\/coming-soon.jpg",
+            "source": "templates\/coming-soon.json",
+            "preview_url": "https:\/\/marami.elementor.imoodev.com\/template-kit\/coming-soon\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "404",
+            "screenshot": "screenshots\/404.jpg",
+            "source": "templates\/404.json",
+            "preview_url": "https:\/\/marami.elementor.imoodev.com\/template-kit\/404\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-404",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Header",
+            "screenshot": "screenshots\/header.jpg",
+            "source": "templates\/header.json",
+            "preview_url": "https:\/\/marami.elementor.imoodev.com\/template-kit\/header\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-header",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Footer",
+            "screenshot": "screenshots\/footer.jpg",
+            "source": "templates\/footer.json",
+            "preview_url": "https:\/\/marami.elementor.imoodev.com\/template-kit\/footer\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-footer",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        }
+    ],
+    "required_plugins": [
+        {
+            "name": "Elementor",
+            "version": "3.30.1",
+            "file": "elementor\/elementor.php",
+            "author": "Elementor.com"
+        },
+        {
+            "name": "ElementsKit Lite",
+            "version": "3.5.4",
+            "file": "elementskit-lite\/elementskit-lite.php",
+            "author": "Wpmet"
+        },
+        {
+            "name": "Ultimate Addons for Elementor Lite",
+            "version": "2.4.4",
+            "file": "header-footer-elementor\/header-footer-elementor.php",
+            "author": "Brainstorm Force"
+        }
+    ],
+    "images": [
+        {
+            "filename": "snack.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/snack.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/home-2.json",
+                    "name": "Home 2"
+                },
+                {
+                    "source": "templates\/partner.json",
+                    "name": "Partner"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 50007,
+            "dimensions": [
+                448,
+                412
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-mockups-PNY56VJ"
+        },
+        {
+            "filename": "flat-lay-of-people-eating-fish-and-drinking-beer-square-crop-e1752052753391.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/flat-lay-of-people-eating-fish-and-drinking-beer-square-crop-e1752052753391.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/about.json",
+                    "name": "About"
+                },
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 233098,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/friends-eating-fish-and-chips-and-drinking-beer-sq-URSWTHN"
+        },
+        {
+            "filename": "nachos-cheese-sauce-salsa-and-corn-cobs-top-view-e1752052729148.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/nachos-cheese-sauce-salsa-and-corn-cobs-top-view-e1752052729148.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 202159,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/nachos-cheese-sauce-salsa-and-corn-cobs-top-view-PF6F3YQ"
+        },
+        {
+            "filename": "cooking-ingredients-spices-beans-and-herbs-e1752052748464.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/cooking-ingredients-spices-beans-and-herbs-e1752052748464.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 239148,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/cooking-ingredients-spices-beans-and-herbs-9WG7UXK"
+        },
+        {
+            "filename": "mexican-food-background-guacamole-salsa-cheesy-sauces-with-nachos-e1752052809231.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/mexican-food-background-guacamole-salsa-cheesy-sauces-with-nachos-e1752052809231.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 218347,
+            "dimensions": [
+                900,
+                900
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/mexican-food-background-guacamole-salsa-cheesy-sau-V9AEC6R"
+        },
+        {
+            "filename": "chips-e1752052454139.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/chips-e1752052454139.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 108814,
+            "dimensions": [
+                1500,
+                1000
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "homemade-chickpea-hummus-with-chips-e1752052360621.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/homemade-chickpea-hummus-with-chips-e1752052360621.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 222992,
+            "dimensions": [
+                800,
+                1200
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/homemade-chickpea-hummus-with-chips-DKRLY86"
+        },
+        {
+            "filename": "Mask-Group-18.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/Mask-Group-18.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 31230,
+            "dimensions": [
+                520,
+                458
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-mockups-PNY56VJ"
+        },
+        {
+            "filename": "Mask-Group-19.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/Mask-Group-19.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 35240,
+            "dimensions": [
+                520,
+                458
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-mockups-PNY56VJ"
+        },
+        {
+            "filename": "yumsnack.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/yumsnack.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 15657,
+            "dimensions": [
+                520,
+                300
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-mockups-PNY56VJ"
+        },
+        {
+            "filename": "Lotte_Mart.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/07\/Lotte_Mart.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 3816,
+            "dimensions": [
+                124,
+                29
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "Mask-Group-22.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/Mask-Group-22.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 19600,
+            "dimensions": [
+                520,
+                300
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-mockups-PNY56VJ"
+        },
+        {
+            "filename": "carefourlogo.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/carefourlogo.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 2126,
+            "dimensions": [
+                132,
+                24
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "Mask-Group-23.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/Mask-Group-23.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 19170,
+            "dimensions": [
+                520,
+                300
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-mockups-PNY56VJ"
+        },
+        {
+            "filename": "Walmart-logo.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/Walmart-logo.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 5617,
+            "dimensions": [
+                125,
+                35
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "Mask-Group-21.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/Mask-Group-21.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 19923,
+            "dimensions": [
+                520,
+                300
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-photoshop-mockup-YRKZU4Z"
+        },
+        {
+            "filename": "mexican-guacamole-and-salsa-dip-nachos-tortilla-chips-e1752052469415.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/mexican-guacamole-and-salsa-dip-nachos-tortilla-chips-e1752052469415.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 96652,
+            "dimensions": [
+                800,
+                533
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/mexican-guacamole-and-salsa-dip-nachos-tortilla-ch-GH2XSZD"
+        },
+        {
+            "filename": "happy-senior-man-e1752052428187.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/happy-senior-man-e1752052428187.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/home-2.json",
+                    "name": "Home 2"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 140560,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/happy-senior-man-JFDKJZK"
+        },
+        {
+            "filename": "beautiful-girl-e1752052366265.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/beautiful-girl-e1752052366265.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/home-2.json",
+                    "name": "Home 2"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 72843,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/beautiful-girl-4QC3QRS"
+        },
+        {
+            "filename": "woman-in-a-garden-e1752052522776.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/woman-in-a-garden-e1752052522776.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 88345,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/woman-in-a-garden-2FDVRB6"
+        },
+        {
+            "filename": "stylish-man-e1752052352210.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/stylish-man-e1752052352210.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/home-2.json",
+                    "name": "Home 2"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 75735,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/stylish-man-4N6J76M"
+        },
+        {
+            "filename": "pattern-chip-e1752052739679.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/pattern-chip-e1752052739679.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/about.json",
+                    "name": "About"
+                },
+                {
+                    "source": "templates\/partner.json",
+                    "name": "Partner"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                },
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                },
+                {
+                    "source": "templates\/faq.json",
+                    "name": "Faq"
+                }
+            ],
+            "filesize": 235890,
+            "dimensions": [
+                2700,
+                920
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-photoshop-mockup-YRKZU4Z"
+        },
+        {
+            "filename": "yummy.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/yummy.png",
+            "templates": [
+                {
+                    "source": "templates\/home-2.json",
+                    "name": "Home 2"
+                },
+                {
+                    "source": "templates\/partner.json",
+                    "name": "Partner"
+                }
+            ],
+            "filesize": 39642,
+            "dimensions": [
+                521,
+                338
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-photoshop-mockup-YRKZU4Z"
+        },
+        {
+            "filename": "chips-bag-mockup-02.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/chips-bag-mockup-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home-2.json",
+                    "name": "Home 2"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 29628,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-photoshop-mockup-YRKZU4Z"
+        },
+        {
+            "filename": "chips-bag-mockup-01.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/chips-bag-mockup-01.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home-2.json",
+                    "name": "Home 2"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 27897,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-mockups-PNY56VJ"
+        },
+        {
+            "filename": "chip-green.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/chip-green.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home-2.json",
+                    "name": "Home 2"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 34414,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-photoshop-mockup-YRKZU4Z"
+        },
+        {
+            "filename": "chip-red.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/chip-red.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home-2.json",
+                    "name": "Home 2"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 27432,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-photoshop-mockup-YRKZU4Z"
+        },
+        {
+            "filename": "Group-103-e1752052762352.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/Group-103-e1752052762352.png",
+            "templates": [
+                {
+                    "source": "templates\/home-2.json",
+                    "name": "Home 2"
+                },
+                {
+                    "source": "templates\/coming-soon.json",
+                    "name": "Coming Soon"
+                }
+            ],
+            "filesize": 57147,
+            "dimensions": [
+                600,
+                342
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/instant-food-packages-mock-up-bundle-JFKDES"
+        },
+        {
+            "filename": "Mask-Group-29.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/Mask-Group-29.png",
+            "templates": [
+                {
+                    "source": "templates\/home-2.json",
+                    "name": "Home 2"
+                }
+            ],
+            "filesize": 11826,
+            "dimensions": [
+                345,
+                254
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-photoshop-mockup-YRKZU4Z"
+        },
+        {
+            "filename": "chips-28.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/chips-28.png",
+            "templates": [
+                {
+                    "source": "templates\/home-2.json",
+                    "name": "Home 2"
+                }
+            ],
+            "filesize": 12962,
+            "dimensions": [
+                345,
+                254
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-mockups-PNY56VJ"
+        },
+        {
+            "filename": "chips-27.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/chips-27.png",
+            "templates": [
+                {
+                    "source": "templates\/home-2.json",
+                    "name": "Home 2"
+                }
+            ],
+            "filesize": 26078,
+            "dimensions": [
+                345,
+                522
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/chips-bag-mockups-PNY56VJ"
+        },
+        {
+            "filename": "corn-chip.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/corn-chip.png",
+            "templates": [
+                {
+                    "source": "templates\/about.json",
+                    "name": "About"
+                }
+            ],
+            "filesize": 176744,
+            "dimensions": [
+                513,
+                691
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/corn-chips-PNVKLPT"
+        },
+        {
+            "filename": "traditional-mexican-chips-on-the-table-e1752052743433.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/traditional-mexican-chips-on-the-table-e1752052743433.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about.json",
+                    "name": "About"
+                },
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 162675,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/traditional-mexican-chips-on-the-table-ZXKRKA2"
+        },
+        {
+            "filename": "logoipsum-249.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/logoipsum-249.png",
+            "templates": [
+                {
+                    "source": "templates\/partner.json",
+                    "name": "Partner"
+                }
+            ],
+            "filesize": 1115,
+            "dimensions": [
+                50,
+                40
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "logoipsum-245.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/logoipsum-245.png",
+            "templates": [
+                {
+                    "source": "templates\/partner.json",
+                    "name": "Partner"
+                }
+            ],
+            "filesize": 933,
+            "dimensions": [
+                50,
+                39
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "logoipsum-224.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/logoipsum-224.png",
+            "templates": [
+                {
+                    "source": "templates\/partner.json",
+                    "name": "Partner"
+                }
+            ],
+            "filesize": 1401,
+            "dimensions": [
+                73,
+                49
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "logoipsum-281.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/logoipsum-281.png",
+            "templates": [
+                {
+                    "source": "templates\/partner.json",
+                    "name": "Partner"
+                }
+            ],
+            "filesize": 1209,
+            "dimensions": [
+                43,
+                48
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "logoipsum-223.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/logoipsum-223.png",
+            "templates": [
+                {
+                    "source": "templates\/partner.json",
+                    "name": "Partner"
+                }
+            ],
+            "filesize": 1179,
+            "dimensions": [
+                49,
+                48
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        },
+        {
+            "filename": "Chips-pack-09.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/Chips-pack-09.jpg",
+            "templates": [
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 51898,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/potato-chips-package-mockup-set-USGEX7Y"
+        },
+        {
+            "filename": "Chips-pack-08.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/Chips-pack-08.jpg",
+            "templates": [
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 50231,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/potato-chips-package-mockup-set-USGEX7Y"
+        },
+        {
+            "filename": "Chips-pack-07.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/Chips-pack-07.jpg",
+            "templates": [
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 44779,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/potato-chips-package-mockup-set-USGEX7Y"
+        },
+        {
+            "filename": "Chips-pack-02.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/Chips-pack-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 66474,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/potato-chips-package-mockup-set-USGEX7Y"
+        },
+        {
+            "filename": "beer-glass-and-snacks-e1752052459793.jpg",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/beer-glass-and-snacks-e1752052459793.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 223671,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/beer-glass-and-snacks-CXNYXML"
+        },
+        {
+            "filename": "logo.png",
+            "thumbnail_url": "https:\/\/marami.elementor.imoodev.com\/wp-content\/uploads\/sites\/14\/2025\/04\/logo.png",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                }
+            ],
+            "filesize": 1751,
+            "dimensions": [
+                158,
+                36
+            ],
+            "image_source": "self_created",
+            "image_urls": ""
+        }
+    ]
+}

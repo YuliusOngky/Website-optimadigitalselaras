@@ -1,0 +1,368 @@
+  {% if section.settings.offer_popup %}
+<div id="custom-popup" class="open" style="display:none">
+       <div class="popup-close">
+      <a href="javascript:void(0)" title="Close" class="dT_close">
+         {% render 'icon-close' %}
+      </a>
+    </div>
+  <div class="popup-content">
+    <div class="popup-image">
+      {% if section.settings.popup_image != blank %}
+        <img loading="lazy" src="{{section.settings.popup_image | image_url : width: 250 }}" width="" height="">
+      {% endif %}
+    </div>
+    <div class="popup-text">
+      <h4>{{ section.settings.popup_heading }}</h4>
+    </div> 
+  </div>
+</div>
+
+<div id="openModal1" class="modalDialog1">
+  <div class="overlay">
+    <a href="#close" title="Close" class="close1">
+   <svg id="Group_24924" data-name="Group 24924" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+            <defs>
+            <clipPath id="clip-path">
+            <rect id="Rectangle_8252" data-name="Rectangle 8252" width="25" height="25" fill="none"/>
+            </clipPath>
+            </defs>
+            <g id="Group_24923" data-name="Group 24923" >
+            <path id="Path_38934" data-name="Path 38934" d="M23.214,25a1.78,1.78,0,0,1-1.263-.523L.523,3.048A1.786,1.786,0,0,1,3.048.523L24.477,21.952A1.786,1.786,0,0,1,23.214,25" transform="translate(0)"/>
+            <path id="Path_38935" data-name="Path 38935" d="M1.786,25A1.786,1.786,0,0,1,.523,21.952L21.952.523a1.786,1.786,0,1,1,2.525,2.525L3.048,24.477A1.78,1.78,0,0,1,1.786,25" transform="translate(0 0)"/>
+            </g>
+            </svg>
+      
+    </a>
+    <div class="modal-container">
+      <div class="modal-header">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+         {%- when 'heading' -%}
+        <h2 class="modal-title1" id="purchaseLabel"> {{ block.settings.heading }} </h2>
+        {%- when 'paragraph' -%}
+        <p>{{ block.settings.paragraph }}</p>
+        {%- when 'email_form' -%}
+         {% form 'customer', class: 'newsletter-form' %}
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="newsletter-form__field-wrapper">
+                <div class="field">
+                  <input
+                    id="NewsletterForm--{{ section.id }}"
+                    type="email"
+                    name="contact[email]"
+                    class="field__input"
+                    value="{{ form.email }}"
+                    aria-required="true"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    autocomplete="email"
+                    {% if form.errors %}
+                      autofocus
+                      aria-invalid="true"
+                      aria-describedby="Newsletter-error--{{ section.id }}"
+                    {% elsif form.posted_successfully? %}
+                      aria-describedby="Newsletter-success--{{ section.id }}"
+                    {% endif %}
+                    placeholder="{{ 'newsletter.label' | t }}"
+                    required
+                  >
+                  <label class="field__label visually-hidden" for="NewsletterForm--{{ section.id }}">
+                    {{ 'newsletter.label' | t }}
+                  </label>
+                  <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                     {% render 'icon-right-arrow' %}
+                  </button>
+                </div>
+                {%- if form.errors -%}
+                  <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                {%- endif -%}
+              </div>
+              {%- if form.posted_successfully? -%}
+                <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+              {%- endif -%}
+            {% endform %}
+        {%- endcase -%} 
+    {%- endfor -%}  
+      </div>
+      <div class="modal-body">
+        <div class="modal-body-image">
+         <img loading="lazy" src="{{section.settings.popup_image | image_url : width: 250 }}" width="" height="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-backdrop1"></div>
+</div>
+
+              
+<script>
+  
+$(document).ready(function() {
+    if ($.cookie('dT_offer-cookie') == 'closed') {      
+        $('#custom-popup').hide();
+    } else {
+    $('#custom-popup').show();
+    }
+
+    $(".popup-close").on("click", function() {
+        $('#custom-popup').hide();
+        $.cookie('dT_offer-cookie', 'closed', {
+            expires: 1,
+            path: '/'
+        });
+    });
+
+
+    $("#custom-popup .popup-content").on("click", function() {
+        $("#openModal1.modalDialog1").addClass('offer-model__opened');
+    });
+
+
+    $(".close1").on("click", function() {
+        $("#openModal1.modalDialog1").removeClass('offer-model__opened');
+        $.cookie('dT_offer-cookie', 'closed', {
+            expires: 1,
+            path: '/'
+        });
+        $('#custom-popup').hide();
+    });
+
+
+    $('.dT_close').bind('click', function() {
+        $('#custom-popup').hide();
+        $.cookie('dT_offer-cookie', 'closed', {
+            expires: 1,
+            path: '/'
+        });
+    });
+
+
+    function handleSubscription() {
+        var email = $('#email').val();
+        var isEmailValid = validateEmail(email);
+
+        if (isEmailValid) {
+            $('.modal1').append('<div class="thank-you"><i class="fa fa-check"></i> Thank you for subscribing!</div>');
+        } else {
+            $('.error-message').text('Invalid email address. Please enter a valid email.');
+        }
+    }
+
+
+    function validateEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    $('.subscribe-btn').click(function() {
+        $('.error-message').empty();
+        handleSubscription();
+    });
+});
+</script>
+
+{% endif %}
+<style>
+
+.modalDialog1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(var(--color-foreground),.5);
+  }
+#openModal1.offer-model__opened {display:block;transition-duration: 4s; transition-delay: 2s;}
+  .modalDialog1 .overlay {
+    width: 40rem;
+    max-width: calc(100vw - 3rem);
+    position: relative;
+    padding: 0;
+    border-radius: 0;
+    background: white;
+    z-index: 9999;
+    height: 100%;
+    margin-left: auto;
+}
+
+  .modal-backdrop1 {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+.close1 {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    pointer-events: all;
+    z-index:10000;
+  }
+  
+  .modal-body img{
+    width: 100%;
+    height: 100%;
+  }
+
+
+.subscribe-btn {
+    font-family: var(--font-button-family);
+    font-weight: var(--font-button-weight);
+    font-style: var(--font-button-style);
+    text-transform: var(--font-button-text-transform);
+    letter-spacing: var(--font-button-letter-spacing);
+    position: relative;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    border-radius: var(--border-radius-button);
+    transition: var(--duration-default);
+    font-size: var(--font-base-size);
+    line-height: 1.2;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    gap: 1.2rem;
+    --btn-bg: var(--color-button);
+    --btn-color: var(--color-button-text);
+  border-radius: 10rem;
+    height: 5.5rem;
+    width: 50%;
+}
+
+#custom-popup{
+    margin: 0;
+    height: 120px;
+    max-width: 300px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: auto;
+    z-index: 1;
+    transition: all 0.3s linear;
+    padding: 10px;
+    background-color:rgb(var(--color-background));
+    /* animation:sticky-left  1s both; */
+}
+
+.popup-content{ display: flex; height: 100%; align-items: center; justify-content: center;}
+.popup-image { height: 100%;    margin-right: 10px;}
+.popup-image img { width: 110px; height: 100%; }
+.popup-text{ margin: 0; padding: 0;}
+#custom-popup .popup-content .dT_close {
+     height: 10px;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    text-align: center;
+    width: 10px;
+    pointer-events: all;
+    color: rgb(var(--color-link));
+  }
+
+  #custom-popup .popup-content .dT_close svg {  height: 10px; width: 10px; fill:currentcolor; transition: all 0.3s linear; color:rgb(var(--color-link));}
+   #custom-popup .popup-content .dT_close:hover svg{color:rgb(var(--color-link-hover));}
+  .popup-text h4{ cursor: pointer; transition:all 0.3s linear;}
+  .popup-text h4:hover{color:rgb(var(--color-link-hover));}
+  .modal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+  .modal-header{
+    position: relative;
+    flex: 1 0 50%;
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .modal-body {
+    flex: 1 0 50%;
+    position: relative;
+}
+  .modal-header .newsletter-form{max-width:39rem;  margin-top: 3rem;}
+  .modal-header  .newsletter-form__button{width:6.4rem;}
+  .modal-body .modal-body-image{height:100%;}
+  .modal-header .newsletter-form__button:hover{ background: rgba(var(--color-hover-button)); color: rgba(var(--color-button-hover-text));}
+  .popup-close a.dT_close{    position: absolute; right: 15px;}
+  .popup-close a.dT_close svg{width:14px; height:14px; transition:all 0.3s linear;}
+  .popup-close a.dT_close:hover svg{fill:rgb(var(--color-link-hover));  color: rgb(var(--color-link-hover));}
+  .close1 svg { width: 16px; height: 16px; transition:all 0.3s linear;}
+  .close1:hover svg{fill:rgb(var(--color-link-hover))}
+  
+/* @keyframes sticky-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to { opacity: 1;transform: translateX(0%); }
+}
+ */
+</style>
+
+
+{% schema %}
+{
+ "name": "t:sections.offer-popup.name",
+  "class": "offer_popup",
+  "settings": [
+     {
+      "type": "checkbox",
+      "id": "offer_popup",
+      "label": "t:sections.offer-popup.settings.offer_popup.label"
+   },
+    {
+      "type": "text",
+      "label": "t:sections.offer-popup.settings.popup_heading.label",
+      "id": "popup_heading",
+      "default": "Special Offer"
+    },
+    {
+      "type": "image_picker",
+      "label": "t:sections.offer-popup.settings.popup_image.label",
+      "id": "popup_image"
+    }
+  ],
+   "blocks": [
+  {
+  "type": "heading",
+  "name": "t:sections.offer-popup.blocks.heading.name",
+  "limit": 1,
+  "settings": [
+  {
+  "type": "text",
+  "id": "heading",
+  "default": "Join Our Newsletter",
+  "label": "t:sections.offer-popup.blocks.heading.settings.heading.label"
+  }
+  ]
+  },
+  {
+  "type": "paragraph",
+  "name": "t:sections.offer-popup.blocks.paragraph.name",
+  "limit": 1,
+  "settings": [
+  {
+  "type": "richtext",
+  "id": "paragraph",
+  "default": "<p>Join our newsletter and enjoy 15% off your first purchase.</p>",
+  "label": "t:sections.offer-popup.blocks.paragraph.settings.paragraph.label"
+  }
+  ]
+  },
+  {
+  "type": "email_form",
+  "name": "t:sections.offer-popup.blocks.email_form.name",
+  "limit": 1
+  }
+  ]
+}
+{% endschema %}
+

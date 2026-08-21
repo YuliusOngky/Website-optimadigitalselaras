@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jarsy Shop — Cold-Pressed Juice</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --green: #2d8a4e;
+  --green-dark: #1a5c33;
+  --green-light: #e8f5e9;
+  --orange: #f57c20;
+  --yellow: #ffd54f;
+  --white: #ffffff;
+  --gray: #f5f5f5;
+  --text: #212121;
+  --text-muted: #757575;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { font-family: 'Nunito', sans-serif; color: var(--text); background: var(--white); }
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(45,138,78,0.97); backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 72px;
+}
+.nav-brand { font-family: 'Pacifico', cursive; font-size: 1.8rem; color: var(--white); text-decoration: none; }
+.nav-brand span { color: var(--yellow); }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.5px; }
+.nav-links a.active { color: var(--yellow); }
+.nav-cta { background: var(--orange); color: var(--white); padding: 10px 24px; border-radius: 50px; font-weight: 800; font-size: 0.9rem; text-decoration: none; }
+.page-hero {
+  margin-top: 72px; min-height: 280px; display: flex; align-items: center;
+  background: linear-gradient(90deg, #f57c20 0%, #f57c20 48%, transparent 48%),
+              url('assets/images/product-banner.jpg') right center / cover no-repeat;
+}
+.page-hero-inner { max-width: 1200px; margin: 0 auto; padding: 56px 48px; }
+.page-hero h1 { font-size: 3.4rem; font-weight: 900; color: #fff; }
+.page-hero p { color: rgba(255,255,255,.9); max-width: 360px; margin-top: 12px; font-size: 1.05rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 72px 48px; }
+.section-badge { display: inline-block; background: var(--green-light); color: var(--green-dark); padding: 6px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+.section-title { font-size: 2.2rem; font-weight: 900; margin-bottom: 8px; }
+.section-sub { color: var(--text-muted); margin-bottom: 40px; }
+.shop-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.shop-card { background: #fff; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,.07); overflow: hidden; text-align: center; }
+.shop-card-img { height: 280px; background: #f7f7f4; display: flex; align-items: center; justify-content: center; }
+.shop-card-img img { max-height: 240px; max-width: 80%; object-fit: contain; }
+.shop-card-body { padding: 18px 16px 24px; }
+.shop-card-body h3 { font-size: 1.05rem; font-weight: 800; }
+.shop-card-body .stars { color: #FFD700; font-size: .9rem; margin: 6px 0; }
+.price { font-size: 1.25rem; font-weight: 900; color: var(--green); margin: 8px 0 14px; }
+.btn-order { background: var(--green); color: #fff; border: none; padding: 8px 20px; border-radius: 50px; font-weight: 800; cursor: pointer; }
+.gallery { background: var(--gray); }
+.g-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.g-grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 16px; }
+.promo { background: linear-gradient(135deg, var(--green-dark), var(--green)); padding: 48px; border-radius: 24px; display: flex; justify-content: space-between; align-items: center; gap: 24px; color: #fff; }
+.promo h2 { font-size: 2rem; font-weight: 900; }
+.promo em { color: var(--yellow); font-style: normal; }
+footer { background: var(--green-dark); color: rgba(255,255,255,0.8); padding: 40px 0 24px; }
+.footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; display: flex; justify-content: space-between; align-items: center; }
+.footer-brand { font-family: 'Pacifico', cursive; font-size: 1.6rem; color: #fff; }
+.footer-brand span { color: var(--yellow); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 700; font-size: .85rem; }
+.footer-copy { text-align: center; font-size: .8rem; padding-top: 16px; }
+@media (max-width: 900px) {
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .page-hero { background: #f57c20; }
+  .shop-grid, .g-grid { grid-template-columns: 1fr 1fr; }
+  .container { padding: 48px 24px; }
+  .promo { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-brand">Jar<span>sy</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#menu">Menu</a></li>
+    <li><a href="shop.html" class="active">Shop</a></li>
+    <li><a href="index.html#about">Tentang Kami</a></li>
+    <li><a href="index.html#reviews">Ulasan</a></li>
+    <li><a href="index.html#contact">Kontak</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Pesan Sekarang</a>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Shop Juice</h1>
+    <p>Cold-pressed 500ml bottles — Banana, Orange, Grape &amp; Apple from the Jarsy kit collection.</p>
+  </div>
+</section>
+
+<section class="container">
+  <div class="text-center" style="text-align:center;">
+    <div class="section-badge">Featured Product</div>
+    <h2 class="section-title">Taste Your Favourite</h2>
+    <p class="section-sub" style="margin-left:auto;margin-right:auto;">Botol cold-pressed Jarsy — aset asli dari Elementor template kit.</p>
+  </div>
+  <div class="shop-grid">
+    <div class="shop-card">
+      <div class="shop-card-img"><img src="assets/images/shop-bottle-1.jpg" alt="Jarsy Grape"></div>
+      <div class="shop-card-body">
+        <h3>Jarsy Grape</h3>
+        <div class="stars">?????</div>
+        <div class="price">Rp 47.000</div>
+        <button class="btn-order">+ Pesan</button>
+      </div>
+    </div>
+    <div class="shop-card">
+      <div class="shop-card-img"><img src="assets/images/shop-bottle-2.jpg" alt="Jarsy Apple"></div>
+      <div class="shop-card-body">
+        <h3>Jarsy Apple</h3>
+        <div class="stars">?????</div>
+        <div class="price">Rp 47.000</div>
+        <button class="btn-order">+ Pesan</button>
+      </div>
+    </div>
+    <div class="shop-card">
+      <div class="shop-card-img"><img src="assets/images/shop-bottle-3.jpg" alt="Jarsy Orange"></div>
+      <div class="shop-card-body">
+        <h3>Jarsy Orange</h3>
+        <div class="stars">?????</div>
+        <div class="price">Rp 47.000</div>
+        <button class="btn-order">+ Pesan</button>
+      </div>
+    </div>
+    <div class="shop-card">
+      <div class="shop-card-img"><img src="assets/images/shop-bottle-4.jpg" alt="Jarsy Banana"></div>
+      <div class="shop-card-body">
+        <h3>Jarsy Banana</h3>
+        <div class="stars">?????</div>
+        <div class="price">Rp 47.000</div>
+        <button class="btn-order">+ Pesan</button>
+      </div>
+    </div>
+  </div>
+  <div class="promo" style="margin-top:56px;">
+    <div>
+      <h2>Diskon <em>10%</em> New Arrival</h2>
+      <p style="margin-top:8px;opacity:.9;">Medium 500 ml cold-pressed — gunakan kode JARSY30</p>
+    </div>
+    <a href="index.html#contact" class="nav-cta">Go To Shop</a>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="container">
+    <div class="section-badge">Gallery</div>
+    <h2 class="section-title">Sent by Jarsy Juice Lovers</h2>
+    <p class="section-sub">Foto lifestyle dari kit Jarsy Juice.</p>
+    <div class="g-grid">
+      <img src="assets/images/gallery-1.jpg" alt="Orchard">
+      <img src="assets/images/gallery-2.jpg" alt="Kitchen">
+      <img src="assets/images/gallery-3.jpg" alt="Toast">
+      <img src="assets/images/gallery-4.jpg" alt="Work">
+      <img src="assets/images/gallery-5.jpg" alt="Drink">
+      <img src="assets/images/gallery-6.jpg" alt="Lifestyle">
+      <img src="assets/images/gallery-7.jpg" alt="Avocado">
+      <img src="assets/images/gallery-8.jpg" alt="Carrot">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Jar<span>sy</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="index.html#about">Tentang</a>
+      <a href="index.html#contact">Kontak</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2024 Jarsy Juice &amp; Beverage. Template by <strong>Optima Digital Selaras</strong>.</div>
+</footer>
+<script>
+document.querySelectorAll('.btn-order').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const name = btn.closest('.shop-card').querySelector('h3').textContent;
+    window.open('https://wa.me/6285770566781?text=' + encodeURIComponent('Halo Optima, saya mau pesan: ' + name), '_blank');
+  });
+});
+</script>
+</body>
+</html>

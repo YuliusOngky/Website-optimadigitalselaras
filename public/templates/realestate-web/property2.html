@@ -1,0 +1,1515 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="styles/styles.css" />
+      <title>Property Details V2 - Homelist</title>
+   </head>
+   <body>
+      <!-- Navbar started -->
+      <header
+         class="sticky left-0 top-0 z-50 flex h-nav-2 items-center bg-white shadow-sm"
+      >
+         <nav class="container flex items-center justify-between px-3 2xl:px-0">
+            <div>
+               <a href="index.html">
+                  <img
+                     src="assets/images/logo.png"
+                     alt="Homelist"
+                     class="shrink-0"
+                  />
+               </a>
+            </div>
+
+            <div class="flex items-center gap-x-6 text-nature-500">
+               <menu
+                  class="mr-2.5 hidden items-center gap-x-3 text-sm font-semibold hover:*:text-primary hover:*:duration-300 md:flex lg:gap-x-5 lg:text-[17px] xl:space-x-6"
+               >
+                  <li
+                     role="button"
+                     id="homesDropdownButton"
+                     data-dropdown-toggle="homes-dropdown-hover"
+                     data-dropdown-trigger="hover"
+                  >
+                     <a class="group relative" role="button" href="index.html"
+                        >Home
+                        <i
+                           class="fa-solid fa-chevron-down text-sm font-normal"
+                        ></i>
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div>
+                     </a>
+                  </li>
+
+                  <div
+                     id="homes-dropdown-hover"
+                     class="z-10 hidden w-60 rounded-xl bg-white shadow"
+                  >
+                     <menu
+                        aria-labelledby="homesDropdownButton"
+                        class="w-full p-2.5 font-semibold text-gray-700 *:px-5 *:py-2.5"
+                     >
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index.html"
+                              >Homepage 1</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index2.html"
+                              >Homepage 2</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index3.html"
+                              >Homepage 3</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index4.html"
+                              >Homepage 4</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index5.html"
+                              >Homepage 5</a
+                           >
+                        </li>
+                     </menu>
+                  </div>
+                  <li
+                     role="button"
+                     id="propertiesDropdownButton"
+                     data-dropdown-toggle="properties-dropdown-hover"
+                     data-dropdown-trigger="hover"
+                  >
+                     <a class="group relative" href="index.html"
+                        >Properties
+                        <i
+                           class="fa-solid fa-chevron-down text-sm font-normal"
+                        ></i>
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div>
+                     </a>
+                  </li>
+
+                  <div
+                     id="properties-dropdown-hover"
+                     class="z-10 hidden w-60 rounded-xl bg-white shadow"
+                  >
+                     <menu
+                        aria-labelledby="propertiesDropdownButton"
+                        class="w-full p-2.5 font-semibold text-gray-700 *:px-5 *:py-2.5"
+                     >
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="properties.html"
+                              >Property List</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="property.html"
+                              >Property Details</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="property2.html"
+                              >Property Details V2</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-1.html"
+                              >Map View 1</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-2.html"
+                              >Map View 2</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-3.html"
+                              >Map View 3</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-4.html"
+                              >Map View 4</a
+                           >
+                        </li>
+                     </menu>
+                  </div>
+                  <li>
+                     <a class="group relative" href="blogs.html"
+                        >Blogs
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div
+                     ></a>
+                  </li>
+                  <li
+                     role="button"
+                     id="pagesDropdownButton"
+                     data-dropdown-toggle="pages-dropdown-hover"
+                     data-dropdown-trigger="hover"
+                  >
+                     <a class="group relative" href="index.html"
+                        >Pages
+                        <i
+                           class="fa-solid fa-chevron-down text-sm font-normal"
+                        ></i>
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div>
+                     </a>
+                  </li>
+
+                  <div
+                     id="pages-dropdown-hover"
+                     class="z-10 hidden w-60 rounded-xl bg-white shadow"
+                  >
+                     <menu
+                        aria-labelledby="pagesDropdownButton"
+                        class="w-full p-2.5 font-semibold text-gray-700 *:px-5 *:py-2.5"
+                     >
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="blogs.html"
+                              >Blog List</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="blog.html"
+                              >Blog Details</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="property2.html"
+                              >FAQs</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-1.html"
+                              >Project List</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-2.html"
+                              >Project Details</a
+                           >
+                        </li>
+                     </menu>
+                  </div>
+                  <li>
+                     <a class="group relative" href="contact.html"
+                        >Contacts
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div
+                     ></a>
+                  </li>
+               </menu>
+               <button
+                  data-modal-target="search-modal"
+                  data-modal-toggle="search-modal"
+                  type="button"
+                  class="transition duration-300 hover:text-primary"
+               >
+                  <i
+                     class="fa-solid fa-magnifying-glass text-xl text-nature-600 duration-300 hover:text-primary"
+                  ></i>
+               </button>
+               <button
+                  class="hidden size-[60px] bg-primary text-white md:block"
+                  type="button"
+                  data-drawer-target="drawer-right-example"
+                  data-drawer-show="drawer-right-example"
+                  data-drawer-placement="right"
+                  aria-controls="drawer-right-example"
+               >
+                  <i class="fa-solid fa-lines-leaning text-2xl"></i>
+               </button>
+               <button
+                  class="md:hidden"
+                  type="button"
+                  data-drawer-target="responsive-menu"
+                  data-drawer-show="responsive-menu"
+                  aria-controls="responsive-menu"
+               >
+                  <svg
+                     class="size-6"
+                     stroke="currentColor"
+                     fill="currentColor"
+                     stroke-width="0"
+                     viewBox="0 0 24 24"
+                     height="200px"
+                     width="200px"
+                     xmlns="http://www.w3.org/2000/svg"
+                  >
+                     <path fill="none" d="M0 0h24v24H0V0z"></path>
+                     <path
+                        d="M3 18h13v-2H3v2zm0-5h10v-2H3v2zm0-7v2h13V6H3zm18 9.59L17.42 12 21 8.41 19.59 7l-5 5 5 5L21 15.59z"
+                     ></path>
+                  </svg>
+               </button>
+            </div>
+         </nav>
+      </header>
+      <!-- Navbar ended -->
+
+      <!-- Details Started -->
+      <section class="bg-primary-10">
+         <div
+            class="h-auto w-full bg-cover bg-center bg-no-repeat"
+            style="background-image: url(&quot;assets/images/layer.svg&quot;)"
+         >
+            <div
+               class="container flex h-[225px] flex-col items-center justify-center sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] 2xl:h-[450px]"
+            >
+               <h1 class="common-hero-heading">Property Details</h1>
+
+               <div class="flex" aria-label="Breadcrumb">
+                  <ol class="inline-flex items-center space-x-1 md:space-x-2">
+                     <li class="inline-flex items-center">
+                        <a
+                           href="#"
+                           class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white"
+                        >
+                           <i class="fa-solid fa-house me-2.5 h-3 w-3"></i>
+                           Home
+                        </a>
+                     </li>
+
+                     <li>
+                        <div class="flex items-center">
+                           <i
+                              class="fa-solid fa-chevron-right mx-1 h-3 w-3 text-gray-400"
+                           ></i>
+                           <a
+                              href="properties.html"
+                              class="ms-1 text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white md:ms-2"
+                              >Properties</a
+                           >
+                        </div>
+                     </li>
+
+                     <li aria-current="page">
+                        <div class="flex items-center">
+                           <i
+                              class="fa-solid fa-chevron-right mx-1 h-3 w-3 text-gray-400"
+                           ></i>
+                           <span
+                              class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400 md:ms-2"
+                              >Property Details</span
+                           >
+                        </div>
+                     </li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Details Ended -->
+
+      <!-- Content Started -->
+      <section
+         class="section-padding-120 gap-30 container grid gap-y-5 px-4 lg:grid-cols-3 xl:px-0"
+      >
+         <div class="lg:col-span-2">
+            <!-- img -->
+            <div class="mb-30 relative w-full">
+               <img
+                  src="assets/images/image-65.png"
+                  alt="Property"
+                  class="h-auto max-h-[375px] w-full rounded-[20px] object-cover object-center"
+               />
+
+               <button
+                  class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-shadow10"
+               >
+                  <i
+                     class="fa-solid fa-circle-play text-[80px] text-secondary"
+                  ></i>
+               </button>
+            </div>
+
+            <h4 class="description-h3 !mb-2.5">Preview</h4>
+
+            <hr class="bg-new-200" />
+
+            <!-- Cards -->
+            <div
+               class="gap-30 mb-30 mt-6 grid w-full grid-cols-2 md:mt-8 lg:mt-10 lg:grid-cols-3"
+            >
+               <!-- card 1 -->
+               <div class="pd-reviews-card">
+                  <div class="pd-reviews-icon">
+                     <svg
+                        width="20"
+                        height="14"
+                        viewBox="0 0 20 14"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="size-10"
+                     >
+                        <path
+                           d="M19.375 10.4375H19.0625V7.9375C19.0621 7.60611 18.9302 7.28842 18.6959 7.0541C18.4616 6.81977 18.1439 6.68793 17.8125 6.6875V1.375C17.8121 1.04361 17.6802 0.725922 17.4459 0.491596C17.2116 0.25727 16.8939 0.125434 16.5625 0.125H3.4375C3.10611 0.125434 2.78842 0.25727 2.5541 0.491596C2.31977 0.725922 2.18793 1.04361 2.1875 1.375V6.6875C1.85611 6.68793 1.53842 6.81977 1.3041 7.0541C1.06977 7.28842 0.937934 7.60611 0.9375 7.9375V10.4375H0.625C0.54212 10.4375 0.462634 10.4704 0.404029 10.529C0.345424 10.5876 0.3125 10.6671 0.3125 10.75V12C0.3125 12.0829 0.345424 12.1624 0.404029 12.221C0.462634 12.2796 0.54212 12.3125 0.625 12.3125H0.9375V13.5625C0.9375 13.6454 0.970424 13.7249 1.02903 13.7835C1.08763 13.8421 1.16712 13.875 1.25 13.875H2.1875C2.25973 13.875 2.32973 13.85 2.38557 13.8042C2.44142 13.7584 2.47965 13.6947 2.49375 13.6238L2.75625 12.3125H17.2437L17.5063 13.6238C17.5204 13.6947 17.5586 13.7584 17.6144 13.8042C17.6703 13.85 17.7403 13.875 17.8125 13.875H18.75C18.8329 13.875 18.9124 13.8421 18.971 13.7835C19.0296 13.7249 19.0625 13.6454 19.0625 13.5625V12.3125H19.375C19.4579 12.3125 19.5374 12.2796 19.596 12.221C19.6546 12.1624 19.6875 12.0829 19.6875 12V10.75C19.6875 10.6671 19.6546 10.5876 19.596 10.529C19.5374 10.4704 19.4579 10.4375 19.375 10.4375ZM2.8125 1.375C2.81272 1.20931 2.87863 1.05046 2.9958 0.933298C3.11296 0.816135 3.27181 0.750217 3.4375 0.75H16.5625C16.7282 0.750217 16.887 0.816135 17.0042 0.933298C17.1214 1.05046 17.1873 1.20931 17.1875 1.375V6.6875H16.5625V5.4375C16.5621 5.10611 16.4302 4.78842 16.1959 4.5541C15.9616 4.31977 15.6439 4.18793 15.3125 4.1875H11.5625C11.2311 4.18793 10.9134 4.31977 10.6791 4.5541C10.4448 4.78842 10.3129 5.10611 10.3125 5.4375V6.6875H9.6875V5.4375C9.68707 5.10611 9.55523 4.78842 9.3209 4.5541C9.08658 4.31977 8.76889 4.18793 8.4375 4.1875H4.6875C4.35611 4.18793 4.03842 4.31977 3.8041 4.5541C3.56977 4.78842 3.43793 5.10611 3.4375 5.4375V6.6875H2.8125V1.375ZM15.9375 5.4375V6.6875H10.9375V5.4375C10.9377 5.27181 11.0036 5.11296 11.1208 4.9958C11.238 4.87863 11.3968 4.81272 11.5625 4.8125H15.3125C15.4782 4.81272 15.637 4.87863 15.7542 4.9958C15.8714 5.11296 15.9373 5.27181 15.9375 5.4375ZM9.0625 5.4375V6.6875H4.0625V5.4375C4.06272 5.27181 4.12863 5.11296 4.2458 4.9958C4.36296 4.87863 4.52181 4.81272 4.6875 4.8125H8.4375C8.60319 4.81272 8.76204 4.87863 8.8792 4.9958C8.99637 5.11296 9.06228 5.27181 9.0625 5.4375ZM1.5625 7.9375C1.56272 7.77181 1.62863 7.61296 1.7458 7.4958C1.86296 7.37863 2.02181 7.31272 2.1875 7.3125H17.8125C17.9782 7.31272 18.137 7.37863 18.2542 7.4958C18.3714 7.61296 18.4373 7.77181 18.4375 7.9375V10.4375H1.5625V7.9375ZM1.93125 13.25H1.5625V12.3125H2.11875L1.93125 13.25ZM18.4375 13.25H18.0688L17.8813 12.3125H18.4375V13.25ZM19.0625 11.6875H0.9375V11.0625H19.0625V11.6875Z"
+                        />
+                     </svg>
+                  </div>
+
+                  <div class="pd-reviews-body">
+                     <span>Room</span>
+                     <p>4 Rooms</p>
+                  </div>
+               </div>
+
+               <!-- card 2 -->
+               <div class="pd-reviews-card">
+                  <div class="pd-reviews-icon">
+                     <i class="fa-solid fa-bed text-4xl"></i>
+                  </div>
+
+                  <div class="pd-reviews-body">
+                     <span>Bed</span>
+                     <p>3 Beds</p>
+                  </div>
+               </div>
+
+               <!-- card 3 -->
+               <div class="pd-reviews-card">
+                  <div class="pd-reviews-icon">
+                     <svg
+                        width="40"
+                        height="39"
+                        viewBox="0 0 40 39"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                     >
+                        <path
+                           d="M1.3125 4.79975L4.90326 1.20898L8.49402 4.79975M34.41 30.7157L38.0007 34.3064L34.41 37.8972"
+                           stroke="#FF5C00"
+                           stroke-width="1.5612"
+                           stroke-miterlimit="10"
+                        />
+                        <path
+                           d="M4.90234 1.20898V34.3064H38"
+                           stroke="#FF5C00"
+                           stroke-width="1.5612"
+                           stroke-miterlimit="10"
+                        />
+                        <path
+                           d="M4.90234 9.32879H29.8816V34.308M4.90234 21.0617L16.6348 9.32879M29.8816 22.5752L18.1492 34.308M4.90234 29.8928L25.4663 9.32879M29.8816 13.7441L9.31765 34.308M31.4428 3.08398H36.1264V7.76759M36.1264 17.1348V10.89M36.1264 26.502V20.2572M12.7083 3.08398H18.9532M22.0756 3.08398H28.3204"
+                           stroke="#FF5C00"
+                           stroke-width="1.5612"
+                           stroke-miterlimit="10"
+                        />
+                     </svg>
+                  </div>
+
+                  <div class="pd-reviews-body">
+                     <span>Size</span>
+                     <p>1220 sqft</p>
+                  </div>
+               </div>
+
+               <!-- card 4 -->
+               <div class="pd-reviews-card">
+                  <div class="pd-reviews-icon">
+                     <svg
+                        width="45"
+                        height="40"
+                        viewBox="0 0 45 40"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                     >
+                        <path
+                           d="M36.25 22.3975V37.515H38.75V22.3975C37.9225 22.5365 37.0775 22.5365 36.25 22.3975ZM38.75 7.6025C37.9225 7.46357 37.0775 7.46357 36.25 7.6025V2.5H38.75V7.6025Z"
+                           fill="#FF5C00"
+                        />
+                        <path
+                           fill-rule="evenodd"
+                           clip-rule="evenodd"
+                           d="M37.5 17.5C38.163 17.5 38.7989 17.2366 39.2678 16.7678C39.7366 16.2989 40 15.663 40 15C40 14.337 39.7366 13.7011 39.2678 13.2322C38.7989 12.7634 38.163 12.5 37.5 12.5C36.837 12.5 36.2011 12.7634 35.7322 13.2322C35.2634 13.7011 35 14.337 35 15C35 15.663 35.2634 16.2989 35.7322 16.7678C36.2011 17.2366 36.837 17.5 37.5 17.5ZM42.5 15C42.5 16.3261 41.9732 17.5979 41.0355 18.5355C40.0979 19.4732 38.8261 20 37.5 20C36.1739 20 34.9021 19.4732 33.9645 18.5355C33.0268 17.5979 32.5 16.3261 32.5 15C32.5 13.6739 33.0268 12.4021 33.9645 11.4645C34.9021 10.5268 36.1739 10 37.5 10C38.8261 10 40.0979 10.5268 41.0355 11.4645C41.9732 12.4021 42.5 13.6739 42.5 15Z"
+                           fill="#FF5C00"
+                        />
+                        <path
+                           d="M21.25 32.3975V37.515H23.75V32.3975C22.9225 32.5365 22.0775 32.5365 21.25 32.3975ZM23.75 17.6025C22.9225 17.4635 22.0775 17.4635 21.25 17.6025V2.5H23.75V17.6025Z"
+                           fill="#FF5C00"
+                        />
+                        <path
+                           fill-rule="evenodd"
+                           clip-rule="evenodd"
+                           d="M22.5 27.5C23.163 27.5 23.7989 27.2366 24.2678 26.7678C24.7366 26.2989 25 25.663 25 25C25 24.337 24.7366 23.7011 24.2678 23.2322C23.7989 22.7634 23.163 22.5 22.5 22.5C21.837 22.5 21.2011 22.7634 20.7322 23.2322C20.2634 23.7011 20 24.337 20 25C20 25.663 20.2634 26.2989 20.7322 26.7678C21.2011 27.2366 21.837 27.5 22.5 27.5ZM27.5 25C27.5 26.3261 26.9732 27.5979 26.0355 28.5355C25.0979 29.4732 23.8261 30 22.5 30C21.1739 30 19.9021 29.4732 18.9645 28.5355C18.0268 27.5979 17.5 26.3261 17.5 25C17.5 23.6739 18.0268 22.4021 18.9645 21.4645C19.9021 20.5268 21.1739 20 22.5 20C23.8261 20 25.0979 20.5268 26.0355 21.4645C26.9732 22.4021 27.5 23.6739 27.5 25Z"
+                           fill="#FF5C00"
+                        />
+                        <path
+                           d="M6.25 22.3975V37.515H8.75V22.3975C7.92246 22.5365 7.07754 22.5365 6.25 22.3975ZM8.75 7.6025C7.92246 7.46357 7.07754 7.46357 6.25 7.6025V2.5H8.75V7.6025Z"
+                           fill="#FF5C00"
+                        />
+                        <path
+                           fill-rule="evenodd"
+                           clip-rule="evenodd"
+                           d="M7.5 17.5C8.16304 17.5 8.79893 17.2366 9.26777 16.7678C9.73661 16.2989 10 15.663 10 15C10 14.337 9.73661 13.7011 9.26777 13.2322C8.79893 12.7634 8.16304 12.5 7.5 12.5C6.83696 12.5 6.20107 12.7634 5.73223 13.2322C5.26339 13.7011 5 14.337 5 15C5 15.663 5.26339 16.2989 5.73223 16.7678C6.20107 17.2366 6.83696 17.5 7.5 17.5ZM12.5 15C12.5 16.3261 11.9732 17.5979 11.0355 18.5355C10.0979 19.4732 8.82608 20 7.5 20C6.17392 20 4.90215 19.4732 3.96447 18.5355C3.02678 17.5979 2.5 16.3261 2.5 15C2.5 13.6739 3.02678 12.4021 3.96447 11.4645C4.90215 10.5268 6.17392 10 7.5 10C8.82608 10 10.0979 10.5268 11.0355 11.4645C11.9732 12.4021 12.5 13.6739 12.5 15Z"
+                           fill="#FF5C00"
+                        />
+                     </svg>
+                  </div>
+
+                  <div class="pd-reviews-body">
+                     <span>Property Type</span>
+                     <p>Apartment</p>
+                  </div>
+               </div>
+
+               <!-- card 5 -->
+               <div class="pd-reviews-card">
+                  <div class="pd-reviews-icon">
+                     <svg
+                        width="34"
+                        height="34"
+                        viewBox="0 0 34 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                     >
+                        <path
+                           d="M32.9875 9.65765L17.2836 0.147669C17.1965 0.0945226 17.0964 0.0664062 16.9943 0.0664062C16.8923 0.0664063 16.7922 0.0945226 16.7051 0.147669L1.0113 9.65765C0.930773 9.70876 0.865032 9.78007 0.820623 9.86449C0.776214 9.9489 0.754685 10.0435 0.758179 10.1388V33.3677C0.758179 33.6784 0.977765 33.9436 1.28841 33.9436H4.63718C4.78651 33.9401 4.92834 33.8775 5.03158 33.7695C5.13481 33.6616 5.19102 33.5171 5.18787 33.3677V17.4201H28.8129V33.3677C28.8097 33.5171 28.8659 33.6616 28.9692 33.7695C29.0724 33.8775 29.2142 33.9401 29.3636 33.9436H32.7123C33.023 33.9436 33.2426 33.6784 33.2426 33.3677V10.1389C33.2457 10.0434 33.2238 9.94877 33.1791 9.86434C33.1343 9.77991 33.0683 9.70865 32.9875 9.65765ZM5.18787 16.2951V14.0451H28.8129V16.2951H5.18787ZM32.1176 32.8186H29.9379V13.4878C29.9354 13.3368 29.8739 13.1929 29.7665 13.0868C29.6592 12.9807 29.5145 12.9208 29.3636 12.9201H4.63718C4.48623 12.9208 4.34156 12.9807 4.2342 13.0868C4.12684 13.1929 4.06533 13.3368 4.06287 13.4878V32.8186H1.88318V10.456L17.0004 1.28638L32.1176 10.456V32.8186Z"
+                           fill="#FF5C00"
+                        />
+                        <path
+                           d="M25.7378 23.7404L24.2512 19.7173C24.1169 19.3552 23.8758 19.0425 23.5597 18.8205C23.2437 18.5986 22.8676 18.478 22.4815 18.4746H11.7838C11.3976 18.478 11.0216 18.5987 10.7055 18.8206C10.3895 19.0425 10.1483 19.3552 10.014 19.7173L8.54812 23.679L7.97057 24.2238C7.6919 24.4638 7.46853 24.7613 7.31584 25.0959C7.16314 25.4305 7.08475 25.7942 7.08604 26.1619V33.3675C7.08319 33.517 7.13968 33.6615 7.24314 33.7694C7.3466 33.8773 7.4886 33.9399 7.63806 33.9434H11.3917C11.4654 33.9415 11.538 33.9251 11.6053 33.8952C11.6727 33.8652 11.7335 33.8222 11.7842 33.7687C11.8349 33.7153 11.8746 33.6523 11.9009 33.5834C11.9272 33.5146 11.9397 33.4412 11.9376 33.3675V31.3418H22.0626V33.3675C22.0605 33.4412 22.073 33.5146 22.0993 33.5834C22.1256 33.6523 22.1653 33.7153 22.216 33.7687C22.2667 33.8222 22.3275 33.8652 22.3949 33.8952C22.4622 33.9251 22.5348 33.9415 22.6085 33.9434H26.3621C26.5116 33.9399 26.6536 33.8773 26.7571 33.7694C26.8605 33.6615 26.917 33.517 26.9142 33.3675V26.0102C26.9145 25.6666 26.8456 25.3265 26.7115 25.0102C26.5774 24.6939 26.3809 24.4078 26.1337 24.1692L25.7378 23.7404ZM11.0689 20.1199C11.1223 19.9716 11.219 19.8427 11.3464 19.75C11.4739 19.6572 11.6262 19.6048 11.7838 19.5996H22.4815C22.639 19.6048 22.7914 19.6572 22.9188 19.75C23.0462 19.8427 23.1429 19.9716 23.1963 20.1199L24.4278 23.4668H9.83737L11.0689 20.1199ZM10.8126 32.8184H8.21104V31.3418H10.8126V32.8184ZM23.1876 32.8184V31.3418H25.7892V32.8184H23.1876ZM25.7892 30.2168H8.21104V26.1619C8.20991 25.9555 8.25386 25.7514 8.33983 25.5637C8.42581 25.3761 8.55172 25.2095 8.70878 25.0755C8.71525 25.0701 8.71898 25.0763 8.72524 25.0705L9.25026 24.5918H24.9714L25.3287 24.9616C25.3366 24.9701 25.3395 24.9724 25.348 24.9803C25.4879 25.1128 25.5992 25.2725 25.6751 25.4497C25.7509 25.6268 25.7898 25.8175 25.7892 26.0102V30.2168Z"
+                           fill="#FF5C00"
+                        />
+                        <path
+                           d="M10.9885 25.9277H10.6641C10.2258 25.9277 9.80555 26.1018 9.49568 26.4117C9.1858 26.7216 9.01172 27.1418 9.01172 27.5801C9.01172 28.0183 9.1858 28.4386 9.49568 28.7485C9.80555 29.0583 10.2258 29.2324 10.6641 29.2324H10.9885C11.4267 29.2324 11.847 29.0583 12.1569 28.7485C12.4667 28.4386 12.6408 28.0183 12.6408 27.5801C12.6408 27.1418 12.4667 26.7216 12.1569 26.4117C11.847 26.1018 11.4267 25.9277 10.9885 25.9277ZM10.9885 28.1074H10.6641C10.5242 28.1074 10.3901 28.0519 10.2912 27.953C10.1923 27.8541 10.1367 27.7199 10.1367 27.5801C10.1367 27.4402 10.1923 27.3061 10.2912 27.2072C10.3901 27.1083 10.5242 27.0527 10.6641 27.0527H10.9885C11.1283 27.0527 11.2625 27.1083 11.3614 27.2072C11.4603 27.3061 11.5158 27.4402 11.5158 27.5801C11.5158 27.7199 11.4603 27.8541 11.3614 27.953C11.2625 28.0519 11.1283 28.1074 10.9885 28.1074ZM23.3382 25.9277H23.0138C22.5755 25.9277 22.1552 26.1018 21.8454 26.4117C21.5355 26.7216 21.3614 27.1418 21.3614 27.5801C21.3614 28.0183 21.5355 28.4386 21.8454 28.7485C22.1552 29.0583 22.5755 29.2324 23.0138 29.2324H23.3382C23.7764 29.2324 24.1967 29.0583 24.5066 28.7485C24.8164 28.4386 24.9905 28.0183 24.9905 27.5801C24.9905 27.1418 24.8164 26.7216 24.5066 26.4117C24.1967 26.1018 23.7764 25.9277 23.3382 25.9277ZM23.3382 28.1074H23.0138C22.8739 28.1074 22.7398 28.0519 22.6409 27.953C22.542 27.8541 22.4864 27.7199 22.4864 27.5801C22.4864 27.4402 22.542 27.3061 22.6409 27.2072C22.7398 27.1083 22.8739 27.0527 23.0138 27.0527H23.3382C23.478 27.0527 23.6122 27.1083 23.7111 27.2072C23.81 27.3061 23.8655 27.4402 23.8655 27.5801C23.8655 27.7199 23.81 27.8541 23.7111 27.953C23.6122 28.0519 23.478 28.1074 23.3382 28.1074ZM20.3761 26.5605C20.3761 26.4114 20.3169 26.2683 20.2114 26.1628C20.1059 26.0573 19.9628 25.998 19.8136 25.998H14.1183C13.9691 25.998 13.826 26.0573 13.7206 26.1628C13.6151 26.2683 13.5558 26.4114 13.5558 26.5605V28.6699C13.5558 28.8191 13.6151 28.9622 13.7206 29.0677C13.826 29.1732 13.9691 29.2324 14.1183 29.2324H19.8136C19.9628 29.2324 20.1059 29.1732 20.2114 29.0677C20.3169 28.9622 20.3761 28.8191 20.3761 28.6699V26.5605ZM19.3214 28.1074H14.6808V27.123H19.3214V28.1074Z"
+                           fill="#FF5C00"
+                        />
+                     </svg>
+                  </div>
+
+                  <div class="pd-reviews-body">
+                     <span>Room</span>
+                     <p>3 Space</p>
+                  </div>
+               </div>
+
+               <!-- card 5 -->
+               <div class="pd-reviews-card">
+                  <div class="pd-reviews-icon">
+                     <i class="fa-solid fa-bath text-4xl"></i>
+                  </div>
+
+                  <div class="pd-reviews-body">
+                     <span>Room</span>
+                     <p>3 Space</p>
+                  </div>
+               </div>
+            </div>
+
+            <h4 class="description-h3 !mb-2.5">Address</h4>
+
+            <hr class="bg-new-200" />
+
+            <!-- Map Started -->
+            <section class="mt-30 h-[375px] w-full">
+               <iframe
+                  class="h-full w-full rounded-[20px] border-0"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.313765530434!2d90.3867355758999!3d23.878490083845758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5b5ce15ad37%3A0xa67f5f221da6908e!2z4Kao4KeH4Kau4Ka44KeN4Kaq4KeH4Ka4IOCmh-Cmnw!5e0!3m2!1sbn!2sbd!4v1726651672329!5m2!1sbn!2sbd"
+                  allowfullscreen="true"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+               ></iframe>
+            </section>
+            <!-- Map Ended -->
+         </div>
+         <!-- sidebar -->
+         <div class="gap-30 flex w-full flex-col">
+            <div class="p-30 rounded-[20px] shadow-shadow10">
+               <h4
+                  class="text-base font-bold text-new-900 md:text-lg lg:text-xl lg:font-medium xl:text-2xl"
+               >
+                  Search Here
+               </h4>
+               <hr class="my-3 bg-new-200 md:my-3.5 lg:my-4 xl:my-5" />
+
+               <form class="mx-auto max-w-md">
+                  <label
+                     for="default-search"
+                     class="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                     >Search</label
+                  >
+                  <div class="relative">
+                     <div
+                        class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3"
+                     >
+                        <svg
+                           class="h-4 w-4 text-gray-500 dark:text-gray-400"
+                           aria-hidden="true"
+                           xmlns="http://www.w3.org/2000/svg"
+                           fill="none"
+                           viewBox="0 0 20 20"
+                        >
+                           <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                           />
+                        </svg>
+                     </div>
+                     <input
+                        type="search"
+                        id="default-search"
+                        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 ps-10 text-sm text-gray-900 focus:border-primary focus:ring-primary"
+                        placeholder="Search..."
+                        required
+                     />
+                     <button
+                        type="submit"
+                        class="absolute bottom-2.5 end-2.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                     >
+                        Search
+                     </button>
+                  </div>
+               </form>
+            </div>
+
+            <div class="p-30 rounded-[20px] shadow-shadow10">
+               <h4
+                  class="text-base font-bold text-new-900 md:text-lg lg:text-xl lg:font-medium xl:text-2xl"
+               >
+                  Category
+               </h4>
+               <hr class="my-3 bg-new-200 md:my-3.5 lg:my-4 xl:my-5" />
+
+               <ol
+                  class="space-y-5 font-poppins text-sm font-medium text-new-900 md:text-base lg:text-lg"
+               >
+                  <li>Modern Luxury Living</li>
+                  <li>Pro Home Finders</li>
+                  <li>Free Service</li>
+                  <li>Rent Home</li>
+                  <li>Home Awaits</li>
+                  <li>Forever Home</li>
+               </ol>
+            </div>
+
+            <div class="p-30 rounded-[20px] shadow-shadow10">
+               <h4
+                  class="text-base font-bold text-new-900 md:text-lg lg:text-xl lg:font-medium xl:text-2xl"
+               >
+                  Popular Posts
+               </h4>
+
+               <div class="mt-4 w-full space-y-5 md:mt-5 lg:mt-6 xl:mt-7">
+                  <!-- Card 1 -->
+                  <div class="flex gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4">
+                     <div class="size-fit">
+                        <div class="size-20">
+                           <img
+                              src="assets/images/image-72.png"
+                              alt="Property"
+                              class="size-20 rounded-[20px] object-cover object-center"
+                           />
+                        </div>
+                     </div>
+                     <div>
+                        <p class="font-poppins text-xs text-new-800">
+                           <i
+                              class="fa-regular fa-calendar-days text-secondary"
+                           ></i>
+                           October 19, 2022
+                        </p>
+                        <a
+                           href="#"
+                           class="mt-1.5 text-base font-bold text-new-900 md:text-lg lg:text-xl"
+                        >
+                           A picture is worth standard us return
+                        </a>
+                     </div>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div class="flex gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4">
+                     <div class="size-fit">
+                        <div class="size-20">
+                           <img
+                              src="assets/images/image-73.png"
+                              alt="Property"
+                              class="size-20 rounded-[20px] object-cover object-center"
+                           />
+                        </div>
+                     </div>
+                     <div>
+                        <p class="font-poppins text-xs text-new-800">
+                           <i
+                              class="fa-regular fa-calendar-days text-secondary"
+                           ></i>
+                           October 19, 2022
+                        </p>
+                        <a
+                           href="#"
+                           class="mt-1.5 text-base font-bold text-new-900 md:text-lg lg:text-xl"
+                        >
+                           Your journ homeowner ship starts here
+                        </a>
+                     </div>
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="flex gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4">
+                     <div class="size-fit">
+                        <div class="size-20">
+                           <img
+                              src="assets/images/image-74.png"
+                              alt="Property"
+                              class="size-20 rounded-[20px] object-cover object-center"
+                           />
+                        </div>
+                     </div>
+                     <div>
+                        <p class="font-poppins text-xs text-new-800">
+                           <i
+                              class="fa-regular fa-calendar-days text-secondary"
+                           ></i>
+                           October 19, 2022
+                        </p>
+                        <a
+                           href="#"
+                           class="mt-1.5 text-base font-bold text-new-900 md:text-lg lg:text-xl"
+                        >
+                           Trust us to guide you the a through the process
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="p-30 rounded-[20px] shadow-shadow10">
+               <h4
+                  class="text-base font-bold text-new-900 md:text-lg lg:text-xl lg:font-medium xl:text-2xl"
+               >
+                  Popular Tags
+               </h4>
+
+               <div class="mt-4 flex flex-wrap gap-2.5 md:mt-5 lg:mt-6 xl:mt-7">
+                  <a href="#" class="tag">Swift Cargo</a>
+                  <a href="#" class="tag">Global</a>
+                  <a href="#" class="tag">Nexus</a>
+                  <a href="#" class="tag">Freight</a>
+                  <a href="#" class="tag">Elite Trans</a>
+                  <a href="#" class="tag">Precision</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Content Ended -->
+
+      <!-- Footer Start -->
+      <footer class="w-full bg-new-100">
+         <div
+            class="w-full rounded-t-3xl bg-nature-600 text-white md:rounded-t-[40px] lg:rounded-t-[60px] xl:rounded-t-[80px] 2xl:rounded-t-[110px]"
+         >
+            <div
+               class="container px-5 py-6 md:py-10 lg:py-14 xl:px-0 xl:py-20 2xl:py-[100px]"
+            >
+               <div
+                  class="flex flex-col gap-y-5 md:flex-row md:items-center md:justify-between"
+               >
+                  <h2
+                     class="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl xl:leading-[64px]"
+                  >
+                     Your home is as important to us <br />
+                     as our own
+                  </h2>
+                  <form class="max-w-[366px]">
+                     <div class="flex items-center gap-0">
+                        <input
+                           type="email"
+                           placeholder="Your email address"
+                           class="rounded-l-md rounded-r-none px-[20px] py-[17px] text-nature-600 placeholder:font-poppins placeholder:text-sm placeholder:text-nature-200"
+                        />
+                        <button
+                           type="submit"
+                           class="rounded-l-none rounded-r-md bg-primary px-[23px] py-[17px]"
+                        >
+                           <i
+                              class="fa-solid fa-magnifying-glass text-[22px]"
+                           ></i>
+                        </button>
+                     </div>
+                  </form>
+               </div>
+
+               <hr
+                  class="my-6 h-px !bg-nature-500 md:my-8 lg:my-12 xl:my-[60px]"
+               />
+
+               <div class="grid w-full grid-cols-2 gap-y-5 md:grid-cols-4">
+                  <div>
+                     <h5
+                        class="mb-2.5 text-lg font-bold md:mb-3.5 md:text-xl lg:mb-5 lg:text-2xl xl:mb-7 xl:text-3xl"
+                     >
+                        About Us
+                     </h5>
+                     <ul
+                        class="grid gap-2 font-poppins text-sm text-new-200 md:gap-3 md:text-base lg:gap-4"
+                     >
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Press</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Resources and Policies</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Careers</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Content Integrity</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Investor Relations</a>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div>
+                     <h5
+                        class="mb-2.5 text-lg font-bold md:mb-3.5 md:text-xl lg:mb-5 lg:text-2xl xl:mb-7 xl:text-3xl"
+                     >
+                        Tour by Categories
+                     </h5>
+                     <ul
+                        class="grid gap-2 font-poppins text-sm text-new-200 md:gap-3 md:text-base lg:gap-4"
+                     >
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Outdoor Activities</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">City Tours </a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Cultural & Thematic Tours</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Indulgence & Luxury Tours</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Family Friendly Tours</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Relaxation Tours</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h5
+                        class="mb-2.5 text-lg font-bold md:mb-3.5 md:text-xl lg:mb-5 lg:text-2xl xl:mb-7 xl:text-3xl"
+                     >
+                        Tripadvisor Sites
+                     </h5>
+                     <ul
+                        class="grid gap-2 font-poppins text-sm text-new-200 md:gap-3 md:text-base lg:gap-4"
+                     >
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Jetsetter</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Cruise Critic</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Seat Guru</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Holiday Lettings</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Vacation Home</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Rentals</a>
+                        </li>
+                        <li class="transition-all hover:text-white">
+                           <a href="#">Reco Trip Designers</a>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div>
+                     <h5
+                        class="mb-2.5 text-lg font-bold md:mb-3.5 md:text-xl lg:mb-5 lg:text-2xl xl:mb-7 xl:text-3xl"
+                     >
+                        Get in touch
+                     </h5>
+
+                     <p class="font-poppins text-lg text-new-200 md:text-base">
+                        Intrigued such's narrow cloud <br />
+                        set upon can my sleeping <br />
+                        could't alarm.
+                     </p>
+
+                     <div
+                        class="mt-[30px] flex gap-x-3 *:flex *:size-10 *:items-center *:justify-center *:rounded-full *:border *:border-nature-400 *:text-xl *:text-white"
+                     >
+                        <a
+                           href="#"
+                           class="transition-all hover:bg-white hover:text-[#1877F2]"
+                        >
+                           <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a
+                           href="#"
+                           class="transition-all hover:bg-white hover:text-[#131418]"
+                        >
+                           <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a
+                           href="#"
+                           class="transition-all hover:bg-white hover:text-[#0A66C2]"
+                        >
+                           <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a
+                           href="#"
+                           class="transition-all hover:bg-white hover:text-[#E4405F]"
+                        >
+                           <i class="fa-brands fa-instagram"></i>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+
+               <hr
+                  class="my-6 h-px !bg-nature-500 md:my-8 lg:my-12 xl:my-[60px]"
+               />
+
+               <p
+                  class="text-center font-poppins text-sm tracking-tight text-primary-10 md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"
+               >
+                  Copyright &copy;2024 Homelist, All right reserved.
+               </p>
+            </div>
+         </div>
+      </footer>
+      <!-- Footer End -->
+
+      <!-- NOTE: splitted content -->
+      <!-- drawer component -->
+      <div
+         id="drawer-right-example"
+         class="fixed right-0 top-0 z-[60] h-screen w-96 translate-x-full overflow-y-auto border-l bg-white p-10 transition-transform"
+         tabindex="-1"
+         aria-labelledby="drawer-right-label"
+      >
+         <a href="index.html">
+            <img src="assets/images/logo.png" alt="Homelist" />
+         </a>
+         <button
+            type="button"
+            data-drawer-hide="drawer-right-example"
+            aria-controls="drawer-right-example"
+            class="group absolute right-10 top-10 inline-flex size-[38px] items-center justify-center rounded-full bg-rose-100 text-sm text-rose-600"
+         >
+            <svg
+               class="size-3.5 transition-transform duration-500 ease-in-out group-hover:rotate-180"
+               aria-hidden="true"
+               xmlns="http://www.w3.org/2000/svg"
+               fill="none"
+               viewBox="0 0 14 14"
+            >
+               <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+               />
+            </svg>
+            <span class="sr-only">Close menu</span>
+         </button>
+
+         <div class="mt-8">
+            <article
+               class="prose prose-ul:m-0 prose-ul:list-none prose-ul:space-y-2.5 prose-ul:pl-0 prose-li:pl-0"
+            >
+               <h3>About Us</h3>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corporis quos illo odio incidunt optio sunt impedit! Quis
+                  nesciunt, expedita doloribus temporibus eos, eum corporis amet
+                  voluptatem sapiente consectetur exercitationem doloremque?
+               </p>
+               <h3>Contact Info</h3>
+               <div>
+                  <ul>
+                     <li>
+                        <h4 class="m-0 font-semibold">Email</h4>
+                        <div class="flex items-center gap-x-1.5">
+                           <span
+                              class="inline-flex size-8 items-center justify-center rounded-md bg-primary-50 text-primary"
+                           >
+                              <i class="fa-solid fa-envelope text-primary"></i>
+                           </span>
+                           <span class="text-base leading-none text-slate-500"
+                              >support@homelist.com</span
+                           >
+                        </div>
+                     </li>
+                     <li>
+                        <h4 class="m-0 font-semibold">Phone</h4>
+                        <div class="flex items-center gap-x-1.5">
+                           <span
+                              class="inline-flex size-8 items-center justify-center rounded-md bg-primary-50 text-primary"
+                           >
+                              <i class="fa-solid fa-phone text-primary"></i>
+                           </span>
+                           <span class="text-base text-slate-500"
+                              >+880 131 245 6340</span
+                           >
+                        </div>
+                     </li>
+                     <li>
+                        <h4 class="m-0 font-semibold">Address</h4>
+                        <div class="flex items-center gap-x-1.5">
+                           <span
+                              class="inline-flex size-8 items-center justify-center rounded-md bg-primary-50 text-primary"
+                           >
+                              <i
+                                 class="fa-solid fa-map-marker-alt text-primary"
+                              ></i>
+                           </span>
+                           <span class="text-base text-slate-500"
+                              >1234, Street, City, USA.</span
+                           >
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+
+               <div class="mt-8">
+                  <h3>Follow Us</h3>
+                  <menu class="flex items-center gap-x-2.5">
+                     <li>
+                        <a
+                           href="#"
+                           class="group flex size-10 items-center justify-center rounded-full bg-primary-50"
+                        >
+                           <i
+                              class="fa-brands fa-facebook text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"
+                           ></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a
+                           href="#"
+                           class="group flex size-10 items-center justify-center rounded-full bg-primary-50"
+                        >
+                           <i
+                              class="fa-brands fa-twitter text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"
+                           ></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a
+                           href="#"
+                           class="group flex size-10 items-center justify-center rounded-full bg-primary-50"
+                        >
+                           <i
+                              class="fa-brands fa-instagram text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"
+                           ></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a
+                           href="#"
+                           class="group flex size-10 items-center justify-center rounded-full bg-primary-50"
+                        >
+                           <i
+                              class="fa-brands fa-linkedin text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"
+                           ></i>
+                        </a>
+                     </li>
+                  </menu>
+               </div>
+            </article>
+         </div>
+      </div>
+
+      <!-- search modal -->
+      <div
+         id="search-modal"
+         data-modal-backdrop="static"
+         tabindex="-1"
+         aria-hidden="true"
+         class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0"
+      >
+         <div
+            class="flex max-h-full w-full max-w-screen-md flex-col items-center justify-center p-4"
+         >
+            <button
+               data-modal-hide="search-modal"
+               class="group flex size-8 items-center justify-center rounded-full bg-rose-100 text-xl text-rose-600"
+            >
+               <i
+                  class="fa-solid fa-times transition-transform duration-500 group-hover:rotate-180"
+               ></i>
+            </button>
+
+            <form class="mx-auto mt-16 w-full">
+               <label
+                  for="default-search"
+                  class="sr-only mb-2 text-sm font-medium text-gray-900"
+                  >Search</label
+               >
+               <div class="relative">
+                  <div
+                     class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3"
+                  >
+                     <svg
+                        class="h-4 w-4 text-gray-500"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                        />
+                     </svg>
+                  </div>
+                  <input
+                     type="search"
+                     id="default-search"
+                     class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 ps-10 text-sm text-gray-900 focus:border-primary focus:ring-primary"
+                     placeholder="Search for Properties..."
+                     required
+                  />
+                  <button
+                     type="submit"
+                     class="absolute bottom-2.5 end-2.5 rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary focus:outline-none focus:ring-4 focus:ring-blue-300"
+                  >
+                     Search
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+      <!-- splitd content end -->
+
+      <!-- responsive menu content started -->
+      <div
+         id="responsive-menu"
+         tabindex="-1"
+         aria-labelledby="responsive-menu-label"
+         class="fixed left-0 top-0 z-[60] h-screen w-64 -translate-x-full overflow-y-auto border-r bg-white p-4 transition-transform"
+      >
+         <a href="#">
+            <img src="assets/images/logo.png" />
+         </a>
+         <button
+            type="button"
+            data-drawer-hide="responsive-menu"
+            aria-controls="responsive-menu"
+            class="absolute end-2.5 top-2.5 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+         >
+            <svg
+               class="h-3 w-3"
+               aria-hidden="true"
+               xmlns="http://www.w3.org/2000/svg"
+               fill="none"
+               viewBox="0 0 14 14"
+            >
+               <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+               />
+            </svg>
+            <span class="sr-only">Close menu</span>
+         </button>
+         <div class="overflow-y-auto py-4">
+            <ul class="space-y-2 font-medium">
+               <!-- homes -->
+               <li>
+                  <button
+                     type="button"
+                     class="group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                     aria-controls="dropdown-homes"
+                     data-collapse-toggle="dropdown-homes"
+                  >
+                     <i
+                        class="fa-solid fa-house h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap text-left"
+                        >Homes</span
+                     >
+                     <svg
+                        class="h-3 w-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 4 4 4-4"
+                        />
+                     </svg>
+                  </button>
+                  <ul id="dropdown-homes" class="hidden space-y-2 py-2">
+                     <li>
+                        <a
+                           href="index.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 1</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="index2.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 2</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="index3.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 3</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="index4.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 4</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="index5.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 5</a
+                        >
+                     </li>
+                  </ul>
+               </li>
+
+               <!-- property -->
+               <li>
+                  <button
+                     type="button"
+                     class="group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                     aria-controls="dropdown-property"
+                     data-collapse-toggle="dropdown-property"
+                  >
+                     <i
+                        class="fa-solid fa-umbrella-beach h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap text-left"
+                        >Property</span
+                     >
+                     <svg
+                        class="h-3 w-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 4 4 4-4"
+                        />
+                     </svg>
+                  </button>
+                  <ul id="dropdown-property" class="hidden space-y-2 py-2">
+                     <li>
+                        <a
+                           href="properties.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Properties</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="property.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Property Details</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="property2.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Property Details V2</a
+                        >
+                     </li>
+                  </ul>
+               </li>
+
+               <!-- project -->
+               <li>
+                  <button
+                     type="button"
+                     class="group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                     aria-controls="dropdown-project"
+                     data-collapse-toggle="dropdown-project"
+                  >
+                     <i
+                        class="fa-solid fa-diagram-project h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap text-left"
+                        >Project</span
+                     >
+                     <svg
+                        class="h-3 w-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 4 4 4-4"
+                        />
+                     </svg>
+                  </button>
+                  <ul id="dropdown-project" class="hidden space-y-2 py-2">
+                     <li>
+                        <a
+                           href="projects.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Projects</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="project.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Project Details</a
+                        >
+                     </li>
+                  </ul>
+               </li>
+
+               <!-- blog -->
+               <li>
+                  <button
+                     type="button"
+                     class="group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                     aria-controls="dropdown-blog"
+                     data-collapse-toggle="dropdown-blog"
+                  >
+                     <i
+                        class="fa-brands fa-microblog h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap text-left"
+                        >Blogs</span
+                     >
+                     <svg
+                        class="h-3 w-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 4 4 4-4"
+                        />
+                     </svg>
+                  </button>
+                  <ul id="dropdown-blog" class="hidden space-y-2 py-2">
+                     <li>
+                        <a
+                           href="blogs.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Blogs</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="blog.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Blog Details</a
+                        >
+                     </li>
+                  </ul>
+               </li>
+
+               <li>
+                  <a
+                     href="map-view-1.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-location-crosshairs h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap"
+                        >Map View 1</span
+                     >
+                  </a>
+               </li>
+
+               <li>
+                  <a
+                     href="map-view-2.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-location-crosshairs h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap"
+                        >Map View 2</span
+                     >
+                  </a>
+               </li>
+
+               <li>
+                  <a
+                     href="map-view-3.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-location-crosshairs h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap"
+                        >Map View 3</span
+                     >
+                  </a>
+               </li>
+
+               <li>
+                  <a
+                     href="faq.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-circle-question h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap">FAQs</span>
+                  </a>
+               </li>
+
+               <li>
+                  <a
+                     href="contact.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-paper-plane h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap">Contact</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- Splitted code ended -->
+
+      <!-- Scripts -->
+      <script src="js/fontawesome.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+      <script src="js/index.js"></script>
+   </body>
+</html>

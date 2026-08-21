@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" opacity="0.15">
+  <!-- Simple world map outline silhouette -->
+  <!-- North America -->
+  <path d="M80,80 L120,60 L160,65 L190,80 L200,110 L185,140 L160,160 L140,180 L120,200 L100,210 L80,200 L60,170 L55,140 L65,110 Z" fill="white" stroke="none"/>
+  <!-- South America -->
+  <path d="M130,220 L160,215 L175,230 L180,260 L175,290 L165,320 L145,340 L125,340 L110,320 L105,290 L110,260 L120,240 Z" fill="white" stroke="none"/>
+  <!-- Europe -->
+  <path d="M310,60 L340,55 L370,60 L385,75 L390,95 L375,110 L350,115 L325,110 L305,95 L305,75 Z" fill="white" stroke="none"/>
+  <!-- Africa -->
+  <path d="M310,125 L345,120 L370,130 L385,160 L390,200 L380,240 L360,270 L335,280 L310,270 L290,240 L285,200 L290,160 L300,140 Z" fill="white" stroke="none"/>
+  <!-- Asia -->
+  <path d="M395,50 L480,40 L560,50 L610,70 L630,100 L620,140 L580,160 L520,170 L460,160 L410,140 L390,110 L390,75 Z" fill="white" stroke="none"/>
+  <!-- Australia -->
+  <path d="M540,230 L590,220 L630,240 L650,270 L645,300 L620,315 L580,310 L545,290 L530,265 Z" fill="white" stroke="none"/>
+  <!-- Grid lines for map effect -->
+  <line x1="0" y1="200" x2="800" y2="200" stroke="white" stroke-width="0.5" stroke-dasharray="4,8"/>
+  <line x1="400" y1="0" x2="400" y2="400" stroke="white" stroke-width="0.5" stroke-dasharray="4,8"/>
+  <!-- Latitude lines -->
+  <line x1="0" y1="133" x2="800" y2="133" stroke="white" stroke-width="0.3" stroke-dasharray="2,10"/>
+  <line x1="0" y1="267" x2="800" y2="267" stroke="white" stroke-width="0.3" stroke-dasharray="2,10"/>
+  <!-- Longitude lines -->
+  <line x1="267" y1="0" x2="267" y2="400" stroke="white" stroke-width="0.3" stroke-dasharray="2,10"/>
+  <line x1="533" y1="0" x2="533" y2="400" stroke="white" stroke-width="0.3" stroke-dasharray="2,10"/>
+  <!-- Location pins -->
+  <circle cx="170" cy="90" r="4" fill="white"/>
+  <circle cx="340" cy="80" r="4" fill="white"/>
+  <circle cx="480" cy="80" r="4" fill="white"/>
+  <circle cx="590" cy="250" r="4" fill="white"/>
+</svg>

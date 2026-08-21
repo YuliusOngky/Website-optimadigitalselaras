@@ -1,0 +1,39 @@
+{%- if block.settings.image_1 != blank or block.settings.image_2 != blank  or block.settings.image_3 != blank  %}
+<ul class="sub-menu-lists mega-menu-coll-list dt-sc-column three-column">
+{%- if block.settings.image_1 != blank  -%}
+<li class="dt-sc-menu-image-with-text top-level-link">
+  <div class="dt-sc-mega_menu text-center">
+     <a {%- if block.settings.image_1_link != blank -%}href="{{ block.settings.image_1_link }}"{% else %} role="link"  aria-disabled="true"{% endif %}  class="dt-sc-mega_menu-link">    
+      {%- unless block.settings.image_1 == blank -%}
+      {{ block.settings.image_1 | image_url: width: 750 | image_tag }}
+      {%- endunless -%}  
+    </a>    
+  </div>
+</li>
+{%- endif -%}
+
+{%- if block.settings.image_2 != blank  -%}
+<li class="dt-sc-menu-image-with-text top-level-link">
+  <div class="dt-sc-mega_menu text-center">
+   <a {%- if block.settings.image_2_link != blank -%}href="{{ block.settings.image_2_link }}"{% else %} role="link"  aria-disabled="true"{% endif %}  class="dt-sc-mega_menu-link">    
+      {%- unless block.settings.image_2 == blank -%}
+      {{ block.settings.image_2 | image_url: width: 750 | image_tag }}
+      {%- endunless -%}  
+    </a>    
+  </div>
+</li>
+{%- endif -%}
+
+{%- if block.settings.image_3 != blank  -%}
+<li class="dt-sc-menu-image-with-text top-level-link">
+  <div class="dt-sc-mega_menu text-center">
+  <a {%- if block.settings.image_3_link != blank -%}href="{{ block.settings.image_3_link }}"{% else %} role="link"  aria-disabled="true"{% endif %}  class="dt-sc-mega_menu-link">    
+      {%- unless block.settings.image_3 == blank -%}
+      {{ block.settings.image_3 | image_url: width: 750 | image_tag }}
+      {%- endunless -%}  
+    </a>    
+  </div>
+</li>
+{%- endif -%}
+</ul>
+{%- endif -%}

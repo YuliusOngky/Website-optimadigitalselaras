@@ -200,7 +200,7 @@
     if ($("[data-bg-src]").length > 0) {
         $("[data-bg-src]").each(function () {
             var src = $(this).attr("data-bg-src");
-            $(this).css("background-image", "url(" + src + ")");
+            $(this).css("background-image", "url('" + src + "')");
             $(this).removeAttr("data-bg-src").addClass("background-image");
         });
     }
@@ -219,8 +219,8 @@
       $('[data-mask-src]').each(function () {
         var mask = $(this).attr('data-mask-src');
         $(this).css({
-          'mask-image': 'url(' + mask + ')',
-          '-webkit-mask-image': 'url(' + mask + ')'
+          'mask-image': "url('" + mask + "')",
+          '-webkit-mask-image': "url('" + mask + "')"
         });
         $(this).removeAttr('data-mask-src');
       });

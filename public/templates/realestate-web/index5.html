@@ -1,0 +1,2611 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="styles/swiper-bundle.min.css" />
+      <link href="styles/aos.css" rel="stylesheet" />
+      <link rel="stylesheet" href="styles/odometer-theme-default.css" />
+      <link rel="stylesheet" href="styles/styles.css" />
+      <title>Homelist - Beyond Logistics Delivering</title>
+   </head>
+   <body>
+      <!-- Navbar started -->
+      <header
+         class="sticky left-0 top-0 z-50 flex h-nav-2 items-center bg-white shadow-sm"
+      >
+         <nav class="container flex items-center justify-between px-3 2xl:px-0">
+            <div>
+               <a href="index.html">
+                  <img
+                     src="assets/images/logo.png"
+                     alt="Homelist"
+                     class="shrink-0"
+                  />
+               </a>
+            </div>
+
+            <div class="flex items-center gap-x-6 text-nature-500">
+               <menu
+                  class="mr-2.5 hidden items-center gap-x-3 text-sm font-semibold hover:*:text-primary hover:*:duration-300 md:flex lg:gap-x-5 lg:text-[17px] xl:space-x-6"
+               >
+                  <li
+                     role="button"
+                     id="homesDropdownButton"
+                     data-dropdown-toggle="homes-dropdown-hover"
+                     data-dropdown-trigger="hover"
+                  >
+                     <a class="group relative" role="button" href="index.html"
+                        >Home
+                        <i
+                           class="fa-solid fa-chevron-down text-sm font-normal"
+                        ></i>
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div>
+                     </a>
+                  </li>
+
+                  <div
+                     id="homes-dropdown-hover"
+                     class="z-10 hidden w-60 rounded-xl bg-white shadow"
+                  >
+                     <menu
+                        aria-labelledby="homesDropdownButton"
+                        class="w-full p-2.5 font-semibold text-gray-700 *:px-5 *:py-2.5"
+                     >
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index.html"
+                              >Homepage 1</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index2.html"
+                              >Homepage 2</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index3.html"
+                              >Homepage 3</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index4.html"
+                              >Homepage 4</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="index5.html"
+                              >Homepage 5</a
+                           >
+                        </li>
+                     </menu>
+                  </div>
+                  <li
+                     role="button"
+                     id="propertiesDropdownButton"
+                     data-dropdown-toggle="properties-dropdown-hover"
+                     data-dropdown-trigger="hover"
+                  >
+                     <a class="group relative" href="index.html"
+                        >Properties
+                        <i
+                           class="fa-solid fa-chevron-down text-sm font-normal"
+                        ></i>
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div>
+                     </a>
+                  </li>
+
+                  <div
+                     id="properties-dropdown-hover"
+                     class="z-10 hidden w-60 rounded-xl bg-white shadow"
+                  >
+                     <menu
+                        aria-labelledby="propertiesDropdownButton"
+                        class="w-full p-2.5 font-semibold text-gray-700 *:px-5 *:py-2.5"
+                     >
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="properties.html"
+                              >Property List</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="property.html"
+                              >Property Details</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="property2.html"
+                              >Property Details V2</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-1.html"
+                              >Map View 1</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-2.html"
+                              >Map View 2</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-3.html"
+                              >Map View 3</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-4.html"
+                              >Map View 4</a
+                           >
+                        </li>
+                     </menu>
+                  </div>
+                  <li>
+                     <a class="group relative" href="blogs.html"
+                        >Blogs
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div
+                     ></a>
+                  </li>
+                  <li
+                     role="button"
+                     id="pagesDropdownButton"
+                     data-dropdown-toggle="pages-dropdown-hover"
+                     data-dropdown-trigger="hover"
+                  >
+                     <a class="group relative" href="index.html"
+                        >Pages
+                        <i
+                           class="fa-solid fa-chevron-down text-sm font-normal"
+                        ></i>
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div>
+                     </a>
+                  </li>
+
+                  <div
+                     id="pages-dropdown-hover"
+                     class="z-10 hidden w-60 rounded-xl bg-white shadow"
+                  >
+                     <menu
+                        aria-labelledby="pagesDropdownButton"
+                        class="w-full p-2.5 font-semibold text-gray-700 *:px-5 *:py-2.5"
+                     >
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="blogs.html"
+                              >Blog List</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="blog.html"
+                              >Blog Details</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="property2.html"
+                              >FAQs</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-1.html"
+                              >Project List</a
+                           >
+                        </li>
+                        <li
+                           class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white"
+                        >
+                           <a
+                              class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                              href="map-view-2.html"
+                              >Project Details</a
+                           >
+                        </li>
+                     </menu>
+                  </div>
+                  <li>
+                     <a class="group relative" href="contact.html"
+                        >Contacts
+                        <div
+                           aria-hidden="true"
+                           class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]"
+                        ></div
+                     ></a>
+                  </li>
+               </menu>
+               <button
+                  data-modal-target="search-modal"
+                  data-modal-toggle="search-modal"
+                  type="button"
+                  class="transition duration-300 hover:text-primary"
+               >
+                  <i
+                     class="fa-solid fa-magnifying-glass text-xl text-nature-600 duration-300 hover:text-primary"
+                  ></i>
+               </button>
+               <button
+                  class="hidden size-[60px] bg-primary text-white md:block"
+                  type="button"
+                  data-drawer-target="drawer-right-example"
+                  data-drawer-show="drawer-right-example"
+                  data-drawer-placement="right"
+                  aria-controls="drawer-right-example"
+               >
+                  <i class="fa-solid fa-lines-leaning text-2xl"></i>
+               </button>
+               <button
+                  class="md:hidden"
+                  type="button"
+                  data-drawer-target="responsive-menu"
+                  data-drawer-show="responsive-menu"
+                  aria-controls="responsive-menu"
+               >
+                  <svg
+                     class="size-6"
+                     stroke="currentColor"
+                     fill="currentColor"
+                     stroke-width="0"
+                     viewBox="0 0 24 24"
+                     height="200px"
+                     width="200px"
+                     xmlns="http://www.w3.org/2000/svg"
+                  >
+                     <path fill="none" d="M0 0h24v24H0V0z"></path>
+                     <path
+                        d="M3 18h13v-2H3v2zm0-5h10v-2H3v2zm0-7v2h13V6H3zm18 9.59L17.42 12 21 8.41 19.59 7l-5 5 5 5L21 15.59z"
+                     ></path>
+                  </svg>
+               </button>
+            </div>
+         </nav>
+      </header>
+      <!-- Navbar ended -->
+
+      <div
+         class="-z-10 h-screen w-full bg-no-repeat md:h-[956px]"
+         style="background-image: url(&quot;assets/images/image-32.png&quot;)"
+      >
+         <div
+            class="h-full w-full"
+            style="
+               background-image: url(&quot;assets/images/bg-overlay.png&quot;);
+            "
+         >
+            <!-- Hero Started -->
+            <section
+               class="container flex items-center justify-center px-4 text-white xl:px-0"
+            >
+               <div class="mx-auto mt-32 max-w-[960px]">
+                  <h1
+                     data-aos="fade-up"
+                     class="heading-hero relative !-z-0 text-center !text-white"
+                  >
+                     Beyond Logistics <br />
+                     Delivering
+                  </h1>
+                  <p
+                     data-aos="fade-up"
+                     data-aos-anchor-placement="top-bottom"
+                     data-aos-delay="200"
+                     class="heading-tagline mt-5 !text-new-100"
+                  >
+                     We have been operating for over a decade, providing
+                     top-notch services to our clients and building a strong
+                     track record We have been operating for over a decade
+                  </p>
+
+                  <!-- Small to SM -->
+                  <div class="container my-5 sm:hidden 2xl:pr-0">
+                     <form action="#" class="w-full">
+                        <div class="space-y-2 pb-2">
+                           <div class="flex">
+                              <span
+                                 class="inline-flex items-center rounded-s-md border border-e-0 border-gray-300 bg-gray-200 px-3 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-600 dark:text-gray-400"
+                              >
+                                 <i
+                                    class="fa-solid fa-location-crosshairs text-sm"
+                                 ></i>
+                              </span>
+                              <input
+                                 type="text"
+                                 class="block w-full min-w-0 flex-1 rounded-none rounded-e-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                                 placeholder="New York City, USA"
+                              />
+                           </div>
+
+                           <div class="flex">
+                              <span
+                                 class="inline-flex items-center rounded-s-md border border-e-0 border-gray-300 bg-gray-200 px-3 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-600 dark:text-gray-400"
+                              >
+                                 <i
+                                    class="fa-solid fa-house-chimney text-sm"
+                                 ></i>
+                              </span>
+                              <input
+                                 type="text"
+                                 class="block w-full min-w-0 flex-1 rounded-none rounded-e-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                                 placeholder="Duplex House"
+                              />
+                           </div>
+
+                           <div class="flex">
+                              <span
+                                 class="inline-flex items-center rounded-s-md border border-e-0 border-gray-300 bg-gray-200 px-3 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-600 dark:text-gray-400"
+                              >
+                                 <i
+                                    class="fa-solid fa-sack-dollar text-sm lg:text-base"
+                                 ></i>
+                              </span>
+                              <input
+                                 type="text"
+                                 class="block w-full min-w-0 flex-1 rounded-none rounded-e-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                                 placeholder="4,00 - 5,00$"
+                              />
+                           </div>
+                        </div>
+                        <div
+                           class="grid w-full grid-cols-4 divide-x font-medium"
+                        >
+                           <button
+                              type="button"
+                              class="h1-search-sm active rounded-l-md py-2"
+                           >
+                              Sell
+                           </button>
+                           <button type="button" class="h1-search-sm py-2">
+                              Buy
+                           </button>
+                           <button type="button" class="h1-search-sm py-2">
+                              Rent
+                           </button>
+                           <button
+                              type="submit"
+                              class="h1-search-sm rounded-r-md bg-primary py-2 text-white"
+                           >
+                              <i
+                                 class="fa-solid fa-magnifying-glass text-lg"
+                              ></i>
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+
+                  <!-- From sm to large -->
+                  <div
+                     data-aos="fade-up"
+                     data-aos-anchor-placement="top-bottom"
+                     data-aos-delay="300"
+                     class="my__gradient hidden w-full items-center justify-between rounded-md border border-[#ededed] bg-white px-4 py-4 shadow-shadow4 sm:flex md:rounded-xl md:px-6 md:py-[18px] lg:w-[945px] lg:rounded-[20px] lg:px-8 lg:py-5 xl:px-10 xl:py-[25px]"
+                  >
+                     <div class="space-y-1 lg:space-y-[10px]">
+                        <p
+                           class="font-poppins text-xs font-normal text-nature-200 md:text-sm lg:text-base"
+                        >
+                           City/Street
+                        </p>
+                        <div class="flex items-center gap-x-1.5 lg:gap-x-2.5">
+                           <input
+                              type="text"
+                              id="city"
+                              class="focus:placeholder:text-new-300 m-0 block size-fit w-full max-w-28 appearance-none rounded-lg border-0 bg-transparent !p-0 font-poppins text-xs text-nature-500 shadow-none placeholder:text-xs placeholder:font-medium placeholder:text-nature-500 focus:outline-none focus:ring-0 md:text-sm placeholder:md:text-sm lg:text-base placeholder:lg:text-base"
+                              placeholder="New Your City"
+                           />
+                        </div>
+                     </div>
+
+                     <div
+                        class="hidden !h-[50px] !w-[1px] bg-gray-300 md:block"
+                     ></div>
+
+                     <div class="flex flex-col items-center justify-center">
+                        <div class="space-y-1 lg:space-y-[10px]">
+                           <p
+                              class="font-poppins text-xs font-normal text-nature-200 md:text-sm lg:text-base"
+                           >
+                              Property Type
+                           </p>
+                           <div
+                              class="flex items-center gap-x-1.5 lg:gap-x-2.5"
+                           >
+                              <input
+                                 type="text"
+                                 id="type"
+                                 class="focus:placeholder:text-new-300 m-0 block size-fit w-full max-w-28 appearance-none rounded-lg border-0 bg-transparent !p-0 font-poppins text-xs text-nature-500 shadow-none placeholder:text-xs placeholder:font-medium placeholder:text-nature-500 focus:outline-none focus:ring-0 md:text-sm placeholder:md:text-sm lg:text-base placeholder:lg:text-base"
+                                 placeholder="Duplex House"
+                              />
+                           </div>
+                        </div>
+                     </div>
+
+                     <div
+                        class="hidden !h-[50px] !w-[1px] bg-gray-300 md:block"
+                     ></div>
+                     <div class="flex flex-col items-center justify-center">
+                        <div class="space-y-1 lg:space-y-[10px]">
+                           <p
+                              class="font-poppins text-xs font-normal text-nature-200 md:text-sm lg:text-base"
+                           >
+                              Price Range
+                           </p>
+                           <div
+                              class="flex items-center gap-x-1.5 lg:gap-x-2.5"
+                           >
+                              <input
+                                 type="text"
+                                 id="price"
+                                 class="focus:placeholder:text-new-300 m-0 block size-fit w-full max-w-28 appearance-none rounded-lg border-0 bg-transparent !p-0 font-poppins text-xs text-nature-500 shadow-none placeholder:text-xs placeholder:font-medium placeholder:text-nature-500 focus:outline-none focus:ring-0 md:text-sm placeholder:md:text-sm lg:text-base placeholder:lg:text-base"
+                                 placeholder="$18,000 - 30,000"
+                              />
+                           </div>
+                        </div>
+                     </div>
+
+                     <div
+                        class="hidden !h-[50px] !w-[1px] bg-gray-300 md:block"
+                     ></div>
+
+                     <div class="flex items-center justify-center md:w-auto">
+                        <div>
+                           <button
+                              class="flex size-fit items-center gap-x-4 rounded-full bg-secondary px-5 py-2.5 text-sm font-normal text-white lg:text-base"
+                           >
+                              <span class="!font-normal">Search</span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- Hero Ended -->
+         </div>
+      </div>
+
+      <!-- About Started -->
+      <section class="container mt-[60px] hidden lg:block">
+         <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            class="text-balance text-center text-2xl font-normal tracking-tight text-new-900 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl"
+         >
+            “Find
+            <a
+               href="#"
+               class="inline-flex size-fit rounded-full bg-secondary px-12 py-4 text-white"
+               ><i class="fa-solid fa-magnifying-glass text-3xl"></i
+            ></a>
+            your ideal property with our comprehensive rental
+            <a href="#" class="inline-flex size-fit">
+               <img
+                  src="assets/images/image-2.png"
+                  class="rounded-full"
+                  alt="Homelist5_about"
+               />
+            </a>
+            and sales services, tailored to meet your needs
+            <a href="#" class="inline-flex size-fit">
+               <img
+                  src="assets/images/image-3.png"
+                  class="rounded-full"
+                  alt="Homelist5_about"
+               />
+            </a>
+            and preferences”
+         </div>
+      </section>
+      <!-- About Ended -->
+
+      <!-- User Activity section start -->
+      <section
+         id="h5-counter"
+         class="section-padding-120 container flex items-center justify-around"
+      >
+         <!-- cta 1 -->
+         <div class="cta-content">
+            <div class="cta-img-container">
+               <img src="assets/icons/prize.svg" alt="Homelist_cta" />
+            </div>
+            <div class="cta-data">
+               <h2>
+                  <span id="h5-award-wins" class="odometer"></span
+                  ><span class="text-primary">M</span>
+               </h2>
+               <p>Award Winning</p>
+            </div>
+         </div>
+
+         <!-- cta 2 -->
+         <div class="cta-content">
+            <div class="cta-img-container">
+               <img src="assets/icons/building.svg" alt="Homelist_cta" />
+            </div>
+            <div class="cta-data">
+               <h2>
+                  <span id="h5-properties" class="odometer"></span
+                  ><span class="text-secondary">K</span>
+               </h2>
+               <p>Property Ready</p>
+            </div>
+         </div>
+
+         <!-- cta 3 -->
+         <div class="cta-content">
+            <div class="cta-img-container">
+               <img src="assets/icons/happy-customer.svg" alt="Homelist_cta" />
+            </div>
+            <div class="cta-data">
+               <h2>
+                  <span id="h5-customers" class="odometer"></span
+                  ><span class="text-primary">M</span>
+               </h2>
+               <p>Happy Customers</p>
+            </div>
+         </div>
+      </section>
+      <!-- User Activity section end -->
+
+      <!-- Description Started -->
+      <section
+         class="section-padding-120 container max-w-[1800px] rounded-[15px] bg-new-100 sm:rounded-[20px] md:rounded-[30px] lg:rounded-[40px] xl:rounded-[50px] 2xl:rounded-[60px]"
+      >
+         <div class="container px-4 xl:px-0">
+            <div
+               class="flex flex-col gap-y-5 md:flex-row md:items-end md:justify-between"
+            >
+               <div
+                  data-aos="fade-right"
+                  class="w-full md:max-w-[75%] lg:max-w-[50%]"
+               >
+                  <h2 class="heading-2 !text-start">Delivering Triumphs</h2>
+                  <p class="heading-tagline !mb-0 !text-start">
+                     We have been operating for over a decade, providing
+                     top-notch services to our clients and building a strong
+                     track record
+                  </p>
+               </div>
+               <div data-aos="fade-left">
+                  <a
+                     href="properties.html"
+                     class="flex size-fit items-center gap-x-1.5 rounded-full border border-secondary px-6 py-3.5 text-center font-poppins text-sm text-new-900 transition-all hover:border-secondary hover:text-secondary md:gap-x-2 md:px-7 md:py-4 md:text-base lg:px-8 lg:text-lg"
+                     ><span>Explore More</span
+                     ><i class="fa-solid fa-arrow-right-long"></i
+                  ></a>
+               </div>
+            </div>
+
+            <div
+               class="gap-30 mt-60p grid w-full md:grid-cols-2 lg:grid-cols-3"
+            >
+               <!-- Card 1 -->
+               <div
+                  data-aos="fade-zoom-in"
+                  data-aos-easing="ease-in-back"
+                  class="h5-description-card"
+               >
+                  <div class="h5-description-img">
+                     <img
+                        src="assets/images/image-40.png"
+                        alt="Homelist5_desc"
+                     />
+                  </div>
+                  <div class="h5-description-body">
+                     <a class="title" href="property.html">Spacious Home</a>
+                     <p>Your Address goes there</p>
+                     <div class="h5-description-icons">
+                        <div>
+                           <img
+                              src="assets/icons/bed-outline.svg"
+                              alt="Homelist5_desc"
+                           />
+                           <span>2 Beds</span>
+                        </div>
+
+                        <div>
+                           <img
+                              src="assets/icons/bath-outline.svg"
+                              alt="Homelist5_desc"
+                           />
+                           <span>3 Beds</span>
+                        </div>
+
+                        <div>
+                           <img
+                              src="assets/icons/sqft.svg"
+                              alt="Homelist5_desc"
+                           />
+                           <span>430sqrt</span>
+                        </div>
+                     </div>
+
+                     <div class="h5-description-footer">
+                        <span>$30,000</span>
+                        <a href="property.html"
+                           >View Details
+                           <i
+                              class="fa-solid fa-arrow-right-long text-secondary"
+                           ></i
+                        ></a>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Card 2 -->
+               <div
+                  data-aos="fade-zoom-in"
+                  data-aos-delay="200"
+                  data-aos-easing="ease-in-back"
+                  class="h5-description-card"
+               >
+                  <div class="h5-description-img">
+                     <img
+                        src="assets/images/image-41.png"
+                        alt="Homelist5_desc"
+                     />
+                  </div>
+                  <div class="h5-description-body">
+                     <a class="title" href="property.html"
+                        >Gorgeous Villa Bay</a
+                     >
+                     <p>Your Address goes there</p>
+                     <div class="h5-description-icons">
+                        <div>
+                           <img
+                              src="assets/icons/bed-outline.svg"
+                              alt="Homelist5_desc"
+                           />
+                           <span>2 Beds</span>
+                        </div>
+
+                        <div>
+                           <img
+                              src="assets/icons/bath-outline.svg"
+                              alt="Homelist5_desc"
+                           />
+                           <span>3 Beds</span>
+                        </div>
+
+                        <div>
+                           <img
+                              src="assets/icons/sqft.svg"
+                              alt="Homelist5_desc"
+                           />
+                           <span>430sqrt</span>
+                        </div>
+                     </div>
+
+                     <div class="h5-description-footer">
+                        <span>$30,000</span>
+                        <a href="property.html"
+                           >View Details
+                           <i
+                              class="fa-solid fa-arrow-right-long text-secondary"
+                           ></i
+                        ></a>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Card 2 -->
+               <div
+                  data-aos="fade-zoom-in"
+                  data-aos-delay="300"
+                  data-aos-easing="ease-in-back"
+                  class="h5-description-card md:col-span-2 lg:col-span-1"
+               >
+                  <div class="h5-description-img">
+                     <img
+                        src="assets/images/image-42.png"
+                        alt="Homelist5_desc"
+                     />
+                  </div>
+                  <div class="h5-description-body">
+                     <a class="title" href="property.html">House Hollywood</a>
+                     <p>Your Address goes there</p>
+                     <div class="h5-description-icons">
+                        <div>
+                           <img
+                              src="assets/icons/bed-outline.svg"
+                              alt="Homelist5_desc"
+                           />
+                           <span>2 Beds</span>
+                        </div>
+
+                        <div>
+                           <img
+                              src="assets/icons/bath-outline.svg"
+                              alt="Homelist5_desc"
+                           />
+                           <span>3 Beds</span>
+                        </div>
+
+                        <div>
+                           <img
+                              src="assets/icons/sqft.svg"
+                              alt="Homelist5_desc"
+                           />
+                           <span>430sqrt</span>
+                        </div>
+                     </div>
+
+                     <div class="h5-description-footer">
+                        <span>$30,000</span>
+                        <a href="property.html"
+                           >View Details
+                           <i
+                              class="fa-solid fa-arrow-right-long text-secondary"
+                           ></i
+                        ></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Description Ended -->
+
+      <!-- Properties Started -->
+      <section
+         class="section-padding-120 container flex flex-col justify-center px-4 xl:px-0"
+      >
+         <h2 data-aos="zoom-in-up" class="heading-2">Elevate your lifestyle</h2>
+         <p data-aos="zoom-in-up" data-aos-delay="150" class="heading-tagline">
+            We have been operating for over a decade, providing top-notch
+            services to our clients and building a strong track record
+         </p>
+
+         <div
+            class="gap-30 grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+         >
+            <!-- Card 1 -->
+            <div data-aos="zoom-in-down" data-aos-duration="600">
+               <div class="max-w-full">
+                  <img
+                     src="assets/images/image-70.png"
+                     alt="Homelist5_properties"
+                     class="rounded-t-[20px] object-cover object-center transition-all duration-200 hover:contrast-50"
+                  />
+               </div>
+               <div class="p-30 rounded-b-[20px] bg-new-100">
+                  <a
+                     href="#"
+                     class="text-lg font-medium text-new-900 md:text-xl lg:text-2xl"
+                  >
+                     Batu, East Java
+                  </a>
+                  <p
+                     class="font-poppins text-sm font-medium text-new-800 md:text-base lg:text-lg"
+                  >
+                     85 Destinations
+                  </p>
+               </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+               data-aos="zoom-in-down"
+               data-aos-duration="600"
+               data-aos-delay="250"
+            >
+               <div class="max-w-full">
+                  <img
+                     src="assets/images/image-121.png"
+                     alt="Homelist5_properties"
+                     class="rounded-t-[20px] object-cover object-center transition-all duration-200 hover:contrast-50"
+                  />
+               </div>
+               <div class="p-30 rounded-b-[20px] bg-new-100">
+                  <a
+                     href="#"
+                     class="text-lg font-medium text-new-900 md:text-xl lg:text-2xl"
+                  >
+                     Kuta
+                  </a>
+                  <p
+                     class="font-poppins text-sm font-medium text-new-800 md:text-base lg:text-lg"
+                  >
+                     5 Destinations
+                  </p>
+               </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+               data-aos="zoom-in-down"
+               data-aos-duration="600"
+               data-aos-delay="300"
+            >
+               <div class="max-w-full">
+                  <img
+                     src="assets/images/image-122.png"
+                     alt="Homelist5_properties"
+                     class="rounded-t-[20px] object-cover object-center transition-all duration-200 hover:contrast-50"
+                  />
+               </div>
+               <div class="p-30 rounded-b-[20px] bg-new-100">
+                  <a
+                     href="#"
+                     class="text-lg font-medium text-new-900 md:text-xl lg:text-2xl"
+                  >
+                     Surabaya, East Java
+                  </a>
+                  <p
+                     class="font-poppins text-sm font-medium text-new-800 md:text-base lg:text-lg"
+                  >
+                     5 Destinations
+                  </p>
+               </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+               data-aos="zoom-in-down"
+               data-aos-duration="600"
+               data-aos-delay="350"
+            >
+               <div class="max-w-full">
+                  <img
+                     src="assets/images/image-123.png"
+                     alt="Homelist5_properties"
+                     class="rounded-t-[20px] object-cover object-center transition-all duration-200 hover:contrast-50"
+                  />
+               </div>
+               <div class="p-30 rounded-b-[20px] bg-new-100">
+                  <a
+                     href="#"
+                     class="text-lg font-medium text-new-900 md:text-xl lg:text-2xl"
+                  >
+                     Malang, East Java
+                  </a>
+                  <p
+                     class="font-poppins text-sm font-medium text-new-800 md:text-base lg:text-lg"
+                  >
+                     5 Destinations
+                  </p>
+               </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div
+               data-aos="zoom-in-down"
+               data-aos-duration="600"
+               data-aos-delay="400"
+            >
+               <div class="max-w-full">
+                  <img
+                     src="assets/images/image-66.png"
+                     alt="Homelist5_properties"
+                     class="rounded-t-[20px] object-cover object-center transition-all duration-200 hover:contrast-50"
+                  />
+               </div>
+               <div class="p-30 rounded-b-[20px] bg-new-100">
+                  <a
+                     href="#"
+                     class="text-lg font-medium text-new-900 md:text-xl lg:text-2xl"
+                  >
+                     Doemg, Central Java
+                  </a>
+                  <p
+                     class="font-poppins text-sm font-medium text-new-800 md:text-base lg:text-lg"
+                  >
+                     5 Destinations
+                  </p>
+               </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div
+               data-aos="zoom-in-down"
+               data-aos-duration="600"
+               data-aos-delay="450"
+            >
+               <div class="max-w-full">
+                  <img
+                     src="assets/images/image-75.png"
+                     alt="Homelist5_properties"
+                     class="rounded-t-[20px] object-cover object-center transition-all duration-200 hover:contrast-50"
+                  />
+               </div>
+               <div class="p-30 rounded-b-[20px] bg-new-100">
+                  <a
+                     href="#"
+                     class="text-lg font-medium text-new-900 md:text-xl lg:text-2xl"
+                  >
+                     Nusa Dua, Lombok
+                  </a>
+                  <p
+                     class="font-poppins text-sm font-medium text-new-800 md:text-base lg:text-lg"
+                  >
+                     54 Destinations
+                  </p>
+               </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div
+               data-aos="zoom-in-down"
+               data-aos-duration="600"
+               data-aos-delay="500"
+               class="hidden lg:block"
+            >
+               <div class="max-w-full">
+                  <img
+                     src="assets/images/image-76.png"
+                     alt="Homelist5_properties"
+                     class="rounded-t-[20px] object-cover object-center transition-all duration-200 hover:contrast-50"
+                  />
+               </div>
+               <div class="p-30 rounded-b-[20px] bg-new-100">
+                  <a
+                     href="#"
+                     class="text-lg font-medium text-new-900 md:text-xl lg:text-2xl"
+                  >
+                     Watatobi,Sumatera
+                  </a>
+                  <p
+                     class="font-poppins text-sm font-medium text-new-800 md:text-base lg:text-lg"
+                  >
+                     54 Destinations
+                  </p>
+               </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div
+               data-aos="zoom-in-down"
+               data-aos-duration="600"
+               data-aos-delay="550"
+               class="hidden lg:block"
+            >
+               <div class="max-w-full">
+                  <img
+                     src="assets/images/image-77.png"
+                     alt="Homelist5_properties"
+                     class="rounded-t-[20px] object-cover object-center transition-all duration-200 hover:contrast-50"
+                  />
+               </div>
+               <div class="p-30 rounded-b-[20px] bg-new-100">
+                  <a
+                     href="#"
+                     class="text-lg font-medium text-new-900 md:text-xl lg:text-2xl"
+                  >
+                     Bandung,West Java
+                  </a>
+                  <p
+                     class="font-poppins text-sm font-medium text-new-800 md:text-base lg:text-lg"
+                  >
+                     54 Destinations
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Properties Ended -->
+
+      <!-- FAQ Started -->
+      <section
+         class="section-padding-120 container max-w-[1800px] rounded-[15px] bg-new-100 sm:rounded-[20px] md:rounded-[30px] lg:rounded-[40px] xl:rounded-[50px] 2xl:rounded-[60px]"
+      >
+         <div
+            class="container grid gap-5 px-4 sm:gap-[30px] md:gap-10 lg:grid-cols-2 lg:gap-[50px] xl:gap-[60px] xl:px-0"
+         >
+            <div data-aos="flip-left">
+               <h2 class="heading-2 !text-start">Our Experience</h2>
+               <p class="heading-tagline !text-start">
+                  We have been operating for over a decade, providing top-notch
+                  services to our clients and building a strong track record
+               </p>
+
+               <div>
+                  <div
+                     id="accordion-flush"
+                     data-accordion="collapse"
+                     data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white mb-4"
+                     data-inactive-classes="text-gray-500 dark:text-gray-400 mb-4"
+                  >
+                     <!-- Num 1 -->
+                     <h2
+                        id="accordion-flush-heading-1"
+                        class="rounded-[20px] bg-white"
+                     >
+                        <button
+                           type="button"
+                           class="px-30 flex w-full items-center justify-between gap-3 rounded-t-[20px] bg-white py-5 font-medium"
+                           data-accordion-target="#accordion-flush-body-1"
+                           aria-expanded="true"
+                           aria-controls="accordion-flush-body-1"
+                        >
+                           <span>How Your Path to Ultimate Wellness?</span>
+                           <svg
+                              data-accordion-icon
+                              class="h-3 w-3 shrink-0 rotate-180"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 10 6"
+                           >
+                              <path
+                                 stroke="currentColor"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 stroke-width="2"
+                                 d="M9 5 5 1 1 5"
+                              />
+                           </svg>
+                        </button>
+                     </h2>
+                     <div
+                        id="accordion-flush-body-1"
+                        class="p-30 mb-4 hidden rounded-b-[20px] bg-white !pt-0"
+                        aria-labelledby="accordion-flush-heading-1"
+                     >
+                        <div class="py-5 dark:border-gray-700">
+                           <p class="mb-2 text-gray-500 dark:text-gray-400">
+                              Lorem Ipsum is simply dummy text the printing and
+                              typese Lorem Ipsum has been the industry's
+                              standard
+                           </p>
+                        </div>
+                     </div>
+
+                     <!-- Num 2 -->
+                     <h2
+                        id="accordion-flush-heading-2"
+                        class="rounded-[20px] bg-white"
+                     >
+                        <button
+                           type="button"
+                           class="px-30 flex w-full items-center justify-between gap-3 rounded-t-[20px] bg-white py-5 font-medium"
+                           data-accordion-target="#accordion-flush-body-2"
+                           aria-expanded="true"
+                           aria-controls="accordion-flush-body-2"
+                        >
+                           <span>Where Your Health Finds a Home?</span>
+                           <svg
+                              data-accordion-icon
+                              class="h-3 w-3 shrink-0 rotate-180"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 10 6"
+                           >
+                              <path
+                                 stroke="currentColor"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 stroke-width="2"
+                                 d="M9 5 5 1 1 5"
+                              />
+                           </svg>
+                        </button>
+                     </h2>
+                     <div
+                        id="accordion-flush-body-2"
+                        class="p-30 mb-4 hidden rounded-b-[20px] bg-white !pt-0"
+                        aria-labelledby="accordion-flush-heading-2"
+                     >
+                        <div class="py-5 dark:border-gray-700">
+                           <p class="mb-2 text-gray-500 dark:text-gray-400">
+                              Flowbite is an open-source library of interactive
+                              components built on top of Tailwind CSS including
+                              buttons, dropdowns, modals, navbars, and more.
+                           </p>
+                           <p class="text-gray-500 dark:text-gray-400">
+                              Check out this guide to learn how to
+                              <a
+                                 href="#"
+                                 class="text-blue-600 hover:underline dark:text-blue-500"
+                                 >get started</a
+                              >
+                              and start developing websites even faster with
+                              components on top of Tailwind CSS.
+                           </p>
+                        </div>
+                     </div>
+
+                     <!-- Num 3 -->
+                     <h2
+                        id="accordion-flush-heading-3"
+                        class="rounded-[20px] bg-white"
+                     >
+                        <button
+                           type="button"
+                           class="px-30 flex w-full items-center justify-between gap-3 rounded-t-[20px] bg-white py-5 font-medium"
+                           data-accordion-target="#accordion-flush-body-3"
+                           aria-expanded="true"
+                           aria-controls="accordion-flush-body-3"
+                        >
+                           <span>Where Caring Speaks Volumes?</span>
+                           <svg
+                              data-accordion-icon
+                              class="h-3 w-3 shrink-0 rotate-180"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 10 6"
+                           >
+                              <path
+                                 stroke="currentColor"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 stroke-width="2"
+                                 d="M9 5 5 1 1 5"
+                              />
+                           </svg>
+                        </button>
+                     </h2>
+                     <div
+                        id="accordion-flush-body-3"
+                        class="p-30 mb-4 hidden rounded-b-[20px] bg-white !pt-0"
+                        aria-labelledby="accordion-flush-heading-3"
+                     >
+                        <div class="py-5 dark:border-gray-700">
+                           <p class="mb-2 text-gray-500 dark:text-gray-400">
+                              Flowbite is an open-source library of interactive
+                              components built on top of Tailwind CSS including
+                              buttons, dropdowns, modals, navbars, and more.
+                           </p>
+                           <p class="text-gray-500 dark:text-gray-400">
+                              Check out this guide to learn how to
+                              <a
+                                 href="docs/getting-started/introduction/"
+                                 class="text-blue-600 hover:underline dark:text-blue-500"
+                                 >get started</a
+                              >
+                              and start developing websites even faster with
+                              components on top of Tailwind CSS.
+                           </p>
+                        </div>
+                     </div>
+
+                     <!-- Num 4 -->
+                     <h2
+                        id="accordion-flush-heading-4"
+                        class="rounded-[20px] bg-white"
+                     >
+                        <button
+                           type="button"
+                           class="px-30 flex w-full items-center justify-between gap-3 rounded-t-[20px] bg-white py-5 font-medium"
+                           data-accordion-target="#accordion-flush-body-4"
+                           aria-expanded="true"
+                           aria-controls="accordion-flush-body-4"
+                        >
+                           <span>What a Healthier Future?</span>
+                           <svg
+                              data-accordion-icon
+                              class="h-3 w-3 shrink-0 rotate-180"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 10 6"
+                           >
+                              <path
+                                 stroke="currentColor"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 stroke-width="2"
+                                 d="M9 5 5 1 1 5"
+                              />
+                           </svg>
+                        </button>
+                     </h2>
+                     <div
+                        id="accordion-flush-body-4"
+                        class="p-30 mb-4 hidden rounded-b-[20px] bg-white !pt-0"
+                        aria-labelledby="accordion-flush-heading-4"
+                     >
+                        <div class="py-5 dark:border-gray-700">
+                           <p class="mb-2 text-gray-500 dark:text-gray-400">
+                              Flowbite is an open-source library of interactive
+                              components built on top of Tailwind CSS including
+                              buttons, dropdowns, modals, navbars, and more.
+                           </p>
+                           <p class="text-gray-500 dark:text-gray-400">
+                              Check out this guide to learn how to
+                              <a
+                                 href="docs/getting-started/introduction/"
+                                 class="text-blue-600 hover:underline dark:text-blue-500"
+                                 >get started</a
+                              >
+                              and start developing websites even faster with
+                              components on top of Tailwind CSS.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div data-aos="flip-right">
+               <img
+                  src="assets/images/image-43.png"
+                  alt="Homelist5_faq"
+                  class="mx-auto"
+               />
+            </div>
+         </div>
+      </section>
+      <!-- FAQ Ended -->
+
+      <!-- Category Started -->
+      <section
+         class="section-padding-120 container flex flex-col overflow-hidden px-4 xl:px-0"
+      >
+         <h2 data-aos="zoom-in-up" class="heading-2">Delivering Triumphs</h2>
+
+         <div
+            class="gap-30 mt-4 grid md:mt-5 md:grid-cols-2 lg:mt-6 lg:grid-cols-3 xl:mt-8"
+         >
+            <!-- Card 1 -->
+            <div
+               data-aos="fade-down"
+               data-aos-duration="2000"
+               class="mx-auto max-w-[410px]"
+            >
+               <div class="relative w-full">
+                  <img
+                     src="assets/images/image-36.png"
+                     alt="Homelist5_category"
+                     class="max-h-[266px] w-full rounded-t-[20px] object-cover object-center transition-all duration-200 hover:blur-[1px] hover:contrast-[0.8]"
+                  />
+
+                  <div
+                     class="absolute bottom-0 left-1/2 flex size-20 -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-[10px] bg-new-100"
+                  >
+                     <img
+                        src="assets/icons/bed.png"
+                        alt="Homelist_category"
+                        class="size-10"
+                     />
+                  </div>
+               </div>
+               <div
+                  class="flex flex-col items-center justify-center rounded-b-2xl border-x-4 border-b-4 border-new-100 pb-3.5 pt-10 sm:pb-4 md:pb-6 lg:pb-8 lg:pt-12 xl:pb-10 xl:pt-14 2xl:pt-16"
+               >
+                  <h5
+                     class="text-center text-lg font-medium text-new-900 md:text-xl lg:text-2xl"
+                  >
+                     Buy a Home
+                  </h5>
+                  <a
+                     href="#"
+                     class="px-30 mt-10 flex size-fit items-center rounded-full bg-secondary py-3 font-poppins text-sm font-medium text-white sm:gap-x-1.5 sm:py-3.5 md:gap-x-2 md:py-4 md:text-base lg:gap-x-2.5 lg:py-[18px] lg:text-lg xl:py-5"
+                     ><span>Read More</span
+                     ><i class="fa-solid fa-arrow-right-long"></i
+                  ></a>
+               </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+               data-aos="fade-down"
+               data-aos-delay="200"
+               data-aos-duration="2000"
+               class="mx-auto max-w-[410px]"
+            >
+               <div class="relative w-full">
+                  <img
+                     src="assets/images/image-37.png"
+                     alt="Homelist5_category"
+                     class="max-h-[266px] w-full rounded-t-[20px] object-cover object-center transition-all duration-200 hover:blur-[1px] hover:contrast-[0.8]"
+                  />
+
+                  <div
+                     class="absolute bottom-0 left-1/2 flex size-20 -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-[10px] bg-new-100"
+                  >
+                     <img
+                        src="assets/icons/roller-paint.png"
+                        alt="Homelist_category"
+                        class="size-10"
+                     />
+                  </div>
+               </div>
+               <div
+                  class="flex flex-col items-center justify-center rounded-b-2xl border-x-4 border-b-4 border-new-100 pb-3.5 pt-10 sm:pb-4 md:pb-6 lg:pb-8 lg:pt-12 xl:pb-10 xl:pt-14 2xl:pt-16"
+               >
+                  <h5
+                     class="text-center text-lg font-medium text-new-900 md:text-xl lg:text-2xl"
+                  >
+                     Rent a Home
+                  </h5>
+                  <a
+                     href="#"
+                     class="px-30 mt-10 flex size-fit items-center rounded-full bg-secondary py-3 font-poppins text-sm font-medium text-white sm:gap-x-1.5 sm:py-3.5 md:gap-x-2 md:py-4 md:text-base lg:gap-x-2.5 lg:py-[18px] lg:text-lg xl:py-5"
+                     ><span>Read More</span
+                     ><i class="fa-solid fa-arrow-right-long"></i
+                  ></a>
+               </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+               data-aos="fade-down"
+               data-aos-delay="300"
+               data-aos-duration="2000"
+               class="mx-auto max-w-[410px] md:col-span-2 lg:col-span-1"
+            >
+               <div class="relative w-full">
+                  <img
+                     src="assets/images/image-38.png"
+                     alt="Homelist5_category"
+                     class="max-h-[266px] w-full rounded-t-[20px] object-cover object-center transition-all duration-200 hover:blur-[1px] hover:contrast-[0.8]"
+                  />
+
+                  <div
+                     class="absolute bottom-0 left-1/2 flex size-20 -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-[10px] bg-new-100"
+                  >
+                     <img
+                        src="assets/icons/moving-home.png"
+                        alt="Homelist_category"
+                        class="size-10"
+                     />
+                  </div>
+               </div>
+               <div
+                  class="flex flex-col items-center justify-center rounded-b-2xl border-x-4 border-b-4 border-new-100 pb-3.5 pt-10 sm:pb-4 md:pb-6 lg:pb-8 lg:pt-12 xl:pb-10 xl:pt-14 2xl:pt-16"
+               >
+                  <h5
+                     class="text-center text-lg font-medium text-new-900 md:text-xl lg:text-2xl"
+                  >
+                     Sell Property
+                  </h5>
+                  <a
+                     href="#"
+                     class="px-30 mt-10 flex size-fit items-center rounded-full bg-secondary py-3 font-poppins text-sm font-medium text-white sm:gap-x-1.5 sm:py-3.5 md:gap-x-2 md:py-4 md:text-base lg:gap-x-2.5 lg:py-[18px] lg:text-lg xl:py-5"
+                     ><span>Read More</span
+                     ><i class="fa-solid fa-arrow-right-long"></i
+                  ></a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Category Ended -->
+
+      <!-- Work Process Started -->
+      <section
+         class="section-padding-120-b container overflow-hidden px-4 xl:px-0"
+      >
+         <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between"
+         >
+            <h1 class="heading-2 !text-start">Live in Luxury</h1>
+            <p class="heading-tagline !mb-0 !text-start md:max-w-[410px]">
+               We have been operating for over a decade, providing top-notch
+               servi to our clients and building
+            </p>
+         </div>
+
+         <div
+            class="gap-30 !md:gap-y-5 relative mt-24 grid !gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
+         >
+            <div
+               data-aos="fade-up"
+               class="absolute -z-10 rotate-90 md:hidden lg:-top-10 lg:block lg:!rotate-[0deg]"
+            >
+               <svg
+                  width="1230"
+                  height="253"
+                  viewBox="0 0 1230 253"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+               >
+                  <path
+                     d="M1 135.46C1 135.46 239.22 -19.619 406.836 3.31402C578.284 26.7714 577.896 212.17 746.861 246.187C938.843 284.838 1229 118.083 1229 118.083"
+                     stroke="#FF5C00"
+                     stroke-width="2"
+                     stroke-dasharray="10 10"
+                  />
+               </svg>
+            </div>
+            <!-- Card 1 -->
+            <div
+               data-aos="flip-left"
+               data-aos-easing="ease-out-cubic"
+               data-aos-duration="2000"
+               class="relative mx-auto flex w-full max-w-[410px] flex-col items-center rounded-[20px] border border-new-100 bg-white p-10 transition-all ease-in-out hover:shadow-shadow sm:gap-5 md:gap-7 lg:flex-row lg:gap-10 xl:gap-[50px]"
+            >
+               <div>
+                  <div
+                     class="flex size-20 items-center justify-center rounded-full bg-new-100"
+                  >
+                     <img
+                        src="assets/icons/road-sign.png"
+                        alt="Homelist5_Work_process"
+                        class="size-11"
+                     />
+                  </div>
+               </div>
+               <h3
+                  class="text-xl font-medium leading-[44px] text-new-900 lg:text-2xl xl:text-3xl 2xl:text-[34px]"
+               >
+                  Book & <br class="hidden lg:block" />
+                  Relax
+               </h3>
+
+               <!-- footer -->
+               <div
+                  class="absolute bottom-0 left-1/2 flex size-[50px] -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-new-100 font-poppins text-sm font-medium text-new-900"
+               >
+                  <span>01</span>
+               </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+               data-aos="flip-up"
+               data-aos-easing="ease-out-cubic"
+               data-aos-duration="2000"
+               class="relative mx-auto flex w-full max-w-[410px] flex-col items-center rounded-[20px] border border-new-100 bg-white p-10 transition-all ease-in-out hover:shadow-shadow sm:gap-5 md:gap-7 lg:flex-row lg:gap-10 xl:gap-[50px]"
+            >
+               <div>
+                  <div
+                     class="flex size-20 items-center justify-center rounded-full bg-new-100"
+                  >
+                     <img
+                        src="assets/icons/payment.png"
+                        alt="Homelist5_Work_process"
+                        class="size-11"
+                     />
+                  </div>
+               </div>
+               <h3
+                  class="text-xl font-medium leading-[44px] text-new-900 lg:text-2xl xl:text-3xl 2xl:text-[34px]"
+               >
+                  Smart & <br class="hidden lg:block" />
+                  Checklist
+               </h3>
+
+               <!-- footer -->
+               <div
+                  class="absolute bottom-0 left-1/2 flex size-[50px] -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-new-100 font-poppins text-sm font-medium text-new-900"
+               >
+                  <span>02</span>
+               </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+               data-aos="flip-right"
+               data-aos-easing="ease-out-cubic"
+               data-aos-duration="2000"
+               class="relative mx-auto flex w-full max-w-[410px] flex-col items-center rounded-[20px] border border-new-100 bg-white p-10 transition-all ease-in-out hover:shadow-shadow sm:col-span-2 sm:gap-5 md:gap-7 lg:col-span-1 lg:flex-row lg:gap-10 xl:gap-[50px]"
+            >
+               <div>
+                  <div
+                     class="flex size-20 items-center justify-center rounded-full bg-new-100"
+                  >
+                     <img
+                        src="assets/icons/management.png"
+                        alt="Homelist5_Work_process"
+                        class="size-11"
+                     />
+                  </div>
+               </div>
+               <h3
+                  class="text-xl font-medium leading-[44px] text-new-900 lg:text-2xl xl:text-3xl 2xl:text-[34px]"
+               >
+                  More & <br class="hidden lg:block" />
+                  Savings
+               </h3>
+
+               <!-- footer -->
+               <div
+                  class="absolute bottom-0 left-1/2 flex size-[50px] -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-new-100 font-poppins text-sm font-medium text-new-900"
+               >
+                  <span>03</span>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Work Process Ended -->
+
+      <!-- Testimonial Started -->
+      <section
+         class="section-padding-120 container relative max-w-[1800px] overflow-hidden rounded-[15px] bg-new-900 sm:rounded-[20px] md:rounded-[30px] lg:rounded-[40px] xl:rounded-[50px] 2xl:rounded-[60px]"
+      >
+         <div class="absolute right-0 top-0">
+            <svg
+               width="1005"
+               height="786"
+               viewBox="0 0 1005 786"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+            >
+               <g opacity="0.3" filter="url(#filter0_f_424_701)">
+                  <circle cx="740" cy="253" r="340" fill="#FF5C00" />
+               </g>
+               <defs>
+                  <filter
+                     id="filter0_f_424_701"
+                     x="0"
+                     y="-487"
+                     width="1480"
+                     height="1480"
+                     filterUnits="userSpaceOnUse"
+                     color-interpolation-filters="sRGB"
+                  >
+                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                     <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                     />
+                     <feGaussianBlur
+                        stdDeviation="200"
+                        result="effect1_foregroundBlur_424_701"
+                     />
+                  </filter>
+               </defs>
+            </svg>
+         </div>
+
+         <div class="absolute bottom-0 right-0 opacity-10">
+            <svg
+               width="712"
+               height="533"
+               viewBox="0 0 712 533"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+            >
+               <g clip-path="url(#clip0_398_3903)">
+                  <circle
+                     opacity="0.1"
+                     cx="576"
+                     cy="445"
+                     r="330"
+                     fill="white"
+                  />
+                  <path
+                     d="M0 629.17C586.832 629.17 481.844 151.436 988.171 151.436"
+                     stroke="#FF5C00"
+                     stroke-width="7.12752"
+                     stroke-miterlimit="10"
+                  />
+               </g>
+               <defs>
+                  <clipPath id="clip0_398_3903">
+                     <rect width="712" height="533" rx="60" fill="white" />
+                  </clipPath>
+               </defs>
+            </svg>
+         </div>
+
+         <div
+            class="container grid gap-5 px-4 text-white sm:gap-6 md:grid-cols-2 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 2xl:px-0"
+         >
+            <div data-aos="zoom-in">
+               <div class="">
+                  <i
+                     class="fa-solid fa-quote-left text-3xl text-secondary md:text-4xl lg:text-5xl"
+                  ></i>
+               </div>
+               <p
+                  class="font-poppins text-xl font-normal tracking-tight md:text-2xl lg:text-3xl xl:leading-[50px]"
+               >
+                  Leverage agile frameworks to provide a is a robust syns is for
+                  <span class="text-secondary">strategy</span> foster go to the
+                  o
+                  <span class="text-secondary">Leverage agile frameworks</span>
+                  to provide a robust synopsis for go for strategy
+               </p>
+
+               <div
+                  class="mt-5 flex gap-x-3.5 sm:mt-6 sm:gap-x-4 md:mt-8 md:gap-x-5 lg:mt-10 lg:gap-x-6 xl:mt-12 xl:gap-x-7 2xl:mt-14"
+               >
+                  <div class="h-px w-14 bg-new-800 xl:w-16 2xl:w-20"></div>
+                  <div class="!-mt-4">
+                     <h5 class="font-medium md:text-lg lg:text-xl xl:text-2xl">
+                        John Doe
+                     </h5>
+                     <p class="font-poppins text-sm text-new-800">
+                        CEO, Company
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div data-aos="zoom-in">
+               <div class="mx-auto size-fit">
+                  <img
+                     src="assets/images/image-93.png"
+                     alt="Homelist5_testimonial"
+                     class="size-[300px] rounded-full md:size-[350px] lg:size-[400px] xl:size-[450px] 2xl:size-[520px]"
+                  />
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Testimonial Ended -->
+
+      <!-- Blogs Started -->
+      <section
+         class="section-padding-120 container overflow-hidden px-4 xl:px-0"
+      >
+         <div
+            class="flex flex-col gap-y-5 md:flex-row md:items-end md:justify-between"
+         >
+            <div
+               data-aos="fade-right"
+               class="w-full md:max-w-[75%] lg:max-w-[50%]"
+            >
+               <h2 class="heading-2 !text-start">Delivering Triumphs</h2>
+            </div>
+            <div data-aos="fade-left">
+               <a
+                  href="#"
+                  class="flex size-fit items-center gap-x-1.5 rounded-full border border-secondary px-6 py-3.5 text-center font-poppins text-sm text-new-900 transition-all hover:border-secondary hover:text-secondary md:gap-x-2 md:px-7 md:py-4 md:text-base lg:px-8 lg:text-lg"
+                  ><span>Explore More</span
+                  ><i class="fa-solid fa-arrow-right-long"></i
+               ></a>
+            </div>
+         </div>
+
+         <div class="gap-30 mt-60p grid w-full md:grid-cols-2">
+            <!-- card 1 -->
+            <div
+               data-aos="fade-zoom-in"
+               data-aos-easing="ease-in-back"
+               class="h5-blogs-card"
+            >
+               <div class="h5-blogs-img">
+                  <img src="assets/images/image-17.png" alt="Homelist5_blog" />
+               </div>
+               <div class="h5-blogs-body">
+                  <div class="h5-blogs-icons">
+                     <p>
+                        <i class="fa-regular fa-calendar-days"></i
+                        ><span>October 12, 2024</span>
+                     </p>
+                     <p><i class="fa-regular fa-user"></i><span>Admin</span></p>
+                  </div>
+
+                  <a href="blog.html">A haven of tranquility memories made</a>
+
+                  <div class="h5-blogs-footer">
+                     <p>
+                        Explore the dynamic commerce through our insightful
+                        blogs. Learn Explore the dynamic
+                     </p>
+                     <div>
+                        <a href="blog.html"
+                           ><i class="fa-solid fa-arrow-right"></i
+                        ></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- card 2 -->
+            <div
+               data-aos="fade-zoom-in"
+               data-aos-easing="ease-in-back"
+               class="h5-blogs-card"
+            >
+               <div class="h5-blogs-img">
+                  <img src="assets/images/image-18.png" alt="Homelist5_blog" />
+               </div>
+               <div class="h5-blogs-body">
+                  <div class="h5-blogs-icons">
+                     <p>
+                        <i class="fa-regular fa-calendar-days"></i
+                        ><span>October 12, 2024</span>
+                     </p>
+                     <p><i class="fa-regular fa-user"></i><span>Admin</span></p>
+                  </div>
+
+                  <a href="blog.html"
+                     >Find your forever home Where Unparalleled</a
+                  >
+
+                  <div class="h5-blogs-footer">
+                     <p>
+                        Explore the dynamic commerce through our insightful
+                        blogs. Learn Explore the dynamic
+                     </p>
+                     <div>
+                        <a href="blog.html"
+                           ><i class="fa-solid fa-arrow-right"></i
+                        ></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Blogs Ended -->
+
+      <!-- Newsletter Started -->
+      <section
+         class="w-full bg-cover bg-center bg-no-repeat"
+         style="background-image: url(&quot;assets/images/image-67.png&quot;)"
+      >
+         <div class="section-padding-120 size-full bg-[#0b0b0e99] text-white">
+            <div class="container flex flex-col items-center justify-center">
+               <h2
+                  data-aos="fade-up"
+                  class="text-center text-[50px] font-bold tracking-tight sm:text-[55px] md:text-[60px] lg:text-[65px] xl:text-[70px] 2xl:text-[74px] 2xl:leading-[84px]"
+               >
+                  Subscribe to Our <br />
+                  Newsletter
+               </h2>
+
+               <a
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  href="#"
+                  class="px-30 mt-6 flex items-center gap-x-1.5 rounded-full bg-secondary py-3.5 text-center font-poppins text-sm md:mt-7 md:gap-x-2 md:py-4 md:text-base lg:mt-8 lg:gap-x-2.5 lg:py-5 lg:text-lg xl:mt-9 2xl:mt-10"
+               >
+                  <span>Subscribe</span
+                  ><i class="fa-solid fa-arrow-right-long"></i>
+               </a>
+            </div>
+         </div>
+      </section>
+      <!-- Newsletter Ended -->
+
+      <!-- footer started -->
+      <footer class="w-full bg-new-900">
+         <div
+            class="section-padding container grid grid-cols-2 gap-5 bg-new-900 px-4 text-white sm:gap-8 md:gap-10 lg:grid-cols-6 lg:gap-16 xl:gap-20 xl:px-0 2xl:gap-24"
+         >
+            <!-- span 2 -->
+            <div
+               data-aos="fade-zoom-in"
+               data-aos-easing="ease-in-back"
+               class="col-span-2"
+            >
+               <a href="" class="size-fit">
+                  <img src="assets/images/logo-2.png" alt="Homelist4_footer" />
+               </a>
+               <p
+                  class="my-9 font-poppins text-sm font-medium text-new-800 opacity-70"
+               >
+                  Lorem ipsum dolor amet, consectetur sell adipis elit phase
+                  nibh ellentes
+               </p>
+
+               <div class="mb-10">
+                  <form action="#">
+                     <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="w-full rounded-full border border-new-200 bg-new-900 px-4 py-3.5 focus:border-secondary focus:ring-secondary"
+                     />
+                     <button
+                        type="submit"
+                        class="mt-1.5 w-full rounded-full bg-secondary py-3.5 font-poppins text-sm text-white"
+                     >
+                        Subscribe
+                     </button>
+                  </form>
+               </div>
+
+               <div class="flex items-center gap-x-2.5">
+                  <a
+                     href="#"
+                     class="flex size-9 items-center justify-center rounded-md border border-new-800 text-new-800 transition-all hover:border-secondary hover:bg-secondary hover:text-white"
+                  >
+                     <i class="fa-brands fa-facebook-f text-xl"></i>
+                  </a>
+                  <a
+                     href="#"
+                     class="flex size-9 items-center justify-center rounded-md border border-new-800 text-new-800 transition-all hover:border-secondary hover:bg-secondary hover:text-white"
+                  >
+                     <i class="fa-brands fa-x-twitter text-xl"></i>
+                  </a>
+                  <a
+                     href="#"
+                     class="flex size-9 items-center justify-center rounded-md border border-new-800 text-new-800 transition-all hover:border-secondary hover:bg-secondary hover:text-white"
+                  >
+                     <i class="fa-brands fa-instagram text-xl"></i>
+                  </a>
+                  <a
+                     href="#"
+                     class="flex size-9 items-center justify-center rounded-md border border-new-800 text-new-800 transition-all hover:border-secondary hover:bg-secondary hover:text-white"
+                  >
+                     <i class="fa-brands fa-linkedin-in text-xl"></i>
+                  </a>
+               </div>
+            </div>
+
+            <!-- span 1 -->
+            <div
+               data-aos="fade-zoom-in"
+               data-aos-easing="ease-in-back"
+               data-aos-delay="300"
+            >
+               <h5 class="text-base font-bold text-white md:text-lg lg:text-xl">
+                  Services
+               </h5>
+
+               <div class="mt-30">
+                  <ul
+                     class="space-y-5 font-poppins text-sm font-medium text-new-800"
+                  >
+                     <li class="transition-all hover:text-secondary">
+                        <a
+                           href="#"
+                           class="flex items-center gap-x-1.5 md:gap-x-2 lg:gap-x-2.5"
+                        >
+                           <i class="fa-solid fa-angle-right text-secondary"></i
+                           ><span>Roof Inspection</span>
+                        </a>
+                     </li>
+                     <li class="transition-all hover:text-secondary">
+                        <a
+                           href="#"
+                           class="flex items-center gap-x-1.5 md:gap-x-2 lg:gap-x-2.5"
+                        >
+                           <i class="fa-solid fa-angle-right text-secondary"></i
+                           ><span>Moss Removal</span>
+                        </a>
+                     </li>
+                     <li class="transition-all hover:text-secondary">
+                        <a
+                           href="#"
+                           class="flex items-center gap-x-1.5 md:gap-x-2 lg:gap-x-2.5"
+                        >
+                           <i class="fa-solid fa-angle-right text-secondary"></i
+                           ><span>Attic Ventilation</span>
+                        </a>
+                     </li>
+                     <li class="transition-all hover:text-secondary">
+                        <a
+                           href="#"
+                           class="flex items-center gap-x-1.5 md:gap-x-2 lg:gap-x-2.5"
+                        >
+                           <i class="fa-solid fa-angle-right text-secondary"></i
+                           ><span>Roof Cleaning</span>
+                        </a>
+                     </li>
+                     <li class="transition-all hover:text-secondary">
+                        <a
+                           href="#"
+                           class="flex items-center gap-x-1.5 md:gap-x-2 lg:gap-x-2.5"
+                        >
+                           <i class="fa-solid fa-angle-right text-secondary"></i
+                           ><span>Eaves Cleaning</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- span 1 -->
+            <div
+               data-aos="fade-zoom-in"
+               data-aos-easing="ease-in-back"
+               data-aos-delay="400"
+            >
+               <h5 class="text-base font-bold text-white md:text-lg lg:text-xl">
+                  Useful Links
+               </h5>
+
+               <div class="mt-30">
+                  <ul
+                     class="space-y-5 font-poppins text-sm font-medium text-new-800"
+                  >
+                     <li class="transition-all hover:text-secondary">
+                        <a
+                           href="#"
+                           class="flex items-center gap-x-1.5 md:gap-x-2 lg:gap-x-2.5"
+                        >
+                           <i class="fa-solid fa-angle-right text-secondary"></i
+                           ><span>About Us</span>
+                        </a>
+                     </li>
+                     <li class="transition-all hover:text-secondary">
+                        <a
+                           href="#"
+                           class="flex items-center gap-x-1.5 md:gap-x-2 lg:gap-x-2.5"
+                        >
+                           <i class="fa-solid fa-angle-right text-secondary"></i
+                           ><span>Our Team</span>
+                        </a>
+                     </li>
+                     <li class="transition-all hover:text-secondary">
+                        <a
+                           href="#"
+                           class="flex items-center gap-x-1.5 md:gap-x-2 lg:gap-x-2.5"
+                        >
+                           <i class="fa-solid fa-angle-right text-secondary"></i
+                           ><span>Recent News</span>
+                        </a>
+                     </li>
+                     <li class="transition-all hover:text-secondary">
+                        <a
+                           href="#"
+                           class="flex items-center gap-x-1.5 md:gap-x-2 lg:gap-x-2.5"
+                        >
+                           <i class="fa-solid fa-angle-right text-secondary"></i
+                           ><span>Projects</span>
+                        </a>
+                     </li>
+                     <li class="transition-all hover:text-secondary">
+                        <a
+                           href="#"
+                           class="flex items-center gap-x-1.5 md:gap-x-2 lg:gap-x-2.5"
+                        >
+                           <i class="fa-solid fa-angle-right text-secondary"></i
+                           ><span>Our All Services</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- span 2 -->
+            <div
+               data-aos="fade-zoom-in"
+               data-aos-easing="ease-in-back"
+               data-aos-delay="500"
+               class="col-span-2"
+            >
+               <h5 class="text-base font-bold text-white md:text-lg lg:text-xl">
+                  Contact
+               </h5>
+
+               <div
+                  class="mt-30 space-y-6 font-poppins text-sm text-new-800 *:flex *:items-center *:gap-x-4"
+               >
+                  <p>
+                     <i class="fa-solid fa-envelope text-secondary"></i
+                     ><span>mail@example.com</span>
+                  </p>
+
+                  <address>
+                     <i class="fa-solid fa-map-pin text-secondary"></i
+                     ><span>Your address goes there</span>
+                  </address>
+               </div>
+            </div>
+         </div>
+
+         <hr class="opacity-20" />
+
+         <div
+            class="container flex items-center justify-between px-4 py-3 md:py-4 lg:py-5 xl:px-0 xl:py-[30px]"
+         >
+            <p
+               class="font-poppins text-xs text-new-800 sm:text-sm md:text-base lg:text-lg"
+            >
+               &copy;Homelist 2024 | All Rights Reserved
+            </p>
+            <ul
+               class="flex items-center gap-x-2 font-poppins text-xs text-new-800 sm:text-sm md:gap-x-4 md:text-base lg:gap-x-5 lg:text-lg"
+            >
+               <li class="transition-all hover:text-white">
+                  <a href="#">Trams & Condition</a>
+               </li>
+               <li class="transition-all hover:text-white">
+                  <a href="#">Privacy Policy</a>
+               </li>
+               <li class="transition-all hover:text-white">
+                  <a href="#">Contact Us</a>
+               </li>
+            </ul>
+         </div>
+      </footer>
+      <!-- footer ended -->
+
+      <!-- NOTE: splitted content -->
+      <!-- drawer component -->
+      <div
+         id="drawer-right-example"
+         class="fixed right-0 top-0 z-[60] h-screen w-96 translate-x-full overflow-y-auto border-l bg-white p-10 transition-transform"
+         tabindex="-1"
+         aria-labelledby="drawer-right-label"
+      >
+         <a href="index.html">
+            <img src="assets/images/logo.png" alt="Homelist" />
+         </a>
+         <button
+            type="button"
+            data-drawer-hide="drawer-right-example"
+            aria-controls="drawer-right-example"
+            class="group absolute right-10 top-10 inline-flex size-[38px] items-center justify-center rounded-full bg-rose-100 text-sm text-rose-600"
+         >
+            <svg
+               class="size-3.5 transition-transform duration-500 ease-in-out group-hover:rotate-180"
+               aria-hidden="true"
+               xmlns="http://www.w3.org/2000/svg"
+               fill="none"
+               viewBox="0 0 14 14"
+            >
+               <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+               />
+            </svg>
+            <span class="sr-only">Close menu</span>
+         </button>
+
+         <div class="mt-8">
+            <article
+               class="prose prose-ul:m-0 prose-ul:list-none prose-ul:space-y-2.5 prose-ul:pl-0 prose-li:pl-0"
+            >
+               <h3>About Us</h3>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corporis quos illo odio incidunt optio sunt impedit! Quis
+                  nesciunt, expedita doloribus temporibus eos, eum corporis amet
+                  voluptatem sapiente consectetur exercitationem doloremque?
+               </p>
+               <h3>Contact Info</h3>
+               <div>
+                  <ul>
+                     <li>
+                        <h4 class="m-0 font-semibold">Email</h4>
+                        <div class="flex items-center gap-x-1.5">
+                           <span
+                              class="inline-flex size-8 items-center justify-center rounded-md bg-primary-50 text-primary"
+                           >
+                              <i class="fa-solid fa-envelope text-primary"></i>
+                           </span>
+                           <span class="text-base leading-none text-slate-500"
+                              >support@homelist.com</span
+                           >
+                        </div>
+                     </li>
+                     <li>
+                        <h4 class="m-0 font-semibold">Phone</h4>
+                        <div class="flex items-center gap-x-1.5">
+                           <span
+                              class="inline-flex size-8 items-center justify-center rounded-md bg-primary-50 text-primary"
+                           >
+                              <i class="fa-solid fa-phone text-primary"></i>
+                           </span>
+                           <span class="text-base text-slate-500"
+                              >+880 131 245 6340</span
+                           >
+                        </div>
+                     </li>
+                     <li>
+                        <h4 class="m-0 font-semibold">Address</h4>
+                        <div class="flex items-center gap-x-1.5">
+                           <span
+                              class="inline-flex size-8 items-center justify-center rounded-md bg-primary-50 text-primary"
+                           >
+                              <i
+                                 class="fa-solid fa-map-marker-alt text-primary"
+                              ></i>
+                           </span>
+                           <span class="text-base text-slate-500"
+                              >1234, Street, City, USA.</span
+                           >
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+
+               <div class="mt-8">
+                  <h3>Follow Us</h3>
+                  <menu class="flex items-center gap-x-2.5">
+                     <li>
+                        <a
+                           href="#"
+                           class="group flex size-10 items-center justify-center rounded-full bg-primary-50"
+                        >
+                           <i
+                              class="fa-brands fa-facebook text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"
+                           ></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a
+                           href="#"
+                           class="group flex size-10 items-center justify-center rounded-full bg-primary-50"
+                        >
+                           <i
+                              class="fa-brands fa-twitter text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"
+                           ></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a
+                           href="#"
+                           class="group flex size-10 items-center justify-center rounded-full bg-primary-50"
+                        >
+                           <i
+                              class="fa-brands fa-instagram text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"
+                           ></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a
+                           href="#"
+                           class="group flex size-10 items-center justify-center rounded-full bg-primary-50"
+                        >
+                           <i
+                              class="fa-brands fa-linkedin text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"
+                           ></i>
+                        </a>
+                     </li>
+                  </menu>
+               </div>
+            </article>
+         </div>
+      </div>
+
+      <!-- search modal -->
+      <div
+         id="search-modal"
+         data-modal-backdrop="static"
+         tabindex="-1"
+         aria-hidden="true"
+         class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0"
+      >
+         <div
+            class="flex max-h-full w-full max-w-screen-md flex-col items-center justify-center p-4"
+         >
+            <button
+               data-modal-hide="search-modal"
+               class="group flex size-8 items-center justify-center rounded-full bg-rose-100 text-xl text-rose-600"
+            >
+               <i
+                  class="fa-solid fa-times transition-transform duration-500 group-hover:rotate-180"
+               ></i>
+            </button>
+
+            <form class="mx-auto mt-16 w-full">
+               <label
+                  for="default-search"
+                  class="sr-only mb-2 text-sm font-medium text-gray-900"
+                  >Search</label
+               >
+               <div class="relative">
+                  <div
+                     class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3"
+                  >
+                     <svg
+                        class="h-4 w-4 text-gray-500"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                        />
+                     </svg>
+                  </div>
+                  <input
+                     type="search"
+                     id="default-search"
+                     class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 ps-10 text-sm text-gray-900 focus:border-primary focus:ring-primary"
+                     placeholder="Search for Properties..."
+                     required
+                  />
+                  <button
+                     type="submit"
+                     class="absolute bottom-2.5 end-2.5 rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary focus:outline-none focus:ring-4 focus:ring-blue-300"
+                  >
+                     Search
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+      <!-- splitd content end -->
+
+      <!-- responsive menu content started -->
+      <div
+         id="responsive-menu"
+         tabindex="-1"
+         aria-labelledby="responsive-menu-label"
+         class="fixed left-0 top-0 z-[60] h-screen w-64 -translate-x-full overflow-y-auto border-r bg-white p-4 transition-transform"
+      >
+         <a href="#">
+            <img src="assets/images/logo.png" />
+         </a>
+         <button
+            type="button"
+            data-drawer-hide="responsive-menu"
+            aria-controls="responsive-menu"
+            class="absolute end-2.5 top-2.5 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+         >
+            <svg
+               class="h-3 w-3"
+               aria-hidden="true"
+               xmlns="http://www.w3.org/2000/svg"
+               fill="none"
+               viewBox="0 0 14 14"
+            >
+               <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+               />
+            </svg>
+            <span class="sr-only">Close menu</span>
+         </button>
+         <div class="overflow-y-auto py-4">
+            <ul class="space-y-2 font-medium">
+               <!-- homes -->
+               <li>
+                  <button
+                     type="button"
+                     class="group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                     aria-controls="dropdown-homes"
+                     data-collapse-toggle="dropdown-homes"
+                  >
+                     <i
+                        class="fa-solid fa-house h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap text-left"
+                        >Homes</span
+                     >
+                     <svg
+                        class="h-3 w-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 4 4 4-4"
+                        />
+                     </svg>
+                  </button>
+                  <ul id="dropdown-homes" class="hidden space-y-2 py-2">
+                     <li>
+                        <a
+                           href="index.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 1</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="index2.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 2</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="index3.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 3</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="index4.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 4</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="index5.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Home 5</a
+                        >
+                     </li>
+                  </ul>
+               </li>
+
+               <!-- property -->
+               <li>
+                  <button
+                     type="button"
+                     class="group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                     aria-controls="dropdown-property"
+                     data-collapse-toggle="dropdown-property"
+                  >
+                     <i
+                        class="fa-solid fa-umbrella-beach h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap text-left"
+                        >Property</span
+                     >
+                     <svg
+                        class="h-3 w-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 4 4 4-4"
+                        />
+                     </svg>
+                  </button>
+                  <ul id="dropdown-property" class="hidden space-y-2 py-2">
+                     <li>
+                        <a
+                           href="properties.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Properties</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="property.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Property Details</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="property2.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Property Details V2</a
+                        >
+                     </li>
+                  </ul>
+               </li>
+
+               <!-- project -->
+               <li>
+                  <button
+                     type="button"
+                     class="group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                     aria-controls="dropdown-project"
+                     data-collapse-toggle="dropdown-project"
+                  >
+                     <i
+                        class="fa-solid fa-diagram-project h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap text-left"
+                        >Project</span
+                     >
+                     <svg
+                        class="h-3 w-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 4 4 4-4"
+                        />
+                     </svg>
+                  </button>
+                  <ul id="dropdown-project" class="hidden space-y-2 py-2">
+                     <li>
+                        <a
+                           href="projects.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Projects</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="project.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Project Details</a
+                        >
+                     </li>
+                  </ul>
+               </li>
+
+               <!-- blog -->
+               <li>
+                  <button
+                     type="button"
+                     class="group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                     aria-controls="dropdown-blog"
+                     data-collapse-toggle="dropdown-blog"
+                  >
+                     <i
+                        class="fa-brands fa-microblog h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap text-left"
+                        >Blogs</span
+                     >
+                     <svg
+                        class="h-3 w-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 4 4 4-4"
+                        />
+                     </svg>
+                  </button>
+                  <ul id="dropdown-blog" class="hidden space-y-2 py-2">
+                     <li>
+                        <a
+                           href="blogs.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Blogs</a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="blog.html"
+                           class="group flex w-full items-center rounded-lg p-2 pl-11 text-gray-900 transition duration-75 hover:bg-gray-100"
+                           >Blog Details</a
+                        >
+                     </li>
+                  </ul>
+               </li>
+
+               <li>
+                  <a
+                     href="map-view-1.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-location-crosshairs h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap"
+                        >Map View 1</span
+                     >
+                  </a>
+               </li>
+
+               <li>
+                  <a
+                     href="map-view-2.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-location-crosshairs h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap"
+                        >Map View 2</span
+                     >
+                  </a>
+               </li>
+
+               <li>
+                  <a
+                     href="map-view-3.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-location-crosshairs h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap"
+                        >Map View 3</span
+                     >
+                  </a>
+               </li>
+
+               <li>
+                  <a
+                     href="faq.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-circle-question h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap">FAQs</span>
+                  </a>
+               </li>
+
+               <li>
+                  <a
+                     href="contact.html"
+                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100"
+                  >
+                     <i
+                        class="fa-solid fa-paper-plane h-5 w-5 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                     ></i>
+
+                     <span class="ms-3 flex-1 whitespace-nowrap">Contact</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- Splitted code ended -->
+
+      <!-- Scripts -->
+      <script src="js/fontawesome.min.js"></script>
+      <script src="js/flowbite.min.js"></script>
+      <script src="js/aos.js"></script>
+      <script src="js/odometer.js"></script>
+      <script src="js/swiper-bundle.min.js"></script>
+      <script src="js/index.js"></script>
+      <script>
+         AOS.init({
+            delay: 0,
+            duration: 1000,
+         });
+      </script>
+   </body>
+</html>

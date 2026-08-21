@@ -1,0 +1,17 @@
+{% comment %}
+  Shopify Wishlist
+  Usage:
+    - Replace the snippet name ('product-card') with your existing product card snippet
+    - Pass the product object as a snippet variable named 'product'
+{% endcomment %}
+{% render 'card-wishlist',
+   card_product: product,
+  media_aspect_ratio: adpt,
+  show_secondary_image: false,
+  show_vendor:false,
+  show_rating: false,
+  show_quick_add: true,
+  show_quick_view: true,
+  section_id: section.id
+%}
+

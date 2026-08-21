@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+      />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+      <link rel="stylesheet" href="dist/css/style.css" />
+      <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+      <title>Homelist - Documentation</title>
+   </head>
+   <body>
+      <!-- navbar started -->
+      <nav
+         class="fixed top-0 z-50 w-full border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800"
+      >
+         <div class="my-px-60 container max-w-[1910px] py-3">
+            <div class="flex items-center justify-between">
+               <div class="flex items-center justify-start rtl:justify-end">
+                  <button
+                     data-drawer-target="logo-sidebar"
+                     data-drawer-toggle="logo-sidebar"
+                     aria-controls="logo-sidebar"
+                     type="button"
+                     class="inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden"
+                  >
+                     <span class="sr-only">Open sidebar</span>
+                     <svg
+                        class="h-6 w-6"
+                        aria-hidden="true"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                     >
+                        <path
+                           clip-rule="evenodd"
+                           fill-rule="evenodd"
+                           d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                        ></path>
+                     </svg>
+                  </button>
+                  <a href="https://flowbite.com" class="ms-2 flex md:me-24">
+                     <img
+                        src="assets/logo.png"
+                        class="me-3 h-8"
+                        alt="Namespace It logo"
+                     />
+                  </a>
+               </div>
+               <div class="flex items-center">
+                  <div
+                     class="flex items-center gap-x-2 sm:gap-x-2.5 md:gap-x-3 lg:gap-x-5"
+                  >
+                     <a
+                        href="https://themeforest.net/user/namespace-it"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        role="button"
+                        class="rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none"
+                     >
+                        <i class="fa-solid fa-shop"></i>
+                        <span class="hidden md:inline-block">Our Store</span>
+                     </a>
+                     <a
+                        href="https://themeforest.net/user/namespace-it/portfolio"
+                        target="_blank"
+                        role="button"
+                        class="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                     >
+                        <span class="hidden md:inline-block"
+                           >Buy More Templates</span
+                        >
+                        <span class="md:hidden">More</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <!-- navbar ended -->
+
+      <!-- left side started -->
+      <aside
+         id="logo-sidebar"
+         class="fixed left-0 top-0 z-40 h-screen w-80 -translate-x-full border-r border-gray-200 bg-white pt-20 transition-transform dark:border-gray-700 dark:bg-gray-800 lg:translate-x-0"
+         aria-label="Sidebar"
+      >
+         <div
+            class="h-full overflow-y-auto bg-white px-3 pb-4 dark:bg-gray-800"
+         >
+            <ul class="space-y-2 font-medium">
+               <li class="mb-5">
+                  <h5
+                     id="sidebar-heading-0"
+                     class="text-base font-semibold uppercase text-gray-500 dark:text-gray-400"
+                  >
+                     Documentation
+                  </h5>
+               </li>
+
+               <li>
+                  <a
+                     href="#getting-started"
+                     class="scroll-active group flex items-center bg-sky-50 p-2 py-3 text-gray-900 transition-all duration-300 hover:bg-sky-50/70 hover:text-primary dark:text-white dark:hover:bg-gray-700"
+                  >
+                     <i class="fad fa-star-shooting"></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap"
+                        >Getting Started</span
+                     >
+                  </a>
+               </li>
+
+               <li>
+                  <a
+                     href="#folder-structure"
+                     class="group flex items-center bg-sky-50 p-2 py-3 text-gray-900 transition-all duration-300 hover:bg-sky-50/70 hover:text-primary dark:text-white dark:hover:bg-gray-700"
+                  >
+                     <i class="fad fa-folders"></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap"
+                        >Folder Structure</span
+                     >
+                  </a>
+               </li>
+
+               <li id="installation-button">
+                  <a
+                     href="#installation"
+                     role="button"
+                     class="group flex w-full items-center bg-sky-50 p-2 py-3 text-gray-900 transition-all duration-300 hover:bg-sky-50/70 hover:text-primary dark:text-white dark:hover:bg-gray-700"
+                  >
+                     <i class="fad fa-tools"></i>
+                     <span
+                        class="ms-3 flex-1 whitespace-nowrap text-left rtl:text-right"
+                        >Installation</span
+                     >
+                     <i class="far fa-plus mr-3"></i>
+                  </a>
+
+                  <ul
+                     id="installation-items"
+                     class="ml-5 hidden space-y-1 py-2 text-sm font-semibold"
+                  >
+                     <li>
+                        <a
+                           href="#change-logo"
+                           class="group flex w-full items-center bg-slate-50 p-2 text-gray-900 transition duration-75 hover:bg-gray-100 hover:text-secondary dark:text-white dark:hover:bg-gray-700"
+                        >
+                           <i class="fad fa-chevron-double-right mr-3"></i>
+                           <span>Change Logo</span></a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="#change-title"
+                           class="group flex w-full items-center bg-slate-50 p-2 text-gray-900 transition duration-75 hover:bg-gray-100 hover:text-secondary dark:text-white dark:hover:bg-gray-700"
+                        >
+                           <i class="fad fa-chevron-double-right mr-3"></i>
+                           <span>Change Title</span></a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="#customize-js"
+                           class="group flex w-full items-center bg-slate-50 p-2 text-gray-900 transition duration-75 hover:bg-gray-100 hover:text-secondary dark:text-white dark:hover:bg-gray-700"
+                        >
+                           <i class="fad fa-chevron-double-right mr-3"></i>
+                           <span>Customize JavaScript</span></a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="#customize-css"
+                           class="group flex w-full items-center bg-slate-50 p-2 text-gray-900 transition duration-75 hover:bg-gray-100 hover:text-secondary dark:text-white dark:hover:bg-gray-700"
+                        >
+                           <i class="fad fa-chevron-double-right mr-3"></i>
+                           <span>Change CSS</span></a
+                        >
+                     </li>
+
+                     <li>
+                        <a
+                           href="#customize-theme"
+                           class="group flex w-full items-center bg-slate-50 p-2 text-gray-900 transition duration-75 hover:bg-gray-100 hover:text-secondary dark:text-white dark:hover:bg-gray-700"
+                        >
+                           <i class="fad fa-chevron-double-right mr-3"></i>
+                           <span>Modify Theme Colors</span></a
+                        >
+                     </li>
+                     <li>
+                        <a
+                           href="#change-placeholders"
+                           class="group flex w-full items-center bg-slate-50 p-2 text-gray-900 transition duration-75 hover:bg-gray-100 hover:text-secondary dark:text-white dark:hover:bg-gray-700"
+                        >
+                           <i class="fad fa-chevron-double-right mr-3"></i>
+                           <span>Change Placeholders</span>
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <a
+                     href="#support"
+                     class="group flex items-center bg-sky-50 p-2 py-3 text-gray-900 transition-all duration-300 hover:bg-sky-50/70 hover:text-primary dark:text-white dark:hover:bg-gray-700"
+                  >
+                     <i class="fad fa-user-headset"></i>
+                     <span class="ms-3 flex-1 whitespace-nowrap">Support</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </aside>
+      <!-- left side ended -->
+
+      <div class="mt-14 flex flex-1 gap-x-5 p-4 lg:ml-80">
+         <div class="flex-1 space-y-5 rounded-lg">
+            <!-- main content here -->
+            <!-- getting started -->
+            <section
+               id="getting-started"
+               class="content container max-w-screen-md rounded-lg p-10 pt-16 shadow-lg"
+            >
+               <article
+                  class="prose !max-w-full flex-1 transition-all prose-a:text-primary-400 hover:prose-a:no-underline prose-img:rounded-lg"
+               >
+                  <div
+                     class="mb-4 flex items-center gap-x-5 md:mb-7 lg:mb-10 xl:mb-12"
+                  >
+                     <div class="mx-auto flex size-fit items-center">
+                        <img
+                           src="assets/logo.png"
+                           alt="Namespace IT"
+                           class="h-10 w-auto"
+                        />
+                        <span class="text-lg font-bold text-slate-500"
+                           >| Docs</span
+                        >
+                     </div>
+                  </div>
+
+                  <h1>Getting Started</h1>
+                  <p class="lead">
+                     Welcome to <strong>Homelist</strong>, a <i>responsive</i>,
+                     <i>mobile-friendly</i> <i>HTML</i> <i>CSS</i>
+                     <i>JavaScript</i> and <i>TypeScript</i> template powered by
+                     <a
+                        href="https://tailwindcss.com"
+                        target="_blank"
+                        referrerpolicy="no-referrer noopner"
+                        rel="nofollow"
+                        >Tailwind CSS</a
+                     >
+                     and <a href="https://flowbite.com">Flowbite UI</a>.
+                     <strong>Homelist</strong> is designed for smooth
+                     <i>SEO</i> optimization, ensuring that your website works
+                     well on <i>all devices</i>.
+                  </p>
+
+                  <div
+                     class="mb-4 flex items-center rounded-lg bg-blue-50 p-4 text-sm text-blue-800 dark:bg-gray-800 dark:text-blue-400"
+                     role="alert"
+                  >
+                     <i
+                        class="fas fa-hands-heart me-3 inline h-4 w-4 flex-shrink-0"
+                     ></i>
+                     <span class="sr-only">Info</span>
+                     <div>
+                        <span class="font-medium">Thank You!</span> We'd like to
+                        thank you for picking our <i>Homelist</i> template.
+                     </div>
+                  </div>
+
+                  <p>
+                     <strong>Homelist</strong> is a real estate platform that
+                     helps consumers find their ideal property worldwide. With
+                     advanced search criteria, featured destinations, and
+                     professional property guides, we make it simple for
+                     consumers to find, compare, and connect with their ideal
+                     home or investment. <strong>Homelist</strong> is
+                     mobile-friendly, responsive, and customized for a smooth
+                     user experience.
+                  </p>
+                  <h3>Use Cases</h3>
+                  <ul>
+                     <li>
+                        <strong>Property Listing:</strong>
+                        You can use the template for property listing websites.
+                     </li>
+                     <li>
+                        <strong>Real Estate:</strong>
+                        You can use the template for real estate websites.
+                     </li>
+                     <li>
+                        <strong>Property Selling: </strong>
+                        You can use the template for property selling websites.
+                     </li>
+                     <li>
+                        <strong>Property Renting: </strong>
+                        You can use the template for property renting websites.
+                     </li>
+                     <li>
+                        <strong>Property Buying: </strong>
+                        You can use the template for property buying websites.
+                        Or you can use it <i>Buy</i>, <i>Sell</i> &
+                        <i>Rent</i> websites at a time.
+                     </li>
+                  </ul>
+                  <h3>Where We Can Use It?</h3>
+                  <p>
+                     Where you can use this template? Here are some examples:
+                  </p>
+                  <ol>
+                     <li>
+                        <strong>Static Site: </strong>
+                        You can use the template as a static site with just
+                        HTML, CSS & JavaScript.
+                     </li>
+                     <li>
+                        <strong>Dynamic Site: </strong>
+                        You can use the template in <i>PHP</i>, <i>NodeJs</i> or
+                        any other server-side language.
+                     </li>
+                     <li>
+                        <strong>ReactJs: </strong>
+                        Your can use the template in <i>ReactJs</i>,
+                        <i>NextJs</i>, <i>GatsbyJs</i>, etc. <i>TypeScript</i> &
+                        <i>JavaScript</i> both are supported.
+                     </li>
+                     <li>
+                        <strong>Wordpress: </strong>
+                        You can use the template in <i>Wordpress</i> as a theme
+                        with customization.
+                     </li>
+                     <li>
+                        <strong> Blade PHP: </strong>
+                        You can use the template in <i>Laravel</i> as a blade UI
+                        with customization.
+                     </li>
+                     <li>
+                        <strong>VueJs: </strong>
+                        You can use the template in <i>VueJs</i> with
+                        <i>Typescript</i> & <i>JavaScript</i> both are
+                        supported.
+                     </li>
+                     <li>
+                        <strong>Angular: </strong>
+                        You can use the template in <i>Angular</i> with
+                        <i>Typescript</i> & <i>JavaScript</i> both are
+                        supported.
+                     </li>
+                     <li>
+                        <strong>Shopify: </strong>
+                        You can use the template in <i>Shopify</i> as a theme
+                        with customization.
+                     </li>
+                     <li>
+                        <strong>Magento: </strong>
+                        You can use the template in <i>Magento</i> as a theme
+                        with customization. And other platforms, where your can
+                        put HTML, CSS and JavaScript.
+                     </li>
+                  </ol>
+
+                  <h3>Credits</h3>
+                  <p>
+                     We'd like to thank the following resources for providing
+                     the tools and resources that we used to create this
+                     template.
+                  </p>
+                  <ul>
+                     <li>
+                        <a
+                           href="https://tailwindcss.com"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           >Tailwind CSS</a
+                        >
+                        : A utility-first CSS framework for rapidly building.
+                     </li>
+                     <li>
+                        <a
+                           href="https://flowbite.com"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           >Flowbite UI</a
+                        >
+                        : A collection of responsive UI components for Tailwind
+                        CSS.
+                     </li>
+                     <li>
+                        <a
+                           href="https://fontawesome.com"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           >Font Awesome</a
+                        >
+                        : The web's most popular icon set and toolkit.
+                     </li>
+                     <li>
+                        <a
+                           href="https://swiperjs.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           >SwiperJs</a
+                        >
+                        : The most modern free mobile touch slider with hardware
+                     </li>
+                     <li>
+                        <a
+                           href="https://github.hubspot.com/odometer/docs/welcome/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           >Odometer:</a
+                        >
+                        Transition numbers with ease.
+                     </li>
+                     <li>
+                        <a
+                           href="https://michalsnik.github.io/aos/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                        >
+                           AOS:
+                        </a>
+                        Animate on scroll library.
+                     </li>
+                  </ul>
+
+                  <div
+                     class="mb-4 flex items-center rounded-lg bg-blue-50 p-4 text-sm text-blue-800 dark:bg-gray-800 dark:text-blue-400"
+                     role="alert"
+                  >
+                     <svg
+                        class="me-3 inline h-4 w-4 flex-shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                     >
+                        <path
+                           d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"
+                        />
+                     </svg>
+                     <span class="sr-only">Info</span>
+                     <div>
+                        <span class="font-medium">Info alert!</span> Some
+                        template like <i>ReactJs</i>, <i>VueJs</i>,
+                        <i>Angular</i>, <i>NextJs</i>, <i>GatsbyJs</i> etc. need
+                        some extra configuration to work, please check the
+                        documentation of the specific platform.
+                     </div>
+                  </div>
+               </article>
+            </section>
+
+            <!-- folder structure -->
+            <section
+               id="folder-structure"
+               class="content container max-w-screen-md rounded-lg p-10 pt-16 shadow-lg"
+            >
+               <article
+                  class="prose !max-w-full flex-1 transition-all prose-a:text-primary-400 hover:prose-a:no-underline prose-img:rounded-lg"
+               >
+                  <h1>Folder Structure</h1>
+                  <p class="lead">
+                     <strong>Homelist</strong> is extensively customized with
+                     <i>HTML</i>, <i>TailwindCSS</i>, <i>JavaScript</i>, and
+                     <i>TypeScript</i>. Here is the template's folder structure.
+                  </p>
+                  <figure>
+                     <img
+                        src="assets/folder-structure.png"
+                        alt="Namespace IT"
+                     />
+
+                     <figcaption>
+                        The <strong>Homelist</strong> template has various files
+                        and folders you can easily customize. You can change the
+                        logo, title, styles, colors, and JavaScript, or add new
+                        pages as needed.
+                     </figcaption>
+                  </figure>
+
+                  <h2>Let's discuss about folders and files.</h2>
+                  <h3>assets:*</h3>
+                  <p>
+                     The <code>/assets</code> folder holds all the images,
+                     icons, and other files for the template. You can replace or
+                     add your own images and icons.
+                  </p>
+
+                  <h3>js:*</h3>
+                  <p>
+                     The <code>js</code> folder contains all the JavaScript &
+                     compiled JavaScript files used in the template. You can
+                     change the JavaScript files as per your need.
+                  </p>
+
+                  <div
+                     class="flex items-center rounded-lg bg-gray-50 p-4 text-sm text-gray-800 dark:bg-gray-800 dark:text-gray-300"
+                     role="alert"
+                  >
+                     <svg
+                        class="me-3 inline h-4 w-4 flex-shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                     >
+                        <path
+                           d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"
+                        />
+                     </svg>
+                     <span class="sr-only">Info</span>
+                     <div>
+                        <span class="font-medium">Info:</span>
+                        You can use only <u>JavaScript</u> file and edit it as
+                        per your need in the <code>/js/**/*.js</code>.
+                     </div>
+                  </div>
+
+                  <h3>node_modules:</h3>
+                  <p>
+                     The <code>/node_modules</code> folder stores all the
+                     template's dependencies. You can install new ones using the
+                     <code>npm install</code> command. This folder isn’t
+                     included in the template and is created automatically. It
+                     doesn’t need to be uploaded to the server.
+                  </p>
+
+                  <h3>src:</h3>
+                  <p>
+                     The <code>/src</code> folder contains all the source files
+                     used in the template. You can change the source files as
+                     per your need. The folder include not compiled
+                     (<u>typescript</u>, <u>tailwindcss</u>, <u>etc</u>) files.
+                  </p>
+
+                  <h3>styles:*</h3>
+                  <p>
+                     The <code>/styles</code> folder includes all CSS and
+                     <i></i> compiled CSS files used in the template. You can
+                     alter the CSS files to suit your needs. The folder also
+                     contains the compiled CSS file from TailwindCSS
+                     <code>/styles/style.css</code>.
+                  </p>
+
+                  <h3>HTML files:*</h3>
+                  <img src="assets/templete/html-filies.png" alt="Homelist" />
+                  <p>
+                     The <code>.html</code> files are in the root folder and can
+                     be customized as needed. The template uses <i>HTML</i>,
+                     <i>CSS</i>, and <i>Tailwind CSS</i> for styling. It&apos;s
+                     fully customizable with
+                     <a href="https://flowbite.com" target="_blank">Flowbite</a>
+                     and built with Vanilla TypeScript and JavaScript for
+                     functionality.
+                  </p>
+
+                  <h3>package.json:</h3>
+                  <p>
+                     The <code>/package.json</code> file lists all the
+                     template's dependencies. You can add new ones using the
+                     <code>npm install</code> command. It&apos;s included in the
+                     template but doesn&apos;t need to be uploaded to the server
+                     and can be deleted if not needed.
+                  </p>
+
+                  <h3>tailwind.config.js:</h3>
+                  <p>
+                     The <code>tailwind.config.js</code> file holds the
+                     <i>TailwindCSS</i> settings for the template. You can
+                     customize it as needed. It&apos;s included in the template
+                     but doesn&apos;t need to be uploaded to the server unless
+                     you want to modify <i>TailwindCSS</i> classes.
+                  </p>
+
+                  <h3>tsconfig.ts:</h3>
+                  <p>
+                     The <code>/tsconfig.ts</code> file holds the TypeScript
+                     settings for the template. You can customize it if needed.
+                     It&apos;s included but doesn&apos;t need to be uploaded to
+                     the server and can be deleted if you&apos;re not using
+                     TypeScript.
+                  </p>
+
+                  <div
+                     class="mb-4 flex items-center rounded-lg bg-yellow-50 p-4 text-sm text-yellow-800 dark:bg-gray-800 dark:text-yellow-300"
+                     role="alert"
+                  >
+                     <svg
+                        class="me-3 inline h-4 w-4 flex-shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                     >
+                        <path
+                           d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"
+                        />
+                     </svg>
+                     <span class="sr-only">Info</span>
+                     <div>
+                        <span class="font-medium">Alert:</span>
+                        The <code>*</code> marked files and folders are
+                        necessary to run the template. Other files and folders
+                        can be deleted if not needed.
+                     </div>
+                  </div>
+               </article>
+            </section>
+
+            <!-- Installation structure -->
+            <section
+               id="installation"
+               class="content container max-w-screen-md rounded-lg p-10 pt-16 shadow-lg"
+            >
+               <article
+                  class="prose !max-w-full flex-1 transition-all prose-a:text-primary-400 hover:prose-a:no-underline prose-img:rounded-lg"
+               >
+                  <h1>Installation</h1>
+                  <p class="lead">
+                     The <strong>Homelist</strong> template is easy to
+                     customize. You can update the <i>logo</i>, <i>title</i>,
+                     <i>styles</i>, <i>JavaScript</i>, <i>colors</i>, and even
+                     add <i>new pages</i>.
+                  </p>
+
+                  <h2 class="sub-menu-content" id="change-logo">Change Logo</h2>
+                  <img src="assets/templete/change-logo.png" alt="Homelist" />
+                  <p>
+                     You will find the <code>/assets/images/logo.png</code> file
+                     in the <code>assets</code> folder. You can replace the logo
+                     with your own logo.
+                  </p>
+
+                  <h2 class="sub-menu-content" id="change-title">
+                     Change Title
+                  </h2>
+                  <img src="assets/templete/change-title.png" alt="Homelist" />
+                  <p>
+                     You will find the <code>&lt;title&gt;</code> tag in every
+                     <code>.html</code> file in the root folder. You can change
+                     the title of the template in the
+                     <code>&lt;title&gt;</code> tag.
+                  </p>
+
+                  <h2 class="sub-menu-content" id="customize-js">
+                     Customize Javascript
+                  </h2>
+                  <img src="assets/templete/change-js.png" alt="Homelist" />
+                  <p>
+                     You can change the JavaScript files in the
+                     <code>js</code> folder. The main JavaScript file is
+                     <code>index.js</code> inside <code>js</code> folder. You
+                     can add new JavaScript files, edit the existing JavaScript
+                     files, etc.
+                  </p>
+
+                  <img src="assets/templete/change-ts.png" alt="Homelist" />
+
+                  <p>
+                     You can change <i>JavaScript</i> through <i>TypeScript</i>,
+                     but you need to install
+                     <a href="https://nodejs.com">Nodejs</a> on your computer.
+                     Then run the following command to compile the TypeScript
+                     files. The main TypeScript file is
+                     <code>/src/ts/index.ts</code>, it will be compiled into
+                     <code>/js/index.js</code> file.
+                  </p>
+
+                  <pre><code class="language-bash"># Install dependencies
+npm install                     
+# Compile TypeScript files
+npm run ts-build</code></pre>
+
+                  <h2 class="sub-menu-content" id="customize-css">
+                     Change Styles/CSS
+                  </h2>
+                  <p>
+                     We used
+                     <a href="https://tailwindcss.com">TailwindCSS</a> to style
+                     the template. You can change the styles in the
+                     <code>styles</code> folder. The main CSS file is
+                     <code>styles.css</code> inside <code>styles</code> folder.
+                     You can add new CSS files, edit the existing CSS files,
+                     etc.
+                  </p>
+
+                  <img src="assets/templete/change-css.png" alt="Homelist" />
+
+                  <div
+                     class="mb-4 flex items-center rounded-lg bg-yellow-50 p-4 text-sm text-yellow-800 dark:bg-gray-800 dark:text-yellow-300"
+                     role="alert"
+                  >
+                     <svg
+                        class="me-3 inline h-4 w-4 flex-shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                     >
+                        <path
+                           d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"
+                        />
+                     </svg>
+                     <span class="sr-only">Info</span>
+                     <div>
+                        <span class="font-medium">Warning! </span>
+                        If you want to change <i>TailwindCSS</i> classes, you
+                        need to install
+                        <a href="https://nodejs.com">Nodejs</a> on your
+                        computer.
+                     </div>
+                  </div>
+
+                  <h3>
+                     Your need to flow the following steps to customize the
+                     template:
+                  </h3>
+                  <p>
+                     <strong>Step1: </strong> Install NodeJs from here
+                     <a href="https://nodejs.com">NodeJs</a>
+                  </p>
+
+                  <p>
+                     <strong>Step2: </strong> Install
+                     <u>required</u> dependencies
+                  </p>
+                  <pre><code class="language-bash"># Install dependencies
+npm install</code></pre>
+
+                  <p>
+                     <strong>Step3: </strong>
+                     Run the following command to compile the TailwindCSS files.
+                  </p>
+                  <pre><code class="language-bash"># Compile TailwindCSS files
+npm run dev:css</code></pre>
+
+                  <p>
+                     <strong>Step4: </strong>
+                     Add <i>TailwindCSS</i> class inside the
+                     <code>class</code> attribute or
+                     <code>/src/css/input.css</code> file.
+                  </p>
+
+                  <div
+                     class="flex items-center rounded-lg bg-gray-50 p-4 text-sm text-gray-800 dark:bg-gray-800 dark:text-gray-300"
+                     role="alert"
+                  >
+                     <svg
+                        class="me-3 inline h-4 w-4 flex-shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                     >
+                        <path
+                           d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"
+                        />
+                     </svg>
+                     <span class="sr-only">Info</span>
+                     <div>
+                        <span class="font-medium">Info!</span>
+                        Don't forget to include
+                        <code>/styles/style.css</code> in your HTML file.
+                     </div>
+                  </div>
+
+                  <pre><code class="language-html">&lt;link rel="stylesheet" href="styles/style.css" /&gt;</code></pre>
+
+                  <div
+                     class="mb-4 flex items-center rounded-lg bg-red-50 p-4 text-sm text-red-800 dark:bg-gray-800 dark:text-red-400"
+                     role="alert"
+                  >
+                     <svg
+                        class="me-3 inline h-4 w-4 flex-shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                     >
+                        <path
+                           d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"
+                        />
+                     </svg>
+                     <span class="sr-only">Info</span>
+                     <div>
+                        <span class="font-medium">Alert!</span>
+                        Always use <u>minified</u> css file in the production.
+                        You can minify the css file using the following command.
+                        It will minify your same css file.
+                     </div>
+                  </div>
+                  <pre><code class="language-bash"># Minify your CSS
+npm run build:css</code></pre>
+
+                  <h2 class="sub-menu-content" id="customize-theme">
+                     Customize Theme Color
+                  </h2>
+                  <p>
+                     The theme colors are defined in the
+                     <code>src/css/input.css</code> file. You can change the
+                     theme colors as per your need.
+                  </p>
+
+                  <pre><code class="language-css">@layer base {
+:root {
+/* primary */
+--primary-600: #5a1bff;
+--primary-500: #3b71fe;
+--primary-400: #628dfe;
+--primary-100: #c4d4ff;
+--primary-50: #d8e3ff;
+--primary-10: #ebf1ff;
+/* secondary */
+--secondary-500: #ff5c00;
+--secondary-400: #ff7d33;
+--secondary-300: #ff9d66;
+/* new */
+--new-900: #0b0b0e;
+--new-800: #969ba9;
+--new-200: #b3b8c7;
+--new-100: #f4f5f6;
+/* nature */
+--nature-800: #0e0f13;
+--nature-600: #1c1e26;
+--nature-500: #23262f;
+--nature-400: #40434d;
+--nature-300: #5d606c;
+--nature-200: #797e8a;
+--nature-100: #969ba9;
+--nature-50: #a5a9b8;
+/* Line */
+--line-100: #f1f1f1;
+/* utils */
+--navbar-height: 48px;
+/* shadows */
+--shadow-1: 0px 16px 52px 0px #00000012;
+--shadow-2: 0px 16px 60px -16px #00000014;
+--shadow-3: 29px 43px 70px -10px #bdbdbd29;
+--shadow-4: 0px 40px 64px -32px #0f0f0f1a;
+--shadow-5: 0px 20px 30px -10px #00000014;
+--shadow-6: 0px 20px 70px 0px #0067ff4d;
+--shadow-7: 0px 10px 14px -5px #0000001a;
+--shadow-8: 0px 0px 60px 0px #0000000d;
+--shadow-9: 0px 5px 60px 0px #0000000d;
+--shadow-10: 0px 20px 80px 0px #0808080d;
+--shadow-11: 0px 4px 13px -2px #1310220f, 0px 4.8px 24.4px -6px #1310221a;
+--swiper-navigation-size: 20px;
+   }
+      }</code></pre>
+
+                  <h2 class="sub-menu-content" id="change-placeholders">
+                     Change Placeholders
+                  </h2>
+                  <img
+                     src="assets/templete/placeholder-1.png"
+                     alt="placeholder"
+                  />
+                  <figcaption>
+                     The placeholder images in the template.
+                  </figcaption>
+
+                  <img
+                     src="assets/templete/placeholder-2.png"
+                     alt="placeholder"
+                  />
+                  <figcaption>The placeholder images in the folder.</figcaption>
+                  <p>
+                     You can change the placeholder images in the
+                     <code>/assets/images</code> folder. The placeholder file
+                     name and it's size is same.
+                  </p>
+               </article>
+            </section>
+
+            <!-- support structure -->
+            <section
+               id="support"
+               class="content container h-screen max-w-screen-md rounded-lg p-10 pt-16 shadow-lg"
+            >
+               <article
+                  class="prose !max-w-full flex-1 transition-all prose-a:text-primary-400 hover:prose-a:no-underline prose-img:rounded-lg"
+               >
+                  <h1 id="support">Support</h1>
+                  <p class="lead">
+                     Need help, have a question, or just want to say hi? We're
+                     here to help you.
+                  </p>
+                  <div class="not-prose flex flex-wrap items-center gap-2">
+                     <a
+                        href="https://www.facebook.com/namespaceitcom"
+                        target="_blank"
+                        referrerpolicy="no-referrer"
+                        role="button"
+                        class="mb-2 me-2 inline-flex items-center rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-medium text-white no-underline transition-colors hover:bg-gradient-to-bl focus:outline-none"
+                     >
+                        <i class="fa-solid fa-shop"></i>
+                        <span class="ml-2">Our Store</span>
+                     </a>
+                     <a
+                        href="https://www.facebook.com/namespaceitcom"
+                        target="_blank"
+                        referrerpolicy="no-referrer"
+                        role="button"
+                        class="mb-2 me-2 inline-flex items-center rounded-lg bg-[#3b5998] px-5 py-2.5 text-center text-sm font-medium text-white no-underline hover:bg-[#3b5998]/90 focus:outline-none"
+                     >
+                        <svg
+                           class="me-2 h-4 w-4"
+                           aria-hidden="true"
+                           xmlns="http://www.w3.org/2000/svg"
+                           fill="currentColor"
+                           viewBox="0 0 8 19"
+                        >
+                           <path
+                              fill-rule="evenodd"
+                              d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                              clip-rule="evenodd"
+                           />
+                        </svg>
+                        <span>Contact with Facebook</span>
+                     </a>
+
+                     <a
+                        href="https://www.namespaceit.com"
+                        target="_blank"
+                        referrerpolicy="no-referrer"
+                        role="button"
+                        class="mb-2 me-2 inline-flex items-center rounded-lg bg-[#f74707] px-5 py-2.5 text-center text-sm font-medium text-white no-underline hover:bg-[#f74707]/90 focus:outline-none"
+                     >
+                        <i class="fas fa-globe-europe"></i>
+                        <span class="ml-2">Official Website</span>
+                     </a>
+
+                     <a
+                        href="mailto:info@namespaceit.com"
+                        referrerpolicy="no-referrer"
+                        role="button"
+                        class="mb-2 me-2 inline-flex items-center rounded-lg bg-slate-500 px-5 py-2.5 text-center text-sm font-medium text-white no-underline hover:bg-slate-500/90 focus:outline-none"
+                     >
+                        <i class="fad fa-paper-plane"></i>
+                        <span class="ml-2">Mail to Us</span>
+                     </a>
+                  </div>
+
+                  <p><strong>Contact: </strong> info@namespaceit.com</p>
+               </article>
+            </section>
+            <!-- main content end -->
+         </div>
+         <div class="hidden w-72 transition-transform xl:block">
+            <div
+               id="dropdown-cta"
+               class="mt-6 rounded-lg bg-blue-50 p-4 dark:bg-blue-900"
+               role="alert"
+            >
+               <div class="mb-3 flex items-center">
+                  <span
+                     class="me-2 rounded bg-orange-100 px-2.5 py-0.5 text-sm font-semibold text-orange-800 dark:bg-orange-200 dark:text-orange-900"
+                     >Notice</span
+                  >
+                  <button
+                     type="button"
+                     class="-mx-1.5 -my-1.5 ms-auto inline-flex h-6 w-6 items-center justify-center rounded-lg bg-blue-50 p-1 text-blue-900 hover:bg-blue-200 focus:ring-2 focus:ring-blue-400 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800"
+                     data-dismiss-target="#dropdown-cta"
+                     aria-label="Close"
+                  >
+                     <span class="sr-only">Close</span>
+                     <svg
+                        class="h-2.5 w-2.5"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                     >
+                        <path
+                           stroke="currentColor"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                        />
+                     </svg>
+                  </button>
+               </div>
+               <p class="mb-3 text-sm text-blue-800 dark:text-blue-400">
+                  We always try to provide the best support to our customers. If
+                  you have any questions, need help, or just want to say hi,
+                  please feel free to contact us.
+               </p>
+               <a
+                  class="text-sm font-medium text-blue-800 underline hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
+                  href="#support"
+                  >Contact Us</a
+               >
+            </div>
+         </div>
+      </div>
+
+      <!-- scripts -->
+      <script src="dist/js/all.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+      <script src="dist/js/index.js"></script>
+      <script>
+         hljs.highlightAll();
+      </script>
+   </body>
+</html>

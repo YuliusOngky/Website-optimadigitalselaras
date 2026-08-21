@@ -1,0 +1,1361 @@
+{
+    "manifest_version": "1.0.21",
+    "title": "Jarsy Juice - Drink Brand Elementor Template Kit",
+    "page_builder": "elementor",
+    "kit_version": "1.0.4",
+    "templates": [
+        {
+            "name": "Global Kit Styles",
+            "screenshot": "screenshots\/global-kit-styles.jpg",
+            "source": "templates\/global.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "global-styles",
+                "include_in_zip": "1",
+                "elementor_pro_required": null,
+                "additional_template_information": [
+                    "These are the global theme styles configured through the Elementor Theme Styles area."
+                ]
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Header",
+            "screenshot": "screenshots\/header.jpg",
+            "source": "templates\/header.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/header\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-header",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Footer",
+            "screenshot": "screenshots\/footer.jpg",
+            "source": "templates\/footer.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/footer\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-footer",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Header",
+            "screenshot": "screenshots\/header.jpg",
+            "source": "templates\/header.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/215\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-header",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Contact",
+            "screenshot": "screenshots\/contact.jpg",
+            "source": "templates\/contact.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/contact\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-contact",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Error Page 404",
+            "screenshot": "screenshots\/error-page-404.jpg",
+            "source": "templates\/error-page-404.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/error-page-404\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-404",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Product Detailed",
+            "screenshot": "screenshots\/product-detailed.jpg",
+            "source": "templates\/product-detailed.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/product-detailed\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Product",
+            "screenshot": "screenshots\/product.jpg",
+            "source": "templates\/product.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/product\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Team",
+            "screenshot": "screenshots\/team.jpg",
+            "source": "templates\/team.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/team\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Our Team",
+            "screenshot": "screenshots\/our-team.jpg",
+            "source": "templates\/our-team.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/our-team\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "FAQ",
+            "screenshot": "screenshots\/faq.jpg",
+            "source": "templates\/faq.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/faq\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Partnership",
+            "screenshot": "screenshots\/partnership.jpg",
+            "source": "templates\/partnership.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/partnership\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Gallery",
+            "screenshot": "screenshots\/gallery.jpg",
+            "source": "templates\/gallery.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/gallery\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-gallery",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "About Us",
+            "screenshot": "screenshots\/about-us.jpg",
+            "source": "templates\/about-us.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/about-us\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Homepage",
+            "screenshot": "screenshots\/homepage.jpg",
+            "source": "templates\/homepage.json",
+            "preview_url": "https:\/\/vwkit.rometheme.pro\/jarsy\/template-kit\/homepage\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        }
+    ],
+    "required_plugins": [
+        {
+            "name": "Elementor Header & Footer Builder",
+            "version": "1.6.8",
+            "file": "header-footer-elementor\/header-footer-elementor.php",
+            "author": "Brainstorm Force, Nikhil Chavan"
+        },
+        {
+            "name": "PowerPack Lite for Elementor",
+            "version": "2.6.6",
+            "file": "powerpack-lite-for-elementor\/powerpack-lite-elementor.php",
+            "author": "IdeaBox Creations"
+        },
+        {
+            "name": "Contact Form 7",
+            "version": "5.5.4",
+            "file": "contact-form-7\/wp-contact-form-7.php",
+            "author": "Takayuki Miyoshi"
+        },
+        {
+            "name": "Elementor",
+            "version": "3.5.4",
+            "file": "elementor\/elementor.php",
+            "author": "Elementor.com"
+        },
+        {
+            "name": "ElementsKit Lite",
+            "version": "2.5.3",
+            "file": "elementskit-lite\/elementskit-lite.php",
+            "author": "Wpmet"
+        }
+    ],
+    "images": [
+        {
+            "filename": "Logo-Jarsy-6.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/Logo-Jarsy-6-800x227.png",
+            "templates": [
+                {
+                    "source": "templates\/header.json",
+                    "name": "Header"
+                },
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                },
+                {
+                    "source": "templates\/header.json",
+                    "name": "Header"
+                }
+            ],
+            "filesize": 20582,
+            "dimensions": [
+                1497,
+                424
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "1-CARROT.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/1-CARROT.png",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                },
+                {
+                    "source": "templates\/product-detailed.json",
+                    "name": "Product Detailed"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 139662,
+            "dimensions": [
+                368,
+                782
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/juice-bottle-packaging-mock-ups-vol-1-NX9H6U"
+        },
+        {
+            "filename": "1-APPLE.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/1-APPLE.png",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                },
+                {
+                    "source": "templates\/product-detailed.json",
+                    "name": "Product Detailed"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 138968,
+            "dimensions": [
+                368,
+                782
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/juice-bottle-packaging-mock-ups-vol-1-NX9H6U"
+        },
+        {
+            "filename": "1-GRAPE.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/1-GRAPE.png",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                },
+                {
+                    "source": "templates\/product-detailed.json",
+                    "name": "Product Detailed"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 140675,
+            "dimensions": [
+                368,
+                782
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/juice-bottle-packaging-mock-ups-vol-1-NX9H6U"
+        },
+        {
+            "filename": "1FIX.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/1FIX.png",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                },
+                {
+                    "source": "templates\/product-detailed.json",
+                    "name": "Product Detailed"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 138059,
+            "dimensions": [
+                368,
+                782
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/juice-bottle-packaging-mock-ups-vol-1-NX9H6U"
+        },
+        {
+            "filename": "Landing-3.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/Landing-3-800x229.png",
+            "templates": [
+                {
+                    "source": "templates\/contact.json",
+                    "name": "Contact"
+                },
+                {
+                    "source": "templates\/product-detailed.json",
+                    "name": "Product Detailed"
+                },
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                },
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                },
+                {
+                    "source": "templates\/faq.json",
+                    "name": "FAQ"
+                },
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 367754,
+            "dimensions": [
+                1920,
+                549
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/oranges-in-studio-SCZJA97"
+        },
+        {
+            "filename": "404-4-e1639579042112.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/404-4-800x450.png",
+            "templates": [
+                {
+                    "source": "templates\/error-page-404.json",
+                    "name": "Error Page 404"
+                }
+            ],
+            "filesize": 478705,
+            "dimensions": [
+                1800,
+                1013
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/a-woman-on-an-orange-background-holds-two-pieces-o-D7UAW7Y"
+        },
+        {
+            "filename": "2.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/2.png",
+            "templates": [
+                {
+                    "source": "templates\/product-detailed.json",
+                    "name": "Product Detailed"
+                },
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                },
+                {
+                    "source": "templates\/faq.json",
+                    "name": "FAQ"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 215639,
+            "dimensions": [
+                800,
+                553
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/juice-bottle-packaging-mock-ups-vol-1-NX9H6U"
+        },
+        {
+            "filename": "FMZ_2806.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/FMZ_2806.jpg",
+            "templates": [
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 81447,
+            "dimensions": [
+                800,
+                512
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/immune-boosting-turmeric-ginger-citrus-juice-shots-BT7RUQH"
+        },
+        {
+            "filename": "placeholder-1.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/placeholder-1-800x533.png",
+            "templates": [
+                {
+                    "source": "templates\/product.json",
+                    "name": "Product"
+                }
+            ],
+            "filesize": 6146,
+            "dimensions": [
+                1200,
+                800
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "team-detail.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/team-detail-800x450.png",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 13516,
+            "dimensions": [
+                1920,
+                1080
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "team-detail-5-e1639579002264.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/team-detail-5-800x800.png",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 383836,
+            "dimensions": [
+                800,
+                800
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/coffee-business-owner-concept-portrait-of-happy-at-7YYU92J"
+        },
+        {
+            "filename": "unrecognizable-woman-drinking-orange-or-carrot-fre-HHQA85R.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/unrecognizable-woman-drinking-orange-or-carrot-fre-HHQA85R-800x573.jpg",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 221179,
+            "dimensions": [
+                1812,
+                1297
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-HHQA85R"
+        },
+        {
+            "filename": "Untitled-1-02.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/Untitled-1-02-800x800.png",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                },
+                {
+                    "source": "templates\/faq.json",
+                    "name": "FAQ"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 51015,
+            "dimensions": [
+                1826,
+                1826
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/farm-technology-icon-TM6LFKY"
+        },
+        {
+            "filename": "Untitled-1-03.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/Untitled-1-03-800x800.png",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                },
+                {
+                    "source": "templates\/faq.json",
+                    "name": "FAQ"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 76069,
+            "dimensions": [
+                1826,
+                1826
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/farm-technology-icon-TM6LFKY"
+        },
+        {
+            "filename": "Untitled-1-04.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/Untitled-1-04-800x800.png",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                },
+                {
+                    "source": "templates\/faq.json",
+                    "name": "FAQ"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 75676,
+            "dimensions": [
+                1826,
+                1826
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/farm-technology-icon-TM6LFKY"
+        },
+        {
+            "filename": "Untitled-1-05.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/Untitled-1-05-800x800.png",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                },
+                {
+                    "source": "templates\/faq.json",
+                    "name": "FAQ"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 58026,
+            "dimensions": [
+                1826,
+                1826
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/farm-technology-icon-TM6LFKY"
+        },
+        {
+            "filename": "team-1.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/team-1.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 58529,
+            "dimensions": [
+                650,
+                488
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/coffee-business-owner-concept-portrait-of-happy-at-7YYU92J"
+        },
+        {
+            "filename": "team-2.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/team-2.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 56241,
+            "dimensions": [
+                650,
+                488
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "happy-man-barman-or-waiter-at-bar-PC5688Q"
+        },
+        {
+            "filename": "team-5.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/team-5.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 64304,
+            "dimensions": [
+                650,
+                488
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "pretty-barista-smiling-at-camera-at-the-coffee-sho-PPS7RBN"
+        },
+        {
+            "filename": "team-4.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/team-4.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 64872,
+            "dimensions": [
+                650,
+                488
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/smiling-waiter-writing-on-slate-6L5FCMN"
+        },
+        {
+            "filename": "team-3.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/team-3.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 46712,
+            "dimensions": [
+                650,
+                488
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/handsome-waiter-smiling-at-camera-at-the-cafe-PRCNRFR"
+        },
+        {
+            "filename": "testi-1.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/testi-1.jpg",
+            "templates": [
+                {
+                    "source": "templates\/faq.json",
+                    "name": "FAQ"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 47292,
+            "dimensions": [
+                400,
+                400
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/pretty-bartender-B9EQN3U"
+        },
+        {
+            "filename": "testi-2.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/testi-2.jpg",
+            "templates": [
+                {
+                    "source": "templates\/faq.json",
+                    "name": "FAQ"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 31659,
+            "dimensions": [
+                400,
+                400
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/woman-reading-book-and-drinking-juice-56WEDAX"
+        },
+        {
+            "filename": "partnership-3.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/partnership-3-800x269.jpg",
+            "templates": [
+                {
+                    "source": "templates\/partnership.json",
+                    "name": "Partnership"
+                }
+            ],
+            "filesize": 94925,
+            "dimensions": [
+                1635,
+                549
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/business-partnership-MXNR5TS"
+        },
+        {
+            "filename": "partnership.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/partnership.jpg",
+            "templates": [
+                {
+                    "source": "templates\/partnership.json",
+                    "name": "Partnership"
+                }
+            ],
+            "filesize": 89233,
+            "dimensions": [
+                800,
+                338
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/orange-trees-with-ripe-oranges-in-the-mountain-gar-PUGMKY5"
+        },
+        {
+            "filename": "galery-1.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/galery-1.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 114883,
+            "dimensions": [
+                564,
+                376
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/orange-trees-plantations-PEYRZY5"
+        },
+        {
+            "filename": "galery-2.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/galery-2.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 49859,
+            "dimensions": [
+                564,
+                376
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/sports-woman-with-healthy-food-on-the-kitchen-LZBV6J2"
+        },
+        {
+            "filename": "galery-3.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/galery-3.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 34004,
+            "dimensions": [
+                359,
+                268
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/close-up-of-children-toasting-juice-7KT9U8G"
+        },
+        {
+            "filename": "galery-4.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/galery-4.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 26393,
+            "dimensions": [
+                359,
+                268
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "woman-drinking-fresh-orange-juice-PVDTHCL"
+        },
+        {
+            "filename": "About-us-1.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/About-us-1-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 261388,
+            "dimensions": [
+                1000,
+                1000
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/atmosphere-PSEK869"
+        },
+        {
+            "filename": "galery-7.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/galery-7.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 24346,
+            "dimensions": [
+                500,
+                500
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "healthy-drink-avocado-juice-and-orange-juice-NBLQLXZ"
+        },
+        {
+            "filename": "galery-9.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/galery-9.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 51221,
+            "dimensions": [
+                500,
+                500
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "healthy-carrot-smoothie-with-orange-and-cinnamon-i-2SY5FJV"
+        },
+        {
+            "filename": "galery-6.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/galery-6.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 71006,
+            "dimensions": [
+                500,
+                500
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/getting-the-day-started-with-juice-HWLY7R4"
+        },
+        {
+            "filename": "galery-5.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/galery-5.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 44185,
+            "dimensions": [
+                500,
+                500
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/healthy-food-NJXMDSL"
+        },
+        {
+            "filename": "partnership-12.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/partnership-12-800x800.png",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 25064,
+            "dimensions": [
+                914,
+                914
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/farm-technology-icon-TM6LFKY"
+        },
+        {
+            "filename": "partnership-13.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/partnership-13-800x800.png",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 30054,
+            "dimensions": [
+                914,
+                914
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/farm-technology-icon-TM6LFKY"
+        },
+        {
+            "filename": "landing-fix-6.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/landing-fix-6-800x450.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 88441,
+            "dimensions": [
+                1920,
+                1080
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/juice-bottle-packaging-mock-ups-vol-1-NX9H6U"
+        },
+        {
+            "filename": "1.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/1.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 253691,
+            "dimensions": [
+                541,
+                508
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "woman-drinking-fresh-raw-juice-healthy-lifestyle-ZXBPMVE"
+        },
+        {
+            "filename": "bg-2-12.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/bg-2-12-800x258.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 10283,
+            "dimensions": [
+                1920,
+                618
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "22.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/22.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 60006,
+            "dimensions": [
+                800,
+                533
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/woman-smelling-juice-N7WB2TZ"
+        },
+        {
+            "filename": "33.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/33.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 92870,
+            "dimensions": [
+                800,
+                533
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/close-up-of-children-toasting-juice-7KT9U8G"
+        },
+        {
+            "filename": "44.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/44.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 95197,
+            "dimensions": [
+                800,
+                533
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/glass-of-fresh-juice-and-mandarins-on-table-H6Q9EAJ"
+        },
+        {
+            "filename": "55.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/55.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 105814,
+            "dimensions": [
+                800,
+                533
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/getting-the-day-started-with-juice-HWLY7R4"
+        },
+        {
+            "filename": "11.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/11.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 83638,
+            "dimensions": [
+                800,
+                533
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/sports-woman-with-healthy-food-on-the-kitchen-LZBV6J2"
+        },
+        {
+            "filename": "bg-1-2.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/bg-1-2-800x404.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 16279,
+            "dimensions": [
+                1920,
+                969
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "1FIX-A.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/1FIX-A.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 118211,
+            "dimensions": [
+                368,
+                782
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/juice-bottle-packaging-mock-ups-vol-1-NX9H6U"
+        },
+        {
+            "filename": "nutri-09.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/nutri-09-800x800.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 23014,
+            "dimensions": [
+                914,
+                914
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/farm-technology-icon-TM6LFKY"
+        },
+        {
+            "filename": "nutri-07.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/nutri-07-800x800.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 22252,
+            "dimensions": [
+                914,
+                914
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/farm-technology-icon-TM6LFKY"
+        },
+        {
+            "filename": "nutri-10.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/nutri-10-800x800.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 15848,
+            "dimensions": [
+                914,
+                914
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/farm-technology-icon-TM6LFKY"
+        },
+        {
+            "filename": "Untitled-1.jpg",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/Untitled-1.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 51485,
+            "dimensions": [
+                500,
+                718
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "elements.envato.com\/glass-of-orange-juice-and-oranges-with-leaves-JQ6SWVE"
+        },
+        {
+            "filename": "nutri-11.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/nutri-11-800x800.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 18267,
+            "dimensions": [
+                914,
+                914
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/farm-technology-icon-TM6LFKY"
+        },
+        {
+            "filename": "nutri-06.png",
+            "thumbnail_url": "http:\/\/vwkit.rometheme.pro\/jarsy\/wp-content\/uploads\/sites\/4\/2021\/06\/nutri-06-800x800.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 14122,
+            "dimensions": [
+                914,
+                914
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/farm-technology-icon-TM6LFKY"
+        }
+    ]
+}
