@@ -12,17 +12,22 @@ Orisa Vite SPA lives at `orisa.html` / `src/`. Do not deploy only that SPA onto 
 
 | Layer | Detail |
 |---|---|
-| Host | Windows NAS `192.168.1.20` (`DESKTOP-5QDC7T3`, user `NAS_GIOS`) |
-| Public DNS / TLS | Cloudflare (`www` + apex) |
-| **Live origin** | Docker container `optima-web` (`nginx:1.27-alpine`) → host port **8088** |
-| Staging on NAS | `C:\deploy\optima-live\` then `docker cp` into `optima-web:/usr/share/nginx/html/` |
+| Host | Windows NAS `192.168.1.20` (`DESKTOP-5QDC7T3`, user `NAS GIOS`) |
+| Public DNS / TLS | Cloudflare Tunnel `nextcloud` (`e5b04a8d-…cfargotunnel.com`) |
+| **Live origin** | Docker `optima-web` (`nginx:1.27-alpine`) → host port **8088** |
+| Nextcloud (not this site) | Docker `nextcloud` → host port **8082** → `gios.online` |
+| HTML on NAS | Bind mount `C:\Users\NAS GIOS\websites\optimadigitalselaras` |
 | IIS `:80` | `C:\inetpub\wwwroot` — leftover Vite SPA. **Not** the Cloudflare origin |
-| Node/nginx on host OS | Not installed; nginx runs only inside Docker |
 
 ```
-Browser → Cloudflare → GIOS 192.168.1.20:8088 (optima-web nginx) → Optima HTML
-                         192.168.1.20:80  (IIS wwwroot)           → Vite SPA (not live)
+Browser → Cloudflare → tunnel nextcloud → 127.0.0.1:8088 (optima-web nginx) → Optima HTML
+                                      → 127.0.0.1:8082 (nextcloud)        → gios.online
+                         192.168.1.20:80  (IIS wwwroot)                    → Vite SPA (not live)
 ```
+
+Do **not** point `www.optimadigitalselaras.com` at `:8082`. After Docker Desktop reboot, Windows can publish the wrong container on `:8088` (Optima then 302s to `gios.online/login` and Cloudflare shows 502). Repair order: `docker stop optima-web nextcloud` → `docker start nextcloud` → `docker start optima-web`.
+
+Watchdog on the NAS (every 2 minutes + at logon): `C:\Users\NAS GIOS\websites\optima-ops\gios-origin-watchdog.ps1` (source in `scripts/gios-origin-watchdog.ps1`). Tunnel config source of truth: `scripts/cloudflared-gios-config.yml`.
 
 ## This Git repo vs live
 
@@ -45,17 +50,13 @@ $env:DEPLOY_KEY  = "$env:USERPROFILE\.ssh\id_ed25519"   # if you have a key
 .\scripts\deploy-optima-web.ps1
 ```
 
-The script copies `index.html`, `public/assets/optima`, `public/solutions`, and `public/products` to `C:\deploy\optima-live\`, then:
-
-```
-docker cp C:\deploy\optima-live\. optima-web:/usr/share/nginx/html/
-docker restart optima-web
-```
+The script copies `index.html`, `public/assets/optima`, `public/solutions`, and `public/products` into the bind-mounted site dir (nginx serves that folder). Do **not** `docker restart optima-web` alone after a host reboot if `:8088` is serving Apache/Nextcloud — run the watchdog repair order first.
 
 Verify:
 
-- `http://192.168.1.20:8088` — Optima HTML (origin)
+- `http://192.168.1.20:8088` — Optima HTML (`Server: nginx`, not Apache)
 - `https://www.optimadigitalselaras.com` — same content via Cloudflare
+- `http://192.168.1.20:8082` — Nextcloud only (must not appear on `:8088`)
 
 Do **not** copy into `C:\inetpub\wwwroot` (IIS) unless you intentionally want to change the unused `:80` site.
 

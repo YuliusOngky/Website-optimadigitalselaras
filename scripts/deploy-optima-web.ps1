@@ -67,12 +67,13 @@ if (Test-Path $Products) {
   if ($LASTEXITCODE -ne 0) { throw "scp products failed" }
 }
 if (Test-Path $OptimaPos) {
-  $PosItems = Get-ChildItem -Path $OptimaPos -Force | ForEach-Object { $_.FullName }
-  if ($PosItems.Count -gt 1) {
+  $PosItems = @(Get-ChildItem -Path $OptimaPos -Force | ForEach-Object { $_.FullName })
+  if ($PosItems.Count -eq 1) {
+    & scp @ScpArgs $PosItems[0] "${SshTarget}:${RemoteUnix}/optima-pos/index.html"
+    if ($LASTEXITCODE -ne 0) { Write-Warning "scp optima-pos index non-fatal: $LASTEXITCODE" }
+  } elseif ($PosItems.Count -gt 1) {
     & scp @ScpArgs -r @PosItems "${SshTarget}:${RemoteUnix}/optima-pos/"
     if ($LASTEXITCODE -ne 0) { Write-Warning "scp optima-pos non-fatal: $LASTEXITCODE" }
-  } else {
-    Write-Warning "optima-pos hanya 1 file, skip (Windows scp drive-letter ambiguity)"
   }
 }
 if (Test-Path $OptimaPos2) {

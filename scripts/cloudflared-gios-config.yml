@@ -5,7 +5,7 @@
 #   8088  optima-web nginx
 #   8082  nextcloud
 #   3000  Optima Store
-#   4000  AAA POS V2 backend (Node.js/Express)
+#   3010  AAA POS V2 backend (Node.js/Express)
 #   8091  LOS
 #   8092  CMS
 #   8087  Rosalialaras WordPress
@@ -71,7 +71,7 @@ ingress:
       httpHostHeader: optimadigitalselaras.com
 
   - hostname: pos-api.optimadigitalselaras.com
-    service: http://127.0.0.1:4000
+    service: http://127.0.0.1:3010
     originRequest:
       httpHostHeader: pos-api.optimadigitalselaras.com
 

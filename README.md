@@ -239,7 +239,7 @@ Yulius Ongky - PT Optima Digital Selaras
 
 ## 📞 Contact
 
-- Email: marketing@optimadigital.co.id
+- Email: info@optimadigitalselaras.com
 - Phone: +62 812 988 5679
 - Website: www.optimadigitalselaras.com
 
