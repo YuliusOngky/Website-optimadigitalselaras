@@ -27,6 +27,8 @@ $Index = Join-Path $RepoRoot "index.html"
 $OptimaAssets = Join-Path $RepoRoot "public\assets\optima"
 $Solutions = Join-Path $RepoRoot "public\solutions"
 $Products = Join-Path $RepoRoot "public\products"
+$OptimaPos = Join-Path $RepoRoot "public\optima-pos"
+$OptimaPos2 = Join-Path $RepoRoot "public\optima-pos_V2"
 $Templates = Join-Path $RepoRoot "public\templates"
 
 if (-not (Test-Path $Index)) { throw "Missing $Index" }
@@ -43,7 +45,7 @@ if (-not $UseAlias) { $ScpArgs += @("-o", "User=$UserName") }
 Write-Host "Staging Optima homepage -> ${SshTarget}:$RemoteDir (optima-web :8088)"
 
 $RemoteUnix = ($RemoteDir -replace '\\', '/')
-$RemotePrep = "cmd /c `"if not exist `"$RemoteDir\products\los\assets`" mkdir `"$RemoteDir\products\los\assets`" & if not exist `"$RemoteDir\assets\optima`" mkdir `"$RemoteDir\assets\optima`" & if not exist `"$RemoteDir\solutions`" mkdir `"$RemoteDir\solutions`" & if not exist `"$RemoteDir\templates`" mkdir `"$RemoteDir\templates`""
+$RemotePrep = "cmd /c `"if not exist `"$RemoteDir\products\los\assets`" mkdir `"$RemoteDir\products\los\assets`" & if not exist `"$RemoteDir\optima-pos`" mkdir `"$RemoteDir\optima-pos`" & if not exist `"$RemoteDir\optima-pos_V2`" mkdir `"$RemoteDir\optima-pos_V2`" & if not exist `"$RemoteDir\assets\optima`" mkdir `"$RemoteDir\assets\optima`" & if not exist `"$RemoteDir\solutions`" mkdir `"$RemoteDir\solutions`" & if not exist `"$RemoteDir\templates`" mkdir `"$RemoteDir\templates`""
 & ssh @SshArgs $SshTarget $RemotePrep
 if ($LASTEXITCODE -ne 0) { throw "SSH mkdir failed with exit $LASTEXITCODE" }
 
@@ -64,6 +66,16 @@ if (Test-Path $Products) {
   & scp @ScpArgs -r @ProductsItems "${SshTarget}:${RemoteUnix}/products/"
   if ($LASTEXITCODE -ne 0) { throw "scp products failed" }
 }
+if (Test-Path $OptimaPos) {
+  $PosItems = Get-ChildItem -Path $OptimaPos -Force | ForEach-Object { $_.FullName }
+  & scp @ScpArgs -r @PosItems "${SshTarget}:${RemoteUnix}/optima-pos/"
+  if ($LASTEXITCODE -ne 0) { throw "scp optima-pos failed" }
+}
+if (Test-Path $OptimaPos2) {
+  $Pos2Items = Get-ChildItem -Path $OptimaPos2 -Force | ForEach-Object { $_.FullName }
+  & scp @ScpArgs -r @Pos2Items "${SshTarget}:${RemoteUnix}/optima-pos_V2/"
+  if ($LASTEXITCODE -ne 0) { throw "scp optima-pos_V2 failed" }
+}
 
 if (Test-Path $Templates) {
   $TemplateItems = Get-ChildItem -Path $Templates -Force | Where-Object { $_.Name -match '-web$|restaurant|autodetail' } | ForEach-Object { $_.FullName }
@@ -73,5 +85,5 @@ if (Test-Path $Templates) {
   }
 }
 
-Write-Host "Done. Check http://${HostName}:8088/products/los and https://optimadigitalselaras.com/products/los"
+Write-Host "Done. Check http://${HostName}:8088/optima-pos and https://optimadigitalselaras.com/optima-pos"
 Write-Host "IIS :80 was not modified."

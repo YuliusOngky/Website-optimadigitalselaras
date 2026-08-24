@@ -1,0 +1,113 @@
+# Cloudflare Tunnel "nextcloud" (e5b04a8d-1944-41a2-8798-faa5bf00f374)
+# Host: GIOS NAS. Do not point Optima hostnames at Nextcloud (:8082).
+#
+# Port map (Windows publish → container):
+#   8088  optima-web nginx
+#   8082  nextcloud
+#   3000  Optima Store
+#   4000  AAA POS V2 backend (Node.js/Express)
+#   8091  LOS
+#   8092  CMS
+#   8087  Rosalialaras WordPress
+#
+# After Docker Desktop reboot, published ports can swap. The watchdog
+# scripts/gios-origin-watchdog.ps1 repairs 8088/8082 if that happens.
+
+tunnel: e5b04a8d-1944-41a2-8798-faa5bf00f374
+credentials-file: C:\Users\NAS GIOS\.cloudflared\e5b04a8d-1944-41a2-8798-faa5bf00f374.json
+
+originRequest:
+  connectTimeout: 10s
+  keepAliveTimeout: 90s
+  keepAliveConnections: 50
+  noHappyEyeballs: true
+  disableChunkedEncoding: true
+
+ingress:
+  - hostname: www.optimadigitalselaras.com
+    path: ^/optima-store
+    service: http://127.0.0.1:3000
+    originRequest:
+      httpHostHeader: www.optimadigitalselaras.com
+
+  - hostname: www.optimadigitalselaras.com
+    path: ^/_next
+    service: http://127.0.0.1:3000
+    originRequest:
+      httpHostHeader: www.optimadigitalselaras.com
+
+  - hostname: www.optimadigitalselaras.com
+    path: ^/marketing
+    service: http://127.0.0.1:3000
+    originRequest:
+      httpHostHeader: www.optimadigitalselaras.com
+
+  - hostname: optimadigitalselaras.com
+    path: ^/optima-store
+    service: http://127.0.0.1:3000
+    originRequest:
+      httpHostHeader: optimadigitalselaras.com
+
+  - hostname: optimadigitalselaras.com
+    path: ^/_next
+    service: http://127.0.0.1:3000
+    originRequest:
+      httpHostHeader: optimadigitalselaras.com
+
+  - hostname: optimadigitalselaras.com
+    path: ^/marketing
+    service: http://127.0.0.1:3000
+    originRequest:
+      httpHostHeader: optimadigitalselaras.com
+
+  - hostname: www.optimadigitalselaras.com
+    service: http://127.0.0.1:8088
+    originRequest:
+      httpHostHeader: www.optimadigitalselaras.com
+
+  - hostname: optimadigitalselaras.com
+    service: http://127.0.0.1:8088
+    originRequest:
+      httpHostHeader: optimadigitalselaras.com
+
+  - hostname: pos-api.optimadigitalselaras.com
+    service: http://127.0.0.1:4000
+    originRequest:
+      httpHostHeader: pos-api.optimadigitalselaras.com
+
+  - hostname: store-demo.optimadigitalselaras.com
+    service: http://127.0.0.1:3000
+    originRequest:
+      httpHostHeader: store-demo.optimadigitalselaras.com
+
+  - hostname: cms.optimadigitalselaras.com
+    service: http://127.0.0.1:8092
+    originRequest:
+      httpHostHeader: cms.optimadigitalselaras.com
+
+  - hostname: los.optimadigitalselaras.com
+    service: http://127.0.0.1:8091
+    originRequest:
+      httpHostHeader: los.optimadigitalselaras.com
+
+  - hostname: gios.online
+    service: http://127.0.0.1:8082
+    originRequest:
+      httpHostHeader: gios.online
+
+  - hostname: www.gios.online
+    service: http://127.0.0.1:8082
+    originRequest:
+      httpHostHeader: gios.online
+
+  - hostname: drive.gios.online
+    service: http://127.0.0.1:8082
+    originRequest:
+      httpHostHeader: gios.online
+
+  - hostname: rosalialaras.my.id
+    service: http://127.0.0.1:8087
+    originRequest:
+      httpHostHeader: rosalialaras.my.id
+
+  - service: http_status:404
