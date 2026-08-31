@@ -1,6 +1,19 @@
 /* Custom trailing cursor — shared across Optima site pages */
 (function(){
   if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return;
+  if (!document.body) return;
+
+  var TRAIL_COUNT = 10;
+  var trail = [];
+  var trailIdx = 0;
+  var lastTrailAt = 0;
+
+  for (var i = 0; i < TRAIL_COUNT; i++){
+    var t = document.createElement('div');
+    t.className = 'cursor-trail-dot';
+    document.body.appendChild(t);
+    trail.push(t);
+  }
 
   var dot = document.createElement('div');
   dot.className = 'cursor-dot';
@@ -8,6 +21,7 @@
   document.body.appendChild(dot);
 
   var tx = -100, ty = -100, x = -100, y = -100;
+  var active = false;
 
   function pointInRects(px, py, rects, pad){
     for (var i = 0; i < rects.length; i++){
@@ -21,7 +35,7 @@
   function isOverText(e){
     var el = e.target;
     if (!el || el === document.body || el === document.documentElement) return false;
-    if (el.closest('svg,img,video,canvas,.wwd-visual,.owd-icon,.owd-small-icon,.cursor-dot')) return false;
+    if (el.closest('svg,img,video,canvas,.wwd-visual,.owd-icon,.owd-small-icon,.cursor-dot,.cursor-trail-dot')) return false;
 
     var node = null, offset = 0;
     if (document.caretPositionFromPoint){
@@ -57,12 +71,30 @@
     return pointInRects(e.clientX, e.clientY, probe.getClientRects(), 6);
   }
 
-  var HOVER_SELECTOR = 'a, button, .btn, .op-suite-card, .op-card, .op-mini, .op-mini-card, .op-lp, .op-demo, .op-site, .op-banner, .work-card, .about-card, .bws-tmpl, .bws-tmpl-interactive, .ent-card, .prod, .carousel-cta, .carousel-nav, .carousel-dot, .lp-btn, .lp-hbtn, input, textarea, select, [role="button"]';
+  var HOVER_SELECTOR = 'a, button, .btn, .lang-toggle button, .op-suite-card, .op-card, .op-mini, .op-mini-card, .op-lp, .op-demo, .op-site, .op-banner, .work-card, .about-card, .bws-tmpl, .bws-tmpl-interactive, .ent-card, .prod, .carousel-cta, .carousel-nav, .carousel-dot, .lp-btn, .lp-hbtn, input, textarea, select, [role="button"]';
   var OWD_SKIP = '.owd-section, .owd-card, .owd-link';
+
+  function spawnTrail(px, py){
+    var now = performance.now();
+    if (now - lastTrailAt < 18) return;
+    lastTrailAt = now;
+    var el = trail[trailIdx % TRAIL_COUNT];
+    trailIdx++;
+    el.style.transition = 'none';
+    el.style.opacity = '0.7';
+    el.style.transform = 'translate(' + px + 'px,' + py + 'px) translate(-50%,-50%) scale(1)';
+    // Force reflow then fade/scale out
+    void el.offsetWidth;
+    el.style.transition = 'opacity .45s ease, transform .45s ease';
+    el.style.opacity = '0';
+    el.style.transform = 'translate(' + px + 'px,' + py + 'px) translate(-50%,-50%) scale(.2)';
+  }
 
   window.addEventListener('mousemove', function(e){
     tx = e.clientX; ty = e.clientY;
+    active = true;
     dot.classList.add('is-visible');
+    spawnTrail(tx, ty);
 
     var learnMore = isOverLearnMoreLabel(e);
     var inOwd = !!(e.target.closest && e.target.closest(OWD_SKIP));
@@ -71,13 +103,16 @@
     dot.classList.toggle('is-text', learnMore || isOverText(e));
   });
   document.addEventListener('mouseleave', function(){
+    active = false;
     dot.classList.remove('is-visible', 'is-hover', 'is-text');
   });
 
   function raf(){
-    x += (tx - x) * 0.18;
-    y += (ty - y) * 0.18;
-    dot.style.transform = 'translate(' + x + 'px,' + y + 'px) translate(-50%,-50%)';
+    x += (tx - x) * 0.22;
+    y += (ty - y) * 0.22;
+    if (active){
+      dot.style.transform = 'translate(' + x + 'px,' + y + 'px) translate(-50%,-50%)';
+    }
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);

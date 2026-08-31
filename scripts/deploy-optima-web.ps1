@@ -18,7 +18,7 @@ $RepoRoot = Split-Path -Parent $PSScriptRoot
 $HostName = if ($env:DEPLOY_HOST) { $env:DEPLOY_HOST } else { "192.168.1.20" }
 # Windows account on NAS is "NAS GIOS" (with space) — see ~/.ssh/config Host gios
 $UserName = if ($env:DEPLOY_USER) { $env:DEPLOY_USER } else { "NAS GIOS" }
-$RemoteDir = if ($env:DEPLOY_REMOTE_DIR) { $env:DEPLOY_REMOTE_DIR } else { "C:\Users\NAS GIOS\websites\optimadigitalselaras" }
+$RemoteDir = if ($env:DEPLOY_REMOTE_DIR) { $env:DEPLOY_REMOTE_DIR } else { "C:\Users\NASGIO~1\websites\optimadigitalselaras" }
 $Identity = $env:DEPLOY_KEY
 $UseAlias = (-not $env:DEPLOY_HOST -and -not $env:DEPLOY_USER)
 $SshTarget = if ($UseAlias) { "gios" } else { $HostName }
@@ -45,7 +45,8 @@ if (-not $UseAlias) { $ScpArgs += @("-o", "User=$UserName") }
 Write-Host "Staging Optima homepage -> ${SshTarget}:$RemoteDir (optima-web :8088)"
 
 $RemoteUnix = ($RemoteDir -replace '\\', '/')
-$RemotePrep = "cmd /c `"if not exist `"$RemoteDir\products\los\assets`" mkdir `"$RemoteDir\products\los\assets`" & if not exist `"$RemoteDir\optima-pos`" mkdir `"$RemoteDir\optima-pos`" & if not exist `"$RemoteDir\optima-pos_V2`" mkdir `"$RemoteDir\optima-pos_V2`" & if not exist `"$RemoteDir\assets\optima`" mkdir `"$RemoteDir\assets\optima`" & if not exist `"$RemoteDir\solutions`" mkdir `"$RemoteDir\solutions`" & if not exist `"$RemoteDir\templates`" mkdir `"$RemoteDir\templates`""
+# Remote OpenSSH default shell is cmd.exe — avoid '|' (gets intercepted before PowerShell).
+$RemotePrep = "cmd /c `"mkdir `"$RemoteDir\assets\optima\i18n`" 2>nul & mkdir `"$RemoteDir\solutions`" 2>nul & mkdir `"$RemoteDir\products\los\assets`" 2>nul & mkdir `"$RemoteDir\optima-pos\login`" 2>nul & mkdir `"$RemoteDir\optima-pos_V2`" 2>nul & mkdir `"$RemoteDir\templates`" 2>nul & exit /b 0`""
 & ssh @SshArgs $SshTarget $RemotePrep
 if ($LASTEXITCODE -ne 0) { throw "SSH mkdir failed with exit $LASTEXITCODE" }
 
@@ -90,5 +91,5 @@ if (Test-Path $Templates) {
   }
 }
 
-Write-Host "Done. Check http://${HostName}:8088/optima-pos and https://optimadigitalselaras.com/optima-pos"
+Write-Host "Done. Check http://${HostName}:8088/optima-pos/login/ and https://optimadigitalselaras.com/optima-pos/login/"
 Write-Host "IIS :80 was not modified."

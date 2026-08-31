@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masuk &#8212; Optima POS</title>
+  <meta name="description" content="Masuk ke Optima POS atau coba gratis 14 hari. Kasir mudah, bisnis lebih teratur." />
+  <link rel="canonical" href="https://optimadigitalselaras.com/optima-pos/login/" />
+  <link rel="icon" type="image/png" href="/assets/optima/logo.png?v=2" />
+  <meta property="og:title" content="Masuk — Optima POS" />
+  <meta property="og:description" content="Masuk ke akun kasir Optima POS." />
+  <meta property="og:url" content="https://optimadigitalselaras.com/optima-pos/login/" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --navy:#0b1f44;
+      --ink:#10233f;
+      --blue:#1d6fe9;
+      --blue-deep:#1558c7;
+      --blue-soft:#e8f1ff;
+      --muted:#5b6b82;
+      --line:#e4edf7;
+      --off:#f6f9fc;
+      --wa:#25d366;
+      --red:#dc2626;
+      --ok:#16a34a;
+      --shadow:0 22px 50px rgba(11,31,68,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{min-height:100dvh;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--off);line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    h1,h2{font-family:Manrope,Inter,sans-serif;font-weight:800;letter-spacing:-.03em;color:var(--navy)}
+    .page{min-height:100dvh;display:grid;grid-template-columns:1.05fr .95fr}
+    .brand{background:linear-gradient(165deg,var(--navy) 0%,#12356e 55%,#1558c7 100%);color:#fff;padding:40px 48px;display:flex;flex-direction:column;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:10px;color:#fff}
+    .logo-mark{width:40px;height:40px;border-radius:10px;background:var(--blue);display:grid;place-items:center;box-shadow:0 8px 16px rgba(29,111,233,.35)}
+    .logo b{display:block;font-size:15px;letter-spacing:.04em}
+    .logo span{display:block;font-size:9.5px;font-weight:700;letter-spacing:.12em;opacity:.7;text-transform:uppercase;margin-top:2px}
+    .brand-copy h1{color:#fff;font-size:clamp(28px,3.4vw,40px);margin:28px 0 12px}
+    .brand-copy p{color:rgba(255,255,255,.78);font-size:16px;max-width:420px}
+    .brand-foot{font-size:13px;color:rgba(255,255,255,.55)}
+    .panel{display:flex;align-items:center;justify-content:center;padding:40px 28px}
+    .card{width:min(420px,100%);background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px 28px;box-shadow:var(--shadow)}
+    .card h2{font-size:24px;margin-bottom:6px}
+    .sub{color:var(--muted);font-size:14px;margin-bottom:24px}
+    .tabs{display:flex;gap:8px;margin-bottom:22px;background:var(--off);border-radius:999px;padding:4px}
+    .tab{flex:1;border:0;background:transparent;border-radius:999px;padding:9px 12px;font-weight:700;font-size:13px;color:var(--muted);cursor:pointer;font-family:inherit}
+    .tab.on{background:#fff;color:var(--navy);box-shadow:0 4px 12px rgba(11,31,68,.08)}
+    label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:6px}
+    input{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;font-size:15px;font-family:inherit;color:var(--ink);outline:none;margin-bottom:14px;background:#fff}
+    input:focus{border-color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;width:100%;border:0;border-radius:999px;padding:13px 18px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit;transition:transform .15s,background .15s}
+    .btn:hover{transform:translateY(-1px)}
+    .btn:disabled{opacity:.65;cursor:default;transform:none}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 22px rgba(29,111,233,.28);margin-top:4px}
+    .btn-primary:hover{background:var(--blue-deep)}
+    .btn-wa{background:var(--wa);color:#fff;margin-top:10px}
+    .msg{display:none;border-radius:10px;padding:10px 12px;font-size:13px;font-weight:600;margin-bottom:14px}
+    .msg.err,.msg.ok{display:block}
+    .msg.err{background:#fef2f2;color:var(--red)}
+    .msg.ok{background:#ecfdf3;color:var(--ok)}
+    #paneLogin,#paneTrial{display:none}
+    #paneLogin.on,#paneTrial.on{display:block}
+    .back{display:inline-block;margin-top:18px;font-size:13px;font-weight:700;color:var(--blue)}
+    .fine{margin-top:16px;font-size:12px;color:var(--muted);text-align:center}
+    @media (max-width:860px){
+      .page{grid-template-columns:1fr}
+      .brand{padding:28px 24px 32px;min-height:auto}
+      .brand-copy h1{margin-top:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="brand">
+      <a class="logo" href="/optima-pos/">
+        <div class="logo-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7L12 2z" fill="#fff"/></svg>
+        </div>
+        <div>
+          <b>OPTIMA POS</b>
+          <span>POINT OF SALES</span>
+        </div>
+      </a>
+      <div class="brand-copy">
+        <h1>Kasir mudah. Bisnis lebih teratur.</h1>
+        <p>Masuk ke akun Optima POS atau mulai uji coba gratis 14 hari. Transaksi cepat, stok terkontrol, laporan jelas setiap hari.</p>
+      </div>
+      <p class="brand-foot">PT Optima Digital Selaras</p>
+    </section>
+
+    <section class="panel">
+      <div class="card">
+        <h2>Masuk Optima POS</h2>
+        <p class="sub">Demo sudah terisi. Klik Masuk untuk mencoba Optima POS.</p>
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab on" id="tabLogin" data-pane="paneLogin">Masuk</button>
+          <button type="button" class="tab" id="tabTrial" data-pane="paneTrial">Coba gratis</button>
+        </div>
+        <div id="msg" class="msg"></div>
+
+        <form id="paneLogin" class="on" autocomplete="on">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="username" required placeholder="kasir@toko.id" value="demo@pos.id" />
+          <label for="password">Kata sandi</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="••••••••" value="demo1234" />
+          <button class="btn btn-primary" type="submit" id="loginBtn">Masuk</button>
+          <p class="fine" style="margin-top:12px">Akun demo Optima POS — siap dipakai, tanpa daftar dulu.</p>
+        </form>
+
+        <div id="paneTrial">
+          <p class="sub" style="margin-bottom:16px">Tim Optima akan buatkan akun uji coba 14 hari. Chat WhatsApp, tanpa kartu kredit.</p>
+          <a class="btn btn-wa" href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20coba%20Optima%20POS%20gratis%2014%20hari.">Chat WhatsApp — Coba gratis</a>
+        </div>
+
+        <a class="back" href="/optima-pos/">← Kembali ke Optima POS</a>
+        <p class="fine">Dengan masuk, Anda menyetujui penggunaan Optima POS untuk operasional toko Anda.</p>
+      </div>
+    </section>
+  </div>
+  <script>
+    const API = "https://pos-api.optimadigitalselaras.com/api/v1";
+    const msgEl = document.getElementById("msg");
+    const tabs = document.querySelectorAll(".tab");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) => t.classList.remove("on"));
+        tab.classList.add("on");
+        document.getElementById("paneLogin").classList.toggle("on", tab.dataset.pane === "paneLogin");
+        document.getElementById("paneTrial").classList.toggle("on", tab.dataset.pane === "paneTrial");
+        hideMsg();
+      });
+    });
+    function hideMsg() {
+      msgEl.className = "msg";
+      msgEl.textContent = "";
+    }
+    function showMsg(text, ok) {
+      msgEl.className = "msg " + (ok ? "ok" : "err");
+      msgEl.textContent = text;
+    }
+    document.getElementById("paneLogin").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      const btn = document.getElementById("loginBtn");
+      btn.disabled = true;
+      btn.textContent = "Masuk…";
+      hideMsg();
+      try {
+        const res = await fetch(API + "/auth/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({ email, password }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          throw new Error(data.message || data.error || "Email atau kata sandi tidak sesuai.");
+        }
+        const payload = data.data && typeof data.data === "object" ? data.data : data;
+        const token = payload.token || data.token;
+        if (!token) {
+          throw new Error("Login berhasil tapi sesi tidak diterima. Coba lagi.");
+        }
+        showMsg("Membuka Optima POS…", true);
+        window.location.href = "/optima-pos/login";
+        return;
+      } catch (err) {
+        showMsg(err.message || "Tidak bisa terhubung ke server. Coba lagi atau chat WhatsApp.", false);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Masuk";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* Language toggle — Optima bilingual */
+.lang-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:0;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:8px;
+  overflow:hidden;
+  flex-shrink:0;
+  background:rgba(255,255,255,.04);
+}
+.lang-toggle button{
+  appearance:none;
+  border:0;
+  margin:0;
+  background:transparent;
+  color:rgba(255,255,255,.62);
+  font-family:inherit;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.06em;
+  padding:7px 11px;
+  cursor:pointer;
+  line-height:1;
+  transition:background .15s ease, color .15s ease;
+}
+.lang-toggle button + button{
+  border-left:1px solid rgba(255,255,255,.16);
+}
+.lang-toggle button:hover{
+  color:#fff;
+  background:rgba(255,255,255,.06);
+}
+.lang-toggle button[aria-pressed="true"]{
+  background:var(--teal, #8bc53f);
+  color:var(--navy-950, #020b1d);
+}
+.lang-toggle button:focus-visible{
+  outline:2px solid var(--teal, #8bc53f);
+  outline-offset:2px;
+  z-index:1;
+}
+
+.nav-cta{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-shrink:0;
+}
+
+/* Keep language toggle visible when desktop nav collapses */
+@media (max-width:980px){
+  #nav .nav-cta{display:flex;}
+}
+
+@media (max-width:640px){
+  .lang-toggle button{padding:7px 9px;font-size:11px;}
+}

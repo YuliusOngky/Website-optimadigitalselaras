@@ -20,13 +20,14 @@ jobs:
 
       - name: Package files for optima-web :8088
         run: |
-          mkdir -p artifact/assets/optima artifact/solutions artifact/products artifact/optima-pos
+          mkdir -p artifact/assets/optima artifact/solutions artifact/products artifact/optima-pos/login artifact/optima-pos_V2
           cp index.html artifact/
           cp -a public/assets/optima/. artifact/assets/optima/
           cp -a public/solutions/. artifact/solutions/
           cp -a public/products/. artifact/products/
           cp -a public/optima-pos/. artifact/optima-pos/
-          ls -la artifact artifact/assets/optima artifact/solutions artifact/products artifact/optima-pos
+          cp -a public/optima-pos_V2/. artifact/optima-pos_V2/
+          ls -la artifact artifact/assets/optima artifact/solutions artifact/products artifact/optima-pos artifact/optima-pos/login artifact/optima-pos_V2
 
       - name: Upload optima-web-8088 artifact
         uses: actions/upload-artifact@v4

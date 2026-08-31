@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="id" data-lang="id">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Optima Digital Selaras — Digital Ecosystem Enabler</title>
+<title data-i18n="meta.homeTitle">Optima Digital Selaras — Digital Ecosystem Enabler</title>
 <link rel="icon" type="image/png" href="/assets/optima/logo.png?v=2">
-<link rel="stylesheet" href="/assets/optima/cursor.css">
+<link rel="stylesheet" href="/assets/optima/cursor.css?v=3">
+<link rel="stylesheet" href="/assets/optima/i18n/i18n.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
@@ -53,10 +54,10 @@ img{max-width:100%;display:block;}
 .brand-text{line-height:1.15;}
 .brand-text b{display:block;color:#fff;font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;letter-spacing:.01em;}
 .brand-text span{display:block;color:rgba(255,255,255,.55);font-size:11px;font-weight:500;}
-.nav-links{display:flex;gap:34px;list-style:none;}
+.nav-links{display:flex;gap:34px;list-style:none;align-items:center;}
 .nav-links a{color:rgba(255,255,255,.85);font-size:14.5px;font-weight:500;transition:color .2s;}
 .nav-links a:hover{color:#fff;}
-.nav-cta{display:flex;align-items:center;gap:18px;}
+.nav-cta{display:flex;align-items:center;gap:14px;flex-shrink:0;}
 
 /* BUTTONS */
 .btn{
@@ -644,6 +645,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
   .about-team{grid-template-columns:repeat(3,1fr);}
   .foot-top{grid-template-columns:1fr 1fr;}
   .nav-links{display:none;}
+  #nav .nav-cta{display:flex;}
   .op-suite-grid{grid-template-columns:1fr;}
   .op-suite-card.flagship{order:-1;}
   .op-grid{grid-template-columns:1fr 1fr;}
@@ -890,13 +892,19 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
       <span class="brand-text"><b>PT Optima Digital Selaras</b></span>
     </a>
     <ul class="nav-links">
-      <li><a href="/products/#website-solutions">Website Development</a></li>
-      <li><a href="/products/#business-commerce">Web/Mobile Apps</a></li>
-      <li><a href="/products/#financial-technology">Financial Apps</a></li>
-      <li><a href="#work">Our Client</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#footer">Contact</a></li>
+      <li><a href="/products/#website-solutions" data-i18n="nav.websiteDev">Website Development</a></li>
+      <li><a href="/products/#business-commerce" data-i18n="nav.webMobile">Web/Mobile Apps</a></li>
+      <li><a href="/products/#financial-technology" data-i18n="nav.financial">Financial Apps</a></li>
+      <li><a href="#work" data-i18n="nav.clients">Our Client</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#footer" data-i18n="nav.contact">Contact</a></li>
     </ul>
+    <div class="nav-cta">
+      <div class="lang-toggle" role="group" aria-label="Language" data-i18n-aria-label="lang.label">
+        <button type="button" data-lang-set="id" aria-pressed="true">ID</button>
+        <button type="button" data-lang-set="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -907,20 +915,20 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
   <div class="hero-overlay"></div>
   <div class="wrap">
     <div class="hero-content">
-      <span class="eyebrow">Digital Ecosystem Enabler</span>
-      <h1 class="mag-text">Build. Transform. Scale.</h1>
-      <h2>Technology solutions designed around how your business operates.</h2>
-      <p>We design and build digital products, platforms, and integrations that help organizations modernize operations and create connected ecosystems.</p>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Digital Ecosystem Enabler</span>
+      <h1 class="mag-text" data-i18n="hero.h1" data-i18n-mag>Build. Transform. Scale.</h1>
+      <h2 data-i18n="hero.h2">Technology solutions designed around how your business operates.</h2>
+      <p data-i18n="hero.p">We design and build digital products, platforms, and integrations that help organizations modernize operations and create connected ecosystems.</p>
       <div class="hero-actions">
-        <a href="#what-we-do" class="btn btn-solid">Explore What We Do <span class="btn-arrow">→</span></a>
+        <a href="#what-we-do" class="btn btn-solid"><span data-i18n="cta.exploreWhatWeDo">Explore What We Do</span> <span class="btn-arrow">→</span></a>
         <a href="https://wa.me/6285770566781" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
           <svg class="wa-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Talk to Our Team
+          <span data-i18n="cta.talkToTeam">Talk to Our Team</span>
         </a>
       </div>
       <a href="#work" class="watch-overview">
         <span class="wo-circle"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></span>
-        Watch overview
+        <span data-i18n="cta.watchOverview">Watch overview</span>
       </a>
     </div>
   </div>
@@ -931,16 +939,16 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
     <div class="statement-icon">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#0d2347" stroke-width="1.6" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#0d2347" stroke-width="1.6" stroke-linejoin="round"/></svg>
     </div>
-    <h3>Technology partner for connected business ecosystems</h3>
-    <p>We combine strategy, engineering, and integration expertise to help organizations across government, finance, cooperatives, and retail build scalable digital solutions that connect people, processes, and systems.</p>
+    <h3 data-i18n="statement.h3">Technology partner for connected business ecosystems</h3>
+    <p data-i18n="statement.p">We combine strategy, engineering, and integration expertise to help organizations across government, finance, cooperatives, and retail build scalable digital solutions that connect people, processes, and systems.</p>
   </div>
 </section>
 
 <section class="owd-section" id="what-we-do" aria-labelledby="what-we-do-title">
   <div class="owd-container">
     <div class="owd-header">
-      <p class="owd-eyebrow">What We Do</p>
-      <h2 class="owd-title mag-text" id="what-we-do-title">
+      <p class="owd-eyebrow" data-i18n="wwd.eyebrow">What We Do</p>
+      <h2 class="owd-title mag-text" id="what-we-do-title" data-i18n="wwd.title" data-i18n-mag>
         We build technology that moves businesses forward.
       </h2>
     </div>
@@ -954,16 +962,16 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
             <path d="M34 16l4-4M38 12v8" />
           </svg>
         </div>
-        <h3>Enterprise Software</h3>
-        <p>
+        <h3 data-i18n="wwd.enterprise.title">Enterprise Software</h3>
+        <p data-i18n="wwd.enterprise.p">
           Purpose-built platforms designed around your business operations,
           internal workflows, data structure, and long-term growth.
         </p>
-        <p class="owd-meta">
+        <p class="owd-meta" data-i18n="wwd.enterprise.meta">
           Custom Platforms · Business Systems · Enterprise Workflow
         </p>
         <a href="/solutions/enterprise-software/" class="owd-link">
-          Learn more <span aria-hidden="true">→</span>
+          <span data-i18n="cta.learnMore">Learn more</span> <span aria-hidden="true">→</span>
         </a>
       </article>
 
@@ -975,16 +983,16 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
             <path d="M31 31l4 4 6-8" />
           </svg>
         </div>
-        <h3>SaaS Products</h3>
-        <p>
+        <h3 data-i18n="wwd.saas.title">SaaS Products</h3>
+        <p data-i18n="wwd.saas.p">
           Scalable cloud products built for repeatable business needs, from
           internal platforms to commercial software used by many organizations.
         </p>
-        <p class="owd-meta">
+        <p class="owd-meta" data-i18n="wwd.saas.meta">
           Cloud Software · Multi-Tenant · Scalable Architecture
         </p>
         <a href="/products/" class="owd-link">
-          Learn more <span aria-hidden="true">→</span>
+          <span data-i18n="cta.learnMore">Learn more</span> <span aria-hidden="true">→</span>
         </a>
       </article>
 
@@ -997,16 +1005,16 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
             <path d="M31 25l4 4-4 4" />
           </svg>
         </div>
-        <h3>Web &amp; Digital Experiences</h3>
-        <p>
+        <h3 data-i18n="wwd.web.title">Web &amp; Digital Experiences</h3>
+        <p data-i18n="wwd.web.p">
           High-quality websites and digital interfaces that communicate clearly,
           perform smoothly, and support real business conversion goals.
         </p>
-        <p class="owd-meta">
+        <p class="owd-meta" data-i18n="wwd.web.meta">
           Corporate Websites · UX &amp; UI Design · Responsive
         </p>
         <a href="/solutions/web-digital/" class="owd-link">
-          Learn more <span aria-hidden="true">→</span>
+          <span data-i18n="cta.learnMore">Learn more</span> <span aria-hidden="true">→</span>
         </a>
       </article>
 
@@ -1018,16 +1026,16 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
             <path d="M31 14v8M27 18h8" />
           </svg>
         </div>
-        <h3>Digital Transformation</h3>
-        <p>
+        <h3 data-i18n="wwd.dx.title">Digital Transformation</h3>
+        <p data-i18n="wwd.dx.p">
           We help businesses modernize manual processes through automation,
           system integration, operational dashboards, and digital workflows.
         </p>
-        <p class="owd-meta">
+        <p class="owd-meta" data-i18n="wwd.dx.meta">
           Automation · System Integration · Digital Workflows
         </p>
         <a href="/solutions/digital-transformation/" class="owd-link">
-          Learn more <span aria-hidden="true">→</span>
+          <span data-i18n="cta.learnMore">Learn more</span> <span aria-hidden="true">→</span>
         </a>
       </article>
     </div>
@@ -1036,32 +1044,32 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
       <div class="owd-value">
         <span class="owd-small-icon" aria-hidden="true">✓</span>
         <div>
-          <h4>Secure by Design</h4>
-          <p>Security and reliability built into every solution.</p>
+          <h4 data-i18n="wwd.v1.title">Secure by Design</h4>
+          <p data-i18n="wwd.v1.p">Security and reliability built into every solution.</p>
         </div>
       </div>
 
       <div class="owd-value">
         <span class="owd-small-icon" aria-hidden="true">↗</span>
         <div>
-          <h4>Built to Scale</h4>
-          <p>Architecture prepared for growth and expansion.</p>
+          <h4 data-i18n="wwd.v2.title">Built to Scale</h4>
+          <p data-i18n="wwd.v2.p">Architecture prepared for growth and expansion.</p>
         </div>
       </div>
 
       <div class="owd-value">
         <span class="owd-small-icon" aria-hidden="true">◎</span>
         <div>
-          <h4>Business-Focused</h4>
-          <p>Technology shaped around measurable business outcomes.</p>
+          <h4 data-i18n="wwd.v3.title">Business-Focused</h4>
+          <p data-i18n="wwd.v3.p">Technology shaped around measurable business outcomes.</p>
         </div>
       </div>
 
       <div class="owd-value">
         <span class="owd-small-icon" aria-hidden="true">→</span>
         <div>
-          <h4>End-to-End Delivery</h4>
-          <p>From strategy and design to development and launch.</p>
+          <h4 data-i18n="wwd.v4.title">End-to-End Delivery</h4>
+          <p data-i18n="wwd.v4.p">From strategy and design to development and launch.</p>
         </div>
       </div>
     </div>
@@ -1072,31 +1080,31 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="sec-title-row"><span class="sec-num">02</span><span class="sec-num-line"></span><span class="eyebrow">Products</span></div>
-        <h2 class="sec-title mag-text" id="products-title">Software built for real business operations</h2>
-        <p class="sec-desc">From credit origination to collections, commerce and industry websites — software built for real operations.</p>
+        <div class="sec-title-row"><span class="sec-num">02</span><span class="sec-num-line"></span><span class="eyebrow" data-i18n="products.eyebrow">Products</span></div>
+        <h2 class="sec-title mag-text" id="products-title" data-i18n="products.title" data-i18n-mag>Software built for real business operations</h2>
+        <p class="sec-desc" data-i18n="products.desc">From credit origination to collections, commerce and industry websites — software built for real operations.</p>
       </div>
     </div>
 
     <div class="op-suite">
       <div class="op-suite-head">
         <p class="op-suite-label">
-          <b>Credit suite:</b>
-          <span class="op-suite-flow"><span>Originate</span><i>→</i><span>Assess</span><i>→</i><span>Collect</span></span>
+          <b data-i18n="products.suiteLabel">Credit suite:</b>
+          <span class="op-suite-flow"><span data-i18n="products.flowOriginate">Originate</span><i>→</i><span data-i18n="products.flowAssess">Assess</span><i>→</i><span data-i18n="products.flowCollect">Collect</span></span>
         </p>
       </div>
       <div class="op-suite-grid">
         <a href="/products/los/" class="op-suite-card op-suite-card-fill" aria-label="Explore Loan Origination System">
           <img src="/assets/optima/los-banner.png" alt="LOS Loan Origination System — Proses Kredit Lebih Cepat, Akurat &amp; Terintegrasi" width="1024" height="682" loading="lazy" decoding="async">
-          <span class="op-cta">Lihat Detail <span class="btn-arrow" aria-hidden="true">→</span></span>
+          <span class="op-cta"><span data-i18n="cta.lihatDetail">Lihat Detail</span> <span class="btn-arrow" aria-hidden="true">→</span></span>
         </a>
         <a href="https://www.creditriskdynamics.com" target="_blank" rel="noopener noreferrer" class="op-suite-card flagship op-suite-card-fill" aria-label="Explore Credit Assessment Process">
           <img src="/assets/optima/cap-banner.png" alt="CAP Credit Assessment Process — proses asesmen kredit lebih cepat, akurat, dan terpercaya dengan teknologi AI" width="1024" height="682" loading="lazy" decoding="async">
-          <span class="op-cta">Lihat Detail <span class="btn-arrow" aria-hidden="true">→</span></span>
+          <span class="op-cta"><span data-i18n="cta.lihatDetail">Lihat Detail</span> <span class="btn-arrow" aria-hidden="true">→</span></span>
         </a>
         <a href="https://cms.optimadigitalselaras.com/" target="_blank" rel="noopener noreferrer" class="op-suite-card op-suite-card-fill" aria-label="Explore Collection Management System">
           <img src="/assets/optima/cms-banner.png" alt="CMS Collection Management System — kelola data koleksi dengan lebih mudah, terstruktur, dan efisien" width="1024" height="682" loading="lazy" decoding="async">
-          <span class="op-cta">Lihat Detail <span class="btn-arrow" aria-hidden="true">→</span></span>
+          <span class="op-cta"><span data-i18n="cta.lihatDetail">Lihat Detail</span> <span class="btn-arrow" aria-hidden="true">→</span></span>
         </a>
       </div>
     </div>
@@ -1104,50 +1112,24 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
     <div class="op-grid">
       <a href="/products/#hris" class="op-suite-card op-suite-card-fill" aria-label="Explore HRIS">
         <img src="/assets/optima/hris-banner.png?v=5" alt="Optima HRIS — Kelola SDM Lebih Mudah Jadi Lebih Produktif" width="1024" height="682" loading="lazy" decoding="async">
-        <span class="op-cta">Explore HRIS <span class="btn-arrow" aria-hidden="true">→</span></span>
+        <span class="op-cta"><span data-i18n="cta.exploreHris">Explore HRIS</span> <span class="btn-arrow" aria-hidden="true">→</span></span>
       </a>
       <a href="https://sanctuary-yoga-tan.vercel.app/" target="_blank" rel="noopener noreferrer" class="op-suite-card op-suite-card-fill" aria-label="Explore Yoga Reservation System">
         <img src="/assets/optima/optima-yoga-reservation-banner.png" alt="Optima Yoga Reservation System — Kelola Kelas Yoga Jadi Lebih Mudah" width="1024" height="682" loading="lazy" decoding="async">
-        <span class="op-cta">Explore Yoga Reservation System <span class="btn-arrow" aria-hidden="true">→</span></span>
+        <span class="op-cta"><span data-i18n="cta.exploreYoga">Explore Yoga Reservation System</span> <span class="btn-arrow" aria-hidden="true">→</span></span>
       </a>
       <a href="https://optimadigitalselaras.com/optima-store" class="op-suite-card op-suite-card-fill" aria-label="Explore Toko Online">
         <img src="/assets/optima/optimastore-station-banner.png?v=3" alt="Optima Toko Online — Bangun Toko Online Mudah, Cepat, Sukses" width="1024" height="682" loading="lazy" decoding="async">
-        <span class="op-cta">Explore Toko Online <span class="btn-arrow" aria-hidden="true">→</span></span>
+        <span class="op-cta"><span data-i18n="cta.exploreToko">Explore Toko Online</span> <span class="btn-arrow" aria-hidden="true">→</span></span>
       </a>
-      <article class="op-card op-expand">
-        <a href="/products/#website-solutions" class="op-card-main">
-          <div class="op-kicker">07</div>
-          <div class="op-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 21h8M12 18v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Business Website Solutions</h3>
-          <p class="op-sub">Industry landing pages</p>
-          <p>High-performance websites and ready industry landings — from financial to retail — built to convert.</p>
-          <span class="op-cta">View Solutions <span class="btn-arrow" aria-hidden="true">→</span></span>
-        </a>
-        <div class="op-preview">
-          <div class="op-sites">
-            <a class="op-site is-live" href="/previews/envato-test/" target="_blank" rel="noopener noreferrer" data-name="Interno">
-              <span class="op-site-frame">
-                <span class="op-site-bar"><i></i><i></i><i></i><span>Interno · Home 01</span></span>
-                <span class="op-site-viewport">
-                  <iframe class="op-site-iframe" src="/previews/envato-test/" title="Interno Home 01" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin"></iframe>
-                </span>
-              </span>
-              <em>Open Interno →</em>
-            </a>
-            <a class="op-site is-live" href="/previews/yoga-test/" target="_blank" rel="noopener noreferrer" data-template-roll data-name="Optima Yoga" data-homes="/previews/yoga-test/?v=4,/previews/yoga-test/index-3.html?v=4,/previews/yoga-test/index-4.html?v=4,/previews/yoga-test/index-5.html?v=4">
-              <span class="op-site-frame">
-                <span class="op-site-bar"><i></i><i></i><i></i><span>Optima Yoga · Home 01</span></span>
-                <span class="op-site-viewport">
-                  <iframe class="op-site-iframe" src="/previews/yoga-test/?v=4" title="Optima Yoga Home 01" loading="eager" tabindex="-1" sandbox="allow-scripts allow-same-origin"></iframe>
-                </span>
-              </span>
-              <em>Open Optima Yoga →</em>
-            </a>
-          </div>
-        </div>
-      </article>
+      <a href="/optima-pos/" class="op-suite-card op-suite-card-fill" aria-label="Explore Point of Sale">
+        <img src="/assets/optima/optima-pos-banner.jpg" alt="Optima POS — kasir dan manajemen usaha untuk warung dan toko" width="1024" height="682" loading="lazy" decoding="async">
+        <span class="op-cta"><span data-i18n="cta.explorePos">Explore Point of Sale</span> <span class="btn-arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a href="/products/musiconnect/" class="op-suite-card op-suite-card-fill" aria-label="Explore Musiconnect">
+        <img src="/assets/optima/musiconnect-banner.jpg?v=4" alt="Musiconnect — Connect. Create. Collaborate. The professional network for musicians" width="1104" height="670" loading="lazy" decoding="async">
+        <span class="op-cta"><span data-i18n="cta.exploreMusic">Explore Musiconnect</span> <span class="btn-arrow" aria-hidden="true">→</span></span>
+      </a>
     </div>
   </div>
 </section>
@@ -1156,7 +1138,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="sec-title-row"><span class="sec-num">03</span><span class="sec-num-line"></span><h2 class="sec-title mag-text" id="work-title">Our Client</h2></div>
+        <div class="sec-title-row"><span class="sec-num">03</span><span class="sec-num-line"></span><h2 class="sec-title mag-text" id="work-title" data-i18n="clients.title" data-i18n-mag>Our Client</h2></div>
       </div>
     </div>
 
@@ -1199,52 +1181,52 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
   <div class="about-hero">
     <div class="wrap">
       <div class="sec-title-row">
-        <span class="sec-num">03</span><span class="sec-num-line"></span><span class="eyebrow">About</span>
+        <span class="sec-num">03</span><span class="sec-num-line"></span><span class="eyebrow" data-i18n="about.eyebrow">About</span>
       </div>
-      <h2 class="about-hero-title" id="about-title">Meet the team</h2>
+      <h2 class="about-hero-title" id="about-title" data-i18n="about.title">Meet the team</h2>
       <article class="about-lead">
         <img class="about-avatar" src="/assets/optima/team/frandito-setyady.png" alt="Frandito Setyady">
         <h3>Frandito Setyady</h3>
-        <p>Chief Technology Officer</p>
+        <p data-i18n="role.cto">Chief Technology Officer</p>
       </article>
     </div>
   </div>
   <div class="about-body">
     <div class="wrap">
       <div class="about-intro">
-        <p>PT Optima Digital Selaras is a technology partner for connected business ecosystems. We combine strategy, engineering, and integration to help organizations across government, finance, cooperatives, and retail modernize how they operate.</p>
-        <p>Based in BSD City, Tangerang Selatan, this is the delivery team behind the products — from design and engineering to people, legal, and operations.</p>
+        <p data-i18n="about.intro1">PT Optima Digital Selaras is a technology partner for connected business ecosystems. We combine strategy, engineering, and integration to help organizations across government, finance, cooperatives, and retail modernize how they operate.</p>
+        <p data-i18n="about.intro2">Based in BSD City, Tangerang Selatan, this is the delivery team behind the products — from design and engineering to people, legal, and operations.</p>
       </div>
       <div class="about-team">
         <article class="about-card">
           <img class="about-avatar" src="/assets/optima/team/gus-riyanto.png" alt="Gus Riyanto">
           <h3>Gus Riyanto</h3>
-          <p>UI/UX &amp; Graphic Designer</p>
+          <p data-i18n="role.uiux">UI/UX &amp; Graphic Designer</p>
         </article>
         <article class="about-card">
           <img class="about-avatar" src="/assets/optima/team/joni-setiawan.png" alt="Joni Setiawan">
           <h3>Joni Setiawan</h3>
-          <p>Front End Developer</p>
+          <p data-i18n="role.frontend">Front End Developer</p>
         </article>
         <article class="about-card">
           <img class="about-avatar" src="/assets/optima/team/zaenudin-andika.png" alt="Zaenudin Andika">
           <h3>Zaenudin Andika</h3>
-          <p>Backend Developer</p>
+          <p data-i18n="role.backend">Backend Developer</p>
         </article>
         <article class="about-card">
           <img class="about-avatar" src="/assets/optima/team/adista-sukma.png" alt="Adista Sukma A">
           <h3>Adista Sukma A</h3>
-          <p>HR &amp; Talent Officer</p>
+          <p data-i18n="role.hr">HR &amp; Talent Officer</p>
         </article>
         <article class="about-card">
           <img class="about-avatar" src="/assets/optima/team/andina-niramaya.png" alt="Andina Niramaya">
           <h3>Andina Niramaya</h3>
-          <p>Business Development</p>
+          <p data-i18n="role.bd">Business Development</p>
         </article>
         <article class="about-card">
           <img class="about-avatar" src="/assets/optima/team/angelina-agata.png" alt="Angelina Agata">
           <h3>Angelina Agata</h3>
-          <p>Admin &amp; Creative</p>
+          <p data-i18n="role.admin">Admin &amp; Creative</p>
         </article>
       </div>
     </div>
@@ -1254,17 +1236,17 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
 <section id="contact" class="final-cta reveal">
   <div class="wrap">
     <div>
-      <h3 class="mag-text">Ready to build your next digital platform?</h3>
-      <p>Let's create connected solutions that accelerate your business.</p>
+      <h3 class="mag-text" data-i18n="contact.title" data-i18n-mag>Ready to build your next digital platform?</h3>
+      <p data-i18n="contact.p">Let's create connected solutions that accelerate your business.</p>
     </div>
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
       <a href="mailto:info@optimadigitalselaras.com" class="btn btn-outline">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Email Us
+        <span data-i18n="cta.emailUs">Email Us</span>
       </a>
       <a href="https://wa.me/6285770566781" class="btn btn-solid" target="_blank" rel="noopener noreferrer">
         <svg class="wa-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Contact Optima
+        <span data-i18n="cta.contactOptima">Contact Optima</span>
       </a>
     </div>
   </div>
@@ -1278,7 +1260,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
           <img class="brand-mark" src="/assets/optima/logo.png?v=2" width="52" height="52" alt="Optima Digital Selaras">
           <span class="brand-text">
             <b>PT Optima Digital Selaras</b>
-            <span class="foot-brand-meta">Digital Ecosystem Enabler</span>
+            <span class="foot-brand-meta" data-i18n="footer.tagline">Digital Ecosystem Enabler</span>
             <i class="foot-mark" aria-hidden="true"></i>
           </span>
         </a>
@@ -1286,38 +1268,41 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
     </div>
     <div class="foot-top">
       <div class="foot-col">
-        <h6>Creative Product</h6>
-        <a href="/products/#website-solutions">Website Development</a>
+        <h6 data-i18n="footer.creative">Creative Product</h6>
+        <a href="/products/#website-solutions" data-i18n="nav.websiteDev">Website Development</a>
         <a href="/products/#website-solutions">SEO</a>
         <a href="/products/#website-solutions">CMS</a>
       </div>
       <div class="foot-col">
-        <h6>Web/Mobile Apps</h6>
+        <h6 data-i18n="footer.webMobile">Web/Mobile Apps</h6>
         <a href="/products/#hris">HRIS</a>
-        <a href="/products/#business-commerce">Online Shop</a>
-        <a href="/products/#pos">Point of Sale</a>
-        <a href="/products/#yoga">Booking Class</a>
+        <a href="/products/#business-commerce" data-i18n="footer.onlineShop">Online Shop</a>
+        <a href="/products/#pos" data-i18n="footer.pos">Point of Sale</a>
+        <a href="/products/#yoga" data-i18n="footer.booking">Booking Class</a>
+        <a href="/products/#musiconnect">Musiconnect</a>
       </div>
       <div class="foot-col">
-        <h6>Company</h6>
-        <a href="#about">About Us</a>
-        <a href="#">Careers</a>
-        <a href="#">News & Insights</a>
+        <h6 data-i18n="footer.company">Company</h6>
+        <a href="#about" data-i18n="footer.aboutUs">About Us</a>
+        <a href="#" data-i18n="footer.careers">Careers</a>
+        <a href="#" data-i18n="footer.news">News & Insights</a>
       </div>
       <div class="foot-col">
-        <h6>Get in Touch</h6>
+        <h6 data-i18n="footer.getInTouch">Get in Touch</h6>
         <a href="mailto:info@optimadigitalselaras.com">info@optimadigitalselaras.com</a>
         <a href="https://wa.me/6285770566781" target="_blank" rel="noopener noreferrer">0857 7056 6781</a>
         <p>Ruko Golden Madrid Blok D No. 26, Jl. Letnan Sutopo, BSD City, Serpong, Tangerang Selatan, Banten 15310</p>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 PT Optima Digital Selaras. All rights reserved.</span>
+      <span data-i18n="footer.rights">© 2026 PT Optima Digital Selaras. All rights reserved.</span>
       <span>www.optimadigitalselaras.com</span>
     </div>
   </div>
 </footer>
 
+<script src="/assets/optima/i18n/translations.js?v=6"></script>
+<script src="/assets/optima/i18n/i18n.js?v=4"></script>
 <script>
 document.querySelectorAll('.reveal').forEach(function(el){
   var io = new IntersectionObserver(function(entries){
@@ -1328,10 +1313,13 @@ document.querySelectorAll('.reveal').forEach(function(el){
 
 /* Magnetic text: letters near the mouse cursor scale up, like a dock */
 (function(){
-  var RADIUS = 140;      // px — how far the effect reaches
-  var MAX_SCALE = 1.7;   // how big a letter gets right under the cursor
+  var RADIUS = 140;
+  var MAX_SCALE = 1.7;
+  var letters = [];
+  var mouseX = -9999, mouseY = -9999;
+  var active = false;
 
-  document.querySelectorAll('.mag-text').forEach(function(el){
+  function splitMagText(el){
     var text = el.textContent;
     el.textContent = '';
     text.split(/(\s+)/).forEach(function(token){
@@ -1346,13 +1334,16 @@ document.querySelectorAll('.reveal').forEach(function(el){
         el.appendChild(span);
       });
     });
-  });
+  }
 
-  var letters = Array.prototype.slice.call(document.querySelectorAll('.mag-text .letter'));
-  if(!letters.length) return;
+  function refreshLetters(){
+    document.querySelectorAll('.mag-text').forEach(splitMagText);
+    letters = Array.prototype.slice.call(document.querySelectorAll('.mag-text .letter'));
+  }
 
-  var mouseX = -9999, mouseY = -9999;
-  var active = false;
+  refreshLetters();
+  window.addEventListener('optima:langchange', refreshLetters);
+
   window.addEventListener('mousemove', function(e){
     mouseX = e.clientX; mouseY = e.clientY; active = true;
   });
@@ -1433,6 +1424,6 @@ document.querySelectorAll('.reveal').forEach(function(el){
 })();
 
 </script>
-<script src="/assets/optima/cursor.js"></script>
+<script src="/assets/optima/cursor.js?v=3"></script>
 </body>
 </html>

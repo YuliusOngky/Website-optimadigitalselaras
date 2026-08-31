@@ -5,9 +5,55 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default [
-  { ignores: ["dist/**", "public/**", "disk/**", "1.Orisa_development/**", "3.Orisa-Nextjs/**", "scripts/**"] },
+  {
+    ignores: [
+      "**/node_modules/**",
+      "dist/**",
+      "public/**",
+      "disk/**",
+      "scripts/**",
+      "config/**",
+      "solutions/**",
+      "1.Orisa_development/**",
+      "3.Orisa-Nextjs/**",
+      "AAA_*/**",
+      "orisa-*/**",
+      "_*/**",
+      "*-image-audit/**",
+      "**/*.mjs",
+      "**/*.cjs",
+      "**/*.html",
+      "**/*.json",
+      "**/*.md",
+      "**/*.css",
+      "**/*.scss",
+      "**/*.png",
+      "**/*.jpg",
+      "**/*.jpeg",
+      "**/*.webp",
+      "**/*.mp4",
+      "**/*.zip",
+      "**/*.ps1",
+      "**/*.py",
+      "**/*.bat",
+      "**/*.cmd",
+      "**/*.yml",
+      "**/*.yaml",
+    ],
+  },
   js.configs.recommended,
   ...tseslint.configs.recommended,
+  {
+    files: ["**/*.{js,jsx}"],
+    languageOptions: {
+      ecmaVersion: 2023,
+      sourceType: "module",
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+  },
   {
     files: ["**/*.{ts,tsx}"],
     languageOptions: {

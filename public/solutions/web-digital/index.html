@@ -1,14 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="id" data-lang="id">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Web &amp; Digital Experiences — Optima Digital Selaras</title>
+<title data-i18n="meta.webDigitalTitle">Web &amp; Digital Experiences — Optima Digital Selaras</title>
 <meta name="description" content="Corporate websites, UX/UI, and responsive digital interfaces that communicate clearly and support real business conversion goals." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/optima/cursor.css">
+<link rel="stylesheet" href="/assets/optima/cursor.css?v=3">
+<link rel="stylesheet" href="/assets/optima/i18n/i18n.css">
 <style>
 :root{
   --navy-950:#020b1d;
@@ -39,7 +40,8 @@ a{text-decoration:none;color:inherit;}
 .brand-text{line-height:1.15;}
 .brand-text b{display:block;color:#fff;font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;letter-spacing:.01em;}
 .brand-text span{display:block;color:rgba(255,255,255,.55);font-size:11px;font-weight:500;}
-.nav-links{display:flex;gap:34px;list-style:none;}
+.nav-links{display:flex;gap:34px;list-style:none;align-items:center;}
+.nav-cta{display:flex;align-items:center;gap:14px;flex-shrink:0;}
 .nav-links a{color:rgba(255,255,255,.85);font-size:14.5px;font-weight:500;}
 .nav-links a:hover{color:#fff;}
 
@@ -185,26 +187,32 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
       <span class="brand-text"><b>PT Optima Digital Selaras</b></span>
     </a>
     <ul class="nav-links">
-      <li><a href="/#what-we-do">What We Do</a></li>
-      <li><a href="/#products">Products</a></li>
-      <li><a href="/#industries">Industries</a></li>
-      <li><a href="/#work">Client Work</a></li>
-      <li><a href="https://wa.me/628129885679" target="_blank" rel="noopener noreferrer">Contact</a></li>
+      <li><a href="/#what-we-do" data-i18n="nav.whatWeDo">What We Do</a></li>
+      <li><a href="/#products" data-i18n="nav.products">Products</a></li>
+      <li><a href="/#industries" data-i18n="nav.industries">Industries</a></li>
+      <li><a href="/#work" data-i18n="nav.clientWork">Client Work</a></li>
+      <li><a href="https://wa.me/628129885679" target="_blank" rel="noopener noreferrer" data-i18n="nav.contact">Contact</a></li>
     </ul>
+    <div class="nav-cta">
+      <div class="lang-toggle" role="group" aria-label="Language" data-i18n-aria-label="lang.label">
+        <button type="button" data-lang-set="id" aria-pressed="true">ID</button>
+        <button type="button" data-lang-set="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </div>
 </nav>
 
 <header class="web-hero">
   <div class="wrap">
     <div class="intro">
-      <a class="crumb" href="/#what-we-do">← Back to What We Do</a>
+      <a class="crumb" href="/#what-we-do" data-i18n="cta.backWhatWeDo">← Back to What We Do</a>
       <div class="kicker">Web studio</div>
-      <h1>High-quality websites and digital interfaces that communicate clearly.</h1>
+      <h1 data-i18n="sol.web.h1">High-quality websites and digital interfaces that communicate clearly.</h1>
       <p class="lead">We design and build sites that perform smoothly and support real conversion goals — from corporate presence to landing pages, business websites, and e-commerce experiences.</p>
       <p class="meta">Corporate Websites · UX &amp; UI Design · Responsive</p>
       <div class="hero-actions">
         <a href="https://wa.me/628129885679" class="btn btn-solid" target="_blank" rel="noopener noreferrer"><svg class="wa-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Start a website project</a>
-        <a href="#covers" class="btn btn-line">See what it covers</a>
+        <a href="#covers" class="btn btn-line"><span data-i18n="cta.seeCovers">See what it covers</span></a>
       </div>
     </div>
     <div class="browser" aria-hidden="true">
@@ -213,7 +221,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
         <div class="site-nav"><b>ACME CORPORATE</b><span>About · Services · Contact</span></div>
         <div class="site-hero">
           <em>Corporate website</em>
-          <h2>A digital presence that matches how you operate.</h2>
+          <h2 data-i18n="sol.web.s1.title">A digital presence that matches how you operate.</h2>
           <p>Clear structure, fast pages, and a path to enquiry — not a brochure that nobody reads.</p>
           <span class="site-cta">Talk to us</span>
         </div>
@@ -249,7 +257,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
 <section id="covers" class="cover reveal">
   <div class="wrap">
     <p class="label">What it covers</p>
-    <h2>Corporate websites, UX/UI, and responsive digital interfaces.</h2>
+    <h2 data-i18n="sol.web.s3.title">Corporate websites, UX/UI, and responsive digital interfaces.</h2>
     <p class="desc">The full scope behind the Web &amp; Digital card — from company sites and landing pages to commerce experiences.</p>
     <div class="cover-grid">
       <article class="cover-card">
@@ -265,7 +273,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
       <article class="cover-card">
         <div class="cover-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a4 4 0 018 0v2"/></svg></div>
         <h3>Business websites</h3>
-        <p>Service and SME sites that explain what you do, show work, and make it easy to get in touch.</p>
+        <p data-i18n="sol.web.sme.p">Service and SME sites that explain what you do, show work, and make it easy to get in touch.</p>
       </article>
       <article class="cover-card">
         <div class="cover-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.6 12.2A2 2 0 009.5 17h7.7a2 2 0 002-1.6L21 7H6"/></svg></div>
@@ -289,7 +297,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
 <section class="usecases reveal">
   <div class="wrap">
     <p class="label">Example sites we build</p>
-    <h2>Digital interfaces matched to a real conversion goal.</h2>
+    <h2 data-i18n="sol.web.s4.title">Digital interfaces matched to a real conversion goal.</h2>
     <div class="use-grid">
       <div class="use">
         <div class="use-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/></svg></div>
@@ -369,32 +377,32 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:64px 0 28p
         </a>
       </div>
       <div class="foot-col">
-        <h6>What We Do</h6>
+        <h6 data-i18n="footer.whatWeDo">What We Do</h6>
         <a href="/solutions/enterprise-software/">Enterprise Software</a>
         <a href="/products/">SaaS Products</a>
         <a href="/solutions/web-digital/">Web &amp; Digital Experiences</a>
         <a href="/solutions/digital-transformation/">Digital Transformation</a>
       </div>
       <div class="foot-col">
-        <h6>Products</h6>
+        <h6 data-i18n="footer.products">Products</h6>
         <a href="/#products">Bank &amp; Financial</a>
         <a href="/#products">Government &amp; Community</a>
         <a href="/#products">Commerce &amp; Transactions</a>
       </div>
       <div class="foot-col">
-        <h6>Company</h6>
-        <a href="/#about">About Us</a>
+        <h6 data-i18n="footer.company">Company</h6>
+        <a href="/#about" data-i18n="footer.aboutUs">About Us</a>
         <a href="https://wa.me/628129885679" target="_blank" rel="noopener noreferrer">Contact</a>
       </div>
       <div class="foot-col">
-        <h6>Get in Touch</h6>
+        <h6 data-i18n="footer.getInTouch">Get in Touch</h6>
         <a href="mailto:info@optimadigitalselaras.com">info@optimadigitalselaras.com</a>
         <a href="https://wa.me/628129885679" target="_blank" rel="noopener noreferrer">+62 812 988 5679</a>
         <p>Ruko Golden Madrid Blok D No. 26, Jl. Letnan Sutopo, BSD City, Serpong, Tangerang Selatan, Banten 15310</p>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 PT Optima Digital Selaras. All rights reserved.</span>
+      <span><span data-i18n="footer.rights">© 2026 PT Optima Digital Selaras. All rights reserved.</span></span>
       <span>www.optimadigitalselaras.com</span>
     </div>
   </div>
@@ -408,6 +416,8 @@ document.querySelectorAll('.reveal').forEach(function(el){
   io.observe(el);
 });
 </script>
-<script src="/assets/optima/cursor.js"></script>
+<script src="/assets/optima/i18n/translations.js?v=4"></script>
+<script src="/assets/optima/i18n/i18n.js?v=4"></script>
+<script src="/assets/optima/cursor.js?v=3"></script>
 </body>
 </html>

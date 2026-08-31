@@ -39,6 +39,14 @@
       "destination": "/products/los/index.html"
     },
     {
+      "source": "/optima-pos/login",
+      "destination": "/optima-pos/login/index.html"
+    },
+    {
+      "source": "/optima-pos/login/",
+      "destination": "/optima-pos/login/index.html"
+    },
+    {
       "source": "/optima-pos",
       "destination": "/optima-pos/index.html"
     },
