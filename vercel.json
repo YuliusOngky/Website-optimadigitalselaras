@@ -39,6 +39,14 @@
       "destination": "/products/los/index.html"
     },
     {
+      "source": "/products/musiconnect",
+      "destination": "/products/musiconnect/index.html"
+    },
+    {
+      "source": "/products/musiconnect/",
+      "destination": "/products/musiconnect/index.html"
+    },
+    {
       "source": "/optima-pos/login",
       "destination": "/optima-pos/login/index.html"
     },
