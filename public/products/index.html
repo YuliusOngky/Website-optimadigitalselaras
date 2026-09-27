@@ -6,6 +6,8 @@
 <title>Products — Optima Digital Selaras</title>
 <meta name="description" content="Professional business websites, commerce applications, enterprise platforms, and financial technology — Optima builds reusable digital products configured around how your organization operates." />
 <link rel="canonical" href="https://optimadigitalselaras.com/products/" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
 <link rel="icon" type="image/png" href="/assets/optima/logo.png?v=2">
 <link rel="stylesheet" href="/assets/optima/cursor.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,6 +116,7 @@ section{padding:100px 0;}
 .op-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px;}
 .op-grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
 .op-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;}
+.op-card-link{display:flex;flex-direction:column;flex:1;color:inherit;}
 .op-card:hover{transform:translateY(-3px);border-color:rgba(11,18,32,.2);box-shadow:0 14px 30px rgba(11,18,32,.08);}
 .op-card img{display:block;width:100%;height:auto;aspect-ratio:1024/682;object-fit:cover;background:var(--off);}
 
@@ -259,7 +262,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
 
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
 .reveal.in{opacity:1;transform:none;}
-#website-solutions,#business-commerce,#financial-technology,#enterprise,#hris,#yoga,#pos,#musiconnect,#footer{scroll-margin-top:90px;}
+#website-solutions,#business-commerce,#financial-technology,#enterprise,#hris,#yoga,#pos,#musiconnect,#community-ecommerce,#footer{scroll-margin-top:90px;}
 
 /* SECTION DIVIDER accent */
 .section-divider{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
@@ -810,6 +813,17 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
           <a href="https://optimadigitalselaras.com/optima-store" target="_blank" rel="noopener noreferrer" class="op-cta">Lihat Demo <span class="btn-arrow">→</span></a>
         </div>
       </article>
+    <article class="op-card" id="community-ecommerce">
+        <a href="/products/community-ecommerce/">
+          <img src="/assets/optima/community-ecommerce-banner.jpg?v=1" alt="Community eCommerce — solusi e-commerce berbasis komunitas" width="1024" height="682" loading="lazy" decoding="async">
+        </a>
+        <div class="op-card-body">
+          <span class="badge badge-featured" data-i18n="prod.badge.liveCommerce">Live Demo · Commerce</span>
+          <h4>Community eCommerce</h4>
+          <p data-i18n="ce.card.p">Solusi e-commerce berbasis komunitas untuk UMKM dan toko lokal — satu ekosistem digital, bisa dicoba langsung.</p>
+          <a href="/products/community-ecommerce/" class="op-cta"><span data-i18n="cta.lihatDetail">Lihat Detail</span> <span class="btn-arrow">→</span></a>
+        </div>
+      </article>
     <article class="op-card" id="pos">
       <a href="/optima-pos/">
         <img src="/assets/optima/optima-pos-banner.jpg" alt="Optima POS — kasir dan manajemen usaha untuk warung dan toko" width="1024" height="682" loading="lazy" decoding="async">
@@ -833,15 +847,15 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
         </div>
       </article>
       <article class="op-card" id="hris">
-        <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20request%20demo%20HRIS." target="_blank" rel="noopener noreferrer">
+        <a href="/products/hris/" class="op-card-link">
           <img src="/assets/optima/hris-banner.png?v=5" alt="Optima HRIS — Kelola SDM Lebih Mudah Jadi Lebih Produktif" width="1024" height="682" loading="lazy" decoding="async">
+          <div class="op-card-body">
+            <span class="badge badge-featured">Featured · People Ops</span>
+            <h4>HRIS</h4>
+            <p>Workforce records and attendance delivered as a multi-organization HR product — ready to deploy for any business.</p>
+            <span class="op-cta">Lihat Detail <span class="btn-arrow">→</span></span>
+          </div>
         </a>
-        <div class="op-card-body">
-          <span class="badge badge-featured">Featured · People Ops</span>
-          <h4>HRIS</h4>
-          <p>Workforce records and attendance delivered as a multi-organization HR product — ready to deploy for any business.</p>
-          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20request%20demo%20HRIS." target="_blank" rel="noopener noreferrer" class="op-cta">Lihat Demo <span class="btn-arrow">→</span></a>
-        </div>
       </article>
       <article class="op-card" id="musiconnect">
         <a href="/products/musiconnect/">
@@ -979,6 +993,11 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
           <a href="https://optimadigitalselaras.com/optima-store" target="_blank" rel="noopener noreferrer">Lihat Demo →</a>
         </article>
         <article class="prod">
+          <strong>Community eCommerce</strong>
+          <p>Community marketplace for local shops and UMKM on one digital ecosystem.</p>
+          <a href="/products/community-ecommerce/">Lihat Detail →</a>
+        </article>
+        <article class="prod">
           <strong>Point of Sale (POS)</strong>
           <p>Checkout and inventory for merchants and retailers on a shared product core.</p>
           <a href="/optima-pos/">Lihat Demo →</a>
@@ -996,7 +1015,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
         <article class="prod">
           <strong>HRIS</strong>
           <p>Workforce records and attendance for multi-organization deployments.</p>
-          <a href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20request%20demo%20HRIS." target="_blank" rel="noopener noreferrer">Lihat Demo →</a>
+          <a href="/products/hris/">Lihat Detail →</a>
         </article>
         <article class="prod">
           <strong>Musiconnect</strong>
@@ -1132,6 +1151,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
         <h6>Web/Mobile Apps</h6>
         <a href="#hris">HRIS</a>
         <a href="#business-commerce">Online Shop</a>
+        <a href="/products/community-ecommerce/">Community eCommerce</a>
         <a href="#pos">Point of Sale</a>
         <a href="#yoga">Booking Class</a>
         <a href="#musiconnect">Musiconnect</a>
