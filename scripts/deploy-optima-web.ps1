@@ -1,27 +1,25 @@
-# Deploy Optima homepage to GIOS Docker optima-web (nginx host :8088).
+# Deploy Optima homepage to CAP Docker optima-web (nginx host :8088).
 # Does NOT touch IIS wwwroot and does NOT upload the Orisa Vite SPA.
 #
-# From a laptop on the LAN (SSH key already on the NAS):
-#   Prefer: ssh gios   (see ~/.ssh/config — user is "NAS GIOS" with a space)
-#   $env:DEPLOY_HOST = "192.168.1.20"
-#   $env:DEPLOY_USER = "NAS GIOS"
-#   $env:DEPLOY_KEY  = "$env:USERPROFILE\.ssh\id_ed25519"   # optional
+# From a laptop on the LAN:
+#   Prefer: ssh x250   (CAP 192.168.1.50)
 #   .\scripts\deploy-optima-web.ps1
 #
-# Live origin is the bind-mounted nginx html dir (read-only in the container):
-#   C:\Users\NAS GIOS\websites\optimadigitalselaras
-# Verify: http://192.168.1.20:8088  and  https://www.optimadigitalselaras.com
+# Live origin bind-mount on CAP:
+#   C:\deploy\optima-sites\optimadigitalselaras
+# Verify: http://192.168.1.50:8088  and  https://www.optimadigitalselaras.com
+#
+# Cloudflare Tunnel still runs on GIOS and proxies Optima hostnames to CAP.
 
 $ErrorActionPreference = "Stop"
 
 $RepoRoot = Split-Path -Parent $PSScriptRoot
-$HostName = if ($env:DEPLOY_HOST) { $env:DEPLOY_HOST } else { "192.168.1.20" }
-# Windows account on NAS is "NAS GIOS" (with space) — see ~/.ssh/config Host gios
-$UserName = if ($env:DEPLOY_USER) { $env:DEPLOY_USER } else { "NAS GIOS" }
-$RemoteDir = if ($env:DEPLOY_REMOTE_DIR) { $env:DEPLOY_REMOTE_DIR } else { "C:\Users\NASGIO~1\websites\optimadigitalselaras" }
+$HostName = if ($env:DEPLOY_HOST) { $env:DEPLOY_HOST } else { "192.168.1.50" }
+$UserName = if ($env:DEPLOY_USER) { $env:DEPLOY_USER } else { "CAP" }
+$RemoteDir = if ($env:DEPLOY_REMOTE_DIR) { $env:DEPLOY_REMOTE_DIR } else { "C:\deploy\optima-sites\optimadigitalselaras" }
 $Identity = $env:DEPLOY_KEY
 $UseAlias = (-not $env:DEPLOY_HOST -and -not $env:DEPLOY_USER)
-$SshTarget = if ($UseAlias) { "gios" } else { $HostName }
+$SshTarget = if ($UseAlias) { "x250" } else { $HostName }
 
 $Index = Join-Path $RepoRoot "index.html"
 $OptimaAssets = Join-Path $RepoRoot "public\assets\optima"
