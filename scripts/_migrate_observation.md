@@ -10,9 +10,11 @@
 # - https://cms.optimadigitalselaras.com/ 200 (CAP PM2 cms-web)
 # - https://gios.online/ 302 (still GIOS Nextcloud)
 #
-# Cleanup command (after window):
-#   scp scripts/_migrate_gios_cleanup_optima.ps1 gios:...
-#   ssh gios powershell -File ...\_migrate_gios_cleanup_optima.ps1
+# Cleanup (automated):
+#   Scheduled task on GIOS: OptimaGiosCleanupAtCap @ 2026-09-28 18:00 WIB
+#   Runs: C:\Users\NASGIO~1\websites\optima-ops\_migrate_gios_cleanup_optima.cmd
+#   Manual (after window): powershell -ExecutionPolicy Bypass -File ...\_migrate_gios_cleanup_optima.ps1
+#   Watchdog updated: Nextcloud + studio only (no Optima repair on GIOS)
 #
 # Rollback tunnel if needed:
 #   restore C:\Users\NAS GIOS\.cloudflared\config.yml.bak-before-optima-cap-*
