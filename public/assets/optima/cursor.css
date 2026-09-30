@@ -6,13 +6,13 @@
 }
 
 .cursor-trail-layer{
-  position:fixed;inset:0;pointer-events:none;z-index:9998;overflow:hidden;
+  position:fixed;inset:0;pointer-events:none;z-index:2147483000;overflow:hidden;
 }
 
 .cursor-trail-dot{
   position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;
   background:rgba(139,197,63,.55);
-  pointer-events:none;z-index:9998;
+  pointer-events:none;z-index:2147483000;
   transform:translate(-50%,-50%) scale(1);
   opacity:0;
   will-change:transform, opacity;
@@ -20,7 +20,7 @@
 
 .cursor-dot{
   position:fixed;top:0;left:0;width:14px;height:14px;border-radius:50%;
-  background:var(--teal, #8bc53f);pointer-events:none;z-index:9999;
+  background:var(--teal, #8bc53f);pointer-events:none;z-index:2147483001;
   transform:translate(-50%,-50%);
   transition:width .25s cubic-bezier(.2,.8,.2,1), height .25s cubic-bezier(.2,.8,.2,1),
              background .25s ease, opacity .2s ease, box-shadow .2s ease;

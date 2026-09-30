@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
   <meta name="description" content="Masuk ke Optima POS atau coba gratis 14 hari. Kasir mudah, bisnis lebih teratur." />
   <link rel="canonical" href="https://optimadigitalselaras.com/optima-pos/login/" />
   <link rel="icon" type="image/png" href="/assets/optima/logo.png?v=2" />
-  <meta property="og:title" content="Masuk — Optima POS" />
+  <meta property="og:title" content="Masuk â€” Optima POS" />
   <meta property="og:description" content="Masuk ke akun kasir Optima POS." />
   <meta property="og:url" content="https://optimadigitalselaras.com/optima-pos/login/" />
   <meta property="og:type" content="website" />
@@ -95,7 +95,7 @@
     <section class="panel">
       <div class="card">
         <h2>Masuk Optima POS</h2>
-        <p class="sub">Demo sudah terisi. Klik Masuk untuk mencoba Optima POS.</p>
+        <p class="sub">Klik Masuk untuk membuka aplikasi demo Optima POS (Shop Owner).</p>
         <div class="tabs" role="tablist">
           <button type="button" class="tab on" id="tabLogin" data-pane="paneLogin">Masuk</button>
           <button type="button" class="tab" id="tabTrial" data-pane="paneTrial">Coba gratis</button>
@@ -104,25 +104,25 @@
 
         <form id="paneLogin" class="on" autocomplete="on">
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" inputmode="email" autocomplete="username" required placeholder="kasir@toko.id" value="demo@pos.id" />
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="username" required placeholder="kasir@toko.id" value="shopowner@optimadigital.com" />
           <label for="password">Kata sandi</label>
-          <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="••••••••" value="demo1234" />
-          <button class="btn btn-primary" type="submit" id="loginBtn">Masuk</button>
-          <p class="fine" style="margin-top:12px">Akun demo Optima POS — siap dipakai, tanpa daftar dulu.</p>
+          <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" value="123456" />
+          <button class="btn btn-primary" type="submit" id="loginBtn">Masuk ke Aplikasi</button>
+          <p class="fine" style="margin-top:12px">Demo Shop Owner â€” siap dipakai. Di halaman berikutnya klik <strong>Masuk</strong> atau pilih role.</p>
         </form>
 
         <div id="paneTrial">
           <p class="sub" style="margin-bottom:16px">Tim Optima akan buatkan akun uji coba 14 hari. Chat WhatsApp, tanpa kartu kredit.</p>
-          <a class="btn btn-wa" href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20coba%20Optima%20POS%20gratis%2014%20hari.">Chat WhatsApp — Coba gratis</a>
+          <a class="btn btn-wa" href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20coba%20Optima%20POS%20gratis%2014%20hari.">Chat WhatsApp â€” Coba gratis</a>
         </div>
 
-        <a class="back" href="/optima-pos/">← Kembali ke Optima POS</a>
+        <a class="back" href="/optima-pos/">â† Kembali ke Optima POS</a>
         <p class="fine">Dengan masuk, Anda menyetujui penggunaan Optima POS untuk operasional toko Anda.</p>
       </div>
     </section>
   </div>
   <script>
-    const API = "https://pos-api.optimadigitalselaras.com/api/v1";
+    const APP_LOGIN = "https://pos.optimadigitalselaras.com/optima-pos/coba";
     const msgEl = document.getElementById("msg");
     const tabs = document.querySelectorAll(".tab");
     tabs.forEach((tab) => {
@@ -142,38 +142,23 @@
       msgEl.className = "msg " + (ok ? "ok" : "err");
       msgEl.textContent = text;
     }
-    document.getElementById("paneLogin").addEventListener("submit", async (e) => {
+    document.getElementById("paneLogin").addEventListener("submit", (e) => {
       e.preventDefault();
       const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value;
       const btn = document.getElementById("loginBtn");
       btn.disabled = true;
-      btn.textContent = "Masuk…";
+      btn.textContent = "Membukaâ€¦";
       hideMsg();
       try {
-        const res = await fetch(API + "/auth/login", {
-          method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({ email, password }),
-        });
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok) {
-          throw new Error(data.message || data.error || "Email atau kata sandi tidak sesuai.");
-        }
-        const payload = data.data && typeof data.data === "object" ? data.data : data;
-        const token = payload.token || data.token;
-        if (!token) {
-          throw new Error("Login berhasil tapi sesi tidak diterima. Coba lagi.");
-        }
-        showMsg("Membuka Optima POS…", true);
-        window.location.href = "/optima-pos/login";
-        return;
-      } catch (err) {
-        showMsg(err.message || "Tidak bisa terhubung ke server. Coba lagi atau chat WhatsApp.", false);
-      } finally {
-        btn.disabled = false;
-        btn.textContent = "Masuk";
-      }
+        // Prefill hint for the real OptimaPOS login (same browser); app uses session auth there.
+        sessionStorage.setItem(
+          "optima_pos_demo",
+          JSON.stringify({ email: email || "shopowner@optimadigital.com", password: password || "123456" })
+        );
+      } catch (err) {}
+      showMsg("Membuka aplikasi Optima POSâ€¦", true);
+      window.location.href = APP_LOGIN;
     });
   </script>
 </body>
