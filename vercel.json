@@ -47,6 +47,14 @@
       "destination": "/products/musiconnect/index.html"
     },
     {
+      "source": "/products/community-ecommerce",
+      "destination": "/products/community-ecommerce/index.html"
+    },
+    {
+      "source": "/products/community-ecommerce/",
+      "destination": "/products/community-ecommerce/index.html"
+    },
+    {
       "source": "/optima-pos/login",
       "destination": "/optima-pos/login/index.html"
     },
