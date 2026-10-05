@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
   <meta name="description" content="Masuk ke Optima POS atau coba gratis 14 hari. Kasir mudah, bisnis lebih teratur." />
   <link rel="canonical" href="https://optimadigitalselaras.com/optima-pos/login/" />
   <link rel="icon" type="image/png" href="/assets/optima/logo.png?v=2" />
-  <meta property="og:title" content="Masuk â€” Optima POS" />
+  <meta property="og:title" content="Masuk — Optima POS" />
   <meta property="og:description" content="Masuk ke akun kasir Optima POS." />
   <meta property="og:url" content="https://optimadigitalselaras.com/optima-pos/login/" />
   <meta property="og:type" content="website" />
@@ -106,17 +106,17 @@
           <label for="email">Email</label>
           <input id="email" name="email" type="email" inputmode="email" autocomplete="username" required placeholder="kasir@toko.id" value="shopowner@optimadigital.com" />
           <label for="password">Kata sandi</label>
-          <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" value="123456" />
+          <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="••••••••" value="123456" />
           <button class="btn btn-primary" type="submit" id="loginBtn">Masuk ke Aplikasi</button>
-          <p class="fine" style="margin-top:12px">Demo Shop Owner â€” siap dipakai. Di halaman berikutnya klik <strong>Masuk</strong> atau pilih role.</p>
+          <p class="fine" style="margin-top:12px">Demo Shop Owner — siap dipakai. Di halaman berikutnya klik <strong>Masuk</strong> atau pilih role.</p>
         </form>
 
         <div id="paneTrial">
           <p class="sub" style="margin-bottom:16px">Tim Optima akan buatkan akun uji coba 14 hari. Chat WhatsApp, tanpa kartu kredit.</p>
-          <a class="btn btn-wa" href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20coba%20Optima%20POS%20gratis%2014%20hari.">Chat WhatsApp â€” Coba gratis</a>
+          <a class="btn btn-wa" href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20coba%20Optima%20POS%20gratis%2014%20hari.">Chat WhatsApp — Coba gratis</a>
         </div>
 
-        <a class="back" href="/optima-pos/">â† Kembali ke Optima POS</a>
+        <a class="back" href="/optima-pos/">← Kembali ke Optima POS</a>
         <p class="fine">Dengan masuk, Anda menyetujui penggunaan Optima POS untuk operasional toko Anda.</p>
       </div>
     </section>
@@ -148,7 +148,7 @@
       const password = document.getElementById("password").value;
       const btn = document.getElementById("loginBtn");
       btn.disabled = true;
-      btn.textContent = "Membukaâ€¦";
+      btn.textContent = "Membuka…";
       hideMsg();
       try {
         // Prefill hint for the real OptimaPOS login (same browser); app uses session auth there.
@@ -157,7 +157,7 @@
           JSON.stringify({ email: email || "shopowner@optimadigital.com", password: password || "123456" })
         );
       } catch (err) {}
-      showMsg("Membuka aplikasi Optima POSâ€¦", true);
+      showMsg("Membuka aplikasi Optima POS…", true);
       window.location.href = APP_LOGIN;
     });
   </script>
