@@ -69,6 +69,22 @@
     {
       "source": "/optima-pos/",
       "destination": "/optima-pos/index.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy/index.html"
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/privacy/index.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms/index.html"
+    },
+    {
+      "source": "/terms/",
+      "destination": "/terms/index.html"
     }
   ]
 }
