@@ -130,6 +130,8 @@
     "footer.govComm": "Government & Community",
     "footer.commerceTx": "Commerce & Transactions",
     "footer.rights": "© 2026 PT Optima Digital Selaras. All rights reserved.",
+    "footer.privacy": "Privacy Policy",
+    "footer.terms": "Terms & Conditions",
 
     "prod.bws.eyebrow": "Business Website Solutions",
     "prod.bws.title": "Professional websites without starting from zero.",
@@ -470,6 +472,8 @@
     "footer.govComm": "Pemerintahan & Komunitas",
     "footer.commerceTx": "Commerce & Transaksi",
     "footer.rights": "© 2026 PT Optima Digital Selaras. Hak cipta dilindungi.",
+    "footer.privacy": "Kebijakan Privasi",
+    "footer.terms": "Syarat & Ketentuan",
 
     "prod.bws.eyebrow": "Solusi Website Bisnis",
     "prod.bws.title": "Website profesional tanpa harus mulai dari nol.",
