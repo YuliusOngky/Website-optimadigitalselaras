@@ -51,6 +51,14 @@ if ($LASTEXITCODE -ne 0) { throw "SSH mkdir failed with exit $LASTEXITCODE" }
 & scp @ScpArgs $Index "${SshTarget}:${RemoteUnix}/index.html"
 if ($LASTEXITCODE -ne 0) { throw "scp index.html failed" }
 
+foreach ($seoName in @("404.html", "robots.txt", "sitemap.xml")) {
+  $seoPath = Join-Path $RepoRoot $seoName
+  if (Test-Path $seoPath) {
+    & scp @ScpArgs $seoPath "${SshTarget}:${RemoteUnix}/$seoName"
+    if ($LASTEXITCODE -ne 0) { throw "scp $seoName failed" }
+  }
+}
+
 $OptimaItems = Get-ChildItem -Path $OptimaAssets -Force | ForEach-Object { $_.FullName }
 & scp @ScpArgs -r @OptimaItems "${SshTarget}:${RemoteUnix}/assets/optima/"
 if ($LASTEXITCODE -ne 0) { throw "scp optima assets failed" }
@@ -82,12 +90,13 @@ if (Test-Path $OptimaPos2) {
 }
 
 if (Test-Path $Templates) {
-  $TemplateItems = Get-ChildItem -Path $Templates -Force | Where-Object { $_.Name -match '-web$|restaurant|autodetail' } | ForEach-Object { $_.FullName }
+  # Include *-web packs plus steak-menu (tracked from CAP live).
+  $TemplateItems = Get-ChildItem -Path $Templates -Force | Where-Object { $_.Name -match '-web$|restaurant|autodetail|^steak-menu$' } | ForEach-Object { $_.FullName }
   if ($TemplateItems) {
     & scp @ScpArgs -r @TemplateItems "${SshTarget}:${RemoteUnix}/templates/"
     if ($LASTEXITCODE -ne 0) { throw "scp templates failed" }
   }
 }
 
-Write-Host "Done. Check http://${HostName}:8088/optima-pos/login/ and https://optimadigitalselaras.com/optima-pos/login/"
-Write-Host "IIS :80 was not modified."
+Write-Host "Done. Check http://${HostName}:8088/ and https://optimadigitalselaras.com/"
+Write-Host "Bind mount served by optima-web :8088. IIS :80 was not modified."
