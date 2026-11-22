@@ -61,3 +61,8 @@ coverage/
 
 # Build artifacts
 *.tsbuildinfo
+
+# Vendor template docs (path contains /dist/ but must be tracked)
+!public/templates/**/documentation/dist/
+!public/templates/**/documentation/dist/**
+
