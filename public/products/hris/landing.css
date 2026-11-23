@@ -481,7 +481,9 @@ body.lp-active {
   width: 100%;
   height: auto;
   border-radius: 18px;
+  border: 1px solid var(--line);
   box-shadow: var(--shadow);
+  background: #fff;
 }
 
 .lp-stats {
