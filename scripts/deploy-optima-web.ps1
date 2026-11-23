@@ -27,16 +27,24 @@ $Solutions = Join-Path $RepoRoot "public\solutions"
 $Products = Join-Path $RepoRoot "public\products"
 $OptimaPos = Join-Path $RepoRoot "public\optima-pos"
 $OptimaPos2 = Join-Path $RepoRoot "public\optima-pos_V2"
-# Yoga landing source of truth is repo kelas-yoga (not this marketing repo).
-$KelasYogaRoot = if ($env:KELAS_YOGA_ROOT) { $env:KELAS_YOGA_ROOT } else {
+function Find-ProductLandingRoot([string]$RepoName) {
+  if ($env:PRODUCT_LANDING_ROOT) {
+    $forced = Join-Path $env:PRODUCT_LANDING_ROOT $RepoName
+    if (Test-Path (Join-Path $forced "landing\index.html")) { return $forced }
+  }
   $candidates = @(
-    (Join-Path (Split-Path $RepoRoot -Parent) "kelas-yoga"),
-    (Join-Path $env:USERPROFILE "kelas-yoga"),
-    (Join-Path $env:USERPROFILE "live-snapshot\kelas-yoga")
+    (Join-Path (Split-Path $RepoRoot -Parent) $RepoName),
+    (Join-Path $env:USERPROFILE $RepoName),
+    (Join-Path $env:USERPROFILE "live-snapshot\$RepoName")
   )
-  ($candidates | Where-Object { Test-Path (Join-Path $_ "landing\index.html") } | Select-Object -First 1)
+  return ($candidates | Where-Object { Test-Path (Join-Path $_ "landing\index.html") } | Select-Object -First 1)
 }
+
+# Product landings sourced from dedicated repos (not duplicated here).
+$KelasYogaRoot = if ($env:KELAS_YOGA_ROOT) { $env:KELAS_YOGA_ROOT } else { Find-ProductLandingRoot "kelas-yoga" }
 $OptimaYoga = if ($KelasYogaRoot) { Join-Path $KelasYogaRoot "landing" } else { $null }
+$MusicConnectRoot = if ($env:MUSICCONNECT_ROOT) { $env:MUSICCONNECT_ROOT } else { Find-ProductLandingRoot "musicconnectMVP" }
+$MusicConnectLanding = if ($MusicConnectRoot) { Join-Path $MusicConnectRoot "landing" } else { $null }
 $Templates = Join-Path $RepoRoot "public\templates"
 
 if (-not (Test-Path $Index)) { throw "Missing $Index" }
@@ -105,6 +113,15 @@ if ($OptimaYoga -and (Test-Path $OptimaYoga)) {
   if ($LASTEXITCODE -ne 0) { throw "scp optima-yoga failed" }
 } else {
   Write-Warning "kelas-yoga/landing not found. Set KELAS_YOGA_ROOT or clone YuliusOngky/kelas-yoga beside this repo. Skipping /optima-yoga deploy."
+}
+if ($MusicConnectLanding -and (Test-Path $MusicConnectLanding)) {
+  Write-Host "MusicConnect landing from musicconnectMVP: $MusicConnectLanding"
+  & ssh @SshArgs $SshTarget "cmd /c `"mkdir `"$RemoteDir\products\musiconnect`" 2>nul & exit /b 0`""
+  $McItems = Get-ChildItem -Path $MusicConnectLanding -Force | ForEach-Object { $_.FullName }
+  & scp @ScpArgs -r @McItems "${SshTarget}:${RemoteUnix}/products/musiconnect/"
+  if ($LASTEXITCODE -ne 0) { throw "scp musiconnect landing failed" }
+} else {
+  Write-Warning "musicconnectMVP/landing not found. Set MUSICCONNECT_ROOT or clone YuliusOngky/musicconnectMVP. Skipping /products/musiconnect deploy."
 }
 
 if (Test-Path $Templates) {
