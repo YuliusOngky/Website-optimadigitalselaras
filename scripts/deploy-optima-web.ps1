@@ -45,6 +45,8 @@ $KelasYogaRoot = if ($env:KELAS_YOGA_ROOT) { $env:KELAS_YOGA_ROOT } else { Find-
 $OptimaYoga = if ($KelasYogaRoot) { Join-Path $KelasYogaRoot "landing" } else { $null }
 $MusicConnectRoot = if ($env:MUSICCONNECT_ROOT) { $env:MUSICCONNECT_ROOT } else { Find-ProductLandingRoot "musicconnectMVP" }
 $MusicConnectLanding = if ($MusicConnectRoot) { Join-Path $MusicConnectRoot "landing" } else { $null }
+$StoreStationRoot = if ($env:OPTIMASTORE_ROOT) { $env:OPTIMASTORE_ROOT } else { Find-ProductLandingRoot "OptimaStoreStation" }
+$StoreStationLanding = if ($StoreStationRoot) { Join-Path $StoreStationRoot "landing" } else { $null }
 $Templates = Join-Path $RepoRoot "public\templates"
 
 if (-not (Test-Path $Index)) { throw "Missing $Index" }
@@ -122,6 +124,15 @@ if ($MusicConnectLanding -and (Test-Path $MusicConnectLanding)) {
   if ($LASTEXITCODE -ne 0) { throw "scp musiconnect landing failed" }
 } else {
   Write-Warning "musicconnectMVP/landing not found. Set MUSICCONNECT_ROOT or clone YuliusOngky/musicconnectMVP. Skipping /products/musiconnect deploy."
+}
+if ($StoreStationLanding -and (Test-Path $StoreStationLanding)) {
+  Write-Host "OptimaStore landing from OptimaStoreStation: $StoreStationLanding"
+  & ssh @SshArgs $SshTarget "cmd /c `"mkdir `"$RemoteDir\products\optima-store`" 2>nul & exit /b 0`""
+  $OssItems = Get-ChildItem -Path $StoreStationLanding -Force | ForEach-Object { $_.FullName }
+  & scp @ScpArgs -r @OssItems "${SshTarget}:${RemoteUnix}/products/optima-store/"
+  if ($LASTEXITCODE -ne 0) { throw "scp optima-store landing failed" }
+} else {
+  Write-Warning "OptimaStoreStation/landing not found. Set OPTIMASTORE_ROOT or clone YuliusOngky/OptimaStoreStation. Skipping /products/optima-store deploy."
 }
 
 if (Test-Path $Templates) {
