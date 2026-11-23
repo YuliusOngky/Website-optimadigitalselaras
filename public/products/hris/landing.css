@@ -308,15 +308,18 @@ body.lp-active {
 
 .lp-devices {
   position: relative;
-  margin-right: -28px;
+  margin-right: -12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lp-devices img {
   display: block;
-  width: 118%;
+  width: 108%;
   max-width: none;
   height: auto;
-  filter: drop-shadow(0 28px 40px rgba(10, 33, 86, 0.16));
+  filter: drop-shadow(0 24px 36px rgba(10, 33, 86, 0.14));
 }
 
 .lp-trust {
