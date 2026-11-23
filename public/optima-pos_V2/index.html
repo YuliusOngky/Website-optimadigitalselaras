@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Optima POS V2</title>
 <link rel="manifest" href="/optima-pos_V2/manifest.json">
-<script src="/optima-pos_V2/config.js"></script>
+<script src="/optima-pos_V2/config.js?v=2"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{
@@ -396,7 +396,7 @@ html,body{height:100%;background:var(--bg);color:var(--t);font-family:-apple-sys
 // ============================================================
 // STATE
 // ============================================================
-const CFG = window.CFG || {
+const CFG = Object.assign({
   API_BASE: 'https://pos-api.optimadigitalselaras.com/api/v1',
   STORE_NAME: 'Demo Warung',
   APP_NAME: 'Optima POS V2',
@@ -404,7 +404,8 @@ const CFG = window.CFG || {
   CACHE_KEY: 'aaa_pos_products',
   QUEUE_KEY: 'aaa_pos_queue',
   CATEGORIES: { '1': 'Minuman', '2': 'Makanan' },
-};
+}, window.CFG || {});
+if (!CFG.CATEGORIES) CFG.CATEGORIES = { '1': 'Minuman', '2': 'Makanan' };
 let TOKEN = localStorage.getItem(CFG.TOKEN_KEY) || '';
 let SESSION_ID = null;
 let cart = {}, curCat = 'Semua', payM = 'tunai', invSeq = 1;
