@@ -11,7 +11,7 @@
   <meta property="og:description" content="Kasir mudah. Bisnis lebih teratur. Lihat demo Optima POS." />
   <meta property="og:url" content="https://optimadigitalselaras.com/optima-pos/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://optimadigitalselaras.com/assets/optima/optima-pos-banner.jpg" />
+  <meta property="og:image" content="https://optimadigitalselaras.com/assets/optima/optima-pos-hero.jpg" />
   <link rel="stylesheet" href="/assets/optima/cursor.css?v=4" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -163,14 +163,14 @@
     }
     .hero-media { position: absolute; inset: 0; z-index: 0; }
     .hero-media img {
-      width: 100%; height: 100%; object-fit: cover; object-position: 80% center;
+      width: 100%; height: 100%; object-fit: cover; object-position: center center;
       animation: heroZoom 12s ease-out forwards;
     }
     .hero-shade {
       position: absolute; inset: 0; z-index: 1;
       background:
-        linear-gradient(90deg, #06122a 0%, rgba(6, 18, 42, .92) 34%, rgba(6, 18, 42, .45) 58%, rgba(6, 18, 42, .18) 100%),
-        linear-gradient(180deg, rgba(6, 18, 42, .5) 0%, transparent 30%, rgba(6, 18, 42, .55) 100%);
+        linear-gradient(90deg, #06122a 0%, rgba(6, 18, 42, .88) 36%, rgba(6, 18, 42, .35) 62%, rgba(6, 18, 42, .12) 100%),
+        linear-gradient(180deg, rgba(6, 18, 42, .4) 0%, transparent 32%, rgba(6, 18, 42, .5) 100%);
     }
     .hero-inner {
       position: relative; z-index: 2;
@@ -206,8 +206,9 @@
     .value-ico {
       width: 42px; height: 42px; border-radius: 12px;
       background: var(--blue-soft); color: var(--blue);
-      display: grid; place-items: center; flex-shrink: 0; font-size: 18px;
+      display: grid; place-items: center; flex-shrink: 0;
     }
+    .value-ico svg { width: 20px; height: 20px; }
     .value-card h3 { font-size: 15px; margin-bottom: 4px; }
     .value-card p { font-size: 13px; color: var(--muted); }
 
@@ -242,8 +243,9 @@
     .feat:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(11, 31, 68, .1); }
     .feat-ico {
       width: 52px; height: 52px; border-radius: 12px;
-      display: grid; place-items: center; margin: 0 auto 14px; color: #fff; font-size: 22px;
+      display: grid; place-items: center; margin: 0 auto 14px; color: #fff;
     }
+    .feat-ico svg { width: 24px; height: 24px; }
     .feat h3 { font-size: 16px; margin-bottom: 6px; }
     .feat p { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
     .c1 { background: #1d6fe9; } .c2 { background: #0ea5e9; }
@@ -412,7 +414,7 @@
 
   <header class="hero" id="beranda">
     <div class="hero-media" aria-hidden="true">
-      <img src="/assets/optima/optima-pos-banner.jpg?v=7" width="1600" height="900" alt="" fetchpriority="high">
+      <img src="/assets/optima/optima-pos-hero.jpg?v=1" width="1188" height="1364" alt="" fetchpriority="high">
     </div>
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="wrap hero-inner">
@@ -422,7 +424,7 @@
         <a class="btn btn-primary" href="https://pos.optimadigitalselaras.com/optima-pos/coba" target="_blank" rel="noopener noreferrer">Lihat Demo →</a>
         <a class="btn btn-ghost" href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Optima%20POS." target="_blank" rel="noopener noreferrer">Hubungi Tim</a>
       </div>
-      <p class="hero-note">Live demo · Multi kasir · Cloud backup · Optima Digital Selaras</p>
+      <p class="hero-note">PosPro · Live demo · Multi kasir · Cloud backup</p>
     </div>
   </header>
 
@@ -431,28 +433,28 @@
       <div class="wrap">
         <div class="value-grid">
           <div class="value-card">
-            <div class="value-ico">⚡</div>
+            <div class="value-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg></div>
             <div>
               <h3>Mudah Digunakan</h3>
               <p>Interface sederhana dan mudah dipahami</p>
             </div>
           </div>
           <div class="value-card">
-            <div class="value-ico">📊</div>
+            <div class="value-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5M10 19V9M16 19v-6M22 19V7"/></svg></div>
             <div>
               <h3>Pantau Usaha Kapan Saja</h3>
               <p>Data real-time yang bisa diakses dari mana saja</p>
             </div>
           </div>
           <div class="value-card">
-            <div class="value-ico">🔒</div>
+            <div class="value-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
             <div>
               <h3>Aman &amp; Terpercaya</h3>
               <p>Data tersimpan aman di cloud dengan backup otomatis</p>
             </div>
           </div>
           <div class="value-card">
-            <div class="value-ico">💰</div>
+            <div class="value-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
             <div>
               <h3>Harga Terjangkau</h3>
               <p>Sesuai budget UMK dengan ROI yang jelas</p>
@@ -497,42 +499,42 @@
         <h2>Semua yang Dibutuhkan untuk Menjalankan Usaha</h2>
         <div class="feat-grid">
           <div class="feat">
-            <div class="feat-ico c1">💵</div>
+            <div class="feat-ico c1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg></div>
             <h3>Kasir</h3>
             <p>Transaksi cepat dengan barcode dan input manual</p>
           </div>
           <div class="feat">
-            <div class="feat-ico c2">📦</div>
+            <div class="feat-ico c2" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
             <h3>Stok</h3>
             <p>Fitur stok yang terintegrasi dengan setiap transaksi</p>
           </div>
           <div class="feat">
-            <div class="feat-ico c3">🏷</div>
+            <div class="feat-ico c3" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1.5" fill="currentColor"/></svg></div>
             <h3>Produk</h3>
             <p>Kelola harga dan katalog produk dengan mudah</p>
           </div>
           <div class="feat">
-            <div class="feat-ico c4">📈</div>
+            <div class="feat-ico c4" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
             <h3>Penjualan</h3>
             <p>Laporan penjualan harian, bulanan, dan tahunan</p>
           </div>
           <div class="feat">
-            <div class="feat-ico c5">📊</div>
+            <div class="feat-ico c5" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5M10 19V9M16 19v-6M22 19V7"/></svg></div>
             <h3>Laporan</h3>
             <p>Laporan lengkap untuk analisa bisnis</p>
           </div>
           <div class="feat">
-            <div class="feat-ico c6">💳</div>
+            <div class="feat-ico c6" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
             <h3>Hutang / Piutang</h3>
             <p>Catat transaksi kredit secara otomatis</p>
           </div>
           <div class="feat">
-            <div class="feat-ico c7">👥</div>
+            <div class="feat-ico c7" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
             <h3>Multi Kasir</h3>
             <p>Setiap kasir punya akun dan hak akses sendiri</p>
           </div>
           <div class="feat">
-            <div class="feat-ico c8">🏬</div>
+            <div class="feat-ico c8" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
             <h3>Multi Outlet</h3>
             <p>Pantau beberapa cabang dalam satu akun</p>
           </div>
@@ -552,7 +554,7 @@
           </ul>
         </div>
         <div class="dash-visual">
-          <img src="/assets/optima/optima-pos-banner.jpg?v=7" width="1024" height="682" alt="Dashboard Optima POS" loading="lazy" />
+          <img src="/assets/optima/optima-pos-hero.jpg?v=1" width="594" height="682" alt="Dashboard Optima POS" loading="lazy" />
         </div>
       </div>
     </section>
@@ -600,21 +602,21 @@
         <h2>Tips Usaha dari Optima POS</h2>
         <div class="blog-grid">
           <div class="blog-item">
-            <div class="blog-thumb">📈</div>
+            <div class="blog-thumb" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
             <div class="blog-content">
               <h3>5 Strategi Meningkatkan Penjualan Warung</h3>
               <p>Tips praktis untuk mengoptimalkan penjualan harian warung Anda dengan metode yang sudah terbukti.</p>
             </div>
           </div>
           <div class="blog-item">
-            <div class="blog-thumb">📊</div>
+            <div class="blog-thumb" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5M10 19V9M16 19v-6M22 19V7"/></svg></div>
             <div class="blog-content">
               <h3>Cara Kelola Stok yang Efektif</h3>
               <p>Panduan lengkap mengelola inventory untuk menghindari kekurangan atau kelebihan stok.</p>
             </div>
           </div>
           <div class="blog-item">
-            <div class="blog-thumb">💵</div>
+            <div class="blog-thumb" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
             <div class="blog-content">
               <h3>Menghitung Keuntungan dengan Benar</h3>
               <p>Metode sederhana untuk mengetahui profit margin dan mengoptimalkan harga jual produk.</p>
