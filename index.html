@@ -133,21 +133,6 @@ img{max-width:100%;display:block;}
 }
 .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
 
-/* Watch overview link under hero CTAs */
-.watch-overview{
-  display:inline-flex;align-items:center;gap:12px;margin-top:40px;
-  color:rgba(255,255,255,.88);font-size:14px;font-weight:600;
-  text-decoration:none;transition:color .2s;
-}
-.watch-overview:hover{color:#fff;}
-.watch-overview .wo-circle{
-  width:36px;height:36px;border-radius:50%;
-  border:1.5px solid rgba(255,255,255,.5);
-  display:flex;align-items:center;justify-content:center;
-  transition:background .2s,border-color .2s;
-}
-.watch-overview:hover .wo-circle{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.8);}
-
 /* SECTION SHARED */
 section{padding:110px 0;}
 .sec-head{
@@ -569,6 +554,7 @@ section{padding:110px 0;}
   transform:translateY(-8px);
   box-shadow:0 8px 32px rgba(0,0,0,0.12);
 }
+.work-logo-slot a{display:flex;align-items:center;justify-content:center;color:inherit;text-decoration:none;}
 .work-logo-slot img{max-width:240px;max-height:140px;width:auto;height:auto;object-fit:contain;display:block;}
 .work-logo-slot figcaption{font-size:15px;font-weight:600;color:var(--muted);line-height:1.3;}
 @keyframes work-marquee{
@@ -959,10 +945,6 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
           <span data-i18n="cta.talkToTeam">Talk to Our Team</span>
         </a>
       </div>
-      <a href="#work" class="watch-overview">
-        <span class="wo-circle"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></span>
-        <span data-i18n="cta.watchOverview">Watch overview</span>
-      </a>
     </div>
   </div>
 </section>
@@ -1179,6 +1161,18 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
       <div class="work-marquee" aria-label="Client logos">
         <div class="work-marquee-track">
           <div class="work-logo-row">
+            <figure class="work-logo-slot">
+              <a href="https://goodfeel.id/" target="_blank" rel="noopener noreferrer" aria-label="GOOD feel">
+                <img src="/assets/optima/clients/goodfeel.png?v=1" alt="GOOD feel">
+              </a>
+              <figcaption>GOOD feel</figcaption>
+            </figure>
+            <figure class="work-logo-slot">
+              <a href="https://dianakaryagroup.com/" target="_blank" rel="noopener noreferrer" aria-label="PT Diana Karya Group">
+                <img src="/assets/optima/clients/diana-karya-group.png?v=1" alt="PT Diana Karya Group">
+              </a>
+              <figcaption>PT Diana Karya Group</figcaption>
+            </figure>
             <figure class="work-logo-slot">
               <img src="/assets/optima/clients/roti-gembong-gedhe.png" alt="Roti Gembong Gedhe">
               <figcaption>Roti Gembong Gedhe</figcaption>

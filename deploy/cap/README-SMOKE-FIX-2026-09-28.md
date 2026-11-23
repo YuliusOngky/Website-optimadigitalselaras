@@ -1,5 +1,29 @@
 # Deploy notes — smoke-test fixes (branch `fix/smoke-test-2026-09-28`)
 
+## Trailing-slash Location leak (2026-11-23)
+
+**Symptom:** `GET /products/hris` (no slash) returned
+`Location: http://origin-web.optimadigitalselaras.com/products/hris/`.
+
+**Cause:** Cloudflare Tunnel presents `Host: origin-web...` to nginx; nginx
+`absolute_redirect` built an absolute Location from that Host + http.
+
+**Fix (live on CAP):** in `C:\deploy\optima-sites\nginx-default.conf`:
+```
+absolute_redirect off;
+port_in_redirect off;
+```
+Then `docker compose restart optima-web` (reload alone was not enough on Docker Desktop bind mount).
+
+Repo mirror: `deploy/cap/nginx-default.conf` + snippet note in
+`deploy/cap/nginx-hardening.snippet.conf`.
+
+**Verify:**
+```
+curl -sSI https://optimadigitalselaras.com/products/hris
+:: expect Location: /products/hris/  (relative, no origin-web)
+```
+
 ## Item 3 — Hide nginx version on apex 404
 
 **Root cause:** `optima-web` (nginx:1.27-alpine on CAP :8088) returns the stock nginx 404 body containing `nginx/1.27.5` because `server_tokens` is still on (default) and there is no branded `error_page`.
