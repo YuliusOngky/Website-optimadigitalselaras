@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Optima POS — Kasir Mudah. Bisnis Lebih Teratur.</title>
-  <meta name="description" content="Optima POS adalah aplikasi kasir dan manajemen usaha untuk warung, toko kelontong, warteg, dan UMK. Transaksi cepat, stok terkontrol, laporan jelas setiap hari." />
+  <title>Optima POS — Tiga Versi Kasir untuk UMK</title>
+  <meta name="description" content="Hub Optima POS: PosPro (live demo), V2 kasir mobile + API, dan V3 prototype UI. Pilih versi yang ingin dicoba." />
   <link rel="canonical" href="https://optimadigitalselaras.com/optima-pos/" />
   <link rel="icon" type="image/png" href="/assets/optima/logo.png?v=2" />
   <meta property="og:title" content="Optima POS — Point of Sale" />
-  <meta property="og:description" content="Kasir mudah. Bisnis lebih teratur. Lihat demo Optima POS." />
+  <meta property="og:description" content="Satu produk kasir, tiga versi yang bisa dicoba: PosPro, V2, dan V3 prototype." />
   <meta property="og:url" content="https://optimadigitalselaras.com/optima-pos/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://optimadigitalselaras.com/assets/optima/optima-pos-hero.jpg" />
@@ -27,8 +27,9 @@
       --muted: #5b6b82;
       --line: #e4edf7;
       --off: #f6f9fc;
-      --wa: #25d366;
-      --shadow: 0 22px 50px rgba(11, 31, 68, .10);
+      --green: #10b981;
+      --green-deep: #059669;
+      --amber: #d97706;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -41,7 +42,7 @@
     }
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
-    h1, h2, h3, h4 {
+    h1, h2, h3 {
       font-family: Manrope, "Plus Jakarta Sans", sans-serif;
       font-weight: 800;
       letter-spacing: -.03em;
@@ -49,7 +50,7 @@
       line-height: 1.12;
     }
     .wrap { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
-    #fitur, #cara-kerja, #testimoni, #blog { scroll-margin-top: 92px; }
+    #versi { scroll-margin-top: 92px; }
 
     .skip {
       position: absolute; left: -999px; top: 0; z-index: 80;
@@ -57,7 +58,6 @@
     }
     .skip:focus { left: 12px; top: 12px; }
 
-    /* —— Nav —— */
     #nav {
       position: fixed; inset: 0 0 auto; z-index: 50;
       transition: background .35s ease, border-color .35s ease, backdrop-filter .35s ease;
@@ -97,12 +97,6 @@
     #nav.scrolled .nav-links a:hover { color: var(--blue); }
 
     .nav-end { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-    .link-login {
-      font-size: 14px; font-weight: 700; color: rgba(255, 255, 255, .9);
-      transition: color .25s;
-    }
-    #nav.scrolled .link-login { color: var(--navy); }
-
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       border-radius: 999px; font-weight: 700; font-size: 14.5px;
@@ -111,23 +105,26 @@
       white-space: nowrap;
     }
     .btn:hover { transform: translateY(-1px); }
-    .btn-primary {
-      background: var(--blue); color: #fff;
-      box-shadow: 0 10px 22px rgba(29, 111, 233, .28);
-    }
+    .btn-primary { background: var(--blue); color: #fff; box-shadow: 0 10px 22px rgba(29, 111, 233, .28); }
     .btn-primary:hover { background: var(--blue-deep); }
-    .btn-nav {
-      padding: 10px 16px; font-size: 13px;
-      background: #fff; color: var(--navy);
-    }
+    .btn-nav { padding: 10px 16px; font-size: 13px; background: #fff; color: var(--navy); }
     .btn-nav:hover { background: var(--blue-soft); }
     .btn-ghost {
       background: transparent; color: #fff;
       border: 1.5px solid rgba(255, 255, 255, .45);
     }
     .btn-ghost:hover { border-color: #fff; background: rgba(255, 255, 255, .08); }
+    .btn-outline {
+      background: transparent; color: var(--navy);
+      border: 1.5px solid var(--line);
+    }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
+    .btn-green { background: var(--green); color: #fff; }
+    .btn-green:hover { background: var(--green-deep); }
+    .btn-amber { background: var(--amber); color: #fff; }
+    .btn-amber:hover { filter: brightness(.95); }
     .btn-white { background: #fff; color: var(--blue); }
-    .btn-wa { background: var(--wa); color: #fff; }
+    .btn-block { width: 100%; }
 
     .nav-toggle {
       display: none; width: 40px; height: 40px;
@@ -150,12 +147,8 @@
       font-size: 17px; font-weight: 600;
       border-bottom: 1px solid rgba(255, 255, 255, .08);
     }
-    .mobile-menu .mm-cta {
-      margin-top: 18px; width: 100%; justify-content: center;
-      border: 0;
-    }
+    .mobile-menu .mm-cta { margin-top: 18px; width: 100%; justify-content: center; border: 0; }
 
-    /* —— Hero —— */
     .hero {
       position: relative; min-height: 100vh; min-height: 100dvh;
       display: flex; align-items: flex-end; color: #fff;
@@ -169,13 +162,13 @@
     .hero-shade {
       position: absolute; inset: 0; z-index: 1;
       background:
-        linear-gradient(90deg, #06122a 0%, rgba(6, 18, 42, .88) 36%, rgba(6, 18, 42, .35) 62%, rgba(6, 18, 42, .12) 100%),
-        linear-gradient(180deg, rgba(6, 18, 42, .4) 0%, transparent 32%, rgba(6, 18, 42, .5) 100%);
+        linear-gradient(90deg, #06122a 0%, rgba(6, 18, 42, .9) 38%, rgba(6, 18, 42, .4) 65%, rgba(6, 18, 42, .15) 100%),
+        linear-gradient(180deg, rgba(6, 18, 42, .45) 0%, transparent 32%, rgba(6, 18, 42, .55) 100%);
     }
     .hero-inner {
       position: relative; z-index: 2;
       padding: 120px 0 72px;
-      max-width: 520px;
+      max-width: 560px;
       animation: rise .9s ease both;
     }
     .hero-brand {
@@ -187,7 +180,7 @@
     .hero-lead {
       font-size: clamp(16px, 2.2vw, 19px);
       color: rgba(255, 255, 255, .9);
-      max-width: 36ch;
+      max-width: 38ch;
       margin-bottom: 28px;
     }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
@@ -195,117 +188,94 @@
       font-size: 13px; color: rgba(255, 255, 255, .55); font-weight: 500;
     }
 
-    /* —— Sections —— */
-    .values { padding: 56px 0; }
-    .value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .value-card {
-      background: #fff; border: 1px solid var(--line); border-radius: 16px;
-      padding: 22px 18px; display: flex; gap: 14px; align-items: flex-start;
-      box-shadow: 0 8px 20px rgba(11, 31, 68, .04);
+    .versions {
+      padding: 80px 0 72px;
+      background: var(--off);
     }
-    .value-ico {
-      width: 42px; height: 42px; border-radius: 12px;
-      background: var(--blue-soft); color: var(--blue);
-      display: grid; place-items: center; flex-shrink: 0;
+    .sec-kicker {
+      font-size: 12px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 10px;
     }
-    .value-ico svg { width: 20px; height: 20px; }
-    .value-card h3 { font-size: 15px; margin-bottom: 4px; }
-    .value-card p { font-size: 13px; color: var(--muted); }
-
-    .pain { padding: 72px 0; background: var(--off); }
-    .pain h2, .features h2, .dash h2, .quotes h2, .blog h2 {
-      font-size: clamp(26px, 3vw, 38px); text-align: center; margin-bottom: 36px;
+    .sec-title {
+      font-size: clamp(26px, 3.2vw, 40px);
+      margin-bottom: 12px;
     }
-    .pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-    .problems { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .problem {
-      background: #fff; border: 1px solid var(--line); border-radius: 12px;
-      padding: 18px; display: flex; gap: 12px; align-items: flex-start;
-    }
-    .problem .x {
-      width: 24px; height: 24px; border-radius: 50%; background: #ef4444; color: #fff;
-      display: grid; place-items: center; flex-shrink: 0; font-size: 14px; font-weight: 800;
-    }
-    .problem span { font-size: 14px; font-weight: 600; color: var(--navy); }
-    .solution {
-      background: linear-gradient(135deg, #1d6fe9, #0ea5e9); color: #fff;
-      padding: 28px; border-radius: 16px; text-align: center; box-shadow: var(--shadow);
-    }
-    .solution h3 { color: #fff; font-size: 18px; margin-bottom: 12px; }
-
-    .features { padding: 80px 0; }
-    .feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-    .feat {
-      background: #fff; border: 1px solid var(--line); border-radius: 14px;
-      padding: 20px; text-align: center;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .feat:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(11, 31, 68, .1); }
-    .feat-ico {
-      width: 52px; height: 52px; border-radius: 12px;
-      display: grid; place-items: center; margin: 0 auto 14px; color: #fff;
-    }
-    .feat-ico svg { width: 24px; height: 24px; }
-    .feat h3 { font-size: 16px; margin-bottom: 6px; }
-    .feat p { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
-    .c1 { background: #1d6fe9; } .c2 { background: #0ea5e9; }
-    .c3 { background: #8b5cf6; } .c4 { background: #16a34a; }
-    .c5 { background: #f59e0b; } .c6 { background: #ef4444; }
-    .c7 { background: #2563eb; } .c8 { background: #0f766e; }
-
-    .dash { padding: 72px 0; background: var(--off); }
-    .dash-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
-    .dash-visual {
-      border-radius: 20px; overflow: hidden; box-shadow: var(--shadow);
-      background: #fff; min-height: 280px;
-    }
-    .dash-visual img {
-      width: 100%; height: auto; aspect-ratio: 1024 / 682;
-      object-fit: cover; object-position: center;
-    }
-    .dash h2 { text-align: left; margin-bottom: 14px; }
-    .dash .sub { color: var(--muted); margin-bottom: 22px; font-size: 16px; }
-    .bullets { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-    .bullets li {
-      display: flex; gap: 12px; align-items: flex-start;
-      font-weight: 700; color: var(--navy);
-    }
-    .check {
-      width: 26px; height: 26px; border-radius: 50%; background: var(--blue); color: #fff;
-      display: grid; place-items: center; flex-shrink: 0; font-size: 13px;
+    .sec-desc {
+      color: var(--muted); font-size: 16px; max-width: 52ch; margin-bottom: 36px;
     }
 
-    .quotes { padding: 80px 0; }
-    .quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .quote {
-      background: #fff; border: 1px solid var(--line); border-radius: 16px;
-      padding: 26px; display: flex; flex-direction: column; gap: 16px;
+    .ver-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
-    .quote-text { font-size: 15px; line-height: 1.7; color: var(--ink); font-style: italic; }
-    .quote-author { display: flex; gap: 12px; align-items: center; }
-    .quote-avatar {
-      width: 48px; height: 48px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--blue), #0ea5e9);
-      display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 18px;
+    .ver {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-height: 100%;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      animation: rise .7s ease both;
     }
-    .quote-info b { display: block; font-size: 14px; color: var(--navy); margin-bottom: 2px; }
-    .quote-info span { font-size: 12px; color: var(--muted); }
+    .ver:nth-child(2) { animation-delay: .08s; }
+    .ver:nth-child(3) { animation-delay: .16s; }
+    .ver:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(11, 31, 68, .1);
+      border-color: #c9daf5;
+    }
+    .ver-tag {
+      display: inline-flex; align-items: center;
+      font-size: 11px; font-weight: 800; letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 5px 10px; border-radius: 999px;
+      width: fit-content;
+    }
+    .ver-tag.live { background: #ecfdf5; color: #065f46; }
+    .ver-tag.api { background: #ecfdf5; color: #047857; }
+    .ver-tag.proto { background: #fffbeb; color: #92400e; }
+    .ver h3 { font-size: 22px; }
+    .ver p { color: var(--muted); font-size: 14.5px; flex: 1; }
+    .ver ul {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 8px;
+      margin: 4px 0 8px;
+    }
+    .ver li {
+      display: flex; gap: 8px; align-items: flex-start;
+      font-size: 13.5px; font-weight: 600; color: var(--navy);
+    }
+    .ver li svg { flex-shrink: 0; margin-top: 2px; color: var(--blue); }
+    .ver-actions { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
 
-    .blog { padding: 80px 0; background: var(--off); }
-    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .blog-item {
-      background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
-      transition: transform .2s, box-shadow .2s;
+    .compare {
+      padding: 72px 0;
+      background: #fff;
     }
-    .blog-item:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(11, 31, 68, .08); }
-    .blog-thumb {
-      width: 100%; height: 180px;
-      background: linear-gradient(135deg, var(--blue-soft), #dbeafe);
-      display: grid; place-items: center; color: var(--blue); font-size: 32px;
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
     }
-    .blog-content { padding: 20px; }
-    .blog-item h3 { font-size: 16px; margin-bottom: 8px; line-height: 1.4; }
-    .blog-item p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .compare-table th,
+    .compare-table td {
+      text-align: left;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .compare-table th {
+      font-family: Manrope, sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .compare-table td:first-child { font-weight: 700; color: var(--navy); width: 28%; }
+    .dot-yes { color: var(--green-deep); font-weight: 700; }
+    .dot-proto { color: var(--amber); font-weight: 700; }
 
     .final-cta { background: var(--navy); color: #fff; padding: 60px 0; }
     .final-cta .wrap {
@@ -314,6 +284,7 @@
     }
     .final-cta h2 { color: #fff; font-size: clamp(24px, 2.8vw, 32px); margin-bottom: 8px; }
     .final-cta p { color: rgba(255, 255, 255, .7); font-size: 16px; }
+    .final-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
     footer {
       background: var(--navy-950); color: rgba(255, 255, 255, .6);
@@ -322,12 +293,6 @@
     footer p { text-align: center; font-size: 13px; }
     footer a { color: rgba(255, 255, 255, .8); }
     footer a:hover { color: #fff; }
-
-    .reveal {
-      opacity: 0; transform: translateY(22px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
-    .reveal.in { opacity: 1; transform: none; }
 
     @keyframes rise {
       from { opacity: 0; transform: translateY(22px); }
@@ -340,27 +305,16 @@
 
     @media (max-width: 980px) {
       .nav-links { display: none; }
-      .nav-end .link-login,
       .nav-end .btn-nav { display: none; }
       .nav-toggle { display: flex; }
-      .pain-grid, .dash-grid, .quote-grid, .feat-grid, .value-grid, .blog-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      .ver-grid { grid-template-columns: 1fr; }
       .hero-inner { padding: 110px 0 52px; }
-      .hero-shade {
-        background:
-          linear-gradient(180deg, rgba(6, 18, 42, .55) 0%, rgba(6, 18, 42, .75) 45%, rgba(6, 18, 42, .94) 100%),
-          linear-gradient(90deg, rgba(6, 18, 42, .7) 0%, transparent 70%);
-      }
+      .compare { overflow-x: auto; }
+      .compare-table { min-width: 640px; }
     }
     @media (max-width: 640px) {
       .wrap { width: min(1180px, calc(100% - 40px)); }
-      .pain-grid, .dash-grid, .quote-grid, .feat-grid, .value-grid, .blog-grid, .problems {
-        grid-template-columns: 1fr;
-      }
       .final-cta .wrap { flex-direction: column; align-items: flex-start; }
-      .dash h2 { text-align: center; }
-      .dash .sub { text-align: center; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -387,14 +341,12 @@
       </a>
       <ul class="nav-links">
         <li><a href="#beranda">Beranda</a></li>
-        <li><a href="#fitur">Fitur</a></li>
-        <li><a href="#cara-kerja">Cara Kerja</a></li>
-        <li><a href="#testimoni">Testimoni</a></li>
+        <li><a href="#versi">Tiga Versi</a></li>
+        <li><a href="#bandingkan">Bandingkan</a></li>
         <li><a href="/products/">Produk</a></li>
       </ul>
       <div class="nav-end">
-        <a class="link-login" href="https://pos.optimadigitalselaras.com/optima-pos/coba" target="_blank" rel="noopener noreferrer">Masuk</a>
-        <a class="btn btn-nav" href="https://pos.optimadigitalselaras.com/optima-pos/coba" target="_blank" rel="noopener noreferrer">Lihat Demo</a>
+        <a class="btn btn-nav" href="#versi">Pilih Versi</a>
         <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Buka menu">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -404,12 +356,10 @@
 
   <div class="mobile-menu" id="mobileMenu">
     <a href="#beranda">Beranda</a>
-    <a href="#fitur">Fitur</a>
-    <a href="#cara-kerja">Cara Kerja</a>
-    <a href="#testimoni">Testimoni</a>
+    <a href="#versi">Tiga Versi</a>
+    <a href="#bandingkan">Bandingkan</a>
     <a href="/products/">Produk</a>
-    <a href="https://pos.optimadigitalselaras.com/optima-pos/coba" target="_blank" rel="noopener noreferrer">Masuk</a>
-    <a class="btn btn-primary mm-cta" href="https://pos.optimadigitalselaras.com/optima-pos/coba" target="_blank" rel="noopener noreferrer">Lihat Demo →</a>
+    <a class="btn btn-primary mm-cta" href="#versi">Pilih Versi →</a>
   </div>
 
   <header class="hero" id="beranda">
@@ -419,210 +369,144 @@
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <h1 class="hero-brand">Optima <span>POS</span></h1>
-      <p class="hero-lead">Kasir mudah. Usaha lebih teratur. Aplikasi kasir dan manajemen untuk warung, toko kelontong, warteg, dan UMK.</p>
+      <p class="hero-lead">Satu produk kasir untuk warung &amp; UMK — tiga versi siap dicoba: live PosPro, kasir mobile V2, dan prototype V3.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://pos.optimadigitalselaras.com/optima-pos/coba" target="_blank" rel="noopener noreferrer">Lihat Demo →</a>
+        <a class="btn btn-primary" href="#versi">Lihat Tiga Versi →</a>
         <a class="btn btn-ghost" href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20Optima%20POS." target="_blank" rel="noopener noreferrer">Hubungi Tim</a>
       </div>
-      <p class="hero-note">PosPro · Live demo · Multi kasir · Cloud backup</p>
+      <p class="hero-note">PosPro · V2 API · V3 Prototype · Optima Digital Selaras</p>
     </div>
   </header>
 
   <main>
-    <section class="values reveal">
+    <section class="versions" id="versi">
       <div class="wrap">
-        <div class="value-grid">
-          <div class="value-card">
-            <div class="value-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg></div>
-            <div>
-              <h3>Mudah Digunakan</h3>
-              <p>Interface sederhana dan mudah dipahami</p>
+        <div class="sec-kicker">Pilih versi</div>
+        <h2 class="sec-title">Tiga jalur demo, satu keluarga produk.</h2>
+        <p class="sec-desc">Mulai dari aplikasi live, kasir mobile yang terhubung API, atau prototype UI lengkap untuk eksplorasi alur.</p>
+
+        <div class="ver-grid">
+          <article class="ver">
+            <span class="ver-tag live">V1 · Live</span>
+            <h3>PosPro</h3>
+            <p>Aplikasi kasir Laravel yang sudah jalan di production — login demo multi-role (Super Admin, Shop Owner, Kasir).</p>
+            <ul>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+                Demo live di pos.optimadigitalselaras.com
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+                Multi kasir &amp; operasional toko
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+                Quick login per role
+              </li>
+            </ul>
+            <div class="ver-actions">
+              <a class="btn btn-primary btn-block" href="https://pos.optimadigitalselaras.com/optima-pos/coba" target="_blank" rel="noopener noreferrer">Buka Demo PosPro →</a>
+              <a class="btn btn-outline btn-block" href="https://pos.optimadigitalselaras.com/optima-pos/login" target="_blank" rel="noopener noreferrer">Halaman Masuk</a>
             </div>
-          </div>
-          <div class="value-card">
-            <div class="value-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5M10 19V9M16 19v-6M22 19V7"/></svg></div>
-            <div>
-              <h3>Pantau Usaha Kapan Saja</h3>
-              <p>Data real-time yang bisa diakses dari mana saja</p>
+          </article>
+
+          <article class="ver">
+            <span class="ver-tag api">V2 · API</span>
+            <h3>Optima POS V2</h3>
+            <p>Kasir mobile-first (PWA) yang terhubung ke API Node — cocok untuk uji transaksi cepat di HP.</p>
+            <ul>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+                Login demo + sesi kasir
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+                Produk dari pos-api
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+                Mode offline queue
+              </li>
+            </ul>
+            <div class="ver-actions">
+              <a class="btn btn-green btn-block" href="/optima-pos_V2/">Buka Kasir V2 →</a>
+              <a class="btn btn-outline btn-block" href="https://pos-api.optimadigitalselaras.com/health" target="_blank" rel="noopener noreferrer">Cek API Health</a>
             </div>
-          </div>
-          <div class="value-card">
-            <div class="value-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
-            <div>
-              <h3>Aman &amp; Terpercaya</h3>
-              <p>Data tersimpan aman di cloud dengan backup otomatis</p>
+          </article>
+
+          <article class="ver">
+            <span class="ver-tag proto">V3 · Prototype</span>
+            <h3>Optima POS V3</h3>
+            <p>Prototype UI lengkap: mobile kasir + web admin, flow cash/QRIS/offline/piutang — untuk review pengalaman.</p>
+            <ul>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+                Mobile + Web Admin
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+                Flow demo interaktif
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+                Belum terhubung backend
+              </li>
+            </ul>
+            <div class="ver-actions">
+              <a class="btn btn-amber btn-block" href="/optima-pos_V3/">Buka Prototype V3 →</a>
             </div>
-          </div>
-          <div class="value-card">
-            <div class="value-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-            <div>
-              <h3>Harga Terjangkau</h3>
-              <p>Sesuai budget UMK dengan ROI yang jelas</p>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="pain reveal">
+    <section class="compare" id="bandingkan">
       <div class="wrap">
-        <h2>Masih pakai catatan atau kalkulator?</h2>
-        <div class="pain-grid">
-          <div class="problems">
-            <div class="problem">
-              <div class="x">✕</div>
-              <span>Stok sering tidak akurat karena lupa input penjualan</span>
-            </div>
-            <div class="problem">
-              <div class="x">✕</div>
-              <span>Sulit mengetahui omzet harian karena data tersebar</span>
-            </div>
-            <div class="problem">
-              <div class="x">✕</div>
-              <span>Catatan mudah hilang atau rusak karena air/debu</span>
-            </div>
-            <div class="problem">
-              <div class="x">✕</div>
-              <span>Hutang pelanggan sering lupa tercatat dengan benar</span>
-            </div>
-          </div>
-          <div class="solution">
-            <h3>✓ Solusinya: Optima POS</h3>
-            <p>Optima POS membantu Anda mencatat transaksi, mengontrol stok, dan melihat perkembangan usaha dalam satu aplikasi.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="features reveal" id="fitur">
-      <div class="wrap">
-        <h2>Semua yang Dibutuhkan untuk Menjalankan Usaha</h2>
-        <div class="feat-grid">
-          <div class="feat">
-            <div class="feat-ico c1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg></div>
-            <h3>Kasir</h3>
-            <p>Transaksi cepat dengan barcode dan input manual</p>
-          </div>
-          <div class="feat">
-            <div class="feat-ico c2" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
-            <h3>Stok</h3>
-            <p>Fitur stok yang terintegrasi dengan setiap transaksi</p>
-          </div>
-          <div class="feat">
-            <div class="feat-ico c3" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1.5" fill="currentColor"/></svg></div>
-            <h3>Produk</h3>
-            <p>Kelola harga dan katalog produk dengan mudah</p>
-          </div>
-          <div class="feat">
-            <div class="feat-ico c4" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
-            <h3>Penjualan</h3>
-            <p>Laporan penjualan harian, bulanan, dan tahunan</p>
-          </div>
-          <div class="feat">
-            <div class="feat-ico c5" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5M10 19V9M16 19v-6M22 19V7"/></svg></div>
-            <h3>Laporan</h3>
-            <p>Laporan lengkap untuk analisa bisnis</p>
-          </div>
-          <div class="feat">
-            <div class="feat-ico c6" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
-            <h3>Hutang / Piutang</h3>
-            <p>Catat transaksi kredit secara otomatis</p>
-          </div>
-          <div class="feat">
-            <div class="feat-ico c7" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-            <h3>Multi Kasir</h3>
-            <p>Setiap kasir punya akun dan hak akses sendiri</p>
-          </div>
-          <div class="feat">
-            <div class="feat-ico c8" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
-            <h3>Multi Outlet</h3>
-            <p>Pantau beberapa cabang dalam satu akun</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="dash reveal" id="cara-kerja">
-      <div class="wrap dash-grid">
-        <div>
-          <h2>Pantau Usaha Kapan Saja, di Mana Saja</h2>
-          <p class="sub">Semua data dalam genggaman Anda. Akses dari mana saja, kapan saja.</p>
-          <ul class="bullets">
-            <li><span class="check">✓</span> Data real-time yang selalu update</li>
-            <li><span class="check">✓</span> Akses di semua perangkat (laptop, tablet, HP)</li>
-            <li><span class="check">✓</span> Aman &amp; backup otomatis ke cloud</li>
-          </ul>
-        </div>
-        <div class="dash-visual">
-          <img src="/assets/optima/optima-pos-hero.jpg?v=1" width="594" height="682" alt="Dashboard Optima POS" loading="lazy" />
-        </div>
-      </div>
-    </section>
-
-    <section class="quotes reveal" id="testimoni">
-      <div class="wrap">
-        <h2>Dipercaya oleh Ribuan UMK di Indonesia</h2>
-        <div class="quote-grid">
-          <div class="quote">
-            <p class="quote-text">"Sejak pakai Optima POS, stok warung saya jadi lebih terkontrol. Nggak ada lagi kejadian kekurangan barang tanpa sadar."</p>
-            <div class="quote-author">
-              <div class="quote-avatar">A</div>
-              <div class="quote-info">
-                <b>Ahmad Fauzi</b>
-                <span>Pemilik Warung Madura</span>
-              </div>
-            </div>
-          </div>
-          <div class="quote">
-            <p class="quote-text">"Laporan penjualan harian jadi mudah banget. Tinggal buka HP, langsung tahu berapa omzet hari ini."</p>
-            <div class="quote-author">
-              <div class="quote-avatar">S</div>
-              <div class="quote-info">
-                <b>Siti Aminah</b>
-                <span>Pemilik Toko Kelontong</span>
-              </div>
-            </div>
-          </div>
-          <div class="quote">
-            <p class="quote-text">"Fitur hutang-piutang sangat membantu. Sekarang nggak ada lagi yang lupa bayar karena tercatat otomatis."</p>
-            <div class="quote-author">
-              <div class="quote-avatar">R</div>
-              <div class="quote-info">
-                <b>Rudi Hartono</b>
-                <span>Pemilik Warung Sembako</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="blog reveal" id="blog">
-      <div class="wrap">
-        <h2>Tips Usaha dari Optima POS</h2>
-        <div class="blog-grid">
-          <div class="blog-item">
-            <div class="blog-thumb" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
-            <div class="blog-content">
-              <h3>5 Strategi Meningkatkan Penjualan Warung</h3>
-              <p>Tips praktis untuk mengoptimalkan penjualan harian warung Anda dengan metode yang sudah terbukti.</p>
-            </div>
-          </div>
-          <div class="blog-item">
-            <div class="blog-thumb" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5M10 19V9M16 19v-6M22 19V7"/></svg></div>
-            <div class="blog-content">
-              <h3>Cara Kelola Stok yang Efektif</h3>
-              <p>Panduan lengkap mengelola inventory untuk menghindari kekurangan atau kelebihan stok.</p>
-            </div>
-          </div>
-          <div class="blog-item">
-            <div class="blog-thumb" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-            <div class="blog-content">
-              <h3>Menghitung Keuntungan dengan Benar</h3>
-              <p>Metode sederhana untuk mengetahui profit margin dan mengoptimalkan harga jual produk.</p>
-            </div>
-          </div>
-        </div>
+        <div class="sec-kicker">Ringkas</div>
+        <h2 class="sec-title">Perbandingan cepat</h2>
+        <p class="sec-desc">Gunakan tabel ini untuk memilih jalur demo yang paling relevan.</p>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Aspek</th>
+              <th>PosPro (V1)</th>
+              <th>V2</th>
+              <th>V3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Status</td>
+              <td><span class="dot-yes">Live production</span></td>
+              <td><span class="dot-yes">Live demo + API</span></td>
+              <td><span class="dot-proto">UI prototype</span></td>
+            </tr>
+            <tr>
+              <td>Stack</td>
+              <td>Laravel / PHP</td>
+              <td>PWA + Node API</td>
+              <td>HTML prototype</td>
+            </tr>
+            <tr>
+              <td>Fokus</td>
+              <td>Operasional toko penuh</td>
+              <td>Kasir mobile cepat</td>
+              <td>Alur UX end-to-end</td>
+            </tr>
+            <tr>
+              <td>Login demo</td>
+              <td>Quick role login</td>
+              <td>demo@pos.id</td>
+              <td>Simulasi UI</td>
+            </tr>
+            <tr>
+              <td>URL</td>
+              <td>pos.…/optima-pos</td>
+              <td>/optima-pos_V2/</td>
+              <td>/optima-pos_V3/</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>
@@ -630,16 +514,19 @@
   <section class="final-cta">
     <div class="wrap">
       <div>
-        <h2>Siap Mengatur Usaha Anda Lebih Baik?</h2>
-        <p>Bergabung dengan ribuan UMK yang sudah merasakan manfaat Optima POS.</p>
+        <h2>Siap coba Optima POS?</h2>
+        <p>Mulai dari PosPro live, atau eksplor V2 dan V3 sesuai kebutuhan demo Anda.</p>
       </div>
-      <a class="btn btn-white" href="https://pos.optimadigitalselaras.com/optima-pos/coba" target="_blank" rel="noopener noreferrer">Lihat Demo Optima POS →</a>
+      <div class="final-actions">
+        <a class="btn btn-white" href="https://pos.optimadigitalselaras.com/optima-pos/coba" target="_blank" rel="noopener noreferrer">Demo PosPro →</a>
+        <a class="btn btn-ghost" href="#versi">Lihat semua versi</a>
+      </div>
     </div>
   </section>
 
   <footer>
     <div class="wrap">
-      <p>© 2026 <a href="/">PT Optima Digital Selaras</a>. Optima POS.</p>
+      <p>© 2026 <a href="/">PT Optima Digital Selaras</a>. Optima POS · PosPro · V2 · V3.</p>
     </div>
   </footer>
 
@@ -670,18 +557,6 @@
         });
       });
     }
-
-    document.querySelectorAll('.reveal').forEach(function (el) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            e.target.classList.add('in');
-            io.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.12 });
-      io.observe(el);
-    });
   })();
   </script>
   <script src="/assets/optima/cursor.js?v=4"></script>
