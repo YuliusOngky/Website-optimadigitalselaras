@@ -1,11 +1,12 @@
 /**
  * Optima bilingual runtime
  * - Default: Indonesian (id)
- * - Persists choice in localStorage
+ * - Only persists language after an explicit user click on ID/EN
  * - Uses data-i18n / data-i18n-attr / data-i18n-title / data-i18n-aria-label / data-i18n-placeholder
  */
 (function (global) {
   var STORAGE_KEY = "optima_lang";
+  var USER_KEY = "optima_lang_user";
   var DEFAULT_LANG = "id";
   var SUPPORTED = { id: true, en: true };
 
@@ -14,7 +15,18 @@
     return all[lang] || all.id || {};
   }
 
+  function hasUserChoice() {
+    try {
+      return localStorage.getItem(USER_KEY) === "1";
+    } catch (e) {
+      return false;
+    }
+  }
+
   function readStoredLang() {
+    // Without an explicit user choice, always stay on Indonesian.
+    // Prevents "language switches by itself" from leftover localStorage / other tabs.
+    if (!hasUserChoice()) return DEFAULT_LANG;
     try {
       var stored = localStorage.getItem(STORAGE_KEY);
       if (stored && SUPPORTED[stored]) return stored;
@@ -25,11 +37,11 @@
   function writeStoredLang(lang) {
     try {
       localStorage.setItem(STORAGE_KEY, lang);
+      localStorage.setItem(USER_KEY, "1");
     } catch (e) {}
   }
 
   function setTextPreservingChildren(el, text) {
-    // Prefer updating a dedicated text node / span while keeping icons & arrows
     var marked = el.querySelector("[data-i18n-text]");
     if (marked) {
       marked.textContent = text;
@@ -42,18 +54,19 @@
       if (node.nodeType === 1) childElements.push(node);
     }
 
-    // Simple text-only element
     if (childElements.length === 0) {
       el.textContent = text;
       return;
     }
 
-    // Replace first significant text node; keep element children (svg, arrows)
     var replaced = false;
     for (var j = 0; j < el.childNodes.length; j++) {
       var n = el.childNodes[j];
       if (n.nodeType === 3 && n.textContent.replace(/\s+/g, "").length) {
-        n.textContent = (n.textContent.match(/^\s*/) || [""])[0] + text + (n.textContent.match(/\s*$/) || [""])[0];
+        n.textContent =
+          (n.textContent.match(/^\s*/) || [""])[0] +
+          text +
+          (n.textContent.match(/\s*$/) || [""])[0];
         replaced = true;
         break;
       }
@@ -69,7 +82,6 @@
   function applyToElement(el, dict) {
     var key = el.getAttribute("data-i18n");
     if (key && dict[key] != null) {
-      // Magnetic headlines are letter-split; replace plain text, then listeners re-split.
       if (el.classList.contains("mag-text") || el.hasAttribute("data-i18n-mag")) {
         el.textContent = dict[key];
       } else {
@@ -79,7 +91,6 @@
 
     var attrMap = el.getAttribute("data-i18n-attr");
     if (attrMap) {
-      // format: title:meta.homeTitle;aria-label:nav.openMenu
       attrMap.split(";").forEach(function (pair) {
         var parts = pair.split(":");
         if (parts.length < 2) return;
@@ -124,9 +135,13 @@
 
     applyDocumentMeta(dict);
 
-    document.querySelectorAll("[data-i18n], [data-i18n-attr], [data-i18n-title], [data-i18n-aria-label], [data-i18n-placeholder]").forEach(function (el) {
-      applyToElement(el, dict);
-    });
+    document
+      .querySelectorAll(
+        "[data-i18n], [data-i18n-attr], [data-i18n-title], [data-i18n-aria-label], [data-i18n-placeholder]"
+      )
+      .forEach(function (el) {
+        applyToElement(el, dict);
+      });
 
     syncToggle(lang);
 
@@ -134,9 +149,7 @@
 
     try {
       global.dispatchEvent(new CustomEvent("optima:langchange", { detail: { lang: lang } }));
-    } catch (e) {
-      // IE-safe fallback not required for this site
-    }
+    } catch (e) {}
 
     return lang;
   }
@@ -145,7 +158,9 @@
     document.querySelectorAll("[data-lang-set]").forEach(function (btn) {
       if (btn.__optimaLangBound) return;
       btn.__optimaLangBound = true;
-      btn.addEventListener("click", function () {
+      btn.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
         var next = btn.getAttribute("data-lang-set");
         if (next) applyLanguage(next);
       });
@@ -153,7 +168,6 @@
   }
 
   function ensureToggleMarkup() {
-    // If a page already has .lang-toggle, skip injection
     if (document.querySelector(".lang-toggle")) return;
 
     var navWrap = document.querySelector("#nav .wrap");
@@ -179,10 +193,11 @@
   function init() {
     ensureToggleMarkup();
     bindToggles();
-    var lang = readStoredLang();
-    applyLanguage(lang, { skipStore: false });
 
-    // Also place a toggle in mobile menu if present
+    // Init never writes storage — only an explicit ID/EN click does.
+    var lang = readStoredLang();
+    applyLanguage(lang, { skipStore: true });
+
     var mobile = document.getElementById("mobileMenu");
     if (mobile && !mobile.querySelector(".lang-toggle")) {
       var row = document.createElement("div");
@@ -211,7 +226,6 @@
     init: init
   };
 
-  // At end-of-body inclusion, init immediately so copy is ready before mag-text / other UI scripts.
   if (document.body) {
     init();
   } else if (document.readyState === "loading") {

@@ -68,6 +68,12 @@ img{max-width:100%;display:block;}
 .nav-links a{color:rgba(255,255,255,.85);font-size:14.5px;font-weight:500;transition:color .2s;}
 .nav-links a:hover{color:#fff;}
 .nav-cta{display:flex;align-items:center;gap:14px;flex-shrink:0;}
+.nav-toggle{display:none;width:40px;height:40px;border:1px solid rgba(255,255,255,.22);border-radius:8px;background:transparent;color:#fff;align-items:center;justify-content:center;cursor:pointer;}
+.nav-toggle svg{width:18px;height:18px;}
+.mobile-menu{display:none;}
+.mobile-menu.open{display:block;position:fixed;top:78px;left:0;right:0;bottom:0;background:var(--navy-950);z-index:99;padding:24px 22px;overflow-y:auto;}
+.mobile-menu.open a{display:block;padding:16px 6px;color:#fff;font-size:17px;font-weight:600;border-bottom:1px solid rgba(255,255,255,.08);}
+.mobile-menu.open .mm-lang{margin-top:20px;}
 
 /* BUTTONS */
 .btn{
@@ -655,6 +661,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
   .about-team{grid-template-columns:repeat(3,1fr);}
   .foot-top{grid-template-columns:1fr 1fr;}
   .nav-links{display:none;}
+  .nav-toggle{display:flex;}
   #nav .nav-cta{display:flex;}
   .op-suite-grid{grid-template-columns:1fr;}
   .op-suite-card.flagship{order:-1;}
@@ -898,26 +905,41 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
 
 <nav id="nav">
   <div class="wrap">
-    <a href="#" class="brand">
+    <a href="/" class="brand">
       <img class="brand-mark" src="/assets/optima/logo.png?v=2" width="44" height="44" alt="Optima Digital Selaras">
       <span class="brand-text"><b>PT Optima Digital Selaras</b></span>
     </a>
     <ul class="nav-links">
-      <li><a href="/products/#website-solutions" data-i18n="nav.websiteDev">Website Development</a></li>
-      <li><a href="/products/#business-commerce" data-i18n="nav.webMobile">Web/Mobile Apps</a></li>
-      <li><a href="/products/#financial-technology" data-i18n="nav.financial">Financial Apps</a></li>
-      <li><a href="#work" data-i18n="nav.clients">Our Client</a></li>
-      <li><a href="#about" data-i18n="nav.about">About</a></li>
-      <li><a href="#footer" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="/products/#website-solutions" data-i18n="nav.websiteDev">Pengembangan Website</a></li>
+      <li><a href="/products/#business-commerce" data-i18n="nav.webMobile">Aplikasi Web/Mobile</a></li>
+      <li><a href="/products/#financial-technology" data-i18n="nav.financial">Aplikasi Finansial</a></li>
+      <li><a href="#work" data-i18n="nav.clients">Klien Kami</a></li>
+      <li><a href="#about" data-i18n="nav.about">Tentang</a></li>
+      <li><a href="#footer" data-i18n="nav.contact">Kontak</a></li>
     </ul>
     <div class="nav-cta">
-      <div class="lang-toggle" role="group" aria-label="Language" data-i18n-aria-label="lang.label">
+      <div class="lang-toggle" role="group" aria-label="Bahasa" data-i18n-aria-label="lang.label">
         <button type="button" data-lang-set="id" aria-pressed="true">ID</button>
         <button type="button" data-lang-set="en" aria-pressed="false">EN</button>
       </div>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Buka menu" data-i18n-aria-label="nav.openMenu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/products/#website-solutions" data-i18n="nav.websiteDev">Pengembangan Website</a>
+  <a href="/products/#business-commerce" data-i18n="nav.webMobile">Aplikasi Web/Mobile</a>
+  <a href="/products/#financial-technology" data-i18n="nav.financial">Aplikasi Finansial</a>
+  <a href="#work" data-i18n="nav.clients">Klien Kami</a>
+  <a href="#about" data-i18n="nav.about">Tentang</a>
+  <a href="#footer" data-i18n="nav.contact">Kontak</a>
+  <div class="lang-toggle mm-lang" role="group" aria-label="Bahasa" data-i18n-aria-label="lang.label">
+    <button type="button" data-lang-set="id" aria-pressed="true">ID</button>
+    <button type="button" data-lang-set="en" aria-pressed="false">EN</button>
+  </div>
+</div>
 
 <section class="hero">
   <video class="hero-bg" autoplay muted loop playsinline poster="/assets/optima/hero-poster.jpg">
@@ -1313,8 +1335,24 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.75);padding:56px 0 28p
 </footer>
 
 <script src="/assets/optima/i18n/translations.js?v=6"></script>
-<script src="/assets/optima/i18n/i18n.js?v=4"></script>
+<script src="/assets/optima/i18n/i18n.js?v=5"></script>
 <script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('mobileMenu');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+
 document.querySelectorAll('.reveal').forEach(function(el){
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
