@@ -27,7 +27,16 @@ $Solutions = Join-Path $RepoRoot "public\solutions"
 $Products = Join-Path $RepoRoot "public\products"
 $OptimaPos = Join-Path $RepoRoot "public\optima-pos"
 $OptimaPos2 = Join-Path $RepoRoot "public\optima-pos_V2"
-$OptimaYoga = Join-Path $RepoRoot "public\optima-yoga"
+# Yoga landing source of truth is repo kelas-yoga (not this marketing repo).
+$KelasYogaRoot = if ($env:KELAS_YOGA_ROOT) { $env:KELAS_YOGA_ROOT } else {
+  $candidates = @(
+    (Join-Path (Split-Path $RepoRoot -Parent) "kelas-yoga"),
+    (Join-Path $env:USERPROFILE "kelas-yoga"),
+    (Join-Path $env:USERPROFILE "live-snapshot\kelas-yoga")
+  )
+  ($candidates | Where-Object { Test-Path (Join-Path $_ "landing\index.html") } | Select-Object -First 1)
+}
+$OptimaYoga = if ($KelasYogaRoot) { Join-Path $KelasYogaRoot "landing" } else { $null }
 $Templates = Join-Path $RepoRoot "public\templates"
 
 if (-not (Test-Path $Index)) { throw "Missing $Index" }
@@ -89,10 +98,13 @@ if (Test-Path $OptimaPos2) {
   & scp @ScpArgs -r @Pos2Items "${SshTarget}:${RemoteUnix}/optima-pos_V2/"
   if ($LASTEXITCODE -ne 0) { throw "scp optima-pos_V2 failed" }
 }
-if (Test-Path $OptimaYoga) {
+if ($OptimaYoga -and (Test-Path $OptimaYoga)) {
+  Write-Host "Yoga landing from kelas-yoga: $OptimaYoga"
   $YogaItems = Get-ChildItem -Path $OptimaYoga -Force | ForEach-Object { $_.FullName }
   & scp @ScpArgs -r @YogaItems "${SshTarget}:${RemoteUnix}/optima-yoga/"
   if ($LASTEXITCODE -ne 0) { throw "scp optima-yoga failed" }
+} else {
+  Write-Warning "kelas-yoga/landing not found. Set KELAS_YOGA_ROOT or clone YuliusOngky/kelas-yoga beside this repo. Skipping /optima-yoga deploy."
 }
 
 if (Test-Path $Templates) {
