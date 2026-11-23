@@ -7,7 +7,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>AAA POS V2</title>
+<title>Optima POS V2</title>
 <link rel="manifest" href="/optima-pos_V2/manifest.json">
 <script src="/optima-pos_V2/config.js"></script>
 <style>
@@ -40,9 +40,16 @@ html,body{height:100%;background:var(--bg);color:var(--t);font-family:-apple-sys
 
 /* ========== LOGIN SCREEN ========== */
 #scrLogin{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;padding:32px 24px;background:var(--bg)}
-.login-logo{width:72px;height:72px;border-radius:20px;background:var(--ac);display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;font-weight:700;margin-bottom:20px;letter-spacing:-1px}
+.login-logo{width:72px;height:72px;border-radius:20px;background:#fff;border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;margin-bottom:20px;overflow:hidden}
+.login-logo img{width:48px;height:48px;object-fit:contain}
 .login-title{font-size:22px;font-weight:700;margin-bottom:4px;text-align:center}
 .login-sub{font-size:13px;color:var(--mu);margin-bottom:36px;text-align:center}
+.login-back{display:inline-block;margin-top:18px;font-size:13px;font-weight:600;color:var(--ac);text-decoration:none}
+.h-logo{overflow:hidden}
+.h-logo img{width:100%;height:100%;object-fit:contain;border-radius:8px;background:#fff}
+.h-actions{display:flex;align-items:center;gap:8px}
+.h-out{border:1px solid var(--bd);background:var(--s);color:var(--mu);border-radius:8px;padding:6px 10px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit}
+.pi-letter{width:100%;height:100%;display:grid;place-items:center;font-weight:700;font-size:18px;color:var(--ac);background:var(--acb);border-radius:10px}
 .form-group{width:100%;margin-bottom:14px}
 .form-label{font-size:12px;font-weight:500;color:var(--mu);margin-bottom:5px;display:block}
 .form-input{width:100%;background:var(--s);border:1.5px solid var(--bd);border-radius:10px;padding:13px 14px;font-size:15px;color:var(--t);outline:none;font-family:inherit;transition:border-color .15s}
@@ -232,9 +239,9 @@ html,body{height:100%;background:var(--bg);color:var(--t);font-family:-apple-sys
 
   <!-- ===== LOGIN SCREEN ===== -->
   <div id="scrLogin">
-    <div class="login-logo">POS</div>
-    <div class="login-title">AAA POS V2</div>
-    <div class="login-sub">Masuk ke akun kasir Anda</div>
+    <div class="login-logo"><img src="/assets/optima/logo.png?v=2" width="48" height="48" alt="Optima"></div>
+    <div class="login-title">Optima POS V2</div>
+    <div class="login-sub">Kasir mobile untuk warung &amp; UMK</div>
     <div class="form-group">
       <label class="form-label">Email</label>
       <input class="form-input" id="loginEmail" type="email" placeholder="kasir@toko.id" inputmode="email" autocomplete="email" value="demo@pos.id">
@@ -246,7 +253,8 @@ html,body{height:100%;background:var(--bg);color:var(--t);font-family:-apple-sys
     <button class="login-btn" id="loginBtn" onclick="doLogin()">
       <span>Masuk</span>
     </button>
-    <div class="login-version">AAA POS V2 · Demo · demo@pos.id / demo1234</div>
+    <div class="login-version">V2 · Demo · demo@pos.id / demo1234</div>
+    <a class="login-back" href="/optima-pos/">← Kembali ke landing PosPro</a>
   </div>
 
   <!-- ===== MAIN APP ===== -->
@@ -254,14 +262,17 @@ html,body{height:100%;background:var(--bg);color:var(--t);font-family:-apple-sys
     <div class="offline-bar" id="offlineBar">⚡ Mode offline — transaksi disimpan sementara</div>
 
     <div class="header">
-      <div class="h-logo">POS</div>
+      <div class="h-logo"><img src="/assets/optima/logo.png?v=2" width="30" height="30" alt=""></div>
       <div class="h-info">
-        <div class="h-title" id="hStore">Warung Bu Sari</div>
+        <div class="h-title" id="hStore">Demo Warung</div>
         <div class="h-sub"><span class="h-dot"></span><span id="hSess">Menghubungkan…</span></div>
       </div>
-      <div class="h-r">
-        <div class="h-time" id="clk">--:--</div>
-        <div class="h-date" id="dateln">--</div>
+      <div class="h-actions">
+        <div class="h-r">
+          <div class="h-time" id="clk">--:--</div>
+          <div class="h-date" id="dateln">--</div>
+        </div>
+        <button type="button" class="h-out" id="btnLogout" onclick="doLogout()" title="Keluar">Keluar</button>
       </div>
     </div>
 
@@ -275,10 +286,6 @@ html,body{height:100%;background:var(--bg);color:var(--t);font-family:-apple-sys
       </div>
       <div class="cats" id="catBar">
         <div class="cat on" onclick="sCat(this,'Semua')">Semua</div>
-        <div class="cat" onclick="sCat(this,'Makanan')">Makanan</div>
-        <div class="cat" onclick="sCat(this,'Minuman')">Minuman</div>
-        <div class="cat" onclick="sCat(this,'Snack')">Snack</div>
-        <div class="cat" onclick="sCat(this,'Rokok')">Rokok</div>
       </div>
       <div class="queue-bar" id="queueBar">
         <span>⏳</span><span id="queueMsg">0 transaksi menunggu sinkronisasi</span>
@@ -358,7 +365,7 @@ html,body{height:100%;background:var(--bg);color:var(--t);font-family:-apple-sys
         <div class="stit">Pembayaran Berhasil!</div>
         <div class="ssub" id="sucSub"></div>
         <div class="receipt">
-          <div class="rch"><div class="rcst" id="sucStore">Warung Bu Sari</div><div class="rcin" id="sucInv"></div></div>
+          <div class="rch"><div class="rcst" id="sucStore">Demo Warung</div><div class="rcin" id="sucInv"></div></div>
           <div id="sucItems"></div>
           <div class="rcmt">Dibayar dengan <span id="sucMt">TUNAI</span></div>
         </div>
@@ -389,7 +396,15 @@ html,body{height:100%;background:var(--bg);color:var(--t);font-family:-apple-sys
 // ============================================================
 // STATE
 // ============================================================
-const CFG = window.CFG || { API_BASE: 'http://localhost:3000/api/v1' };
+const CFG = window.CFG || {
+  API_BASE: 'https://pos-api.optimadigitalselaras.com/api/v1',
+  STORE_NAME: 'Demo Warung',
+  APP_NAME: 'Optima POS V2',
+  TOKEN_KEY: 'aaa_pos_token',
+  CACHE_KEY: 'aaa_pos_products',
+  QUEUE_KEY: 'aaa_pos_queue',
+  CATEGORIES: { '1': 'Minuman', '2': 'Makanan' },
+};
 let TOKEN = localStorage.getItem(CFG.TOKEN_KEY) || '';
 let SESSION_ID = null;
 let cart = {}, curCat = 'Semua', payM = 'tunai', invSeq = 1;
@@ -403,6 +418,7 @@ let queue = JSON.parse(localStorage.getItem(CFG.QUEUE_KEY) || '[]');
 // ============================================================
 const $ = id => document.getElementById(id);
 const fmt = n => 'Rp ' + Math.round(n).toLocaleString('id-ID');
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 function toast(msg, type = '') {
   const t = $('toast');
@@ -428,10 +444,47 @@ async function api(method, path, body) {
 }
 
 function uuid() {
+  if (window.crypto && typeof crypto.randomUUID === 'function') return crypto.randomUUID();
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
     const r = Math.random() * 16 | 0;
     return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
   });
+}
+
+function catLabel(p) {
+  if (p.category) return p.category;
+  if (p.cat) return p.cat;
+  const map = CFG.CATEGORIES || {};
+  return map[String(p.category_id)] || 'Lainnya';
+}
+
+function productInitial(name) {
+  const t = (name || '?').trim();
+  return (t.split(/\s+/).map(w => w[0]).join('').slice(0, 2) || '?').toUpperCase();
+}
+
+function rebuildCats() {
+  const bar = $('catBar');
+  if (!bar) return;
+  const names = ['Semua', ...Array.from(new Set(products.map(catLabel).filter(Boolean)))];
+  bar.innerHTML = names.map((n, i) =>
+    `<div class="cat${(curCat === n || (!i && curCat === 'Semua')) ? ' on' : ''}" onclick="sCat(this,'${esc(n)}')">${esc(n)}</div>`
+  ).join('');
+  if (!names.includes(curCat)) curCat = 'Semua';
+}
+
+function doLogout() {
+  TOKEN = null;
+  SESSION_ID = null;
+  products = [];
+  cart = {};
+  localStorage.removeItem(CFG.TOKEN_KEY);
+  localStorage.removeItem(CFG.CACHE_KEY);
+  $('scrApp').classList.remove('on');
+  $('scrLogin').style.display = '';
+  const btn = $('loginBtn');
+  if (btn) { btn.disabled = false; const sp = btn.querySelector('span'); if (sp) sp.textContent = 'Masuk'; }
+  toast('Anda keluar', 'ok');
 }
 
 // ============================================================
@@ -484,9 +537,10 @@ async function doLogin() {
     localStorage.setItem(CFG.TOKEN_KEY, TOKEN);
     $('scrLogin').style.display = 'none';
     $('scrApp').classList.add('on');
-    $('hStore').textContent = CFG.STORE_NAME;
+    $('hStore').textContent = CFG.STORE_NAME || 'Demo Warung';
+    if ($('sucStore')) $('sucStore').textContent = CFG.STORE_NAME || 'Demo Warung';
     await initApp();
-    toast('Selamat datang!', 'ok');
+    toast('Selamat datang' + (data.user && data.user.name ? ', ' + data.user.name : '') + '!', 'ok');
   } catch (e) {
     toast('Login gagal: ' + e.message, 'err');
     btn.disabled = false;
@@ -506,26 +560,42 @@ async function initApp() {
 async function loadProducts() {
   try {
     const data = await api('GET', '/products?limit=100');
-    products = Array.isArray(data) ? data : (data.products || data.items || []);
+    const rows = Array.isArray(data) ? data : (data.products || data.items || []);
+    products = rows.map(p => ({
+      ...p,
+      category: catLabel(p),
+      sale_price: Number(p.sale_price || p.price || 0),
+    }));
     localStorage.setItem(CFG.CACHE_KEY, JSON.stringify(products));
-  } catch {
+  } catch (e) {
+    const msg = (e && e.message) || '';
+    if (/unauthorized|401|token|login/i.test(msg)) {
+      doLogout();
+      toast('Sesi berakhir — masuk lagi', 'err');
+      return;
+    }
+    try {
+      const cached = JSON.parse(localStorage.getItem(CFG.CACHE_KEY) || '[]');
+      if (cached.length) products = cached.map(p => ({ ...p, category: catLabel(p), sale_price: Number(p.sale_price || p.price || 0) }));
+    } catch (_) {}
     if (!products.length) {
-      // fallback demo products jika API belum tersedia
       products = [
-        {id:1,name:'Nasi Uduk',sale_price:15000,category:'Makanan',icon:'🍚',short_code:'01'},
-        {id:2,name:'Ayam Goreng',sale_price:12000,category:'Makanan',icon:'🍗',short_code:'02'},
-        {id:3,name:'Es Teh Manis',sale_price:4000,category:'Minuman',icon:'🧋',short_code:'11'},
-        {id:4,name:'Kopi Hitam',sale_price:5000,category:'Minuman',icon:'☕',short_code:'12'},
-        {id:5,name:'Indomie Goreng',sale_price:4500,category:'Snack',icon:'🍜',short_code:'21'},
-        {id:6,name:'Aqua 600ml',sale_price:5000,category:'Minuman',icon:'💧',short_code:'13'},
+        {id:1,name:'Nasi Goreng',sale_price:15000,category:'Makanan',short_code:'01'},
+        {id:2,name:'Mie Goreng',sale_price:12000,category:'Makanan',short_code:'02'},
+        {id:3,name:'Es Teh Manis',sale_price:5000,category:'Minuman',short_code:'11'},
+        {id:4,name:'Kopi Hitam',sale_price:7000,category:'Minuman',short_code:'12'},
+        {id:5,name:'Air Mineral',sale_price:3000,category:'Minuman',short_code:'13'},
+        {id:6,name:'Roti Bakar',sale_price:8000,category:'Makanan',short_code:'21'},
       ];
     }
-    toast('Menggunakan produk cache', '');
+    toast('Mode offline — produk cache', '');
   }
+  rebuildCats();
   rGrid();
 }
 
 async function openSession() {
+  $('hSess').textContent = 'Membuka sesi…';
   try {
     const sess = await api('POST', '/sessions', {
       opening_cash: 500000,
@@ -533,8 +603,9 @@ async function openSession() {
     });
     SESSION_ID = sess.id;
     $('hSess').textContent = `Sesi #${SESSION_ID} aktif`;
-  } catch {
-    $('hSess').textContent = 'Sesi offline';
+  } catch (e) {
+    $('hSess').textContent = 'Siap (tanpa sesi server)';
+    console.warn('openSession', e);
   }
 }
 
@@ -549,19 +620,19 @@ function sCat(el, cat) {
 function rGrid() {
   const q = ($('srch').value || '').toLowerCase();
   const f = products.filter(p => {
-    const catMatch = curCat === 'Semua' || (p.category || '').toLowerCase() === curCat.toLowerCase() || (p.cat || '') === curCat;
-    const srchMatch = !q || (p.name || '').toLowerCase().includes(q) || (p.short_code || p.code || '').includes(q);
+    const cat = catLabel(p);
+    const catMatch = curCat === 'Semua' || cat.toLowerCase() === curCat.toLowerCase();
+    const srchMatch = !q || (p.name || '').toLowerCase().includes(q) || String(p.short_code || p.code || p.id || '').includes(q);
     return catMatch && srchMatch;
   });
-  const icon = p => p.icon || '📦';
-  const price = p => p.sale_price || p.price || 0;
+  const price = p => Number(p.sale_price || p.price || 0);
   $('pgrid').innerHTML = f.length === 0
     ? '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--mu)">Produk tidak ditemukan</div>'
-    : f.map(p => `<div class="pcard${cart[p.id] ? ' ic' : ''}" data-q="${cart[p.id] || ''}" onclick="addCart(${p.id})">
-        <div class="pi">${icon(p)}</div>
-        <div class="pn">${p.name}</div>
+    : f.map(p => `<div class="pcard${cart[p.id] ? ' ic' : ''}" data-q="${cart[p.id] || ''}" onclick="addCart('${esc(p.id)}')">
+        <div class="pi"><div class="pi-letter">${esc(productInitial(p.name))}</div></div>
+        <div class="pn">${esc(p.name)}</div>
         <div class="pp">${fmt(price(p))}</div>
-        <div class="pk">kode ${p.short_code || p.code || p.id}</div>
+        <div class="pk">${esc(catLabel(p))} · ${esc(p.short_code || p.code || p.id)}</div>
       </div>`).join('');
 }
 
@@ -572,8 +643,9 @@ const getPrice = id => { const p = products.find(x => x.id == id); return p ? (p
 const getTotal = () => Object.keys(cart).reduce((s, id) => s + getPrice(id) * cart[id], 0);
 const getCount = () => Object.values(cart).reduce((s, q) => s + q, 0);
 
-function addCart(id) { cart[id] = (cart[id] || 0) + 1; rGrid(); updFAB(); }
+function addCart(id) { id = String(id); cart[id] = (cart[id] || 0) + 1; rGrid(); updFAB(); }
 function chgQty(id, d) {
+  id = String(id);
   cart[id] = (cart[id] || 0) + d;
   if (cart[id] <= 0) delete cart[id];
   rGrid(); updFAB(); rCartSheet();
@@ -599,13 +671,13 @@ function rCartSheet() {
     if (!p) return '';
     const pr = getPrice(id);
     return `<div class="ci">
-      <div class="ci-ic">${p.icon || '📦'}</div>
-      <div class="ci-inf"><div class="ci-name">${p.name}</div><div class="ci-pr">${fmt(pr)}</div></div>
+      <div class="ci-ic"><div class="pi-letter" style="width:40px;height:40px;font-size:13px">${esc(productInitial(p.name))}</div></div>
+      <div class="ci-inf"><div class="ci-name">${esc(p.name)}</div><div class="ci-pr">${fmt(pr)}</div></div>
       <div class="ci-r"><div class="ci-tot">${fmt(pr * cart[id])}</div>
       <div class="qc">
-        <button class="qb" onclick="chgQty(${id},-1)">−</button>
+        <button class="qb" onclick="chgQty('${esc(id)}',-1)">−</button>
         <span class="qv">${cart[id]}</span>
-        <button class="qb" onclick="chgQty(${id},1)">+</button>
+        <button class="qb" onclick="chgQty('${esc(id)}',1)">+</button>
       </div></div></div>`;
   }).join('');
   $('cfCnt').textContent = `${cnt} item`;
@@ -822,11 +894,11 @@ tick(); setInterval(tick, 1000);
 if (TOKEN) {
   $('scrLogin').style.display = 'none';
   $('scrApp').classList.add('on');
-  initApp();
-} else {
-  // Demo mode tanpa login: skip ke app langsung untuk testing
-  // Uncomment baris di bawah ini jika ingin skip login:
-  // $('scrLogin').style.display = 'none'; $('scrApp').classList.add('on'); loadProducts(); updateQueueBar();
+  $('hStore').textContent = CFG.STORE_NAME || 'Demo Warung';
+  initApp().catch(() => {
+    doLogout();
+    toast('Gagal memuat sesi — masuk lagi', 'err');
+  });
 }
 </script>
 </body>
