@@ -27,6 +27,7 @@ $Solutions = Join-Path $RepoRoot "public\solutions"
 $Products = Join-Path $RepoRoot "public\products"
 $OptimaPos = Join-Path $RepoRoot "public\optima-pos"
 $OptimaPos2 = Join-Path $RepoRoot "public\optima-pos_V2"
+$OptimaYoga = Join-Path $RepoRoot "public\optima-yoga"
 $Templates = Join-Path $RepoRoot "public\templates"
 
 if (-not (Test-Path $Index)) { throw "Missing $Index" }
@@ -44,7 +45,7 @@ Write-Host "Staging Optima homepage -> ${SshTarget}:$RemoteDir (optima-web :8088
 
 $RemoteUnix = ($RemoteDir -replace '\\', '/')
 # Remote OpenSSH default shell is cmd.exe — avoid '|' (gets intercepted before PowerShell).
-$RemotePrep = "cmd /c `"mkdir `"$RemoteDir\assets\optima\i18n`" 2>nul & mkdir `"$RemoteDir\solutions`" 2>nul & mkdir `"$RemoteDir\products\los\assets`" 2>nul & mkdir `"$RemoteDir\optima-pos\login`" 2>nul & mkdir `"$RemoteDir\optima-pos_V2`" 2>nul & mkdir `"$RemoteDir\templates`" 2>nul & exit /b 0`""
+$RemotePrep = "cmd /c `"mkdir `"$RemoteDir\assets\optima\i18n`" 2>nul & mkdir `"$RemoteDir\solutions`" 2>nul & mkdir `"$RemoteDir\products\los\assets`" 2>nul & mkdir `"$RemoteDir\optima-pos\login`" 2>nul & mkdir `"$RemoteDir\optima-pos_V2`" 2>nul & mkdir `"$RemoteDir\optima-yoga`" 2>nul & mkdir `"$RemoteDir\templates`" 2>nul & exit /b 0`""
 & ssh @SshArgs $SshTarget $RemotePrep
 if ($LASTEXITCODE -ne 0) { throw "SSH mkdir failed with exit $LASTEXITCODE" }
 
@@ -87,6 +88,11 @@ if (Test-Path $OptimaPos2) {
   $Pos2Items = Get-ChildItem -Path $OptimaPos2 -Force | ForEach-Object { $_.FullName }
   & scp @ScpArgs -r @Pos2Items "${SshTarget}:${RemoteUnix}/optima-pos_V2/"
   if ($LASTEXITCODE -ne 0) { throw "scp optima-pos_V2 failed" }
+}
+if (Test-Path $OptimaYoga) {
+  $YogaItems = Get-ChildItem -Path $OptimaYoga -Force | ForEach-Object { $_.FullName }
+  & scp @ScpArgs -r @YogaItems "${SshTarget}:${RemoteUnix}/optima-yoga/"
+  if ($LASTEXITCODE -ne 0) { throw "scp optima-yoga failed" }
 }
 
 if (Test-Path $Templates) {

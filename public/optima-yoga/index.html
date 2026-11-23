@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yoga Class App — Booking &amp; Membership | Optima Digital Selaras</title>
+  <meta name="description" content="Yoga Class App membantu studio yoga mengelola jadwal kelas, booking member, paket membership, dan absensi dalam satu aplikasi." />
+  <link rel="canonical" href="https://optimadigitalselaras.com/optima-yoga" />
+  <link rel="icon" type="image/png" href="/assets/optima/logo.png?v=2" />
+  <meta property="og:title" content="Yoga Class App — Booking &amp; Membership" />
+  <meta property="og:description" content="Kelola kelas yoga, booking, dan membership jadi lebih mudah." />
+  <meta property="og:url" content="https://optimadigitalselaras.com/optima-yoga" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://optimadigitalselaras.com/assets/optima/optima-yoga-reservation-banner.png" />
+  <link rel="stylesheet" href="/assets/optima/cursor.css?v=4" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --navy:#0b1f44; --ink:#10233f; --blue:#1d6fe9; --blue-deep:#1558c7;
+      --blue-soft:#e8f1ff; --muted:#5b6b82; --line:#e4edf7; --off:#f6f9fc;
+      --teal:#0d9488; --shadow:0 22px 50px rgba(11,31,68,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    h1,h2,h3{font-family:Manrope,Inter,sans-serif;font-weight:800;letter-spacing:-.03em;color:var(--navy)}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}
+    header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:16px}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--teal),var(--blue));display:grid;place-items:center;color:#fff;font-weight:800}
+    .logo b{display:block;font-size:14px;color:var(--navy)}
+    .logo span{display:block;font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+    .nav-links{display:flex;gap:20px;list-style:none}
+    .nav-links a{font-size:14px;font-weight:600;color:#3d5270}
+    .nav-links a:hover{color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:700;font-size:14px;padding:11px 18px;border:0;cursor:pointer}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 22px rgba(29,111,233,.25)}
+    .btn-primary:hover{background:var(--blue-deep)}
+    .btn-ghost{background:#fff;color:var(--navy);border:1.5px solid #d7e4f5}
+    .btn-white{background:#fff;color:var(--blue)}
+
+    .hero{padding:48px 0 28px;background:linear-gradient(180deg,#f3f8ff 0%,#fff 70%)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
+    .eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+    .hero h1{font-size:clamp(28px,4vw,42px);line-height:1.15;margin-bottom:12px}
+    .hero .lead{color:var(--muted);font-size:16px;margin-bottom:22px;max-width:46ch}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+    .checks{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;list-style:none}
+    .checks li{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;font-weight:600;color:var(--navy)}
+    .checks i{width:20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;flex-shrink:0;font-style:normal;font-size:11px;margin-top:1px}
+    .hero-visual{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:#fff}
+    .hero-visual img{width:100%;height:auto}
+
+    .values{padding:20px 0 56px}
+    .value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .value{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 8px 20px rgba(11,31,68,.04)}
+    .value h3{font-size:15px;margin-bottom:4px}
+    .value p{font-size:13px;color:var(--muted)}
+
+    .features{padding:64px 0;background:var(--off)}
+    .features h2,.quotes h2{text-align:center;font-size:clamp(24px,3vw,34px);margin-bottom:28px}
+    .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .feat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+    .feat .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:#fff;font-size:18px;margin-bottom:12px}
+    .feat h3{font-size:16px;margin-bottom:6px}
+    .feat p{font-size:13.5px;color:var(--muted)}
+    .c1{background:#0d9488}.c2{background:#1d6fe9}.c3{background:#7c3aed}
+    .c4{background:#f59e0b}.c5{background:#16a34a}.c6{background:#ef4444}
+
+    .quotes{padding:64px 0}
+    .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .quote{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff}
+    .quote p{font-size:14.5px;font-style:italic;margin-bottom:14px;color:var(--ink)}
+    .quote b{display:block;font-size:13px;color:var(--navy)}
+    .quote span{font-size:12px;color:var(--muted)}
+
+    .final{background:var(--navy);color:#fff;padding:52px 0}
+    .final .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .final h2{color:#fff;font-size:clamp(22px,2.6vw,30px);margin-bottom:6px}
+    .final p{color:rgba(255,255,255,.7)}
+
+    footer{background:var(--navy);color:rgba(255,255,255,.6);padding:28px 0;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:13px}
+    footer a{color:rgba(255,255,255,.85)}
+
+    @media (max-width:900px){
+      .nav-links{display:none}
+      .hero-grid,.value-grid,.feat-grid,.quote-grid,.checks{grid-template-columns:1fr}
+      .value-grid,.feat-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:560px){
+      .value-grid,.feat-grid{grid-template-columns:1fr}
+      .cta-row{flex-direction:column;align-items:stretch}
+    }
+  </style>
+  <script defer src="https://optimadigitalselaras.com/webanalytic/script.js" data-site="optima"></script>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a href="/" class="logo" aria-label="Optima Digital Selaras">
+        <div class="logo-mark">Y</div>
+        <div>
+          <b>YOGA CLASS APP</b>
+          <span>BOOKING &amp; MEMBERSHIP</span>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Navigasi">
+        <a href="#beranda">Beranda</a>
+        <a href="#fitur">Fitur</a>
+        <a href="#testimoni">Testimoni</a>
+      </nav>
+      <a class="btn btn-primary" href="https://yoga.optimadigitalselaras.com/" target="_blank" rel="noopener noreferrer">Lihat Demo</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Optima Digital Selaras</span>
+          <h1>Kelola Kelas Yoga Jadi Lebih Mudah</h1>
+          <p class="lead">Yoga Class App membantu studio yoga mengatur jadwal kelas, booking member, paket membership, dan kehadiran — web admin + akses member dalam satu sistem.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://yoga.optimadigitalselaras.com/" target="_blank" rel="noopener noreferrer">Lihat Demo Yoga Class App ?</a>
+            <a class="btn btn-ghost" href="https://wa.me/6285770566781?text=Halo%20Optima%2C%20saya%20ingin%20demo%20Yoga%20Class%20App." target="_blank" rel="noopener noreferrer">Chat WhatsApp</a>
+          </div>
+          <ul class="checks">
+            <li><i>?</i> Jadwal &amp; kapasitas kelas</li>
+            <li><i>?</i> Booking online member</li>
+            <li><i>?</i> Paket membership</li>
+            <li><i>?</i> Absensi &amp; riwayat</li>
+            <li><i>?</i> Admin + member portal</li>
+            <li><i>?</i> Siap demo live</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <a href="https://yoga.optimadigitalselaras.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka demo Yoga Class App">
+            <img src="/assets/optima/optima-yoga-reservation-banner.png" width="1024" height="682" alt="Yoga Class App — booking dan membership yoga" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="values">
+      <div class="wrap value-grid">
+        <article class="value"><h3>Untuk Studio Yoga</h3><p>Cocok studio kecil sampai multi-kelas</p></article>
+        <article class="value"><h3>Booking Rapi</h3><p>Kuota kelas terkontrol otomatis</p></article>
+        <article class="value"><h3>Mudah Digunakan</h3><p>Jadwal &amp; riwayat mudah diakses</p></article>
+        <article class="value"><h3>Admin Praktis</h3><p>Kelola kelas, paket, dan member</p></article>
+      </div>
+    </section>
+
+    <section class="features" id="fitur">
+      <div class="wrap">
+        <h2>Fitur Utama Yoga Class App</h2>
+        <div class="feat-grid">
+          <article class="feat"><div class="ico c1">??</div><h3>Jadwal Kelas</h3><p>Atur kelas, instruktur, dan kapasitas harian.</p></article>
+          <article class="feat"><div class="ico c2">??</div><h3>Booking Online</h3><p>Member pesan kelas dengan sisa kuota real-time.</p></article>
+          <article class="feat"><div class="ico c3">??</div><h3>Paket Membership</h3><p>Kelola paket sesi, masa aktif, dan perpanjangan.</p></article>
+          <article class="feat"><div class="ico c4">?</div><h3>Absensi</h3><p>Catat kehadiran dan riwayat kelas member.</p></article>
+          <article class="feat"><div class="ico c5">??</div><h3>Portal Member</h3><p>Member lihat jadwal, booking, dan paket sendiri.</p></article>
+          <article class="feat"><div class="ico c6">???</div><h3>Panel Admin</h3><p>Kelola member, kelas, artikel, dan galeri studio.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quotes" id="testimoni">
+      <div class="wrap">
+        <h2>Cocok untuk Studio Yoga Modern</h2>
+        <div class="quote-grid">
+          <article class="quote">
+            <p>“Jadwal kelas dan booking jadi teratur. Admin tidak perlu cek WhatsApp satu-satu.”</p>
+            <b>Rina Sari</b><span>Pemilik studio yoga, Jakarta</span>
+          </article>
+          <article class="quote">
+            <p>“Member bisa lihat sisa paket dan riwayat kelas sendiri. Lebih transparan.”</p>
+            <b>Andi Pratama</b><span>Manajer operasional studio</span>
+          </article>
+          <article class="quote">
+            <p>“Demo cepat dipahami. Cocok untuk studio yang baru mau digital.”</p>
+            <b>Maya Lestari</b><span>Instruktur &amp; founder</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap">
+        <div>
+          <h2>Siap lihat Yoga Class App beraksi?</h2>
+          <p>Buka demo live atau hubungi tim Optima untuk presentasi singkat.</p>
+        </div>
+        <a class="btn btn-white" href="https://yoga.optimadigitalselaras.com/" target="_blank" rel="noopener noreferrer">Lihat Demo ?</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2026 <a href="/">PT Optima Digital Selaras</a>. Yoga Class App.</p>
+    </div>
+  </footer>
+  <script src="/assets/optima/cursor.js?v=4"></script>
+</body>
+</html>
