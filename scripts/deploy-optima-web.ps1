@@ -35,7 +35,8 @@ function Find-ProductLandingRoot([string]$RepoName) {
   $candidates = @(
     (Join-Path (Split-Path $RepoRoot -Parent) $RepoName),
     (Join-Path $env:USERPROFILE $RepoName),
-    (Join-Path $env:USERPROFILE "live-snapshot\$RepoName")
+    (Join-Path $env:USERPROFILE "live-snapshot\$RepoName"),
+    (Join-Path "D:\optima-store-project" $RepoName)
   )
   return ($candidates | Where-Object { Test-Path (Join-Path $_ "landing\index.html") } | Select-Object -First 1)
 }
@@ -47,6 +48,8 @@ $MusicConnectRoot = if ($env:MUSICCONNECT_ROOT) { $env:MUSICCONNECT_ROOT } else 
 $MusicConnectLanding = if ($MusicConnectRoot) { Join-Path $MusicConnectRoot "landing" } else { $null }
 $StoreStationRoot = if ($env:OPTIMASTORE_ROOT) { $env:OPTIMASTORE_ROOT } else { Find-ProductLandingRoot "OptimaStoreStation" }
 $StoreStationLanding = if ($StoreStationRoot) { Join-Path $StoreStationRoot "landing" } else { $null }
+$CommunityEcomRoot = if ($env:OPTIMA_STORE_ROOT) { $env:OPTIMA_STORE_ROOT } elseif ($env:COMMUNITY_ECOM_ROOT) { $env:COMMUNITY_ECOM_ROOT } else { Find-ProductLandingRoot "optima-store" }
+$CommunityEcomLanding = if ($CommunityEcomRoot) { Join-Path $CommunityEcomRoot "landing" } else { $null }
 $Templates = Join-Path $RepoRoot "public\templates"
 
 if (-not (Test-Path $Index)) { throw "Missing $Index" }
@@ -133,6 +136,15 @@ if ($StoreStationLanding -and (Test-Path $StoreStationLanding)) {
   if ($LASTEXITCODE -ne 0) { throw "scp optima-store landing failed" }
 } else {
   Write-Warning "OptimaStoreStation/landing not found. Set OPTIMASTORE_ROOT or clone YuliusOngky/OptimaStoreStation. Skipping /products/optima-store deploy."
+}
+if ($CommunityEcomLanding -and (Test-Path $CommunityEcomLanding)) {
+  Write-Host "Community eCommerce landing from optima-store: $CommunityEcomLanding"
+  & ssh @SshArgs $SshTarget "cmd /c `"mkdir `"$RemoteDir\products\community-ecommerce`" 2>nul & exit /b 0`""
+  $CeItems = Get-ChildItem -Path $CommunityEcomLanding -Force | ForEach-Object { $_.FullName }
+  & scp @ScpArgs -r @CeItems "${SshTarget}:${RemoteUnix}/products/community-ecommerce/"
+  if ($LASTEXITCODE -ne 0) { throw "scp community-ecommerce landing failed" }
+} else {
+  Write-Warning "optima-store/landing not found. Set OPTIMA_STORE_ROOT or clone YuliusOngky/optima-store (branch main). Skipping /products/community-ecommerce overwrite."
 }
 
 if (Test-Path $Templates) {
